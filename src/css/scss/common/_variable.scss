@@ -1,0 +1,44 @@
+:root {
+  --bg_gray_1: #2b2b2b;
+  --bg_gray_2: #3b3b3b;
+  --bg_gray_3: #858584;
+  --white: #fff;
+  --gray: #ccc;
+  --bg_btn_violet: #a259ff;
+  --blue_accent: #377df7;
+  --red_accent: #ff7262;
+  --gradient_white_violet: linear-gradient(180deg,
+      rgba(162, 89, 255, 0) 0%,
+      #a259ff 100%);
+
+  --gradient_violet_red: linear-gradient(100.92deg, #A259FF 13.57%, #FF6250 97.65%);
+  ;
+}
+
+$black: #000;
+$screen-xsm: 320px;
+$screen-sm: 828px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+$screen-xlg: 1920px;
+
+
+$height_btn_46: 46px;
+$height_btn_60: 60px;
+$height_btn_72: 72px;
+$width_100: 100%;
+
+$border_radius_20: 20px;
+$border_radius_50: 50%;
+
+
+@mixin custom-font($fontsize, $fontweight, $lineheight) {
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  line-height: $lineheight;
+}
+
+@mixin custom-dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}

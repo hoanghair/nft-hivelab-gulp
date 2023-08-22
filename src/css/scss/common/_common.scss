@@ -1,0 +1,226 @@
+body,
+input,
+select,
+textarea,
+button {
+    font-family: WorkSans, '나눔바른고딕', 'NanumBarunGothic', 'Malgun Gothic', '맑은고딕', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif
+}
+
+.theme_spacemono {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        font-family: SpaceMono;
+    }
+}
+
+.blind,
+caption span,
+legend {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    text-indent: -9999px;
+}
+
+.skip {
+    height: 0
+}
+
+.skip a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 25px;
+    text-align: center
+}
+
+.skip a:focus,
+#skip a:active {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none
+}
+
+/* <!-- [D] Typography --> */
+.heading {
+    &_one {
+        @include custom-font(67px, 600, 74px);
+    }
+
+    &_two {
+        @include custom-font(51px, 600, 56px);
+    }
+
+    &_three {
+        @include custom-font(38px, 600, 46px);
+    }
+
+    &_four {
+        @include custom-font(28px, 600, 39px);
+    }
+
+    &_five {
+        @include custom-font(22px, 600, 31px);
+    }
+
+}
+
+.body {
+    &_caption {
+        @include custom-font(12px, 400, 13px);
+    }
+
+    &_base {
+        @include custom-font(16px, 400, 22px);
+    }
+
+    &_text {
+        @include custom-font(22px, 400, 35px);
+    }
+}
+
+/* <!--// [D] Typography --> */
+
+/* <!-- [D] Button --> */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border_radius_20;
+
+    @include custom-font(16px, 600, 22px);
+
+    color: var(--white);
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+    user-select: none;
+
+    &.is_disabled {
+        opacity: 50%;
+        pointer-events: none;
+    }
+
+    &_p30 {
+        padding: 0 30px;
+
+    }
+
+    &_p50 {
+        padding: 0 50px;
+
+    }
+
+    &_sm {
+        height: $height_btn_46;
+    }
+
+    &_md {
+        height: $height_btn_60;
+    }
+
+    &_lg {
+        height: $height_btn_72;
+    }
+
+    // &_46px {
+    //     height: $height_btn_46;
+    // }
+
+    &_w100 {
+        width: $width_100;
+    }
+
+    /* <!-- [D] White --> */
+    &_white {
+        background-color: var(--white);
+        color: var(--bg_gray_1);
+    }
+
+    /* <!--// [D] White --> */
+
+    /* <!-- [D] Violet --> */
+    &_violet {
+        background-color: var(--bg_btn_violet);
+    }
+
+    /* <!--// [D] Violet --> */
+
+    /* <!-- [D] Transparent --> */
+    &_transparent {
+        background-color: transparent;
+        border: 2px solid var(--bg_btn_violet);
+    }
+
+    /* <!--// [D] Transparent --> */
+
+    /* <!-- [D] Gray --> */
+    &_gray {
+        background-color: var(--bg_gray_2);
+    }
+
+    /* <!--// [D] Gray --> */
+}
+
+/* <!--// [D] Button--> */
+
+// <!-- [D] Thumbnail -->
+.thumb {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+
+    .img {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include custom-dimensions(100%, 100%);
+
+        object-fit: cover;
+    }
+}
+
+//   <!--// [D] Thumbnail -->
+
+
+// <!-- [D] Avatar -->
+.avatar {
+    .thumb {
+        border-radius: $border_radius_50;
+    }
+
+    &_small {
+        width: 24px;
+        height: 24px;
+    }
+
+    &_medium {
+        width: 60px;
+        height: 60px;
+    }
+
+    &_large {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+// <!--// [D] Avatar -->
