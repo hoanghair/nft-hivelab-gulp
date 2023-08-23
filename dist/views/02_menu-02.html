@@ -5,6 +5,7 @@
 	<meta name="format-detection" content="telephone=no">
 
 	
+
 	<title>Document Title - Sub_02 : UIT Gulp Project</title>
 
 	<!-- SEO meta tag -->
@@ -44,7 +45,7 @@
 	.wrap {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 60px 60px
+		padding: 60px 60px;
 	}
 
 	.ui_heading {
@@ -62,23 +63,23 @@
 		font-size: 36px;
 		font-weight: 400;
 		line-height: 49px;
-		color: #2a254b
+		color: #2a254b;
 	}
 
 	.ui_content {
 		padding: 56px;
 		border-radius: 4px;
-		background-color: #fff
+		background-color: #fff;
 	}
 
 	.ui_color_list {
 		display: block;
-		font-size: 0
+		font-size: 0;
 	}
 
 	.ui_color_item {
 		display: inline-block;
-		width: 50%
+		width: 50%;
 	}
 
 	.ui_item_title {
@@ -91,12 +92,12 @@
 	.ui_table {
 		width: 100%;
 		min-width: 500px;
-		border-spacing: 0
+		border-spacing: 0;
 	}
 
 	.ui_table thead {
 		height: 48px;
-		background-color: #f9f9f9
+		background-color: #f9f9f9;
 	}
 
 	.ui_table thead tr th {
@@ -104,11 +105,11 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 22px;
-		text-align: left
+		text-align: left;
 	}
 
 	.ui_table tbody tr {
-		height: 93px
+		height: 93px;
 	}
 
 	.ui_table tbody tr td {
@@ -116,110 +117,130 @@
 		border-bottom: 1px solid #ebe8f4;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 22px
+		line-height: 22px;
 	}
 
 	.ui_table .table__line td {
-		border-bottom: 1px solid #4e4d93
+		border-bottom: 1px solid #4e4d93;
 	}
 
 	.ui_button,
-	.ui_other {
+	.ui_input {
 		background-color: #cbcbcb;
-		font-size: 0
+		font-size: 0;
 	}
 
 	.ui_item,
 	.ui_typography {
-		overflow-x: auto
+		overflow-x: auto;
 	}
 
 	.ui_buttonmd .ui_item {
-		display: block
+		display: block;
 	}
 
 	.ui_buttonmd_title {
 		display: inline-block;
 		margin-bottom: 16px;
 		font-size: 20px;
-		line-height: 20px
+		line-height: 20px;
 	}
 
 	.ui_item+.ui_item {
-		margin-top: 70px
+		margin-top: 70px;
 	}
 
 	.ui_table_btn thead tr th {
 		text-align: center;
 		border-top: 1px solid #ebe8f4;
-		border-bottom: 1px solid #ebe8f4
+		border-bottom: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn thead tr th:first-child {
 		text-align: left;
-		border-left: 1px solid #ebe8f4
+		border-left: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn thead tr th:last-child {
-		border-right: 1px solid #ebe8f4
+		border-right: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn tbody tr td,
 	.ui_table_btn tbody tr td:nth-child(2) {
-		text-align: center
+		text-align: center;
 	}
 
 	.ui_table_btn tbody tr td:first-child {
 		border-right: 1px solid #ebe8f4;
 		border-left: 1px solid #ebe8f4;
-		text-align: left
+		text-align: left;
 	}
 
 	.ui_table_btn tbody tr td:last-child {
-		border-right: 1px solid #ebe8f4
+		border-right: 1px solid #ebe8f4;
 	}
 
 	.ui_product {
 		padding: 20px;
-		font-size: 0
+		font-size: 0;
 	}
 
-	.ui_other {
+	.ui_input {
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap
+		flex-wrap: wrap;
+		gap: 30px;
 	}
 
-	.ui_other .ui_item {
+	.ui_input .ui_item+.ui_item {
+		margin-top: 0;
+	}
+
+	.ui_input .ui_item {
 		display: inline-block;
-		vertical-align: top
+		width: calc(50% - 30px);
 	}
 
-	.ui_other .ui_item:first-child {
-		flex: 0 0 100%;
-		display: block
+	/* .ui_input .ui_item:first-child {
+        flex: 0 0 100%;
+        display: block;
+      } */
+
+	.ui_input .ui_item:nth-child(-n + 2) {
+		margin-left: 0;
 	}
 
-	.ui_other .ui_item:nth-child(-n+2) {
-		margin-left: 0
-	}
+	/* 
+      .ui_input_list .ui_input_item {
+        display: inline-block;
+      } */
 
-	.ui_other_input .ui_other_item {
-		display: inline-block;
-	}
-
-	.ui_other_item+.ui_other_item {
-		margin-top: 20px
-	}
+	/* .ui_input_item + .ui_input_item {
+        margin-top: 20px;
+      } */
 
 	.ui_table_avatar .avatar {
 		margin: 0 auto;
+	}
+
+	.ui_thumb_list {
+		font-size: 0;
+	}
+
+	.ui_thumb_item {
+		display: inline-block;
+		width: calc(25% - 20px);
+	}
+
+	.ui_thumb_item+.ui_thumb_item {
+		margin-left: 20px;
 	}
 
 	</style>
 </head>
 
 <body data-pagestatus="new : 2019.05.20">
+
+
 	<!-- Skip Navigation -->
 	<ul class="skip">
 		<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>

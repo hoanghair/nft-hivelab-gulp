@@ -5,6 +5,7 @@
 	<meta name="format-detection" content="telephone=no">
 
 	
+
 	<title>Common NFT</title>
 
 	<!-- SEO meta tag -->
@@ -44,7 +45,7 @@
 	.wrap {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 60px 60px
+		padding: 60px 60px;
 	}
 
 	.ui_heading {
@@ -62,23 +63,23 @@
 		font-size: 36px;
 		font-weight: 400;
 		line-height: 49px;
-		color: #2a254b
+		color: #2a254b;
 	}
 
 	.ui_content {
 		padding: 56px;
 		border-radius: 4px;
-		background-color: #fff
+		background-color: #fff;
 	}
 
 	.ui_color_list {
 		display: block;
-		font-size: 0
+		font-size: 0;
 	}
 
 	.ui_color_item {
 		display: inline-block;
-		width: 50%
+		width: 50%;
 	}
 
 	.ui_item_title {
@@ -91,12 +92,12 @@
 	.ui_table {
 		width: 100%;
 		min-width: 500px;
-		border-spacing: 0
+		border-spacing: 0;
 	}
 
 	.ui_table thead {
 		height: 48px;
-		background-color: #f9f9f9
+		background-color: #f9f9f9;
 	}
 
 	.ui_table thead tr th {
@@ -104,11 +105,11 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 22px;
-		text-align: left
+		text-align: left;
 	}
 
 	.ui_table tbody tr {
-		height: 93px
+		height: 93px;
 	}
 
 	.ui_table tbody tr td {
@@ -116,110 +117,130 @@
 		border-bottom: 1px solid #ebe8f4;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 22px
+		line-height: 22px;
 	}
 
 	.ui_table .table__line td {
-		border-bottom: 1px solid #4e4d93
+		border-bottom: 1px solid #4e4d93;
 	}
 
 	.ui_button,
-	.ui_other {
+	.ui_input {
 		background-color: #cbcbcb;
-		font-size: 0
+		font-size: 0;
 	}
 
 	.ui_item,
 	.ui_typography {
-		overflow-x: auto
+		overflow-x: auto;
 	}
 
 	.ui_buttonmd .ui_item {
-		display: block
+		display: block;
 	}
 
 	.ui_buttonmd_title {
 		display: inline-block;
 		margin-bottom: 16px;
 		font-size: 20px;
-		line-height: 20px
+		line-height: 20px;
 	}
 
 	.ui_item+.ui_item {
-		margin-top: 70px
+		margin-top: 70px;
 	}
 
 	.ui_table_btn thead tr th {
 		text-align: center;
 		border-top: 1px solid #ebe8f4;
-		border-bottom: 1px solid #ebe8f4
+		border-bottom: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn thead tr th:first-child {
 		text-align: left;
-		border-left: 1px solid #ebe8f4
+		border-left: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn thead tr th:last-child {
-		border-right: 1px solid #ebe8f4
+		border-right: 1px solid #ebe8f4;
 	}
 
 	.ui_table_btn tbody tr td,
 	.ui_table_btn tbody tr td:nth-child(2) {
-		text-align: center
+		text-align: center;
 	}
 
 	.ui_table_btn tbody tr td:first-child {
 		border-right: 1px solid #ebe8f4;
 		border-left: 1px solid #ebe8f4;
-		text-align: left
+		text-align: left;
 	}
 
 	.ui_table_btn tbody tr td:last-child {
-		border-right: 1px solid #ebe8f4
+		border-right: 1px solid #ebe8f4;
 	}
 
 	.ui_product {
 		padding: 20px;
-		font-size: 0
+		font-size: 0;
 	}
 
-	.ui_other {
+	.ui_input {
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap
+		flex-wrap: wrap;
+		gap: 30px;
 	}
 
-	.ui_other .ui_item {
+	.ui_input .ui_item+.ui_item {
+		margin-top: 0;
+	}
+
+	.ui_input .ui_item {
 		display: inline-block;
-		vertical-align: top
+		width: calc(50% - 30px);
 	}
 
-	.ui_other .ui_item:first-child {
-		flex: 0 0 100%;
-		display: block
+	/* .ui_input .ui_item:first-child {
+        flex: 0 0 100%;
+        display: block;
+      } */
+
+	.ui_input .ui_item:nth-child(-n + 2) {
+		margin-left: 0;
 	}
 
-	.ui_other .ui_item:nth-child(-n+2) {
-		margin-left: 0
-	}
+	/* 
+      .ui_input_list .ui_input_item {
+        display: inline-block;
+      } */
 
-	.ui_other_input .ui_other_item {
-		display: inline-block;
-	}
-
-	.ui_other_item+.ui_other_item {
-		margin-top: 20px
-	}
+	/* .ui_input_item + .ui_input_item {
+        margin-top: 20px;
+      } */
 
 	.ui_table_avatar .avatar {
 		margin: 0 auto;
+	}
+
+	.ui_thumb_list {
+		font-size: 0;
+	}
+
+	.ui_thumb_item {
+		display: inline-block;
+		width: calc(25% - 20px);
+	}
+
+	.ui_thumb_item+.ui_thumb_item {
+		margin-left: 20px;
 	}
 
 	</style>
 </head>
 
 <body>
+
+
 	<!-- Skip Navigation -->
 	<ul class="skip">
 		<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
@@ -805,7 +826,7 @@
 										<td>email</td>
 										<td><i class="ico_email_20px"></i></td>
 										<td><i class="ico_email_32px"></i></td>
-										<td></td>
+										<td><i class="ico_email_color_20px"></i></td>
 									</tr>
 									<tr>
 										<td>eye</td>
@@ -817,7 +838,7 @@
 										<td>eyeslash</td>
 										<td><i class=""></i></td>
 										<td><i class="ico_eyeslash_32px"></i></td>
-										<td><i class=""></i></td>
+										<td><i class="ico_eyeslash_color_20px"></i></td>
 									</tr>
 									<tr>
 										<td>globe</td>
@@ -841,7 +862,7 @@
 										<td>lockkey</td>
 										<td><i class=""></i></td>
 										<td><i class="ico_lockkey_32px"></i></td>
-										<td><i class=""></i></td>
+										<td><i class="ico_lockkey_color_20px"></i></td>
 									</tr>
 									<tr>
 										<td>plus</td>
@@ -889,7 +910,7 @@
 										<td>user</td>
 										<td><i class="ico_user_20px"></i></td>
 										<td><i class="ico_user_32px"></i></td>
-										<td><i class=""></i></td>
+										<td><i class="ico_user_color_20px"></i></td>
 									</tr>
 									<tr>
 										<td>usercircle</td>
@@ -930,6 +951,59 @@
 								</tbody>
 							</table>
 						</div>
+						<div class="ui_item">
+							<h3 class="ui_item_title"># Icons Large</h3>
+							<table class="ui_table ui_table_btn">
+								<colgroup>
+									<col style="width: 25%">
+									<col style="width: 75%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">120px</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>basketball</td>
+										<td><i class="ico_basketball"></i></td>
+									</tr>
+									<tr>
+										<td>bookmarkssimple</td>
+										<td><i class="ico_bookmarkssimple"></i></td>
+									</tr>
+									<tr>
+										<td>camera</td>
+										<td><i class="ico_camera"></i></td>
+									</tr>
+									<tr>
+										<td>magicwand</td>
+										<td><i class="ico_magicwand"></i></td>
+									</tr>
+									<tr>
+										<td>musicnotes</td>
+										<td><i class="ico_musicnotes"></i></td>
+									</tr>
+									<tr>
+										<td>paintbrush</td>
+										<td><i class="ico_paintbrush"></i></td>
+									</tr>
+									<tr>
+										<td>planet</td>
+										<td><i class="ico_planet"></i></td>
+									</tr>
+									<tr>
+										<td>swatches</td>
+										<td><i class="ico_swatches"></i></td>
+									</tr>
+									<tr>
+										<td>videocamera</td>
+										<td><i class="ico_videocamera"></i></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</section>
 				<!--// [D] Icons -->
@@ -941,7 +1015,25 @@
 						<ul class="ui_thumb_list">
 							<li class="ui_thumb_item">
 								<h3 class="ui_item_title"># 1:1 (Image)</h3>
-								<div class="thumb thumb_img">
+								<div class="thumb">
+									<img src="../img/trending/img_trending1.png" alt="" class="img">
+								</div>
+							</li>
+							<li class="ui_thumb_item">
+								<h3 class="ui_item_title"># Card (Image)</h3>
+								<div class="thumb thumb_card">
+									<img src="../img/trending/img_trending1.png" alt="" class="img">
+								</div>
+							</li>
+							<li class="ui_thumb_item">
+								<h3 class="ui_item_title"># Card Mo (Image)</h3>
+								<div class="thumb thumb_card_mo">
+									<img src="../img/trending/img_trending1.png" alt="" class="img">
+								</div>
+							</li>
+							<li class="ui_thumb_item">
+								<h3 class="ui_item_title"># 16:7 (Image)</h3>
+								<div class="thumb thumb_16x7">
 									<img src="../img/trending/img_trending1.png" alt="" class="img">
 								</div>
 							</li>
@@ -969,6 +1061,7 @@
 										<th scope="col">S</th>
 										<th scope="col">M</th>
 										<th scope="col">L</th>
+										<th scope="col">XL</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -995,6 +1088,13 @@
 												</div>
 											</div>
 										</td>
+										<td>
+											<div class="avatar avatar_extra_large">
+												<div class="thumb">
+													<img src="../img/trending/img_trending1.png" alt="" class="img">
+												</div>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1003,85 +1103,132 @@
 				</section>
 				<!--// [D] Avatar -->
 
-				<!-- [D] Other -->
+				<!-- [D] Input -->
 				<section class="ui_section">
-					<h2 class="ui_title">Other</h2>
-					<div class="ui_content ui_other">
-						<!-- [D] Text input -->
+					<h2 class="ui_title">Input</h2>
+					<div class="ui_content ui_input">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Text input</h3>
-							<ul class="ui_other_input">
-								<li class="ui_other_item">
+							<h3 class="ui_item_title"># Subscribe Form</h3>
+							<ul class="ui_input_list">
+								<li class="ui_input_item">
 									<form action="#" class="form">
-										<input type="email" id="email" name="email" placeholder="your@email.com" class="input input_white">
-										<input type="submit" value="Sign up" class="submit submit_dark">
-									</form>
-								</li>
-								<li class="ui_other_item">
-									<form action="#" class="form">
-										<input type="email" id="email2" name="email" placeholder="your@email.com" class="input input_transparent">
-										<input type="submit" value="Sign up" class="submit submit_white">
+										<input type="email" id="email" name="email" placeholder="Enter your email here" class="input_text">
+										<button class="btn btn_md btn_p50 btn_violet" type="submit">
+											<i class="ico_email_20px"></i>
+											Button
+										</button>
 									</form>
 								</li>
 							</ul>
 						</div>
-						<!--// [D] Text input -->
-
-						<!-- [D] Stepper -->
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Stepper</h3>
-							<ul class="ui_other_stepper">
-								<li class="ui_other_item">
-									<div class="steps steps_white">
-										<span class="down">-</span>
-										<input type="text" value="1">
-										<span class="up">+</span>
-									</div>
+							<h3 class="ui_item_title"># Subscribe Widget/Mobile</h3>
+							<ul class="ui_input_list">
+								<li class="ui_input_item">
+									<form action="#" class="form form_mo">
+										<input type="email" id="email" name="email" placeholder="Enter your email here" class="input_text input_mo">
+										<button class="btn btn_sm btn_p30 btn_violet" type="submit">
+											<i class="ico_email_20px"></i>
+											Button
+										</button>
+									</form>
 								</li>
-								<li class="ui_other_item">
-									<div class="steps steps_gray">
-										<span class="down">-</span>
-										<input type="text" value="1">
-										<span class="up">+</span>
+							</ul>
+						</div>
+						<div class="ui_item">
+							<h3 class="ui_item_title"># Type Form</h3>
+							<ul class="ui_input_list">
+								<li class="ui_input_item">
+									<div class="input_group">
+										<span class="input_group_item">
+											<i class="ico_user_color_20px"></i>
+										</span>
+										<input type="name" id="name" name="name" placeholder="Username" class="input_text input_mo">
+										<span class="input_group_item">
+											<i class="ico_eyeslash_color_20px"></i>
+										</span>
 									</div>
 								</li>
 							</ul>
 						</div>
-						<!--// [D] Stepper -->
-
-						<!-- [D] Checkbox -->
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Checkbox</h3>
-							<ul class="ui_other_stepper">
-								<li class="ui_other_item">
-									<div class="checkbox">
-										<input type="checkbox" id="vehicle1" name="vehicle1" value="Furniture" class="checkbox_input">
-										<label for="vehicle1">Furniture</label>
-									</div>
+							<h3 class="ui_item_title"># Subscribe Widget/Mobile 2</h3>
+							<ul class="ui_input_list">
+								<li class="ui_input_item">
+									<form action="#" class="form form_mo">
+										<div class="input_group">
+											<span class="input_group_item">
+												<i class="ico_user_color_20px"></i>
+											</span>
+											<input type="name" id="name" name="name" placeholder="Username" class="input_text">
+										</div>
+										<div class="input_group">
+											<span class="input_group_item">
+												<i class="ico_email_color_20px"></i>
+											</span>
+											<input type="email" id="email" name="email" placeholder="Email Address" class="input_text">
+										</div>
+										<button class="btn btn_sm btn_p30 btn_violet" type="submit">
+											Button
+										</button>
+									</form>
 								</li>
-								<li class="ui_other_item">
-									<div class="checkbox">
-										<input type="checkbox" id="vehicle2" name="vehicle2" value="Homeware" checked="checked" class="checkbox_input">
-										<label for="vehicle2">Homeware</label>
+							</ul>
+						</div>
+						<div class="ui_item">
+							<h3 class="ui_item_title"># Search</h3>
+							<ul class="ui_input_list">
+								<li class="ui_input_item">
+									<div class="input_group input_search">
+										<input type="search" id="search" name="search" placeholder="Search your favourite NFTs" class="input_text input_mo">
+										<span class="input_group_item">
+											<i class="ico_search_24px"></i>
+										</span>
 									</div>
 								</li>
 							</ul>
 						</div>
-						<!--// [D] Checkbox -->
-
-						<!-- [D] Feature Card -->
-						<div class="ui_item">
-							<h3 class="ui_item_title"># Feature Card</h3>
-							<div class="feature">
-								<span class="ico_car"></span>
-								<span class="feature_title">Next day as standard</span>
-								<p class="feature_disc">Order before 3pm and get your order the next day as standard</p>
-							</div>
-						</div>
-						<!--// [D] Feature Card -->
 					</div>
 				</section>
-				<!--// [D] Other -->
+				<!--// [D] Input -->
+
+				<!-- [D] Table -->
+				<section class="ui_section">
+					<h2 class="ui_title">Table</h2>
+					<div class="ui_content ui_thumb">
+						<div class="ui_item">
+							<h3 class="ui_item_title"># Table Web</h3>
+							<table class="table">
+								<colgroup>
+									<col style="width: 6.67%">
+									<col style="width: 42%">
+									<col style="width: 17.14%">
+									<col style="width: 17.048%">
+									<col style="width: 17.14%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Artist</th>
+										<th scope="col">Change</th>
+										<th scope="col">NFTs Sold</th>
+										<th scope="col">Volume</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Jaydon Ekstrom Bothman</td>
+										<td>+1.41%</td>
+										<td>602</td>
+										<td>12.4 ETH</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!--// [D] Table -->
 
 			</div>
 		</main>
