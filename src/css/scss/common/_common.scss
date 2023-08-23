@@ -98,14 +98,16 @@ legend {
 /* <!--// [D] Typography --> */
 
 /* <!-- [D] Button --> */
+button i {
+    margin-right: 12px;
+}
+
 .btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: $border_radius_20;
-
     @include custom-font(16px, 600, 22px);
-
     color: var(--white);
     box-sizing: border-box;
     transition: background-color 0.3s ease-out;
@@ -191,11 +193,22 @@ legend {
         position: absolute;
         top: 0;
         left: 0;
-
         @include custom-dimensions(100%, 100%);
-
         object-fit: cover;
     }
+
+    &_card {
+        padding-top: 89.39%;
+        &_mo{
+            padding-top: 75.56%;
+        }
+    }
+
+    &_16x7 {
+        padding-top: 43.75%;
+    }
+
+
 }
 
 //   <!--// [D] Thumbnail -->
@@ -217,10 +230,134 @@ legend {
         height: 60px;
     }
 
-    &_large {
+    &_large,
+    &_extra_large {
         width: 120px;
         height: 120px;
+    }
+
+    &_extra_large {
+        .thumb {
+            border-radius: $border_radius_20;
+        }
     }
 }
 
 // <!--// [D] Avatar -->
+
+// <!-- [D] Input -->
+::placeholder {
+    @include custom-font(16px, 400, 22px);
+    color: var(--bg_gray_1);
+}
+
+.form {
+    display: flex;
+    overflow: hidden;
+    border-radius: $border_radius_20;
+    background-color: var(--white);
+
+
+
+    &_mo {
+        display: block;
+        background-color: transparent;
+
+        input {
+            border-radius: $border_radius_20;
+        }
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .input {
+        &_text {
+            padding: 19px 20px;
+        }
+
+        &_mo {
+            padding: 11px 20px;
+            border: 1px solid var(--bg_gray_3);
+
+        }
+
+        &_mo+button {
+            margin-top: 16px;
+
+        }
+    }
+}
+
+.input {
+    &_text {
+        width: 100%;
+        @include custom-font(16px, 400, 22px);
+        color: var(--bg_gray_1);
+        box-sizing: border-box;
+    }
+
+    &_group {
+        @include flex-item(flex, space-between, center);
+        padding: 8px 20px;
+        border-radius: $border_radius_20;
+        border: 1px solid var(--bg_gray_3);
+        background-color: var(--white);
+
+        &_item {
+            padding: 4px;
+        }
+
+        & .input_text~span {
+            margin-left: 12px;
+            cursor: pointer;
+        }
+
+        & span~.input_text {
+            padding-left: 12px;
+        }
+
+        &+.input_group {
+            margin-top: 15px;
+        }
+
+        &:nth-last-of-type(1)+button {
+            margin-top: 30px;
+        }
+    }
+
+    &_group &_text {
+        padding: 0;
+    }
+
+    &_search {
+        padding: 14px 20px;
+        background-color: transparent;
+
+        ::placeholder,
+        input {
+            color: var(--bg_gray_3);
+            background-color: transparent;
+
+        }
+
+    }
+}
+
+// <!--// [D] Text input -->
+
+// <!-- [D] Table -->
+.table{
+    width: 100%;
+    thead{
+        tr{
+            border: 1px solid var(--bg_gray_2);
+            border-radius: $border_radius_20;
+            th{
+                padding: 12px 20px;
+            }
+        }
+    }
+}
+// <!--// [D] Table -->

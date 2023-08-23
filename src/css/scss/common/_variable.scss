@@ -42,3 +42,10 @@ $border_radius_50: 50%;
   width: $width;
   height: $height;
 }
+
+
+@mixin flex-item($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

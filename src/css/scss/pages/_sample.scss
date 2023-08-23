@@ -4,7 +4,6 @@
 
 i {
     display: inline-block;
-    margin-right: 12px;
 }
 
 .block-element {
@@ -46,6 +45,10 @@ i {
     @include sp-normal('ico_email_20px')
 }
 
+.ico_email_color_20px {
+    @include sp-normal('ico_email_color_20px')
+}
+
 .ico_email_32px {
     @include sp-normal('ico_email_32px')
 }
@@ -56,6 +59,10 @@ i {
 
 .ico_eye_32px {
     @include sp-normal('ico_eye_32px')
+}
+
+.ico_eyeslash_color_20px {
+    @include sp-normal('ico_eyeslash_color_20px')
 }
 
 .ico_eyeslash_32px {
@@ -76,6 +83,10 @@ i {
 
 .ico_list_32px {
     @include sp-normal('ico_list_32px')
+}
+
+.ico_lockkey_color_20px {
+    @include sp-normal('ico_lockkey_color_20px')
 }
 
 .ico_lockkey_32px {
@@ -130,6 +141,10 @@ i {
     @include sp-normal('ico_user_20px')
 }
 
+.ico_user_color_20px {
+    @include sp-normal('ico_user_color_20px')
+}
+
 .ico_user_32px {
     @include sp-normal('ico_user_32px')
 }
@@ -156,6 +171,43 @@ i {
 
 .ico_walletconnect {
     @include sp-normal('ico_walletconnect')
+}
+
+.ico_basketball {
+    @include sp-normal('ico_basketball')
+}
+
+.ico_bookmarkssimple {
+    @include sp-normal('ico_bookmarkssimple')
+}
+
+.ico_camera {
+    @include sp-normal('ico_camera')
+}
+
+.ico_magicwand {
+    @include sp-normal('ico_magicwand')
+}
+
+.ico_musicnotes {
+    @include sp-normal('ico_musicnotes')
+}
+
+.ico_paintbrush {
+    @include sp-normal('ico_paintbrush')
+}
+
+.ico_planet {
+    @include sp-normal('ico_planet')
+}
+
+.ico_swatches {
+    @include sp-normal('ico_swatches')
+}
+
+.ico_videocamera {
+
+    @include sp-normal('ico_videocamera')
 }
 
 
