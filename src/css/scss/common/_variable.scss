@@ -16,22 +16,42 @@
   ;
 }
 
+
 $black: #000;
 $screen-xsm: 320px;
-$screen-sm: 828px;
+$screen-sm: 769px;
 $screen-md: 1024px;
 $screen-lg: 1366px;
 $screen-xlg: 1920px;
 
 
-$height_btn_46: 46px;
-$height_btn_60: 60px;
-$height_btn_72: 72px;
+$height_btn_sm: 46px;
+$height_btn_md: 60px;
+$height_btn_lg: 72px;
 $width_100: 100%;
 
-$border_radius_20: 20px;
-$border_radius_50: 50%;
+$border_radius_sm: 20px;
+$border_radius_lg: 50%;
 
+
+
+@mixin mobile {
+  @media (max-width: #{$screen-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$screen-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
 
 @mixin custom-font($fontsize, $fontweight, $lineheight) {
   font-size: $fontsize;
@@ -44,6 +64,13 @@ $border_radius_50: 50%;
   height: $height;
 }
 
+@mixin absolute-align($top, $left, $bottom, $right) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
 
 @mixin flex-item($display, $justify-content, $align-items) {
   display: $display;
