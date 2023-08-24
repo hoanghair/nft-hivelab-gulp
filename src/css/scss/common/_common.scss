@@ -106,7 +106,7 @@ button i {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: $border_radius_20;
+    border-radius: $border_radius_sm;
     @include custom-font(16px, 600, 22px);
     color: var(--white);
     box-sizing: border-box;
@@ -130,19 +130,19 @@ button i {
     }
 
     &_sm {
-        height: $height_btn_46;
+        height: $height_btn_sm;
     }
 
     &_md {
-        height: $height_btn_60;
+        height: $height_btn_md;
     }
 
     &_lg {
-        height: $height_btn_72;
+        height: $height_btn_lg;
     }
 
     // &_46px {
-    //     height: $height_btn_46;
+    //     height: $height_btn_sm;
     // }
 
     &_w100 {
@@ -220,7 +220,7 @@ button i {
     display: inline-block;
 
     .thumb {
-        border-radius: $border_radius_50;
+        border-radius: $border_radius_lg;
     }
 
     &_small {
@@ -241,7 +241,7 @@ button i {
 
     &_extra_large {
         .thumb {
-            border-radius: $border_radius_20;
+            border-radius: $border_radius_sm;
         }
     }
 }
@@ -257,7 +257,7 @@ button i {
 .form {
     display: flex;
     overflow: hidden;
-    border-radius: $border_radius_20;
+    border-radius: $border_radius_sm;
     background-color: var(--white);
 
 
@@ -267,7 +267,7 @@ button i {
         background-color: transparent;
 
         input {
-            border-radius: $border_radius_20;
+            border-radius: $border_radius_sm;
         }
     }
 
@@ -304,7 +304,7 @@ button i {
     &_group {
         @include flex-item(flex, space-between, center);
         padding: 8px 20px;
-        border-radius: $border_radius_20;
+        border-radius: $border_radius_sm;
         border: 1px solid var(--bg_gray_3);
         background-color: var(--white);
 
@@ -370,13 +370,30 @@ button i {
 
                 &:first-child {
                     border-left: 1px solid var(--bg_gray_2);
-                    border-radius: $border_radius_20 0 0 $border_radius_20 ;
+                    border-radius: $border_radius_sm 0 0 $border_radius_sm ;
                     text-align: center;
                 }
 
+                &:nth-child(2) {
+                    padding: 12px 20px 12px 0;
+                }
+
+
                 &:last-child {
                     border-right: 1px solid var(--bg_gray_2);
-                    border-radius: 0 $border_radius_20 $border_radius_20 0;
+                    border-radius: 0 $border_radius_sm $border_radius_sm 0;
+                }
+
+                @include tablet {
+                    &:nth-last-child(2) {
+                        display: none;
+                    }
+                }
+
+                @include mobile {
+                    &:nth-last-child(3) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -384,30 +401,28 @@ button i {
 
     tbody {
         tr {
+            background-color: var(--bg_gray_2);
+
             td {
                 padding: 12px 20px;
-                border-top: 1px solid var(--bg_gray_2);
-                border-bottom: 1px solid var(--bg_gray_2);
                 font-family: SpaceMono;
                 @include custom-font(16px, 400, 22px);
+                color: var(--white);
                 text-align: left;
                 box-sizing: border-box;
 
                 &:first-child {
                     position: relative;
                     z-index: 1;
-                    border-left: 1px solid var(--bg_gray_2);
-                    border-radius: $border_radius_20 0 0 $border_radius_20;
+                    border-radius: $border_radius_sm 0 0 $border_radius_sm;
                     color: var(--bg_gray_3);
                     text-align: center;
 
                     &::after {
-                        position: absolute;
+                        @include absolute-align(50%, 50%, null, null);
                         z-index: -1;
-                        top: 50%;
-                        left: 50%;
                         @include custom-dimensions(30px, 30px);
-                        border-radius: $border_radius_50;
+                        border-radius: $border_radius_lg;
                         background-color: var(--bg_gray_1);
                         transform: translate(-50%, -50%);
                         content: '';
@@ -416,12 +431,12 @@ button i {
                 }
 
                 &:last-child {
-                    border-right: 1px solid var(--bg_gray_2);
-                    border-radius: 0 $border_radius_20 $border_radius_20 0;
+                    border-radius: 0 $border_radius_sm $border_radius_sm 0;
                 }
 
                 &:nth-child(2) {
                     @include flex-item(flex, normal, center);
+                    padding: 12px 20px 12px 0;
                 }
 
                 &:nth-child(3) {
@@ -432,11 +447,34 @@ button i {
                     margin-left: 20px;
                     font-family: WorkSans;
                     @include custom-font(22px, 600, 31px);
-                    color: var(--bg_gray_3);
                 }
 
                 & .avatar {
                     flex: 0 0 auto;
+                }
+
+                @include tablet {
+                    &:nth-last-child(2) {
+                        display: none;
+                    }
+
+                    & .avatar+span {
+                        @include custom-font(16px, 600, 22px);
+                    }
+                }
+
+                @include mobile {
+                    & {
+                        @include custom-font(12px, 400, 13px);
+                    }
+
+                    &:nth-last-child(3) {
+                        display: none;
+                    }
+
+                    & .avatar+span {
+                        @include custom-font(16px, 400, 22px);
+                    }
                 }
             }
         }
@@ -444,3 +482,72 @@ button i {
 }
 
 // <!--// [D] Table -->
+
+// <!-- [D] Tab Bar -->
+.tabs {
+    display: flex;
+    background-color: var(--bg_gray_1);
+    text-align: center;
+
+    .active {
+        color: var(--white);
+        border-bottom: 2px solid var(--bg_gray_3);
+
+        span::after {
+            background-color: var(--bg_gray_3);
+        }
+    }
+
+    &_item {
+        flex: 1;
+    }
+
+    &_link {
+        display: block;
+        @include custom-dimensions(100%, 60px);
+        padding: 14.5px 30px;
+        @include custom-font(22px, 600, 31px);
+        color: var(--bg_gray_3);
+        box-sizing: border-box;
+        transition: color 0.4s ease;
+
+        &:hover {
+            color: var(--white);
+            border-bottom: 2px solid var(--bg_gray_3);
+
+            span::after {
+                background-color: var(--bg_gray_3);
+            }
+        }
+
+        & > span {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            margin-left: 16px;
+            padding: 5px 10px;
+            font-family: SpaceMono;
+            @include custom-font(16px, 400, 22px);
+            color: var(--white);
+            vertical-align: top;
+
+            &::after {
+                @include absolute-align(50%, 50%, null, null);
+                z-index: -1;
+                @include custom-dimensions(100%, 100%);
+                border-radius: $border_radius_sm;
+                background-color: var(--bg_gray_2);
+                transform: translate(-50%, -50%);
+                transition: all 0.4s ease;
+                content: '';
+
+                .active {
+                    background-color: var(--bg_gray_3);
+                }
+            }
+        }
+    }
+
+}
+
+// <!--// [D] Tab Bar -->
