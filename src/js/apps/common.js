@@ -10,7 +10,14 @@
     }
   }
 
+  function activeTabs() {
+    $(this).parents(".ui_item").find(".tabs_link").removeClass("active");
+    //this select container parents '.ui_item' and find ".tabs_link" and only in "ul li"
+    $(this).addClass("active");
+  }
+
   $(window).on("resize", resizeAvatar);
+  $(".tabs_link").on("click", activeTabs);
 
   $(function () {});
 

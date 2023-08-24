@@ -369,17 +369,27 @@ button i {
                 box-sizing: border-box;
 
                 &:first-child {
+                    width: 6.67%;
                     border-left: 1px solid var(--bg_gray_2);
                     border-radius: $border_radius_sm 0 0 $border_radius_sm ;
                     text-align: center;
                 }
 
                 &:nth-child(2) {
+                    width: 42%;
                     padding: 12px 20px 12px 0;
                 }
 
+                &:nth-child(3) {
+                    width: 17.14%;
+                }
+
+                &:nth-child(4) {
+                    width: 17.048%;
+                }
 
                 &:last-child {
+                    width: 17.14%;
                     border-right: 1px solid var(--bg_gray_2);
                     border-radius: 0 $border_radius_sm $border_radius_sm 0;
                 }
@@ -503,9 +513,10 @@ button i {
     }
 
     &_link {
-        display: block;
+        @include flex-item(inline-flex, center, center);
         @include custom-dimensions(100%, 60px);
         padding: 14.5px 30px;
+        border-bottom: 2px solid transparent;
         @include custom-font(22px, 600, 31px);
         color: var(--bg_gray_3);
         box-sizing: border-box;
@@ -520,7 +531,7 @@ button i {
             }
         }
 
-        & > span {
+        &>span {
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -529,7 +540,6 @@ button i {
             font-family: SpaceMono;
             @include custom-font(16px, 400, 22px);
             color: var(--white);
-            vertical-align: top;
 
             &::after {
                 @include absolute-align(50%, 50%, null, null);
@@ -544,6 +554,18 @@ button i {
                 .active {
                     background-color: var(--bg_gray_3);
                 }
+            }
+        }
+
+        @include tablet {
+            & {
+                @include custom-font(16px, 600, 22px);
+            }
+        }
+
+        @include mobile {
+            &>span {
+                display: none;
             }
         }
     }
