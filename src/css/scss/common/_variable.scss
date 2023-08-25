@@ -1,9 +1,5 @@
 :root {
-  --bg_gray_1: #2b2b2b;
-  --bg_gray_2: #3b3b3b;
-  --bg_gray_3: #858584;
   --white: #fff;
-  --gray: #ccc;
   --green: #00AC4F;
   --bg_btn_violet: #a259ff;
   --blue_accent: #377df7;
@@ -15,7 +11,12 @@
   --gradient_violet_red: linear-gradient(100.92deg, #A259FF 13.57%, #FF6250 97.65%);
   ;
 }
-
+$gray:(
+  1: #2b2b2b,
+  2: #3b3b3b,
+  3: #858584,
+  4: #ccc,
+);
 
 $black: #000;
 $screen-xsm: 320px;
@@ -38,6 +39,7 @@ $border_radius_lg: 50%;
 @mixin mobile {
   @media (max-width: #{$screen-sm - 1px}) {
     @content;
+    @include on-mo;
   }
 }
 
@@ -76,4 +78,24 @@ $border_radius_lg: 50%;
   display: $display;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin on-pc {
+  .only_pc {
+    display: block;
+  }
+
+  .only_mo {
+    display: none;
+  }
+}
+
+@mixin on-mo {
+  .only_pc {
+    display: none;
+  }
+
+  .only_mo {
+    display: block;
+  }
 }

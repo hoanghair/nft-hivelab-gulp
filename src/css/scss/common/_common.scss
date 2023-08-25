@@ -152,7 +152,7 @@ button i {
     /* <!-- [D] White --> */
     &_white {
         background-color: var(--white);
-        color: var(--bg_gray_1);
+        color: map-get($gray, 1);
     }
 
     /* <!--// [D] White --> */
@@ -174,7 +174,7 @@ button i {
 
     /* <!-- [D] Gray --> */
     &_gray {
-        background-color: var(--bg_gray_2);
+        background-color: map-get($gray, 2);
     }
 
     /* <!--// [D] Gray --> */
@@ -251,7 +251,7 @@ button i {
 // <!-- [D] Input -->
 ::placeholder {
     @include custom-font(16px, 400, 22px);
-    color: var(--bg_gray_1);
+    color: map-get($gray, 1);
 }
 
 .form {
@@ -282,7 +282,7 @@ button i {
 
         &_mo {
             padding: 11px 20px;
-            border: 1px solid var(--bg_gray_3);
+            border: 1px solid map-get($gray, 3);
 
         }
 
@@ -297,7 +297,7 @@ button i {
     &_text {
         width: 100%;
         @include custom-font(16px, 400, 22px);
-        color: var(--bg_gray_1);
+        color: map-get($gray, 1);
         box-sizing: border-box;
     }
 
@@ -305,7 +305,7 @@ button i {
         @include flex-item(flex, space-between, center);
         padding: 8px 20px;
         border-radius: $border_radius_sm;
-        border: 1px solid var(--bg_gray_3);
+        border: 1px solid map-get($gray, 3);
         background-color: var(--white);
 
         &_item {
@@ -340,7 +340,7 @@ button i {
 
         ::placeholder,
         input {
-            color: var(--bg_gray_3);
+            color: map-get($gray, 3);
             background-color: transparent;
 
         }
@@ -360,17 +360,17 @@ button i {
         tr {
             th {
                 padding: 12px 20px;
-                border-top: 1px solid var(--bg_gray_2);
-                border-bottom: 1px solid var(--bg_gray_2);
+                border-top: 1px solid map-get($gray, 2);
+                border-bottom: 1px solid map-get($gray, 2);
                 font-family: SpaceMono;
                 @include custom-font(16px, 400, 22px);
-                color: var(--bg_gray_3);
+                color: map-get($gray, 3);
                 text-align: left;
                 box-sizing: border-box;
 
                 &:first-child {
                     width: 6.67%;
-                    border-left: 1px solid var(--bg_gray_2);
+                    border-left: 1px solid map-get($gray, 2);
                     border-radius: $border_radius_sm 0 0 $border_radius_sm ;
                     text-align: center;
                 }
@@ -390,7 +390,7 @@ button i {
 
                 &:last-child {
                     width: 17.14%;
-                    border-right: 1px solid var(--bg_gray_2);
+                    border-right: 1px solid map-get($gray, 2);
                     border-radius: 0 $border_radius_sm $border_radius_sm 0;
                 }
 
@@ -411,7 +411,7 @@ button i {
 
     tbody {
         tr {
-            background-color: var(--bg_gray_2);
+            background-color: map-get($gray, 2);
 
             td {
                 padding: 12px 20px;
@@ -422,22 +422,8 @@ button i {
                 box-sizing: border-box;
 
                 &:first-child {
-                    position: relative;
-                    z-index: 1;
                     border-radius: $border_radius_sm 0 0 $border_radius_sm;
-                    color: var(--bg_gray_3);
                     text-align: center;
-
-                    &::after {
-                        @include absolute-align(50%, 50%, null, null);
-                        z-index: -1;
-                        @include custom-dimensions(30px, 30px);
-                        border-radius: $border_radius_lg;
-                        background-color: var(--bg_gray_1);
-                        transform: translate(-50%, -50%);
-                        content: '';
-                    }
-
                 }
 
                 &:last-child {
@@ -469,7 +455,7 @@ button i {
                     }
 
                     & .avatar+span {
-                        @include custom-font(16px, 600, 22px);
+                        @include custom-font(16px, null, 22px);
                     }
                 }
 
@@ -491,20 +477,44 @@ button i {
     }
 }
 
+.number {
+    position: relative;
+    z-index: 1;
+    @include custom-font(16px, 400, 22px);
+    color: map-get($gray, 3);
+    text-align: center;
+
+    &::after {
+        @include absolute-align(50%, 50%, null, null);
+        z-index: -1;
+        @include custom-dimensions(30px, 30px);
+        border-radius: $border_radius_lg;
+        background-color: map-get($gray, 1);
+        transform: translate(-50%, -50%);
+        content: '';
+
+        @include tablet {
+            & {
+                display: none;
+            }
+        }
+    }
+}
+
 // <!--// [D] Table -->
 
 // <!-- [D] Tab Bar -->
 .tabs {
     display: flex;
-    background-color: var(--bg_gray_1);
+    background-color: map-get($gray, 1);
     text-align: center;
 
     .active {
         color: var(--white);
-        border-bottom: 2px solid var(--bg_gray_3);
+        border-bottom: 2px solid map-get($gray, 3);
 
-        span::after {
-            background-color: var(--bg_gray_3);
+        & .tabs_data::after {
+            background-color: map-get($gray, 3);
         }
     }
 
@@ -517,59 +527,62 @@ button i {
         @include custom-dimensions(100%, 60px);
         padding: 14.5px 30px;
         border-bottom: 2px solid transparent;
-        @include custom-font(22px, 600, 31px);
-        color: var(--bg_gray_3);
+        color: map-get($gray, 3);
         box-sizing: border-box;
         transition: color 0.4s ease;
 
         &:hover {
             color: var(--white);
-            border-bottom: 2px solid var(--bg_gray_3);
+            border-bottom: 2px solid map-get($gray, 3);
 
-            span::after {
-                background-color: var(--bg_gray_3);
+
+            & .tabs_data::after {
+                background-color: map-get($gray, 3);
+
             }
         }
 
-        &>span {
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            margin-left: 16px;
-            padding: 5px 10px;
-            font-family: SpaceMono;
-            @include custom-font(16px, 400, 22px);
-            color: var(--white);
+    }
 
-            &::after {
-                @include absolute-align(50%, 50%, null, null);
-                z-index: -1;
-                @include custom-dimensions(100%, 100%);
-                border-radius: $border_radius_sm;
-                background-color: var(--bg_gray_2);
-                transform: translate(-50%, -50%);
-                transition: all 0.4s ease;
-                content: '';
-
-                .active {
-                    background-color: var(--bg_gray_3);
-                }
-            }
-        }
+    &_name {
+        @include custom-font(22px, 600, 31px);
 
         @include tablet {
             & {
-                @include custom-font(16px, 600, 22px);
-            }
-        }
+                @include custom-font(16px, null, 22px);
 
-        @include mobile {
-            &>span {
-                display: none;
             }
         }
     }
 
+    &_data {
+        position: relative;
+        z-index: 1;
+        margin-left: 16px;
+        padding: 5px 10px;
+        font-family: SpaceMono;
+        @include custom-font(16px, 400, 22px);
+        color: var(--white);
+
+        &::after {
+            @include absolute-align(50%, 50%, null, null);
+            z-index: -1;
+            @include custom-dimensions(100%, 100%);
+            border-radius: $border_radius_sm;
+            background-color: map-get($gray, 2);
+
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
+            content: '';
+
+            .active {
+                background-color: map-get($gray, 3);
+            }
+        }
+    }
 }
 
+@include on-pc;
+@include mobile;
+@include desktop;
 // <!--// [D] Tab Bar -->
