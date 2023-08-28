@@ -1,5 +1,11 @@
 body {
-  background-color: map-get($gray, 2);
+  background-color: map-get($gray, 1);
+  color: var(--white);
+}
+
+.wrap {
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 // <!-- Navigation -->
@@ -7,28 +13,33 @@ body {
   @include flex-item(flex, space-between, center);
   padding: 20px 50px;
 }
-.logo{
-  &_link{
+
+.logo {
+  &_link {
     display: inline-block;
     width: 100%;
     height: 32px;
   }
-  &_img{
+
+  &_img {
     width: 100%;
     height: 100%;
   }
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
 
   &_list {
     @include flex-item(flex, null, center);
-    &+ button{
+
+    &+button {
       margin-left: 10px;
     }
   }
-  &_item + &_item{
+
+  &_item+&_item {
     margin-left: 10px;
   }
 
@@ -37,7 +48,6 @@ body {
     padding: 12px 20px;
     @include custom-font(16px, 600, 22px);
     color: var(--white);
-
   }
 }
 
@@ -53,6 +63,104 @@ body {
 
   &:last-child {
     padding-top: 40px;
+  }
+}
+
+// < !-- Section Hero -->
+
+
+// < !-- // Section Hero -->
+.section {
+  &_hero {
+    display: block;
+    font-size: 0;
+    // display: flex;
+    // justify-content: space-between;
+  }
+}
+
+.hero {
+  &_content {
+    display: inline-block;
+    width: calc(50% - 15px);
+  }
+
+  &_title {
+    @include custom-font(67px, 600, 74px);
+    text-transform: capitalize;
+  }
+
+  &_desc {
+    @include custom-font(22px, 400, 35px);
+    margin-top: 20px;
+  }
+
+  &_desc+button,
+  &_overview {
+    margin-top: 30px;
+  }
+
+  &_card {
+    display: inline-block;
+    width: calc(50% - 15px);
+    overflow: hidden;
+    margin-left: 30px;
+    border-radius: $border_radius_sm;
+    background-color: map-get($gray, 2);
+    vertical-align: top;
+  }
+}
+
+.overview {
+  &_list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_item {
+    display: block;
+    width: calc((100% / 3) - 15px);
+  }
+
+  &_item+&_item {
+    margin-left: 30px;
+  }
+
+  &_param {
+    display: block;
+    font-family: SpaceMono;
+    @include custom-font(28px, 700, 39px);
+  }
+
+  &_title {
+    display: inline-block;
+    @include custom-font(24px, 400, 38px);
+  }
+}
+
+.card {
+  &_thumb {
+    padding-top: 72.33%;
+  }
+
+  &_info {
+    padding: 22px 20px;
+  }
+
+  &_title {
+    display: inline-block;
+    @include custom-font(22px, 600, 31px);
+  }
+
+  &_avt {
+    @include flex-item(flex, null, center);
+    margin-top: 10px;
+  }
+
+  &_name {
+    display: inline-block;
+    margin-left: 12px;
+    @include custom-font(16px, 400, 22px);
   }
 }
 
