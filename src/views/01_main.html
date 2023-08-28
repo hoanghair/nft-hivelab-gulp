@@ -1,55 +1,65 @@
-@@include('./include/head.html',{"title": "Document Title - Main : UIT Gulp Project", "list_title": "List Title - Main_01 : Main"})
+@@include('./include/head.html',{"title": "NFT Market", "list_title": "List Title - Main_01 : Main"})
+
 <body data-pagestatus="new : 2019.10.10">
-@@include('./include/skipnavigation.html')
+	@@include('./include/skipnavigation.html')
 
 	<div class="wrap">
 		<!--[D] HEADER -->
-@@include('./include/header.html',{"type": "01"})
+		@@include('./include/header.html',{"type": "01"})
 		<!--//[D] HEADER -->
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
+			<!-- Section Hero -->
 			<section class="section">
-				<div>
-					<h2>Discover digital art & Collect NFTs</h2>
-					<p>NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</p>
-					<button class="btn btn_md btn_p50 btn_violet">
-						<i class="ico_rocketlaunch_20px"></i>
-						Get Started
-					</button>
-					<ul>
-						<li>
-							<strong>240k+</strong>
-							<span>Total Sale</span>
-						</li>
-						<li>
-							<strong>100k+</strong>
-							<span>Auctions</span>
-						</li>
-						<li>
-							<strong>240k+</strong>
-							<span>Artists</span>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<div>
-						<img src="../img/image/img_hero_pc.png" alt="">
+				<div class="section_hero">
+					<div class="hero_content">
+						<h2 class="hero_title">Discover <br>digital art & <br>Collect NFTs</h2>
+						<p class="hero_desc">NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more
+							than 20k NFT
+							artists.
+						</p>
+						<button class="btn btn_md btn_p50 btn_violet">
+							<i class="ico_rocketlaunch_20px"></i>
+							Get Started
+						</button>
+						<div class="hero_overview">
+							<ul class="overview_list">
+								<li class="overview_item">
+									<strong class="overview_param">240k+</strong>
+									<span class="overview_title">Total Sale</span>
+								</li>
+								<li class="overview_item">
+									<strong class="overview_param">100k+</strong>
+									<span class="overview_title">Auctions</span>
+								</li>
+								<li class="overview_item">
+									<strong class="overview_param">240k+</strong>
+									<span class="overview_title">Artists</span>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div>
-						<strong>Space Walking</strong>
-						<div>
-							<div class="avatar avatar_small">
-								<div class="thumb">
-									<img src="../img/image/img_lg_trending1.png" alt="Animakid" class="img">
+					<div class="hero_card">
+						<div class="thumb card_thumb">
+							<img class="img card_img" src="../img/image/img_hero_pc.png" alt="">
+						</div>
+						<div class="card_info">
+							<strong class="card_title">Space Walking</strong>
+							<div class="card_avt">
+								<div class="avatar avatar_small">
+									<div class="thumb">
+										<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+									</div>
 								</div>
+								<span class="card_name">Animakid</span>
 							</div>
-							<span>Animakid</span>
 						</div>
 					</div>
 				</div>
-				section 1
 			</section>
+			<!--// Section Hero -->
+
 			<section class="section">
 				section 2
 			</section>
@@ -75,7 +85,7 @@
 		<!-- // [D] CONTENTS -->
 
 		<!--[D] FOOTER -->
-@@include('./include/footer.html',{"type": "01"})
+		@@include('./include/footer.html',{"type": "01"})
 		<!--// [D] FOOTER -->
 	</div>
 
@@ -83,6 +93,7 @@
 	<div class="layer"></div>
 	<!-- [D] LAYER -->
 
-@@include('./include/script.html')
+	@@include('./include/script.html')
 </body>
+
 </html>
