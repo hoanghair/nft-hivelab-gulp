@@ -98,9 +98,6 @@ legend {
 /* <!--// [D] Typography --> */
 
 /* <!-- [D] Button --> */
-button i {
-    margin-right: 12px;
-}
 
 .btn {
     display: inline-flex;
@@ -113,7 +110,9 @@ button i {
     transition: background-color 0.3s ease-out;
     cursor: pointer;
     user-select: none;
-
+    & i {
+        margin-right: 12px;
+    }
     &.is_disabled {
         opacity: 50%;
         pointer-events: none;
@@ -139,6 +138,10 @@ button i {
 
     &_lg {
         height: $height_btn_lg;
+    }
+
+    &_full {
+        width: 100%;
     }
 
     // &_46px {
@@ -277,7 +280,7 @@ button i {
 
     .input {
         &_text {
-            padding: 19px 20px;
+            padding: 12px 20px 12px 52px;
         }
 
         &_mo {
@@ -296,6 +299,7 @@ button i {
 .input {
     &_text {
         width: 100%;
+        padding: 12px 52px;
         @include custom-font(16px, 400, 22px);
         color: map-get($gray, 1);
         box-sizing: border-box;
@@ -303,23 +307,12 @@ button i {
 
     &_group {
         @include flex-item(flex, space-between, center);
-        padding: 8px 20px;
+        position: relative;
+        // padding: 8px 20px;
+        overflow: hidden;
         border-radius: $border_radius_sm;
         border: 1px solid map-get($gray, 3);
         background-color: var(--white);
-
-        &_item {
-            padding: 4px;
-        }
-
-        & .input_text~span {
-            margin-left: 12px;
-            cursor: pointer;
-        }
-
-        & span~.input_text {
-            padding-left: 12px;
-        }
 
         &+.input_group {
             margin-top: 15px;
@@ -330,13 +323,25 @@ button i {
         }
     }
 
-    &_group &_text {
-        padding: 0;
+    &_icon_left {
+        position: absolute;
+        left: 20px;
+        pointer-events: none;
+    }
+
+    &_icon_right {
+        position: absolute;
+        right: 20px;
+        padding: 4px;
+        cursor: pointer;
     }
 
     &_search {
-        padding: 14px 20px;
+        // padding: 14px 20px;
         background-color: transparent;
+        & .input_text{
+            padding: 19px 20px;
+        }
 
         ::placeholder,
         input {

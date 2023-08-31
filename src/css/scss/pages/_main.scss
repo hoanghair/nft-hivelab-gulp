@@ -1,11 +1,12 @@
 body {
-  background-color: map-get($gray, 1);
-  color: var(--white);
+  
 }
 
 .wrap {
   max-width: 1366px;
   margin: 0 auto;
+  background-color: map-get($gray, 1);
+  color: var(--white);
 }
 
 // <!-- Navigation -->
