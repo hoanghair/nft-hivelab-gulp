@@ -1,11 +1,11 @@
 body {
-  
+  background-color: map-get($gray, 1);
 }
 
 .wrap {
   max-width: 1366px;
   margin: 0 auto;
-  background-color: map-get($gray, 1);
+  // background-color: map-get($gray, 1);
   color: var(--white);
 }
 
@@ -54,7 +54,7 @@ body {
 
 // <!-- // Navigation -->
 
-// <!-- [D] CONTENTS -->
+// <!--CONTENTS -->
 .main {
   // padding: 0 115px;
 }
@@ -67,11 +67,8 @@ body {
   }
 }
 
-
 // < !-- Section Hero -->
 
-
-// < !-- // Section Hero -->
 .section {
   &_hero {
     display: block;
@@ -166,11 +163,45 @@ body {
   }
 }
 
-// <!-- // [D] CONTENTS -->
+// < !-- // Section Hero -->
 
-// <!-- [D] Footer -->
+// < !-- Section Trending -->
+.section {
+  &_trending {}
+
+  &_heading {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_heading_btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: end
+  }
+
+  &_title {
+    @include custom-font(38px, 600, 46px);
+  }
+
+  &_subhead {
+    margin-top: 10px;
+    @include custom-font(22px, 400, 35px);
+
+  }
+
+  &_content {
+    margin-top: 60px;
+  }
+}
+
+// < !-- // Section Trending -->
+
+// <!-- // CONTENTS -->
+
+// <!-- Footer -->
 .footer {
   padding: 40px 115px;
 }
 
-// <!-- // [D] Footer -->
+// <!-- // Footer -->

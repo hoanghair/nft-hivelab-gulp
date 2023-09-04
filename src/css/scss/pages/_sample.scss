@@ -1,6 +1,6 @@
-
 i {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .block-element {
@@ -125,6 +125,7 @@ i {
 .ico_storefront_32px {
     @include sp-normal('ico_storefront_32px')
 }
+
 .ico_storefront_color_32px {
     @include sp-normal('ico_storefront_color_32px')
 }
