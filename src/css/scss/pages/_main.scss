@@ -192,10 +192,121 @@ body {
 
   &_content {
     margin-top: 60px;
+
+    .trending {
+      &_card {
+        &_list {
+          display: block;
+          font-size: 0;
+        }
+
+        &_item {
+          display: inline-block;
+          width: calc((100% / 3) - 20px);
+
+          &+.trending_card_item {
+            margin-left: 30px;
+          }
+
+          & .thumb {
+            @include border_sm;
+
+          }
+        }
+
+        &_info {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.image {
+  &_list {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &_item {
+    display: inline-block;
+    @include border_sm;
+    width: calc((100% / 3) - 7.5px);
+
+    &+.image_item {
+      margin-left: 15px;
+    }
+  }
+
+  &_more {
+    @include flex-item(flex, center, center);
+    flex-direction: column;
+    background-color: var(--bg_btn_violet);
+  }
+
+  &_number {
+    font-family: SpaceMono;
+    @include custom-font(22px, 700, 35px);
+    text-align: center;
+    color: var(--white);
   }
 }
 
 // < !-- // Section Trending -->
+
+// <!-- Section Top Rated -->
+.toprated_card {
+  &_list {
+    font-size: 0;
+  }
+
+  &_item {
+    display: inline-block;
+    position: relative;
+    @include border_sm;
+    margin-top: 30px;
+    padding: 20px;
+    width: calc((100% / 4) - 23px);
+    background-color: map-get($gray, 2);
+    box-sizing: border-box;
+    text-align: center;
+
+    &+.toprated_card_item {
+      margin-left: 30px;
+    }
+    &:nth-child(-n + 4){
+      margin-top: 0;
+    }
+    &:nth-child(4n + 1){
+      margin-left: 0;
+    }
+  }
+  &_number{
+    position: absolute;
+    top: 22px;
+    left: 30px;
+  }
+
+  &_info {
+    margin-top: 20px;
+  }
+
+}
+
+.card_infomore {
+  display: block;
+  margin-top: 5px;
+  @include custom-font(16px, 400, 22px);
+  color: map-get($gray, 3);
+
+  &_desc {
+    font-family: SpaceMono;
+    @include custom-font(16px, 400, 22px);
+    color: var(--white);
+  }
+}
+
+// <!--// Section Top Rated -->
 
 // <!-- // CONTENTS -->
 
