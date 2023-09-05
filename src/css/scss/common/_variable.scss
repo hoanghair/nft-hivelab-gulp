@@ -99,3 +99,8 @@ $border_radius_lg: 50%;
     display: block;
   }
 }
+
+@mixin border_sm{
+  overflow: hidden;
+  border-radius: $border_radius_sm
+}
