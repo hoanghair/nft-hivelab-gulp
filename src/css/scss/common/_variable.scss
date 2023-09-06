@@ -145,7 +145,7 @@ $border_radius_lg: 50%;
   }
 }
 
-@mixin bg_full($background,$z-index){
+@mixin bg_full($background, $z-index) {
   z-index: $z-index;
   width: 100vw;
   height: 640px;
