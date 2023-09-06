@@ -274,14 +274,17 @@ body {
     &+.toprated_card_item {
       margin-left: 30px;
     }
-    &:nth-child(-n + 4){
+
+    &:nth-child(-n + 4) {
       margin-top: 0;
     }
-    &:nth-child(4n + 1){
+
+    &:nth-child(4n + 1) {
       margin-left: 0;
     }
   }
-  &_number{
+
+  &_number {
     position: absolute;
     top: 22px;
     left: 30px;
@@ -307,6 +310,62 @@ body {
 }
 
 // <!--// Section Top Rated -->
+
+// < !-- Section Browse Categories -->
+.category_card {
+  &_list {
+    font-size: 0;
+  }
+
+  &_item {
+    display: inline-block;
+    @include border_sm;
+    margin-top: 30px;
+    width: calc((100% / 4) - 23px);
+
+    &+.category_card_item {
+      margin-left: 30px;
+    }
+
+    &:nth-child(-n + 4) {
+      margin-top: 0;
+    }
+
+    &:nth-child(4n + 1) {
+      margin-left: 0;
+    }
+  }
+
+  &_image {
+    position: relative;
+  }
+
+  &_thumb {
+    &::after {
+      @include absolute-align(0, 0, null, null);
+      @include custom-dimensions(100%, 100%);
+      backdrop-filter: blur(15px) brightness(100%);
+      content: '';
+    }
+  }
+
+  &_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &_name {
+    display: block;
+    padding: 20px 30px 25px 30px;
+    @include custom-font(22px, 600, 31px);
+    background-color: map-get($gray, 2);
+    // background: #FFFFFF1A;
+  }
+}
+
+// < !-- // Section Browse Categories -->
 
 // <!-- // CONTENTS -->
 
