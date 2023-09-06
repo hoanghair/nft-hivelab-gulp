@@ -588,6 +588,10 @@ legend {
     }
 }
 
+.card_list{
+    font-size: 0
+}
+
 @include on-pc;
 @include mobile;
 @include desktop;

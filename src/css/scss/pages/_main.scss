@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   background-color: map-get($gray, 1);
 }
 
@@ -55,9 +56,7 @@ body {
 // <!-- // Navigation -->
 
 // <!--CONTENTS -->
-.main {
-  // padding: 0 115px;
-}
+.main {}
 
 .section {
   padding: 80px 115px;
@@ -73,8 +72,6 @@ body {
   &_hero {
     display: block;
     font-size: 0;
-    // display: flex;
-    // justify-content: space-between;
   }
 }
 
@@ -187,38 +184,25 @@ body {
   &_subhead {
     margin-top: 10px;
     @include custom-font(22px, 400, 35px);
-
   }
 
   &_content {
     margin-top: 60px;
+  }
 
-    .trending {
-      &_card {
-        &_list {
-          display: block;
-          font-size: 0;
-        }
+}
 
-        &_item {
-          display: inline-block;
-          width: calc((100% / 3) - 20px);
+.trending_card {
+  &_item {
+    @include card_three_item;
 
-          &+.trending_card_item {
-            margin-left: 30px;
-          }
-
-          & .thumb {
-            @include border_sm;
-
-          }
-        }
-
-        &_info {
-          margin-top: 15px;
-        }
-      }
+    & .thumb {
+      border-radius: $border_radius_sm;
     }
+  }
+
+  &_info {
+    margin-top: 15px;
   }
 }
 
@@ -256,32 +240,13 @@ body {
 
 // <!-- Section Top Rated -->
 .toprated_card {
-  &_list {
-    font-size: 0;
-  }
-
   &_item {
-    display: inline-block;
     position: relative;
-    @include border_sm;
-    margin-top: 30px;
+    @include card_four_item;
     padding: 20px;
-    width: calc((100% / 4) - 23px);
     background-color: map-get($gray, 2);
     box-sizing: border-box;
     text-align: center;
-
-    &+.toprated_card_item {
-      margin-left: 30px;
-    }
-
-    &:nth-child(-n + 4) {
-      margin-top: 0;
-    }
-
-    &:nth-child(4n + 1) {
-      margin-left: 0;
-    }
   }
 
   &_number {
@@ -313,27 +278,9 @@ body {
 
 // < !-- Section Browse Categories -->
 .category_card {
-  &_list {
-    font-size: 0;
-  }
-
   &_item {
-    display: inline-block;
-    @include border_sm;
-    margin-top: 30px;
-    width: calc((100% / 4) - 23px);
-
-    &+.category_card_item {
-      margin-left: 30px;
-    }
-
-    &:nth-child(-n + 4) {
-      margin-top: 0;
-    }
-
-    &:nth-child(4n + 1) {
-      margin-left: 0;
-    }
+    @include card_four_item;
+    background-color: map-get($gray, 2);
   }
 
   &_image {
@@ -360,12 +307,117 @@ body {
     display: block;
     padding: 20px 30px 25px 30px;
     @include custom-font(22px, 600, 31px);
-    background-color: map-get($gray, 2);
-    // background: #FFFFFF1A;
   }
 }
 
 // < !-- // Section Browse Categories -->
+
+// <!-- Section Discover more NFTs -->
+.discovery_card {
+  &_item {
+    @include card_three_item;
+    background-color: map-get($gray, 2);
+
+  }
+
+  &_info {
+    padding: 20px 30px 25px 30px;
+
+    .card_name {
+      font-family: SpaceMono;
+    }
+  }
+
+  &_desc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-family: SpaceMono;
+  }
+}
+
+.card_desc {
+  &_title {
+    display: block;
+    @include custom-font(12px, 400, 13px);
+    color: map-get($gray, 3);
+  }
+
+  &_price {
+    display: block;
+    margin-top: 8px;
+    @include custom-font(16px, 400, 22px);
+  }
+}
+
+.card {
+  &_price {
+    text-align: left;
+  }
+
+  &_maxprice {
+    text-align: right;
+  }
+}
+
+// <!--// Section Discover more NFTs -->
+
+// <!-- Section Highlight -->
+.section {
+  &_highlight {
+    position: relative;
+    @include bg_full(url(../img/image/bg_highlight_pc.png) no-repeat center/cover, 0);
+
+    &::after {
+      position: absolute;
+      @include bg_full(var(--gradient_white_violet), -1);
+    }
+    .card_avt{
+      margin-top: 0;
+    }
+  }
+}
+
+.highlight {
+  &_wrap {
+    margin: 0 auto;
+    max-width: 1366px;
+  }
+
+  &_content {
+    // display: flex;
+    position: absolute;
+    // justify-content: space-between;
+    bottom: 0;
+    max-width: 1366px;
+    width: 100%;
+    padding: 60px 115px;
+    box-sizing: border-box;
+
+    & button{
+      margin-top: 30px;
+    }
+  }
+  &_title{
+    margin-top: 30px;
+    @include custom-font(51px, 600, 56px);
+  }
+  &_timer{
+    display: inline-block;
+    width: 295px;
+    padding: 30px;
+    border-radius: $border_radius_sm;
+    background-color: map-get($gray, 5);
+  }
+}
+.card_wrap{
+  display: inline-block;
+  padding: 11px 20px;
+  font-family: SpaceMono;
+  border-radius: $border_radius_sm;
+  background-color: map-get($gray, 2);
+}
+// <!--// Section Highlight -->
 
 // <!-- // CONTENTS -->
 
