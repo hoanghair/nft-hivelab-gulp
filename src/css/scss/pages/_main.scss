@@ -372,7 +372,8 @@ body {
       position: absolute;
       @include bg_full(var(--gradient_white_violet), -1);
     }
-    .card_avt{
+
+    .card_avt {
       margin-top: 0;
     }
   }
@@ -385,38 +386,53 @@ body {
   }
 
   &_content {
-    // display: flex;
     position: absolute;
-    // justify-content: space-between;
     bottom: 0;
     max-width: 1366px;
     width: 100%;
     padding: 60px 115px;
+    font-size: 0;
     box-sizing: border-box;
 
-    & button{
+    & button {
       margin-top: 30px;
     }
   }
-  &_title{
+
+  &_name {
+    display: inline-block;
+    width: calc(100% - 295px);
+  }
+
+  &_title {
     margin-top: 30px;
     @include custom-font(51px, 600, 56px);
   }
-  &_timer{
+
+  &_timer {
     display: inline-block;
     width: 295px;
     padding: 30px;
+    font-family: SpaceMono;
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 5);
+    box-sizing: border-box;
+    vertical-align: bottom;
+
+    .timer_desc {
+      @include custom-font(12px, 400, 13px);
+    }
   }
 }
-.card_wrap{
+
+.card_wrap {
   display: inline-block;
   padding: 11px 20px;
   font-family: SpaceMono;
   border-radius: $border_radius_sm;
   background-color: map-get($gray, 2);
 }
+
 // <!--// Section Highlight -->
 
 // <!-- // CONTENTS -->
@@ -427,3 +443,44 @@ body {
 }
 
 // <!-- // Footer -->
+
+// <!-- Count down -->
+
+.count {
+  display: block;
+  margin-top: 10px;
+  font-size: 0;
+  text-align: center;
+
+  .time {
+    &_wrap {
+      display: inline-block;
+    }
+
+    &_txt {
+      position: relative;
+      display: inline-block;
+      width: 53px;
+      @include custom-font(38px, 700, 46px);
+      vertical-align: middle
+    }
+  }
+
+  .title_txt {
+    display: block;
+    margin-top: 5px;
+    @include custom-font(12px, 400, 13px);
+    text-align: left;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 18px;
+    margin: 0px 10px;
+    @include custom-font(28px, 700, 39px);
+    vertical-align: top;
+    text-align: center;
+  }
+}
+
+// <!-- Count down -->
