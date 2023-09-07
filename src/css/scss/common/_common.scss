@@ -111,9 +111,11 @@ legend {
     transition: background-color 0.3s ease-out;
     cursor: pointer;
     user-select: none;
+
     & i {
         margin-right: 12px;
     }
+
     &.is_disabled {
         opacity: 50%;
         pointer-events: none;
@@ -272,18 +274,20 @@ legend {
             border-radius: $border_radius_sm;
         }
     }
-   
+
     button {
         width: 100%;
     }
-    
+
     .input {
         &_text {
             padding: 12px 20px 12px 52px;
         }
-        &_email{
+
+        &_email {
             padding-left: 20px;
         }
+
         &_mo {
             padding: 11px 20px;
             border: 1px solid map-get($gray, 3);
@@ -295,10 +299,12 @@ legend {
 
         }
     }
+
     &_email {
         button {
             width: auto;
         }
+
         .input_text {
             padding-left: 20px;
         }
@@ -348,7 +354,8 @@ legend {
     &_search {
         // padding: 14px 20px;
         background-color: transparent;
-        & .input_text{
+
+        & .input_text {
             padding: 19px 20px;
         }
 
@@ -507,8 +514,14 @@ legend {
         transform: translate(-50%, -50%);
         content: '';
 
-        @include tablet {
-            & {
+
+    }
+}
+
+@include tablet {
+    .table {
+        .number {
+            &::after {
                 display: none;
             }
         }
@@ -596,7 +609,7 @@ legend {
     }
 }
 
-.card_list{
+.card_list {
     font-size: 0
 }
 
