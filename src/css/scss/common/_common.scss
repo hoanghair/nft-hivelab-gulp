@@ -264,8 +264,6 @@ legend {
     border-radius: $border_radius_sm;
     background-color: var(--white);
 
-
-
     &_mo {
         display: block;
         background-color: transparent;
@@ -274,16 +272,18 @@ legend {
             border-radius: $border_radius_sm;
         }
     }
-
+   
     button {
         width: 100%;
     }
-
+    
     .input {
         &_text {
             padding: 12px 20px 12px 52px;
         }
-
+        &_email{
+            padding-left: 20px;
+        }
         &_mo {
             padding: 11px 20px;
             border: 1px solid map-get($gray, 3);
@@ -293,6 +293,14 @@ legend {
         &_mo+button {
             margin-top: 16px;
 
+        }
+    }
+    &_email {
+        button {
+            width: auto;
+        }
+        .input_text {
+            padding-left: 20px;
         }
     }
 }

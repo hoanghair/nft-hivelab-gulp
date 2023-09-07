@@ -4,10 +4,12 @@ body {
 }
 
 .wrap {
+  color: var(--white);
+}
+
+.main {
   max-width: 1366px;
   margin: 0 auto;
-  // background-color: map-get($gray, 1);
-  color: var(--white);
 }
 
 // <!-- Navigation -->
@@ -17,13 +19,11 @@ body {
 }
 
 .logo {
-  &_link {
-    display: inline-block;
-    width: 100%;
-    height: 32px;
-  }
+  display: inline-flex;
+  height: 32px;
 
   &_img {
+    display: inline-block;
     width: 100%;
     height: 100%;
   }
@@ -56,7 +56,7 @@ body {
 // <!-- // Navigation -->
 
 // <!--CONTENTS -->
-.main {}
+
 
 .section {
   padding: 80px 115px;
@@ -87,8 +87,9 @@ body {
   }
 
   &_desc {
-    @include custom-font(22px, 400, 35px);
     margin-top: 20px;
+    @include custom-font(22px, 400, 35px);
+    text-transform: capitalize;
   }
 
   &_desc+button,
@@ -136,7 +137,7 @@ body {
 
 .card {
   &_thumb {
-    padding-top: 72.33%;
+    padding-top: 78.9%;
   }
 
   &_info {
@@ -179,11 +180,14 @@ body {
 
   &_title {
     @include custom-font(38px, 600, 46px);
+    text-transform: capitalize;
   }
 
   &_subhead {
+    display: inline-block;
     margin-top: 10px;
     @include custom-font(22px, 400, 35px);
+    text-transform: capitalize;
   }
 
   &_content {
@@ -313,6 +317,12 @@ body {
 // < !-- // Section Browse Categories -->
 
 // <!-- Section Discover more NFTs -->
+.section_discovery {
+  .card_avt {
+    margin-top: 5px
+  }
+}
+
 .discovery_card {
   &_item {
     @include card_three_item;
@@ -366,6 +376,8 @@ body {
 .section {
   &_highlight {
     position: relative;
+    margin-top: -80px;
+    margin-bottom: -80px;
     @include bg_full(url(../img/image/bg_highlight_pc.png) no-repeat center/cover, 0);
 
     &::after {
@@ -427,25 +439,188 @@ body {
 
 .card_wrap {
   display: inline-block;
-  padding: 11px 20px;
-  font-family: SpaceMono;
+  padding: 10px 20px;
   border-radius: $border_radius_sm;
   background-color: map-get($gray, 2);
 }
 
 // <!--// Section Highlight -->
 
+// <!-- Section How it works -->
+.section_steps {
+  .card_list {
+    display: flex
+  }
+
+  .section_content {
+    margin-top: 48px
+  }
+}
+
+.steps_card {
+  &_item {
+    @include card_three_item;
+    padding: 10px 30px 30px;
+    background-color: map-get($gray, 2);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &_thumb {
+    padding: 0 10px;
+  }
+
+  &_info {
+    .card_title {
+      margin-top: 20px;
+    }
+  }
+
+  &_desc {
+    margin-top: 10px;
+    @include custom-font(16px, 400, 22px);
+
+  }
+}
+
+// <!--// Section How it works -->
+
+// <!-- Section Subscribe widget-->
+.section {
+  &_subscribe {
+    @include border_sm;
+    padding: 60px;
+    font-size: 0;
+    background-color: map-get($gray, 2);
+
+    .section_content,
+    .section_heading {
+      display: inline-block;
+      width: calc(50% - 40px);
+      vertical-align: middle;
+    }
+
+    .section_content {
+      @include border_sm;
+      margin-top: 0px;
+    }
+
+    .section_heading {
+      display: inline-block;
+      margin-left: 80px;
+    }
+
+    .form {
+      margin-top: 40px;
+    }
+  }
+}
+
+.subscribe {
+  &_thumb {
+    padding-top: 72.94%;
+  }
+}
+
+// <!--// Section Subscribe widget -->
+
 // <!-- // CONTENTS -->
+
 
 // <!-- Footer -->
 .footer {
-  padding: 40px 115px;
+  background-color: map-get($gray, 2);
+
+  &_content {
+    padding: 40px 115px;
+    box-sizing: border-box;
+  }
+
+  &_info {
+    display: flex;
+
+    &_txt,
+    .explore_link,
+    .footer_info_desc {
+      display: block;
+      @include custom-font(16px, 400, 22px);
+      color: map-get($gray, 4);
+    }
+
+    &_sns {
+      margin-top: 20px;
+    }
+  }
+
+  &_box {
+    display: inline-block;
+    width: calc(100% - 420px - 240px - 62px);
+
+    .footer_info_desc {
+      margin-top: 30px;
+    }
+  }
+
+  &_explore {
+    display: inline-block;
+    width: 240px;
+    margin-left: 31px;
+    vertical-align: top;
+  }
+
+  .explore {
+    &_list {
+      margin-top: 25px;
+    }
+
+    &_item+.explore_item {
+      margin-top: 20px;
+    }
+  }
+
+  &_subscribe {
+    display: inline-block;
+    margin-left: 31px;
+    width: 420px;
+    vertical-align: top;
+
+    & .footer_info_txt {
+      margin-top: 25px;
+    }
+
+    & .form_email {
+      margin-top: 20px;
+    }
+  }
+
+  &_title {
+    font-family: SpaceMono;
+    @include custom-font(22px, 700, 35px);
+    text-transform: capitalize;
+  }
+
+  .sns {
+    &_list {
+      margin-top: 10px;
+    }
+
+    &_item {
+      display: inline-block;
+
+      &+.sns_item {
+        margin-left: 4px;
+      }
+    }
+
+    &_link {
+      display: inline-block;
+    }
+  }
 }
 
 // <!-- // Footer -->
 
 // <!-- Count down -->
-
 .count {
   display: block;
   margin-top: 10px;
