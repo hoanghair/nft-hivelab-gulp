@@ -147,6 +147,7 @@ body {
   &_title {
     display: inline-block;
     @include custom-font(22px, 600, 31px);
+    text-transform: capitalize
   }
 
   &_avt {
@@ -165,7 +166,6 @@ body {
 
 // < !-- Section Trending -->
 .section {
-  &_trending {}
 
   &_heading {
     display: flex;
@@ -295,7 +295,7 @@ body {
     &::after {
       @include absolute-align(0, 0, null, null);
       @include custom-dimensions(100%, 100%);
-      backdrop-filter: blur(15px) brightness(100%);
+      backdrop-filter: blur(8px) brightness(100%);
       content: '';
     }
   }
@@ -614,6 +614,18 @@ body {
 
     &_link {
       display: inline-block;
+    }
+  }
+
+  &_copyright {
+    margin-top: 30px;
+    border-top: 1px solid map-get($gray , 3);
+
+    &_txt {
+      display: block;
+      padding-top: 20px;
+      @include custom-font(12px, 400, 13px);
+      color: map-get($gray , 4);
     }
   }
 }
