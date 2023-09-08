@@ -58,6 +58,19 @@ legend {
 }
 
 
+
+// .only_pc {
+//     display: block;
+// }
+
+// .only_tb {
+//     display: none;
+// }
+
+// .only_mo {
+//     display: none;
+// }
+
 /* <!-- [D] Typography --> */
 .heading {
     &_one {
@@ -613,7 +626,8 @@ legend {
     font-size: 0
 }
 
-@include on-pc;
-@include mobile;
+// @include on_pc;
 @include desktop;
+@include tablet;
+@include mobile;
 // <!--// [D] Tab Bar -->

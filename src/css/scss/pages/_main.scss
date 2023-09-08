@@ -22,6 +22,10 @@ body {
   display: inline-flex;
   height: 32px;
 
+  &_link {
+    flex: 0 0 auto;
+  }
+
   &_img {
     display: inline-block;
     width: 100%;
@@ -53,6 +57,20 @@ body {
   }
 }
 
+@include tablet {
+  .header {
+    padding: 15px 50px;
+  }
+
+  .logo {
+    height: 24px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
 // <!-- // Navigation -->
 
 // <!--CONTENTS -->
@@ -63,6 +81,20 @@ body {
 
   &:last-child {
     padding-top: 40px;
+  }
+}
+
+@include tablet {
+  .section {
+    padding: 40px 72px;
+
+    &:first-child {
+      padding: 80px 72px;
+    }
+
+    &:last-child {
+      padding-top: 40px;
+    }
   }
 }
 
@@ -84,17 +116,35 @@ body {
   &_title {
     @include custom-font(67px, 600, 74px);
     text-transform: capitalize;
+
+    @include tablet {
+      & {
+        @include custom-font(38px, 600, 46px);
+      }
+    }
   }
 
   &_desc {
     margin-top: 20px;
     @include custom-font(22px, 400, 35px);
     text-transform: capitalize;
+
+    @include tablet {
+      & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
   }
 
   &_desc+button,
   &_overview {
     margin-top: 30px;
+
+    @include tablet {
+      & {
+        margin-top: 20px;
+      }
+    }
   }
 
   &_card {
@@ -127,11 +177,23 @@ body {
     display: block;
     font-family: SpaceMono;
     @include custom-font(28px, 700, 39px);
+
+    @include tablet {
+      & {
+        @include custom-font(22px, 700, 35px);
+      }
+    }
   }
 
   &_title {
     display: inline-block;
     @include custom-font(24px, 400, 38px);
+
+    @include tablet {
+      & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
   }
 }
 
@@ -147,7 +209,7 @@ body {
   &_title {
     display: inline-block;
     @include custom-font(22px, 600, 31px);
-    text-transform: capitalize
+    text-transform: capitalize;
   }
 
   &_avt {
@@ -166,10 +228,23 @@ body {
 
 // < !-- Section Trending -->
 .section {
+  &_trending {
+    .trending_card_item {
+      border-radius: 0;
+    }
+  }
 
   &_heading {
     display: flex;
     justify-content: space-between;
+
+    &_wrap {
+      @include tablet {
+        & {
+          width: 343px;
+        }
+      }
+    }
   }
 
   &_heading_btn {
@@ -181,6 +256,12 @@ body {
   &_title {
     @include custom-font(38px, 600, 46px);
     text-transform: capitalize;
+
+    @include tablet {
+      & {
+        @include custom-font(28px, 600, 39px);
+      }
+    }
   }
 
   &_subhead {
@@ -188,10 +269,22 @@ body {
     margin-top: 10px;
     @include custom-font(22px, 400, 35px);
     text-transform: capitalize;
+
+    @include tablet {
+      & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
   }
 
   &_content {
     margin-top: 60px;
+
+    @include tablet {
+      & {
+        margin-top: 40px;
+      }
+    }
   }
 
 }
@@ -200,9 +293,15 @@ body {
   &_item {
     @include card_three_item;
 
-    & .thumb {
-      border-radius: $border_radius_sm;
+    @include tablet {
+      & {
+        @include card_two_item;
+      }
     }
+  }
+
+  &_thumb .thumb {
+    border-radius: $border_radius_sm;
   }
 
   &_info {
@@ -251,16 +350,50 @@ body {
     background-color: map-get($gray, 2);
     box-sizing: border-box;
     text-align: center;
+
+    @include tablet {
+      & {
+        @include card_two_item;
+        text-align: start;
+      }
+    }
+  }
+
+  &_avt {
+    @include tablet {
+      & {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
   }
 
   &_number {
     position: absolute;
     top: 22px;
     left: 30px;
+
+    @include tablet {
+      & {
+        top: 13px;
+        left: 22px;
+      }
+    }
   }
 
   &_info {
+    display: inline-block;
     margin-top: 20px;
+
+    @include tablet {
+      & {
+        width: calc(100% - 80px);
+        margin-top: 0;
+        margin-left: 20px;
+        vertical-align: middle;
+      }
+    }
   }
 
 }
@@ -272,6 +405,7 @@ body {
   color: map-get($gray, 3);
 
   &_desc {
+    margin-left: 10px;
     font-family: SpaceMono;
     @include custom-font(16px, 400, 22px);
     color: var(--white);
@@ -311,6 +445,13 @@ body {
     display: block;
     padding: 20px 30px 25px 30px;
     @include custom-font(22px, 600, 31px);
+
+    @include tablet {
+      & {
+        padding: 20px 20px 25px 20px;
+        @include custom-font(16px, 600, 22px);
+      }
+    }
   }
 }
 
@@ -328,6 +469,12 @@ body {
     @include card_three_item;
     background-color: map-get($gray, 2);
 
+    @include tablet {
+      & {
+        @include card_two_item;
+
+      }
+    }
   }
 
   &_info {
@@ -649,7 +796,7 @@ body {
       display: inline-block;
       width: 53px;
       @include custom-font(38px, 700, 46px);
-      vertical-align: middle
+      vertical-align: middle;
     }
   }
 
@@ -657,7 +804,7 @@ body {
     display: block;
     margin-top: 5px;
     @include custom-font(12px, 400, 13px);
-    text-align: left;
+    text-align: center;
   }
 
   .divider {
@@ -671,3 +818,21 @@ body {
 }
 
 // <!-- Count down -->
+
+//Responsive
+
+.only_tb {
+  display: none;
+}
+
+
+// @include on_pc;
+@include desktop;
+
+@include tablet {
+  @include on_tb;
+}
+
+@include mobile {
+  @include on_mo;
+}
