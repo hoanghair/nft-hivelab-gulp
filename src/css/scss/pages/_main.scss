@@ -93,7 +93,8 @@ body {
     }
 
     &:last-child {
-      padding-top: 40px;
+      // padding-top: 40px;
+      padding-bottom: 80px;
     }
   }
 }
@@ -345,11 +346,12 @@ body {
 .toprated_card {
   &_item {
     position: relative;
-    @include card_four_item;
     padding: 20px;
+    font-size: 0;
     background-color: map-get($gray, 2);
     box-sizing: border-box;
     text-align: center;
+
 
     @include tablet {
       & {
@@ -357,9 +359,17 @@ body {
         text-align: start;
       }
     }
+
+    @include desktop {
+      & {
+        @include card_four_item;
+      }
+    }
+
   }
 
   &_avt {
+
     @include tablet {
       & {
         display: inline-block;
@@ -522,18 +532,26 @@ body {
 // <!-- Section Highlight -->
 .section {
   &_highlight {
-    position: relative;
-    margin-top: -80px;
-    margin-bottom: -80px;
-    @include bg_full(url(../img/image/bg_highlight_pc.png) no-repeat center/cover, 0);
+    @include bg_full(relative, 0, 640px, url(../img/image/bg_highlight_pc.png) no-repeat center/cover, -80px -50vw);
 
     &::after {
-      position: absolute;
-      @include bg_full(var(--gradient_white_violet), -1);
+      @include bg_full(absolute, -1, 640px, var(--gradient_white_violet), 0 -50vw);
     }
 
     .card_avt {
       margin-top: 0;
+    }
+
+    @include tablet {
+      & {
+        height: 630px;
+        margin: 0 -50vw -40px;
+        background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
+
+        &::after {
+          height: 630px;
+        }
+      }
     }
   }
 }
@@ -556,6 +574,12 @@ body {
     & button {
       margin-top: 30px;
     }
+
+    @include tablet {
+      & {
+        padding: 60px 82px;
+      }
+    }
   }
 
   &_name {
@@ -566,6 +590,12 @@ body {
   &_title {
     margin-top: 30px;
     @include custom-font(51px, 600, 56px);
+
+    @include tablet {
+      & {
+        @include custom-font(38px, 600, 46px);
+      }
+    }
   }
 
   &_timer {
@@ -595,9 +625,9 @@ body {
 
 // <!-- Section How it works -->
 .section_steps {
-  .card_list {
-    display: flex
-  }
+  // .card_list {
+  //   display: flex
+  // }
 
   .section_content {
     margin-top: 48px
@@ -611,6 +641,10 @@ body {
     background-color: map-get($gray, 2);
     box-sizing: border-box;
     text-align: center;
+
+    @include tablet {
+      padding: 10px 20px 30px;
+    }
   }
 
   &_thumb {
@@ -620,6 +654,13 @@ body {
   &_info {
     .card_title {
       margin-top: 20px;
+
+      @include tablet {
+        & {
+          @include custom-font(16px, 600, 22px);
+
+        }
+      }
     }
   }
 
@@ -627,6 +668,11 @@ body {
     margin-top: 10px;
     @include custom-font(16px, 400, 22px);
 
+    @include tablet {
+      & {
+        @include custom-font(12px, 400, 17px);
+      }
+    }
   }
 }
 
@@ -639,6 +685,12 @@ body {
     padding: 60px;
     font-size: 0;
     background-color: map-get($gray, 2);
+
+    @include tablet {
+      & {
+        padding: 40px 30px;
+      }
+    }
 
     .section_content,
     .section_heading {
@@ -655,6 +707,12 @@ body {
     .section_heading {
       display: inline-block;
       margin-left: 80px;
+
+      @include tablet {
+        & {
+          margin-left: 30px;
+        }
+      }
     }
 
     .form {
@@ -666,7 +724,15 @@ body {
 .subscribe {
   &_thumb {
     padding-top: 72.94%;
+
+    @include tablet {
+      & {
+        padding-top: 100%;
+      }
+    }
   }
+
+
 }
 
 // <!--// Section Subscribe widget -->
@@ -681,10 +747,22 @@ body {
   &_content {
     padding: 40px 115px;
     box-sizing: border-box;
+
+    @include tablet {
+      & {
+        padding: 40px 72px;
+      }
+    }
   }
 
   &_info {
     display: flex;
+
+    @include tablet {
+      & {
+        display: block;
+      }
+    }
 
     &_txt,
     .explore_link,
@@ -705,6 +783,19 @@ body {
 
     .footer_info_desc {
       margin-top: 30px;
+
+      @include tablet {
+        & {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    @include tablet {
+      & {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
@@ -713,11 +804,26 @@ body {
     width: 240px;
     margin-left: 31px;
     vertical-align: top;
+
+    @include tablet {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
   }
 
   .explore {
     &_list {
       margin-top: 25px;
+
+      @include tablet {
+        & {
+          margin-top: 20px;
+        }
+      }
     }
 
     &_item+.explore_item {
@@ -733,10 +839,25 @@ body {
 
     & .footer_info_txt {
       margin-top: 25px;
+
+      @include tablet {
+        & {
+          margin-top: 20px;
+        }
+      }
     }
 
     & .form_email {
       margin-top: 20px;
+    }
+
+    @include tablet {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
     }
   }
 
@@ -749,6 +870,12 @@ body {
   .sns {
     &_list {
       margin-top: 10px;
+
+      @include tablet {
+        & {
+          margin-top: 15px;
+        }
+      }
     }
 
     &_item {
@@ -767,6 +894,12 @@ body {
   &_copyright {
     margin-top: 30px;
     border-top: 1px solid map-get($gray , 3);
+
+    @include tablet {
+      & {
+        margin-top: 49px;
+      }
+    }
 
     &_txt {
       display: block;
