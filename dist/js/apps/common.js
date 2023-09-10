@@ -3,10 +3,22 @@
 
   function resizeAvatar() {
     const screen_lg = "1366";
+    const screen_tb = "1024";
     if (window.innerWidth <= screen_lg) {
       $(".table .avatar").addClass("avatar_small").removeClass("avatar_medium");
     } else {
-      $(".table .avatar").addClass("avatar_medium");
+      $(".table .avatar").addClass("avatar_medium").removeClass("avatar_small");
+    }
+
+    if (window.innerWidth < screen_lg) {
+      $(".section_toprated .avatar")
+        .addClass("avatar_medium")
+        .removeClass("avatar_large");
+      console.log("123");
+    } else {
+      $(".section_toprated .avatar")
+        .addClass("avatar_large")
+        .removeClass("avatar_medium");
     }
   }
 
@@ -16,10 +28,12 @@
     $(this).addClass("active");
   }
 
-  $(window).on("resize", resizeAvatar);
-  $(".tabs_link").on("click", activeTabs);
-
-  $(function () {});
+  // $(".tabs_link").on("click", activeTabs);
+  // $(window).on("resize", resizeAvatar);
 
   $(win).on("load", function () {});
+  $(win).on("resize", function () {
+    resizeAvatar();
+  });
+  $(".tabs_link").on("click", activeTabs);
 })(window, window.jQuery);
