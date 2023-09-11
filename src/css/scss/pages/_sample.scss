@@ -178,6 +178,10 @@ i {
     @include sp-normal('ico_basketball')
 }
 
+.ico_basketball_sm {
+    @include sp-normal('ico_basketball_sm')
+}
+
 .ico_bookmarkssimple {
     @include sp-normal('ico_bookmarkssimple')
 }
@@ -186,29 +190,55 @@ i {
     @include sp-normal('ico_camera')
 }
 
+.ico_camera_sm {
+    @include sp-normal('ico_camera_sm')
+}
+
 .ico_magicwand {
     @include sp-normal('ico_magicwand')
+}
+
+.ico_magicwand_sm {
+    @include sp-normal('ico_magicwand_sm')
 }
 
 .ico_musicnotes {
     @include sp-normal('ico_musicnotes')
 }
 
+.ico_musicnotes_sm {
+    @include sp-normal('ico_musicnotes_sm')
+}
+
 .ico_paintbrush {
     @include sp-normal('ico_paintbrush')
+}
+
+.ico_paintbrush_sm {
+    @include sp-normal('ico_paintbrush_sm')
 }
 
 .ico_planet {
     @include sp-normal('ico_planet')
 }
 
+.ico_planet_sm {
+    @include sp-normal('ico_planet_sm')
+}
+
 .ico_swatches {
     @include sp-normal('ico_swatches')
 }
 
-.ico_videocamera {
+.ico_swatches_sm {
+    @include sp-normal('ico_swatches_sm')
+}
 
+.ico_videocamera {
     @include sp-normal('ico_videocamera')
+}
+.ico_videocamera_sm {
+    @include sp-normal('ico_videocamera_sm')
 }
 
 

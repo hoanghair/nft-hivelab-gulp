@@ -3,14 +3,14 @@
 
   function resizeAvatar() {
     const screen_lg = "1366";
-    const screen_tb = "1024";
+    const screen_tb = "1280";
     if (window.innerWidth <= screen_lg) {
       $(".table .avatar").addClass("avatar_small").removeClass("avatar_medium");
     } else {
       $(".table .avatar").addClass("avatar_medium").removeClass("avatar_small");
     }
 
-    if (window.innerWidth < screen_lg) {
+    if (window.innerWidth < screen_tb) {
       $(".section_toprated .avatar")
         .addClass("avatar_medium")
         .removeClass("avatar_large");
