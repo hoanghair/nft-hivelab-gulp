@@ -71,6 +71,77 @@ legend {
 //     display: none;
 // }
 
+
+//  <!-- Btn Navbar Toggler --> */
+.navbar-toggler {
+
+    input {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 14px;
+        padding: 5px 3px;
+        transition: all .5s;
+        text-align: left;
+        cursor: pointer; 
+    }
+
+    span,
+    span:before,
+    span:after {
+        position: absolute;
+        height: 1.5px;
+        width: 18px;
+        border-radius: 4px;
+        background: var(--white);
+        transition: all .5s;
+    }
+
+    label {
+        span:first-child {
+            top: 5px;
+            width: 13px;
+        }
+
+        span:nth-child(2) {
+            top: 11px;
+        }
+
+        span:nth-child(3) {
+            top: 17px;
+            width: 13px;
+        }
+    }
+
+    #menu2:checked+label {
+        span:first-child {
+            top: 20px;
+            width: 0px;
+            opacity: 0;
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(2) {
+            top: 12px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(3) {
+            top: 12px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+//  <!--// Btn Navbar Toggler --> */
+
+
 /* <!-- [D] Typography --> */
 .heading {
     &_one {
@@ -217,7 +288,7 @@ legend {
     }
 
     &_card {
-        padding-top: 89.39%;
+        padding-top: 89.69%;
 
         &_mo {
             padding-top: 75.56%;
@@ -279,16 +350,16 @@ legend {
     border-radius: $border_radius_sm;
     background-color: var(--white);
 
-    @include tablet {
-        &_mo {
-            display: block;
-            background-color: transparent;
+    // @include tablet {
+    //     &_mo {
+    //         display: block;
+    //         background-color: transparent;
 
-            input {
-                border-radius: $border_radius_sm;
-            }
-        }
-    }
+    //         input {
+    //             border-radius: $border_radius_sm;
+    //         }
+    //     }
+    // }
 
 
     button {
@@ -304,21 +375,21 @@ legend {
             padding-left: 20px;
         }
 
-        @include tablet {
-            & {
-                &_mo {
-                    padding: 11px 20px;
-                    border: 1px solid map-get($gray, 3);
+        // @include tablet {
+        //     & {
+        //         &_mo {
+        //             padding: 11px 20px;
+        //             border: 1px solid map-get($gray, 3);
 
-                }
+        //         }
 
-                &_mo+button {
-                    width: 100%;
-                    margin-top: 16px;
+        //         &_mo+button {
+        //             width: 100%;
+        //             margin-top: 16px;
 
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
 
     }
 
@@ -328,9 +399,9 @@ legend {
             height: 60px;
             padding: 0 50px;
 
-            @include tablet {
-                height: 46px;
-            }
+            // @include tablet {
+            //     height: 46px;
+            // }
         }
 
         .input_text {

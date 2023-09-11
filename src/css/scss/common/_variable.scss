@@ -25,7 +25,8 @@ $screen-xsm: 320px;
 $screen-sm: 769px;
 // $screen-md: 834px;
 // $screen-md: 1024px;
-$screen-md: 1366px;
+$screen-md: 1280px;
+// $screen-md: 1366px;
 $screen-lg: 1366px;
 $screen-xlg: 1920px;
 
@@ -147,7 +148,7 @@ $border_radius_lg: 50%;
 
 @mixin on_pc {
   .only_pc {
-    display: block;
+    display: inline-block;
   }
 
   .only_tb {
@@ -165,7 +166,7 @@ $border_radius_lg: 50%;
   }
 
   .only_tb {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -175,6 +176,6 @@ $border_radius_lg: 50%;
   }
 
   .only_mo {
-    display: block;
+    display: inline-block;
   }
 }

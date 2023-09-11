@@ -60,11 +60,13 @@ body {
 @include tablet {
   .header {
     padding: 15px 50px;
+
+    .logo {
+      height: 24px;
+    }
   }
 
-  .logo {
-    height: 24px;
-  }
+  
 
   .nav {
     display: none;
@@ -93,7 +95,7 @@ body {
     }
 
     &:last-child {
-      // padding-top: 40px;
+      padding-top: 23px;
       padding-bottom: 80px;
     }
   }
@@ -201,6 +203,12 @@ body {
 .card {
   &_thumb {
     padding-top: 78.9%;
+
+    @include tablet {
+      & {
+        padding-top: 66.9%;
+      }
+    }
   }
 
   &_info {
@@ -242,7 +250,7 @@ body {
     &_wrap {
       @include tablet {
         & {
-          width: 343px;
+          // width: 343px;
         }
       }
     }
@@ -383,11 +391,12 @@ body {
     position: absolute;
     top: 22px;
     left: 30px;
+    font-family: SpaceMono;
 
     @include tablet {
       & {
-        top: 13px;
-        left: 22px;
+        top: 17px;
+        left: 23px;
       }
     }
   }
@@ -410,15 +419,21 @@ body {
 
 .card_infomore {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   @include custom-font(16px, 400, 22px);
   color: map-get($gray, 3);
 
   &_desc {
-    margin-left: 10px;
+    margin-left: 4px;
     font-family: SpaceMono;
     @include custom-font(16px, 400, 22px);
     color: var(--white);
+
+    @include tablet {
+      & {
+        margin-left: 13px
+      }
+    }
   }
 }
 
@@ -429,6 +444,14 @@ body {
   &_item {
     @include card_four_item;
     background-color: map-get($gray, 2);
+
+    & .thumb {
+      @include tablet {
+        & {
+          padding-top: 94.667%;
+        }
+      }
+    }
   }
 
   &_image {
@@ -601,7 +624,7 @@ body {
   &_timer {
     display: inline-block;
     width: 295px;
-    padding: 30px;
+    padding: 30px 30px 26px;
     font-family: SpaceMono;
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 5);
@@ -630,7 +653,11 @@ body {
   // }
 
   .section_content {
-    margin-top: 48px
+    margin-top: 48px;
+
+    @include tablet {
+      margin-top: 42px;
+    }
   }
 }
 
@@ -649,11 +676,17 @@ body {
 
   &_thumb {
     padding: 0 10px;
+
+    @include tablet{
+      &{
+        padding: 0 5px;
+      }
+    }
   }
 
   &_info {
+    margin-top: 20px;
     .card_title {
-      margin-top: 20px;
 
       @include tablet {
         & {
@@ -697,6 +730,12 @@ body {
       display: inline-block;
       width: calc(50% - 40px);
       vertical-align: middle;
+
+      @include tablet{
+        &{
+          width: calc(50% - 15px)
+        }
+      }
     }
 
     .section_content {
@@ -718,6 +757,46 @@ body {
     .form {
       margin-top: 40px;
     }
+
+    .form {
+      @include tablet {
+        &_mo {
+          display: block;
+          background-color: transparent;
+
+          input {
+            border-radius: $border_radius_sm;
+          }
+        }
+      }
+
+      .input {
+        @include tablet {
+          & {
+            &_mo {
+              padding: 11px 20px;
+              border: 1px solid map-get($gray, 3);
+
+            }
+
+            &_mo+button {
+              width: 100%;
+              margin-top: 16px;
+
+            }
+          }
+        }
+
+      }
+
+      &_email {
+        button {
+          @include tablet {
+            height: 46px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -727,7 +806,7 @@ body {
 
     @include tablet {
       & {
-        padding-top: 100%;
+        padding-top: 93.33%;
       }
     }
   }
@@ -848,6 +927,7 @@ body {
     }
 
     & .form_email {
+      width: 420px;
       margin-top: 20px;
     }
 
@@ -859,6 +939,8 @@ body {
         margin-left: 0;
       }
     }
+
+
   }
 
   &_title {
