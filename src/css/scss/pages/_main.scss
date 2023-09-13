@@ -66,7 +66,7 @@ body {
     }
   }
 
-  
+
 
   .nav {
     display: none;
@@ -111,9 +111,22 @@ body {
 }
 
 .hero {
+  &_box {
+    display: grid; 
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
   &_content {
     display: inline-block;
     width: calc(50% - 15px);
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 2;
+    grid-column-end: 2;
   }
 
   &_title {
@@ -158,6 +171,23 @@ body {
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 2);
     vertical-align: top;
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+ 
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
+
+  &_btn {
+    display: inline-block;
+    width: calc(50% - 15px);
+
+    grid-row-start: 2;
+   grid-column-start: 1;
+
+   grid-row-end: 3;
+   grid-column-end: 2;
   }
 }
 
@@ -677,8 +707,8 @@ body {
   &_thumb {
     padding: 0 10px;
 
-    @include tablet{
-      &{
+    @include tablet {
+      & {
         padding: 0 5px;
       }
     }
@@ -686,6 +716,7 @@ body {
 
   &_info {
     margin-top: 20px;
+
     .card_title {
 
       @include tablet {
@@ -731,8 +762,8 @@ body {
       width: calc(50% - 40px);
       vertical-align: middle;
 
-      @include tablet{
-        &{
+      @include tablet {
+        & {
           width: calc(50% - 15px)
         }
       }
