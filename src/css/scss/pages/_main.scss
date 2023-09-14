@@ -66,7 +66,19 @@ body {
     }
   }
 
+  .nav {
+    display: none;
+  }
+}
 
+@include mobile {
+  .header {
+    padding: 15px 30px;
+
+    .logo {
+      height: 24px;
+    }
+  }
 
   .nav {
     display: none;
@@ -84,22 +96,38 @@ body {
   &:last-child {
     padding-top: 40px;
   }
-}
 
-@include tablet {
-  .section {
-    padding: 40px 72px;
+  @include tablet {
+    & {
+      padding: 40px 72px;
 
-    &:first-child {
-      padding: 80px 72px;
-    }
+      &:first-child {
+        padding: 80px 72px;
+      }
 
-    &:last-child {
-      padding-top: 23px;
-      padding-bottom: 80px;
+      &:last-child {
+        padding-top: 23px;
+        padding-bottom: 80px;
+      }
     }
   }
+
+  @include mobile {
+    & {
+      padding: 40px 30px;
+
+      &:first-child {
+        padding: 40px 30px;
+      }
+    }
+
+
+  }
 }
+
+
+
+
 
 // < !-- Section Hero -->
 
@@ -112,21 +140,24 @@ body {
 
 .hero {
   &_box {
-    display: grid; 
-
-    grid-template-rows: 1fr 1fr;
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include tablet {
+      gap: 20px 30px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &_content {
     display: inline-block;
-    width: calc(50% - 15px);
+    grid-column: 1 / 2;
+    grid-row: 1;
 
-    grid-row-start: 1;
-    grid-column-start: 1;
- 
-    grid-row-end: 2;
-    grid-column-end: 2;
   }
 
   &_title {
@@ -138,6 +169,13 @@ body {
         @include custom-font(38px, 600, 46px);
       }
     }
+
+    @include mobile {
+      & {
+        display: block;
+        @include custom-font(28px, 600, 39px);
+      }
+    }
   }
 
   &_desc {
@@ -147,6 +185,13 @@ body {
 
     @include tablet {
       & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-top: 10px;
         @include custom-font(16px, 400, 22px);
       }
     }
@@ -165,29 +210,39 @@ body {
 
   &_card {
     display: inline-block;
-    width: calc(50% - 15px);
-    overflow: hidden;
-    margin-left: 30px;
-    border-radius: $border_radius_sm;
-    background-color: map-get($gray, 2);
+    grid-column: 2;
+    grid-row: 1 / 3;
     vertical-align: top;
 
-    grid-row-start: 1;
-    grid-column-start: 2;
- 
-    grid-row-end: 3;
-    grid-column-end: 3;
+    &_box {
+      overflow: hidden;
+      border-radius: $border_radius_sm;
+      background-color: map-get($gray, 2);
+    }
+
+    @include mobile {
+      & {
+        display: block;
+        margin-top: 40px;
+      }
+    }
   }
 
   &_btn {
-    display: inline-block;
-    width: calc(50% - 15px);
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2;
 
-    grid-row-start: 2;
-   grid-column-start: 1;
+    @include mobile {
+      & {
+        display: block;
+        margin-top: 40px;
+      }
 
-   grid-row-end: 3;
-   grid-column-end: 2;
+      & .btn {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -237,6 +292,12 @@ body {
     @include tablet {
       & {
         padding-top: 66.9%;
+      }
+    }
+
+    @include mobile {
+      & {
+        padding-top: 65.4%;
       }
     }
   }
@@ -301,6 +362,12 @@ body {
         @include custom-font(28px, 600, 39px);
       }
     }
+
+    @include mobile {
+      & {
+        @include custom-font(28px, 600, 39px);
+      }
+    }
   }
 
   &_subhead {
@@ -314,12 +381,24 @@ body {
         @include custom-font(16px, 400, 22px);
       }
     }
+
+    @include mobile {
+      & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
   }
 
   &_content {
     margin-top: 60px;
 
     @include tablet {
+      & {
+        margin-top: 40px;
+      }
+    }
+
+    @include mobile {
       & {
         margin-top: 40px;
       }
@@ -335,6 +414,12 @@ body {
     @include tablet {
       & {
         @include card_two_item;
+      }
+    }
+
+    @include mobile {
+      & {
+        @include card_one_item
       }
     }
   }
@@ -381,6 +466,44 @@ body {
 // < !-- // Section Trending -->
 
 // <!-- Section Top Rated -->
+.section {
+  &_heading {
+    @include mobile {
+      & {
+        display: block;
+      }
+    }
+  }
+
+  &_toprated {
+    @include mobile {
+      .card_list {
+        display: block;
+      }
+    }
+  }
+}
+
+.section {
+
+  &_toprated,
+  &_discovery {
+    @include mobile {
+      & {
+        position: relative
+      }
+
+      .section_heading_btn {
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
 .toprated_card {
   &_item {
     position: relative;
@@ -390,25 +513,38 @@ body {
     box-sizing: border-box;
     text-align: center;
 
-
-    @include tablet {
-      & {
-        @include card_two_item;
-        text-align: start;
-      }
-    }
-
     @include desktop {
       & {
         @include card_four_item;
       }
     }
 
+    @include tablet {
+      & {
+        @include card_two_item;
+        text-align: left;
+      }
+    }
+
+    @include mobile {
+      & {
+        @include card_one_item;
+        text-align: left;
+      }
+    }
+
+
   }
 
   &_avt {
-
     @include tablet {
+      & {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    @include mobile {
       & {
         display: inline-block;
         vertical-align: middle;
@@ -429,6 +565,13 @@ body {
         left: 23px;
       }
     }
+
+    @include mobile {
+      & {
+        top: 17px;
+        left: 23px;
+      }
+    }
   }
 
   &_info {
@@ -436,6 +579,15 @@ body {
     margin-top: 20px;
 
     @include tablet {
+      & {
+        width: calc(100% - 80px);
+        margin-top: 0;
+        margin-left: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    @include mobile {
       & {
         width: calc(100% - 80px);
         margin-top: 0;
@@ -464,15 +616,21 @@ body {
         margin-left: 13px
       }
     }
+
+    @include mobile {
+      & {
+        margin-left: 4px
+      }
+    }
   }
 }
 
 // <!--// Section Top Rated -->
 
 // < !-- Section Browse Categories -->
+
 .category_card {
   &_item {
-    @include card_four_item;
     background-color: map-get($gray, 2);
 
     & .thumb {
@@ -481,6 +639,18 @@ body {
           padding-top: 94.667%;
         }
       }
+    }
+
+    @include desktop {
+      @include card_four_item;
+    }
+
+    @include tablet {
+      @include card_four_item;
+    }
+
+    @include mobile {
+      @include card_two_item
     }
   }
 
@@ -515,6 +685,13 @@ body {
         @include custom-font(16px, 600, 22px);
       }
     }
+
+    @include mobile {
+      & {
+        padding: 20px 20px 25px 20px;
+        @include custom-font(16px, 600, 22px);
+      }
+    }
   }
 }
 
@@ -529,13 +706,23 @@ body {
 
 .discovery_card {
   &_item {
-    @include card_three_item;
     background-color: map-get($gray, 2);
+
+    @include desktop {
+      & {
+        @include card_three_item;
+      }
+    }
 
     @include tablet {
       & {
         @include card_two_item;
+      }
+    }
 
+    @include mobile {
+      & {
+        @include card_one_item;
       }
     }
   }
@@ -595,6 +782,8 @@ body {
       margin-top: 0;
     }
 
+
+
     @include tablet {
       & {
         height: 630px;
@@ -603,6 +792,18 @@ body {
 
         &::after {
           height: 630px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        height: 590px;
+        margin: 0 -50vw;
+        background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
+
+        &::after {
+          height: 590px;
         }
       }
     }
@@ -633,11 +834,33 @@ body {
         padding: 60px 82px;
       }
     }
+
+    @include mobile {
+      & {
+        display: block;
+        width: 100%;
+        padding: 120px 30px 130px;
+      }
+    }
   }
 
   &_name {
     display: inline-block;
+    position: relative;
     width: calc(100% - 295px);
+
+    @include mobile {
+      & {
+        display: block;
+        width: 100%;
+
+        .section_heading_btn {
+          position: absolute;
+          bottom: -270px;
+          width: 100%;
+        }
+      }
+    }
   }
 
   &_title {
@@ -649,8 +872,19 @@ body {
         @include custom-font(38px, 600, 46px);
       }
     }
-  }
 
+    @include mobile {
+      & {
+        @include custom-font(38px, 600, 46px);
+      }
+    }
+  }
+  &_box{
+    @include mobile {
+      margin: 30px auto 0;
+      text-align: center;
+    }
+  }
   &_timer {
     display: inline-block;
     width: 295px;
@@ -663,6 +897,11 @@ body {
 
     .timer_desc {
       @include custom-font(12px, 400, 13px);
+
+      @include mobile{
+        display: block;
+        text-align: left;
+      }
     }
   }
 }
@@ -693,14 +932,31 @@ body {
 
 .steps_card {
   &_item {
-    @include card_three_item;
     padding: 10px 30px 30px;
     background-color: map-get($gray, 2);
     box-sizing: border-box;
+    font-size: 0;
     text-align: center;
 
+    @include desktop {
+      & {
+        @include card_three_item;
+      }
+    }
+
     @include tablet {
-      padding: 10px 20px 30px;
+      & {
+        @include card_three_item;
+        padding: 10px 20px 30px;
+      }
+    }
+
+    @include mobile {
+      & {
+        @include card_one_item;
+        padding: 20px;
+        text-align: left;
+      }
     }
   }
 
@@ -710,6 +966,15 @@ body {
     @include tablet {
       & {
         padding: 0 5px;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 0;
       }
     }
   }
@@ -725,6 +990,23 @@ body {
 
         }
       }
+
+      @include mobile {
+        & {
+          @include custom-font(16px, 600, 22px);
+
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        display: inline-block;
+        width: calc(100% - 120px);
+        margin-top: 0;
+        margin-left: 20px;
+        vertical-align: top;
+      }
     }
   }
 
@@ -733,6 +1015,12 @@ body {
     @include custom-font(16px, 400, 22px);
 
     @include tablet {
+      & {
+        @include custom-font(12px, 400, 17px);
+      }
+    }
+
+    @include mobile {
       & {
         @include custom-font(12px, 400, 17px);
       }
@@ -756,6 +1044,15 @@ body {
       }
     }
 
+    @include mobile {
+      & {
+        border-radius: 0;
+        padding: 0;
+        background-color: map-get($gray, 1);
+      }
+    }
+
+
     .section_content,
     .section_heading {
       display: inline-block;
@@ -765,6 +1062,13 @@ body {
       @include tablet {
         & {
           width: calc(50% - 15px)
+        }
+      }
+
+      @include mobile {
+        & {
+          display: block;
+          width: 100%;
         }
       }
     }
@@ -783,6 +1087,13 @@ body {
           margin-left: 30px;
         }
       }
+
+      @include mobile {
+        & {
+          margin-top: 30px;
+          margin-left: 0;
+        }
+      }
     }
 
     .form {
@@ -791,6 +1102,17 @@ body {
 
     .form {
       @include tablet {
+        &_mo {
+          display: block;
+          background-color: transparent;
+
+          input {
+            border-radius: $border_radius_sm;
+          }
+        }
+      }
+
+      @include mobile {
         &_mo {
           display: block;
           background-color: transparent;
@@ -818,11 +1140,30 @@ body {
           }
         }
 
+        @include mobile {
+          & {
+            &_mo {
+              padding: 11px 20px;
+              border: 1px solid map-get($gray, 3);
+
+            }
+
+            &_mo+button {
+              width: 100%;
+              margin-top: 16px;
+
+            }
+          }
+        }
       }
 
       &_email {
         button {
           @include tablet {
+            height: 46px;
+          }
+
+          @include mobile {
             height: 46px;
           }
         }
@@ -838,6 +1179,12 @@ body {
     @include tablet {
       & {
         padding-top: 93.33%;
+      }
+    }
+
+    @include mobile {
+      & {
+        padding-top: 80.95%;
       }
     }
   }
@@ -863,12 +1210,24 @@ body {
         padding: 40px 72px;
       }
     }
+
+    @include mobile {
+      & {
+        padding: 40px 30px;
+      }
+    }
   }
 
   &_info {
     display: flex;
 
     @include tablet {
+      & {
+        display: block;
+      }
+    }
+
+    @include mobile {
       & {
         display: block;
       }
@@ -899,9 +1258,22 @@ body {
           margin-top: 20px;
         }
       }
+
+      @include mobile {
+        & {
+          margin-top: 20px;
+        }
+      }
     }
 
     @include tablet {
+      & {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @include mobile {
       & {
         display: block;
         width: 100%;
@@ -923,6 +1295,15 @@ body {
         margin-left: 0;
       }
     }
+
+    @include mobile {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
   }
 
   .explore {
@@ -930,6 +1311,12 @@ body {
       margin-top: 25px;
 
       @include tablet {
+        & {
+          margin-top: 20px;
+        }
+      }
+
+      @include mobile {
         & {
           margin-top: 20px;
         }
@@ -955,11 +1342,61 @@ body {
           margin-top: 20px;
         }
       }
+
+      @include mobile {
+        & {
+          margin-top: 20px;
+        }
+      }
     }
 
     & .form_email {
       width: 420px;
       margin-top: 20px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+
+    .form {
+      @include mobile {
+        &_mo {
+          display: block;
+          background-color: transparent;
+
+          input {
+            border-radius: $border_radius_sm;
+          }
+        }
+      }
+
+      .input {
+        @include mobile {
+          & {
+            &_mo {
+              padding: 11px 20px;
+              border: 1px solid map-get($gray, 3);
+
+            }
+
+            &_mo+button {
+              width: 100%;
+              margin-top: 16px;
+
+            }
+          }
+        }
+      }
+
+      &_email {
+        button {
+          @include mobile {
+            height: 46px;
+          }
+        }
+      }
     }
 
     @include tablet {
@@ -971,7 +1408,14 @@ body {
       }
     }
 
-
+    @include mobile {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
   }
 
   &_title {
@@ -985,6 +1429,12 @@ body {
       margin-top: 10px;
 
       @include tablet {
+        & {
+          margin-top: 15px;
+        }
+      }
+
+      @include mobile {
         & {
           margin-top: 15px;
         }
@@ -1009,6 +1459,12 @@ body {
     border-top: 1px solid map-get($gray , 3);
 
     @include tablet {
+      & {
+        margin-top: 49px;
+      }
+    }
+
+    @include mobile {
       & {
         margin-top: 49px;
       }
