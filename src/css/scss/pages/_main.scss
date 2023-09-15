@@ -14,8 +14,55 @@ body {
 
 // <!-- Navigation -->
 .header {
-  @include flex-item(flex, space-between, center);
-  padding: 20px 50px;
+  &_box {
+    position: fixed;
+    @include flex-item(flex, space-between, center);
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin: 0 -50vw;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    transition: all 0.42s ease;
+
+    @include tablet {
+      & {
+        height: 56px;
+        padding: 15px 50px;
+      }
+    }
+
+    @include mobile {
+      & {
+        height: 56px;
+        padding: 15px 30px;
+      }
+    }
+  }
+
+  & .header_scroll {
+    height: 80px;
+    background-color: map-get($gray, 2);
+
+    @include tablet {
+      & {
+        height: 56px;
+      }
+    }
+
+    @include mobile {
+      & {
+        height: 56px;
+      }
+    }
+
+    & .btn {
+      height: 46px;
+    }
+  }
+
 }
 
 .logo {
@@ -31,6 +78,10 @@ body {
     width: 100%;
     height: 100%;
   }
+}
+
+.header_scroll .nav_link {
+  border: 2px solid map-get($gray, 2);
 }
 
 .nav {
@@ -51,15 +102,24 @@ body {
 
   &_link {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 11px 19px;
+    border: 2px solid map-get($gray, 1);
+    border-radius: $border_radius_sm;
     @include custom-font(16px, 600, 22px);
     color: var(--white);
+    transition: all 0.42s ease-in-out;
+
+    &:hover {
+      border: 2px solid var(--bg_btn_violet);
+      background-color: map-get($gray, 2);
+    }
   }
 }
 
+
 @include tablet {
   .header {
-    padding: 15px 50px;
+    // padding: 15px 50px;
 
     .logo {
       height: 24px;
@@ -73,7 +133,7 @@ body {
 
 @include mobile {
   .header {
-    padding: 15px 30px;
+    // padding: 15px 30px;
 
     .logo {
       height: 24px;
@@ -93,8 +153,16 @@ body {
 .section {
   padding: 80px 115px;
 
+
+
   &:last-child {
     padding-top: 40px;
+  }
+
+  @include desktop {
+    &:first-child {
+      margin-top: 100px;
+    }
   }
 
   @include tablet {
@@ -110,6 +178,10 @@ body {
         padding-bottom: 80px;
       }
     }
+
+    &:first-child {
+      margin-top: 54px;
+    }
   }
 
   @include mobile {
@@ -117,11 +189,10 @@ body {
       padding: 40px 30px;
 
       &:first-child {
+        margin-top: 54px;
         padding: 40px 30px;
       }
     }
-
-
   }
 }
 
@@ -206,6 +277,12 @@ body {
         margin-top: 20px;
       }
     }
+
+    @include mobile {
+      & {
+        margin-top: 40px;
+      }
+    }
   }
 
   &_card {
@@ -271,6 +348,12 @@ body {
         @include custom-font(22px, 700, 35px);
       }
     }
+
+    @include mobile {
+      & {
+        @include custom-font(22px, 700, 35px);
+      }
+    }
   }
 
   &_title {
@@ -278,6 +361,12 @@ body {
     @include custom-font(24px, 400, 38px);
 
     @include tablet {
+      & {
+        @include custom-font(16px, 400, 22px);
+      }
+    }
+
+    @include mobile {
       & {
         @include custom-font(16px, 400, 22px);
       }
@@ -323,6 +412,39 @@ body {
     @include custom-font(16px, 400, 22px);
   }
 }
+
+// .typewriter {
+//   display: inline-block;
+//   overflow: hidden;
+//   border-right: .15em solid orange;
+//   animation:
+//     typing 3.5s steps(30, end),
+//     blink-caret .5s step-end infinite;
+// }
+
+// /* The typing effect */
+// @keyframes typing {
+//   from {
+//     width: 0
+//   }
+
+//   to {
+//     width: 100%
+//   }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+
+//   from,
+//   to {
+//     border-color: transparent
+//   }
+
+//   50% {
+//     border-color: orange
+//   }
+// }
 
 // < !-- // Section Hero -->
 
@@ -419,7 +541,8 @@ body {
 
     @include mobile {
       & {
-        @include card_one_item
+        @include card_one_item;
+
       }
     }
   }
@@ -460,6 +583,13 @@ body {
     @include custom-font(22px, 700, 35px);
     text-align: center;
     color: var(--white);
+
+    @include mobile {
+      & {
+        @include custom-font(16px, 700, 22px);
+
+      }
+    }
   }
 }
 
@@ -512,6 +642,8 @@ body {
     background-color: map-get($gray, 2);
     box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
     @include desktop {
       & {
@@ -533,7 +665,9 @@ body {
       }
     }
 
-
+    &:hover {
+      transform: scale(1.04);
+    }
   }
 
   &_avt {
@@ -628,15 +762,44 @@ body {
 // <!--// Section Top Rated -->
 
 // < !-- Section Browse Categories -->
+.section {
+  &_category {
+    .section_content {
+      @include mobile {
+        & {
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+
+  &:has(.section_category) {
+    @include mobile {
+      & {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+
 
 .category_card {
   &_item {
     background-color: map-get($gray, 2);
 
     & .thumb {
-      @include tablet {
-        & {
-          padding-top: 94.667%;
+      & {
+        @include tablet {
+          & {
+            padding-top: 94.667%;
+          }
+        }
+
+        @include mobile {
+          & {
+            padding-top: 95.95%;
+          }
         }
       }
     }
@@ -708,6 +871,14 @@ body {
   &_item {
     background-color: map-get($gray, 2);
 
+    & .thumb_card {
+      @include mobile {
+        & {
+          padding-top: 75.56%;
+        }
+      }
+    }
+
     @include desktop {
       & {
         @include card_three_item;
@@ -733,6 +904,13 @@ body {
     .card_name {
       font-family: SpaceMono;
     }
+
+    @include mobile {
+      & {
+        padding: 20px 20px 25px;
+
+      }
+    }
   }
 
   &_desc {
@@ -754,6 +932,12 @@ body {
     display: block;
     margin-top: 8px;
     @include custom-font(16px, 400, 22px);
+
+    @include mobile {
+      & {
+        @include custom-font(12px, 400, 13px);
+      }
+    }
   }
 }
 
@@ -771,6 +955,15 @@ body {
 
 // <!-- Section Highlight -->
 .section {
+  &:has(.section_highlight) {
+    @include mobile {
+      & {
+        margin-top: 120px;
+        padding: 0
+      }
+    }
+  }
+
   &_highlight {
     @include bg_full(relative, 0, 640px, url(../img/image/bg_highlight_pc.png) no-repeat center/cover, -80px -50vw);
 
@@ -827,7 +1020,12 @@ body {
 
     & button {
       margin-top: 30px;
+
+      @include mobile {
+        margin-top: 0;
+      }
     }
+
 
     @include tablet {
       & {
@@ -856,7 +1054,7 @@ body {
 
         .section_heading_btn {
           position: absolute;
-          bottom: -270px;
+          bottom: -264px;
           width: 100%;
         }
       }
@@ -879,12 +1077,23 @@ body {
       }
     }
   }
-  &_box{
+
+  &_box {
+    @include desktop {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    @include tablet {
+      display: inline-block;
+    }
+
     @include mobile {
       margin: 30px auto 0;
       text-align: center;
     }
   }
+
   &_timer {
     display: inline-block;
     width: 295px;
@@ -895,10 +1104,14 @@ body {
     box-sizing: border-box;
     vertical-align: bottom;
 
+    @include mobile {
+      width: 315px;
+    }
+
     .timer_desc {
       @include custom-font(12px, 400, 13px);
 
-      @include mobile{
+      @include mobile {
         display: block;
         text-align: left;
       }
@@ -926,6 +1139,10 @@ body {
 
     @include tablet {
       margin-top: 42px;
+    }
+
+    @include mobile {
+      margin-top: 41px;
     }
   }
 }
@@ -1460,13 +1677,7 @@ body {
 
     @include tablet {
       & {
-        margin-top: 49px;
-      }
-    }
-
-    @include mobile {
-      & {
-        margin-top: 49px;
+        margin-top: 48px;
       }
     }
 
@@ -1523,18 +1734,48 @@ body {
 
 //Responsive
 
-.only_tb {
-  display: none;
+// .only_tb_mo {
+//   display: none;
+// }
+
+.only_pc_mo {
+  display: inline-block
 }
 
+.only_pc_tb {
+  display: inline-block
+}
 
 // @include on_pc;
-@include desktop;
+@include desktop {
+  @include on_pc;
+
+  .only_tb_mo {
+    display: none;
+  }
+
+}
 
 @include tablet {
   @include on_tb;
+
+  .only_tb_mo {
+    display: inline-block
+  }
+
+  .only_pc_mo {
+    display: none;
+  }
 }
 
 @include mobile {
   @include on_mo;
+
+  .only_tb_mo {
+    display: inline-block
+  }
+
+  .only_pc_tb {
+    display: none;
+  }
 }
