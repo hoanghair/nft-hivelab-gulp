@@ -106,6 +106,16 @@
     countdown();
   }
 
+  //scroll navbar
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 0) {
+      $(".header_box").addClass("header_scroll")
+    } else {
+      $(".header_box").removeClass("header_scroll")
+    }
+  });
+
   $(function () {
     sample2.init();
     sample3.init();
