@@ -8,24 +8,25 @@
             </a>
         </h1>
         <nav class="nav">
-            <ul class="nav_list">
-                <li class="nav_item">
-                    <a href="#" class="nav_link">Marketplace</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#" class="nav_link">Rankings</a>
-                </li>
-                <li class="nav_item">
-                    <a href="#" class="nav_link">Connect a wallet</a>
-                </li>
-            </ul>
-            <button class="btn btn_md btn_p30 btn_violet">
-                <i class="ico_user_20px"></i>
-                Sign Up
-            </button>
+            <div class="nav_box">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Marketplace</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Rankings</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Connect a wallet</a>
+                    </li>
+                </ul>
+                <button class="btn btn_md btn_p30 btn_violet">
+                    <i class="ico_user_20px"></i>
+                    Sign Up
+                </button>
+            </div>
         </nav>
         <button class="navbar-toggler only_tb_mo" type="button">
-            <!-- <i class="ico_list_24px"></i> -->
             <input type="checkbox" id="menu2" />
             <label for="menu2">
                 <span></span>
@@ -39,26 +40,4 @@
     <!-- Navigation -->
     <nav></nav>
     <!-- // Navigation -->
-    <script>
-        //Just to flash the showcase, this is pure CSS
-        var inputs = document.getElementsByTagName("input");
-        var labels = document.getElementsByTagName("label");
-
-        // Checks all checkboxs triggering all CSS transitions 
-        function check(status) {
-            for (var x = 0; x < inputs.length; x++) {
-                inputs[x].checked = status;
-            }
-            if (status) {
-                setTimeout(function () {
-                    check(false);
-                }, 2000);
-            }
-
-        }
-        // Flashes menus on load
-        document.addEventListener("DOMContentLoaded", function (event) {
-            check(true);
-        });
-    </script>
 </header>}
