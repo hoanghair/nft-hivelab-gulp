@@ -110,11 +110,29 @@
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop > 0) {
-      $(".header_box").addClass("header_scroll")
+      $(".header_box").addClass("header_scroll");
     } else {
-      $(".header_box").removeClass("header_scroll")
+      $(".header_box").removeClass("header_scroll");
     }
   });
+
+  // toggle btn nav
+  const inputs = $("input");
+  const labels = $("label");
+  const body = $("body");
+
+  function toggleOverflow() {
+    body.toggleClass("off_scroll");
+  }
+
+  function check(status) {
+    inputs.prop("checked", status);
+    labels.click(function (e) {
+      $(".nav_box").toggleClass("nav_view");
+      $(".nav").toggleClass("nav_modal");
+      toggleOverflow();
+    });
+  }
 
   $(function () {
     sample2.init();
@@ -127,5 +145,6 @@
     sample5();
     $("body").sample6();
     startCountdownTimer();
+    check(false);
   });
 })(window, window.jQuery);

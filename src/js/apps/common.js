@@ -10,16 +10,15 @@
       $(".table .avatar").addClass("avatar_medium").removeClass("avatar_small");
     }
 
-    if (window.innerWidth < screen_tb) {
-      $(".section_toprated .avatar")
-        .addClass("avatar_medium")
-        .removeClass("avatar_large");
-      console.log("123");
-    } else {
-      $(".section_toprated .avatar")
-        .addClass("avatar_large")
-        .removeClass("avatar_medium");
-    }
+    // if (window.innerWidth < screen_tb) {
+    //   $(".section_toprated .avatar")
+    //     .addClass("avatar_medium")
+    //     .removeClass("avatar_large");
+    // } else {
+    //   $(".section_toprated .avatar")
+    //     .addClass("avatar_large")
+    //     .removeClass("avatar_medium");
+    // }
   }
 
   function activeTabs() {
