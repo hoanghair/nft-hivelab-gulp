@@ -1,0 +1,59 @@
+@@include('./include/head.html',{"title": "Document Title - Sub_02 : UIT Gulp Project", "list_title": "Connect Wallet : Page"})
+<body data-pagestatus="new : 2023">
+@@include('./include/skipnavigation.html')
+
+	<div class="wrap">
+		<!--[D] HEADER -->
+@@include('./include/header.html',{"type": "01"})
+		<!--//[D] HEADER -->
+
+		<!-- [D] CONTENTS -->
+		<main id="content">
+			<section class="section_connect">
+				<div class="connect_thumb">
+					<div class="thumb">
+						<img src="../img/image/bg_connect_pc.jpg" alt="" class="img">
+					</div>
+				</div>
+				<div class="connect_box">
+					<div class="connect_form">
+						<h2 class="connect_title">Connect Wallet</h2>
+						<p class="connect_desc">Choose a wallet you want to connect. There are several wallet providers.</p>
+            <ul class="connect_list">
+              <li class="connect_item">
+                <a href="#none" class="connect_link">
+                  <i class="ico_metamask"></i>
+                  <span class="connect_name">Metamask</span>
+                </a>
+              </li>
+              <li class="connect_item">
+                <a href="#none" class="connect_link">
+                  <i class="ico_walletconnect"></i>
+                  <span class="connect_name">Wallet Connect</span>
+                </a>
+              </li>
+              <li class="connect_item">
+                <a href="#none" class="connect_link">
+                  <i class="ico_coinbase"></i>
+                  <span class="connect_name">Coinbase</span>
+                </a>
+              </li>
+            </ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- // [D] CONTENTS -->
+
+		<!--[D] FOOTER -->
+@@include('./include/footer.html',{"type": "01"})
+		<!--// [D] FOOTER -->
+	</div>
+
+	<!-- [D] LAYER -->
+	<div class="layer"></div>
+	<!-- [D] LAYER -->
+
+@@include('./include/script.html')
+</body>
+</html>

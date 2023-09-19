@@ -422,6 +422,9 @@ legend {
         color: map-get($gray, 1);
         box-sizing: border-box;
     }
+    &_list + button{
+            margin-top: 30px;
+    }
 
     &_group {
         @include flex-item(flex, space-between, center);
@@ -434,10 +437,6 @@ legend {
 
         &+.input_group {
             margin-top: 15px;
-        }
-
-        &:nth-last-of-type(1)+button {
-            margin-top: 30px;
         }
     }
 

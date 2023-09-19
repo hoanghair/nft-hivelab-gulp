@@ -93,23 +93,11 @@ $border_radius_lg: 50%;
     margin-top: 30px;
   }
 
-  // @include mobile{
-  //   width: calc((100% / 2) - 10px);
-
-  //   &:not(:nth-child(2n+1)) {
-  //     margin-left: 20px;
-  //   }
-  
-  //   &:not(:nth-child(-n + 2)) {
-  //     margin-top: 20px;
-  //   }
-  // }
 }
 
 @mixin card_three_item {
   display: inline-block;
   @include border_sm;
-
   width: calc((100% / 3) - 20px);
 
   &:not(:nth-child(3n+1)) {

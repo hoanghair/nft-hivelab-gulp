@@ -1,0 +1,159 @@
+.section {
+  &_connect {
+    display: flex;
+    font-size: 0;
+    margin-top: 54px;
+
+    @include desktop {
+      & {
+        margin-top: 100px;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: block;
+      }
+    }
+  }
+}
+
+.connect {
+  &_thumb {
+    display: inline-block;
+
+    @include desktop {
+      width: calc(50% - 30px);
+
+      & .thumb {
+        padding-top: 105.24%;
+      }
+    }
+
+    @include tablet {
+      width: calc(50% - 20px);
+
+      & .thumb {
+        padding-top: 133.50%;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+
+      & .thumb {
+        padding-top: 61.866%;
+      }
+    }
+  }
+
+  &_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+
+    @include desktop {
+      & {
+        width: calc(50% - 30px);
+        margin-left: 60px;
+      }
+    }
+
+    @include tablet {
+      & {
+        width: calc(50% - 20px);
+        margin-left: 40px;
+      }
+    }
+
+    @include mobile {
+      & {
+        width: 100%;
+        padding: 30px 30px 40px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &_form {
+    @include desktop {
+      & {
+        width: 460px;
+      }
+    }
+
+    @include tablet {
+      & {
+        width: 325px;
+      }
+    }
+
+  }
+
+  &_title {
+    @include custom-font(38px, 600, 46px);
+    text-transform: capitalize;
+
+    @include desktop {
+      & {
+        @include custom-font(51px, 600, 56px);
+      }
+    }
+  }
+
+  &_desc {
+    display: inline-block;
+    margin-top: 20px;
+    @include custom-font(16px, 400, 22px);
+    text-transform: capitalize;
+
+    @include desktop {
+      & {
+        @include custom-font(22px, 400, 35px);
+      }
+    }
+  }
+
+  &_list{
+      display: block;
+      margin-top: 40px;
+
+      @include desktop {
+        width: 330px;
+
+      }
+
+      @include tablet {
+        width: 100%;
+
+      }
+
+      @include mobile {
+        margin-top: 30px;
+
+      }
+
+  }
+
+  &_item + &_item{
+    margin-top: 20px;
+  }
+
+  &_link {
+    display: block;
+    padding: 15px 20px 15px 40px;
+    border-radius: $border_radius_sm;
+    border: 1px solid var(--bg_btn_violet);
+    background-color: map-get($gray, 2);
+    box-sizing: border-box;
+  }
+
+  &_name {
+    display: inline-block;
+    margin-left: 20px;
+    @include custom-font(22px, 600, 31px);
+    color: var(--white);
+    vertical-align: middle;
+  }
+}
