@@ -980,6 +980,8 @@ body {
     &::after {
       @include absolute-align(0, 0, null, null);
       @include custom-dimensions(100%, 100%);
+      border-top-left-radius: $border_radius_sm;
+      border-top-right-radius: $border_radius_sm;
       backdrop-filter: blur(8px) brightness(100%);
       content: '';
     }
@@ -1241,6 +1243,7 @@ body {
 
     @include tablet {
       display: inline-block;
+      vertical-align: bottom;
     }
 
     @include mobile {
