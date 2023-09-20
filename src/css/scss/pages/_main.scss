@@ -12,8 +12,9 @@ body {
 }
 
 .main {
-  max-width: 1366px;
-  margin: 0 auto;
+  @include tablet {
+    margin-top: 56px;
+  }
 }
 
 // <!-- Navigation -->
@@ -289,13 +290,42 @@ body {
 
 
 .section {
-  padding: 80px 115px;
+  &_inner {
+    max-width: 1366px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include desktop {
+      & {
+        padding: 80px 115px;
+      }
+    }
+
+    @include tablet {
+      & {
+        // max-width: 834px;
+        padding: 40px 72px;
+
+        &:first-child {
+          // padding: 80px 72px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        // max-width: 375px;
+        padding: 40px 30px;
+      }
+    }
+  }
 
   &:last-child {
-    padding-top: 40px;
+    // padding-top: 40px;
   }
 
   @include desktop {
+
     &:first-child {
       margin-top: 100px;
     }
@@ -303,26 +333,23 @@ body {
 
   @include tablet {
     & {
-      padding: 40px 72px;
+      // padding: 40px 72px;
 
-      &:first-child {
-        padding: 80px 72px;
-      }
+
 
       &:last-child {
-        padding-top: 23px;
-        padding-bottom: 80px;
+        // padding-top: 23px;
+        // padding-bottom: 80px;
       }
     }
 
     &:first-child {
-      margin-top: 54px;
+      // margin-top: 54px;
     }
   }
 
   @include mobile {
     & {
-      padding: 40px 30px;
 
       &:first-child {
         margin-top: 54px;
@@ -342,6 +369,14 @@ body {
   &_hero {
     display: block;
     font-size: 0;
+
+    .section_inner {
+      @include tablet {
+        & {
+          padding: 80px 72px;
+        }
+      }
+    }
   }
 }
 
@@ -1022,6 +1057,16 @@ body {
   .card_avt {
     margin-top: 5px
   }
+
+  .section_inner {
+    @include tablet {
+      & {
+        padding-bottom: 80px;
+      }
+    }
+  }
+
+
 }
 
 .discovery_card {
@@ -1122,10 +1167,30 @@ body {
   }
 
   &_highlight {
-    @include bg_full(relative, 0, 640px, url(../img/image/bg_highlight_pc.png) no-repeat center/cover, -80px -50vw);
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+    background: url(../img/image/bg_highlight_pc.png) no-repeat center/cover;
 
-    &::after {
-      @include bg_full(absolute, -1, 640px, var(--gradient_white_violet), 0 -50vw);
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 640px;
+      background: var(--gradient_white_violet);
+      content: '';
+    }
+
+    .section_inner {
+      padding: 360px 115px 60px;
+
+      @include tablet {
+        & {
+          padding: 360px 82px 60px;
+        }
+      }
     }
 
     .card_avt {
@@ -1136,12 +1201,15 @@ body {
 
     @include tablet {
       & {
-        height: 630px;
-        margin: 0 -50vw -40px;
         background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
+        height: 630px;
 
-        &::after {
+        &::before {
           height: 630px;
+        }
+
+        .section_inner {
+          padding-top: 360px;
         }
       }
     }
@@ -1149,11 +1217,14 @@ body {
     @include mobile {
       & {
         height: 590px;
-        margin: 0 -50vw;
         background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
 
-        &::after {
+        &::before {
           height: 590px;
+        }
+
+        .section_inner {
+          padding-top: 120px;
         }
       }
     }
@@ -1161,17 +1232,17 @@ body {
 }
 
 .highlight {
-  &_wrap {
-    margin: 0 auto;
-    max-width: 1366px;
-  }
+  // &_wrap {
+  //   margin: 0 auto;
+  //   max-width: 1366px;
+  // }
 
   &_content {
-    position: absolute;
-    bottom: 0;
-    max-width: 1366px;
-    width: 100%;
-    padding: 60px 115px;
+    // position: absolute;
+    // bottom: 0;
+    // max-width: 1366px;
+    // width: 100%;
+    // padding: 60px 115px;
     font-size: 0;
     box-sizing: border-box;
 
@@ -1186,7 +1257,7 @@ body {
 
     @include tablet {
       & {
-        padding: 60px 82px;
+        // padding: 60px 82px;
       }
     }
 
@@ -1194,7 +1265,7 @@ body {
       & {
         display: block;
         width: 100%;
-        padding: 120px 30px 130px;
+        // padding: 120px 30px 130px;
       }
     }
   }
@@ -1253,14 +1324,12 @@ body {
   }
 
   &_timer {
-    display: inline-block;
     width: 295px;
     padding: 30px 30px 26px;
     font-family: SpaceMono;
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 5);
     box-sizing: border-box;
-    vertical-align: bottom;
 
     @include mobile {
       width: 315px;
@@ -1408,25 +1477,40 @@ body {
 // <!-- Section Subscribe widget-->
 .section {
   &_subscribe {
-    @include border_sm;
-    padding: 60px;
-    font-size: 0;
-    background-color: map-get($gray, 2);
+    .section_inner {
+      padding: 40px 115px 80px;
 
-    @include tablet {
-      & {
-        padding: 40px 30px;
+      @include tablet {
+        padding: 20px 72px 80px;
       }
     }
 
-    @include mobile {
-      & {
-        border-radius: 0;
-        padding: 0;
-        background-color: map-get($gray, 1);
+    &_wrap {
+      @include border_sm;
+      font-size: 0;
+      background-color: map-get($gray, 2);
+
+      @include desktop {
+        & {
+          padding: 60px;
+
+        }
+      }
+
+      @include tablet {
+        & {
+          padding: 40px 30px;
+        }
+      }
+
+      @include mobile {
+        & {
+          border-radius: 0;
+          padding: 0;
+          background-color: map-get($gray, 1);
+        }
       }
     }
-
 
     .section_content,
     .section_heading {
@@ -1578,12 +1662,14 @@ body {
   background-color: map-get($gray, 2);
 
   &_content {
+    max-width: 1366px;
+    margin: 0 auto;
     padding: 40px 115px;
     box-sizing: border-box;
 
     @include tablet {
       & {
-        padding: 40px 72px;
+        padding: 39px 72px;
       }
     }
 
