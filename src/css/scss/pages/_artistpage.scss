@@ -1,0 +1,258 @@
+.section {
+  &_profile {
+    .btn_violet {
+      padding: 0 20px;
+    }
+
+    .sns_item+.sns_item {
+      margin-left: 9px
+    }
+
+    @include desktop {
+      margin-top: 140px;
+      padding: 0px 115px;
+      .overview_title {
+        font-size: 22px
+      }
+    }
+
+    @include tablet {
+      margin-top: 79px;
+      padding: 0 72px;
+    }
+
+    @include mobile {
+      margin-top: 96px;
+      padding: 0 30px;
+
+      .overview_item {
+        width: calc((100% / 3) - 10px);
+      }
+
+      .overview_item+.overview_item {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.profile {
+  &_thumb {
+    position: relative;
+    z-index: 0;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    background: url(../img/image/bg_artist_pc.jpg) no-repeat center/cover;
+    content: '';
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      right: 50%;
+      width: 100vw;
+      margin: 0 -50vw;
+      background: var(--gradient_white_violet);
+      content: '';
+    }
+
+    @include desktop {
+      margin: -40px -50vw 0;
+      height: 320px;
+
+      &::after {
+        height: 320px;
+      }
+    }
+
+    @include tablet {
+      margin: -23px -50vw 0;
+      height: 280px;
+
+      &::after {
+        height: 280px;
+      }
+    }
+
+    @include mobile {
+      margin: -40px -50vw 0;
+      height: 250px;
+
+      &::after {
+        height: 250px;
+      }
+    }
+
+  }
+
+  &_box {
+    margin-top: -70px;
+    font-size: 0;
+
+    .avatar {
+      @include mobile {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &_info {
+    display: block;
+    margin-top: 30px;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+    }
+  }
+
+  &_name {
+    @include custom-font(51px, 600, 56px);
+
+    @include tablet {
+      @include custom-font(38px, 600, 46px);
+
+    }
+
+    @include mobile {
+      @include custom-font(28px, 600, 39px);
+
+    }
+  }
+
+  &_btn {
+    margin-top: 30px;
+    font-size: 0;
+
+    .btn+.btn {
+      margin-left: 20px;
+    }
+
+    @include desktop {
+      margin-top: 0;
+    }
+
+    @include mobile {
+      .btn {
+        display: block;
+        width: 100%;
+      }
+
+      .btn+.btn {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &_desc {
+    width: 500px;
+    margin-top: 30px;
+
+    @include desktop {
+      margin-top: 25px;
+
+    }
+
+    @include mobile {
+      width: 100%;
+
+    }
+
+    &_item+&_item {
+      margin-top: 30px;
+    }
+
+    .profile_title {
+      display: block;
+      margin-bottom: 10px;
+      font-family: SpaceMono;
+      @include custom-font(16px, 400, 22px);
+      color: map-get($gray, 3);
+
+      @include desktop {
+        @include custom-font(22px, 700, 35px);
+      }
+    }
+
+  }
+
+  &_bio {
+    &>span {
+      @include custom-font(16px, 400, 22px);
+      text-transform: capitalize;
+
+      @include desktop {
+        @include custom-font(22px, 400, 35px);
+      }
+    }
+  }
+
+}
+
+.section_card {
+  margin-top: 30px;
+
+  &_tabs {
+    position: relative;
+    z-index: 0;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin: 0 -50vw;
+    border-top: 1px solid map-get($gray, 2);
+
+    .tabs {
+      max-width: 1366px;
+      margin: 0 auto;
+      padding: 10px 115px 0;
+      box-sizing: border-box;
+
+      @include tablet {
+        padding: 10px 72px 0;
+
+      }
+
+      @include mobile {
+        padding: 10px 30px 0;
+
+      }
+    }
+  }
+
+  &_box {
+    position: relative;
+    z-index: 0;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+
+    margin: 0 -50vw;
+    background-color: map-get($gray, 2);
+
+    .card_list {
+      max-width: 1366px;
+      margin: 0 auto;
+      padding: 80px 115px;
+      box-sizing: border-box;
+
+      @include tablet {
+        padding: 80px 72px;
+
+      }
+
+      @include mobile {
+        padding: 80px 30px;
+
+      }
+    }
+
+    .discovery_card_item {
+      background-color: map-get($gray, 1);
+    }
+  }
+}

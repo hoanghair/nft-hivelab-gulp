@@ -196,7 +196,7 @@ legend {
     cursor: pointer;
     user-select: none;
 
-    &:hover{
+    &:hover {
         // transform: scale(1.1);
     }
 
@@ -422,8 +422,9 @@ legend {
         color: map-get($gray, 1);
         box-sizing: border-box;
     }
-    &_list + button{
-            margin-top: 30px;
+
+    &_list+button {
+        margin-top: 30px;
     }
 
     &_group {
@@ -670,15 +671,18 @@ legend {
 
             }
         }
+        @include mobile {
+            padding: 19px 12px;
+        }
 
     }
 
     &_name {
-        @include custom-font(22px, 600, 31px);
+        @include custom-font(16px, 600, 22px);
 
-        @include tablet {
+        @include desktop {
             & {
-                @include custom-font(16px, null, 22px);
+                @include custom-font(22px, 600, 31px);
 
             }
         }
