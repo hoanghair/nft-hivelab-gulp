@@ -1574,6 +1574,7 @@ body {
 
 // <!-- Footer -->
 .footer {
+  border-top: 2px solid map-get($gray, 1);
   background-color: map-get($gray, 2);
 
   &_content {
@@ -1799,36 +1800,6 @@ body {
     text-transform: capitalize;
   }
 
-  .sns {
-    &_list {
-      margin-top: 10px;
-
-      @include tablet {
-        & {
-          margin-top: 15px;
-        }
-      }
-
-      @include mobile {
-        & {
-          margin-top: 15px;
-        }
-      }
-    }
-
-    &_item {
-      display: inline-block;
-
-      &+.sns_item {
-        margin-left: 4px;
-      }
-    }
-
-    &_link {
-      display: inline-block;
-    }
-  }
-
   &_copyright {
     margin-top: 30px;
     border-top: 1px solid map-get($gray , 3);
@@ -1845,6 +1816,36 @@ body {
       @include custom-font(12px, 400, 13px);
       color: map-get($gray , 4);
     }
+  }
+}
+
+.sns {
+  &_list {
+    margin-top: 10px;
+
+    @include tablet {
+      & {
+        margin-top: 15px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &_item {
+    display: inline-block;
+
+    &+.sns_item {
+      margin-left: 4px;
+    }
+  }
+
+  &_link {
+    display: inline-block;
   }
 }
 
