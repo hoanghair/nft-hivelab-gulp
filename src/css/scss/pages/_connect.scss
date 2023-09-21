@@ -2,13 +2,6 @@
   &_connect {
     display: flex;
     font-size: 0;
-    margin-top: 54px;
-
-    @include desktop {
-      & {
-        margin-top: 100px;
-      }
-    }
 
     @include mobile {
       & {
@@ -85,7 +78,7 @@
 
     @include tablet {
       & {
-        width: 325px;
+        width: 320px;
       }
     }
 
@@ -115,45 +108,53 @@
     }
   }
 
-  &_list{
-      display: block;
-      margin-top: 40px;
+  &_list {
+    display: block;
+    margin-top: 40px;
 
-      @include desktop {
-        width: 330px;
+    @include desktop {
+      width: 320px;
 
-      }
+    }
 
-      @include tablet {
-        width: 100%;
+    @include tablet {
+      width: 100%;
 
-      }
+    }
 
-      @include mobile {
-        margin-top: 30px;
+    @include mobile {
+      margin-top: 30px;
 
-      }
+    }
 
   }
 
-  &_item + &_item{
+  &_item+&_item {
     margin-top: 20px;
   }
 
   &_link {
     display: block;
-    padding: 15px 20px 15px 40px;
+    padding: 9px 20px 9px 40px;
     border-radius: $border_radius_sm;
     border: 1px solid var(--bg_btn_violet);
     background-color: map-get($gray, 2);
     box-sizing: border-box;
+
+    @include desktop {
+      padding: 15px 20px 15px 40px;
+    }
   }
 
   &_name {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
     @include custom-font(22px, 600, 31px);
     color: var(--white);
     vertical-align: middle;
+
+    @include tablet {
+      margin-left: 20px;
+    }
   }
 }
