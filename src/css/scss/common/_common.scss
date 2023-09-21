@@ -671,6 +671,7 @@ legend {
 
             }
         }
+
         @include mobile {
             padding: 19px 12px;
         }
@@ -712,6 +713,11 @@ legend {
                 background-color: map-get($gray, 3);
             }
         }
+
+        @include tablet {
+            @include custom-font(12px, 400, 13px);
+        }
+
     }
 }
 

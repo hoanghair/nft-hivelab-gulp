@@ -1,18 +1,19 @@
-@@include('./include/head.html',{"title": "Document Title - Sub_02 : UIT Gulp Project", "list_title": "Artist Page : Page"})
+@@include('./include/head.html',{"title": "Artist Page", "list_title": "Artist Page : Page"})
+
 <body data-pagestatus="new : 2023">
-@@include('./include/skipnavigation.html')
+	@@include('./include/skipnavigation.html')
 
 	<div class="wrap">
 		<!--[D] HEADER -->
-@@include('./include/header.html',{"type": "01"})
+		@@include('./include/header.html',{"type": "01"})
 		<!--//[D] HEADER -->
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="">
-				<div class="section_profile">
-					<div class="profile_thumb">
-					</div>
+			<section class="section section_thumb section_thumb_artist">
+			</section>
+			<section class="section section_profile">
+				<div class="section_inner">
 					<div class="profile_box">
 						<div class="avatar avatar_extra_large">
 							<div class="thumb">
@@ -91,29 +92,32 @@
 						</div>
 					</div>
 				</div>
-				<section class="section_card">
-					<div class="section_card_tabs">
-						<ul class="tabs">
-							<li class="tabs_item">
-								<button class="tabs_link active">
-									<span class="tabs_name">Created</span>
-									<span class="tabs_data only_pc">302</span>
-								</button>
-							</li>
-							<li class="tabs_item">
-								<button class="tabs_link">
-									<span class="tabs_name">Owned</span>
-									<span class="tabs_data only_pc">67</span>
-								</button>
-							</li>
-							<li class="tabs_item">
-								<button class="tabs_link">
-									<span class="tabs_name">Collection</span>
-									<span class="tabs_data only_pc">4</span>
-								</button>
-							</li>
-						</ul>
-					</div>
+
+			</section>
+			<div class="section_tabs">
+				<ul class="tabs">
+					<li class="tabs_item">
+						<button class="tabs_link active">
+							<span class="tabs_name">Created</span>
+							<span class="tabs_data only_pc_tb">302</span>
+						</button>
+					</li>
+					<li class="tabs_item">
+						<button class="tabs_link">
+							<span class="tabs_name">Owned</span>
+							<span class="tabs_data only_pc_tb">67</span>
+						</button>
+					</li>
+					<li class="tabs_item">
+						<button class="tabs_link">
+							<span class="tabs_name">Collection</span>
+							<span class="tabs_data only_pc_tb">4</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<section class="section section_card">
+				<div class="section_inner">
 					<div class="section_card_box">
 						<ul class="card_list">
 							<li class="discovery_card_item">
@@ -127,10 +131,10 @@
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt5.png" alt="MoonDancer " class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">MoonDancer</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="discovery_card_desc">
 										<div class="card_price">
@@ -148,7 +152,7 @@
 							<li class="discovery_card_item">
 								<div class="discovery_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
+										<img src="../img/image/img_discover2.png" alt="Life On Edena" class="img">
 									</div>
 								</div>
 								<div class="discovery_card_info">
@@ -156,10 +160,10 @@
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="NebulaKid" class="img">
 											</div>
 										</div>
-										<span class="card_name">NebulaKid</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="discovery_card_desc">
 										<div class="card_price">
@@ -175,180 +179,6 @@
 							</li>
 
 							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							
-							<li class="discovery_card_item">
-								<div class="discovery_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
-									</div>
-								</div>
-								<div class="discovery_card_info">
-									<strong class="card_title">Life On Edena</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
-											</div>
-										</div>
-										<span class="card_name">NebulaKid</span>
-									</div>
-									<div class="discovery_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="discovery_card_item only_pc_mo">
 								<div class="discovery_card_image">
 									<div class="thumb thumb_card">
 										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
@@ -359,10 +189,184 @@
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc_tb">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover4.png" alt="CryptoCity" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">CryptoCity</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc_tb">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover5.png" alt="ColorfulDog 0524" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">ColorfulDog 0524</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc_tb">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover6.png" alt="Space Tales" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">Space Tales</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover7.png" alt="Cherry Blossom Girl 037" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">Cherry Blossom Girl 037</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover8.png" alt="Dancing Robots 0987" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">Dancing Robots 0987</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="discovery_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="discovery_card_item only_pc">
+								<div class="discovery_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover9.png" alt="IceCream Ape" class="img">
+									</div>
+								</div>
+								<div class="discovery_card_info">
+									<strong class="card_title">IceCream Ape </strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="discovery_card_desc">
 										<div class="card_price">
@@ -378,13 +382,15 @@
 							</li>
 						</ul>
 					</div>
-				</section>
+				</div>
+
+
 			</section>
 		</main>
 		<!-- // [D] CONTENTS -->
 
 		<!--[D] FOOTER -->
-@@include('./include/footer.html',{"type": "01"})
+		@@include('./include/footer.html',{"type": "01"})
 		<!--// [D] FOOTER -->
 	</div>
 
@@ -392,6 +398,7 @@
 	<div class="layer"></div>
 	<!-- [D] LAYER -->
 
-@@include('./include/script.html')
+	@@include('./include/script.html')
 </body>
+
 </html>

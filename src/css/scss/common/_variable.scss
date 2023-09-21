@@ -124,18 +124,6 @@ $border_radius_lg: 50%;
   }
 }
 
-@mixin bg_full($position, $z-index, $height, $background, $margin) {
-  position: $position;
-  z-index: $z-index;
-  width: 100vw;
-  height: $height;
-  left: 50%;
-  right: 50%;
-  margin: $margin;
-  background: $background;
-  content: '';
-}
-
 @mixin mobile {
   @media (max-width: #{$screen-sm - 1px}) {
     @content;

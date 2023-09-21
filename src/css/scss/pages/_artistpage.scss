@@ -1,5 +1,16 @@
 .section {
   &_profile {
+    .section_inner {
+      margin-top: -110px;
+      padding-bottom: 18px;
+
+      @include desktop {
+        margin-top: -150px;
+        padding-bottom: 40px;
+      }
+
+    }
+
     .btn_violet {
       padding: 0 20px;
     }
@@ -9,22 +20,12 @@
     }
 
     @include desktop {
-      margin-top: 140px;
-      padding: 0px 115px;
       .overview_title {
         font-size: 22px
       }
     }
 
-    @include tablet {
-      margin-top: 79px;
-      padding: 0 72px;
-    }
-
     @include mobile {
-      margin-top: 96px;
-      padding: 0 30px;
-
       .overview_item {
         width: calc((100% / 3) - 10px);
       }
@@ -34,60 +35,68 @@
       }
     }
   }
-}
 
-.profile {
   &_thumb {
-    position: relative;
-    z-index: 0;
-    left: 50%;
-    right: 50%;
-    width: 100vw;
-    background: url(../img/image/bg_artist_pc.jpg) no-repeat center/cover;
-    content: '';
-
-    &::after {
-      position: absolute;
-      z-index: -1;
-      left: 50%;
-      right: 50%;
-      width: 100vw;
-      margin: 0 -50vw;
-      background: var(--gradient_white_violet);
-      content: '';
-    }
-
-    @include desktop {
-      margin: -40px -50vw 0;
+    &_artist {
       height: 320px;
+      background: url(../img/image/bg_artist_pc.jpg) no-repeat center/cover;
 
       &::after {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
         height: 320px;
+        background: var(--gradient_white_violet);
+        content: '';
       }
-    }
 
-    @include tablet {
-      margin: -23px -50vw 0;
-      height: 280px;
-
-      &::after {
+      @include tablet {
         height: 280px;
+
+        &::after {
+          height: 280px;
+        }
       }
-    }
 
-    @include mobile {
-      margin: -40px -50vw 0;
-      height: 250px;
-
-      &::after {
+      @include mobile {
         height: 250px;
+
+        &::after {
+          height: 250px;
+        }
       }
     }
 
   }
 
+  &_tabs {
+
+    border-top: 1px solid map-get($gray, 2);
+    background-color: map-get($gray, 1);
+
+    .tabs {
+      max-width: 1366px;
+      margin: 0 auto;
+      padding: 10px 115px 0;
+      box-sizing: border-box;
+
+      @include tablet {
+        padding: 10px 72px 0;
+
+      }
+
+      @include mobile {
+        padding: 10px 30px 0;
+
+      }
+    }
+  }
+}
+
+.profile {
   &_box {
-    margin-top: -70px;
     font-size: 0;
 
     .avatar {
@@ -164,7 +173,7 @@
     }
 
     &_item+&_item {
-      margin-top: 30px;
+      margin-top: 29px;
     }
 
     .profile_title {
@@ -192,67 +201,33 @@
     }
   }
 
+
 }
 
 .section_card {
-  margin-top: 30px;
+  background-color: map-get($gray, 2);
 
-  &_tabs {
-    position: relative;
-    z-index: 0;
-    left: 50%;
-    right: 50%;
-    width: 100vw;
-    margin: 0 -50vw;
-    border-top: 1px solid map-get($gray, 2);
+  .section_inner {
+    padding-top: 80px;
 
-    .tabs {
-      max-width: 1366px;
-      margin: 0 auto;
-      padding: 10px 115px 0;
-      box-sizing: border-box;
+    @include tablet {
+      padding-bottom: 80px;
+    }
 
-      @include tablet {
-        padding: 10px 72px 0;
-
-      }
-
-      @include mobile {
-        padding: 10px 30px 0;
-
-      }
+    @include mobile {
+      padding-bottom: 80px;
     }
   }
 
   &_box {
-    position: relative;
-    z-index: 0;
-    left: 50%;
-    right: 50%;
-    width: 100vw;
-
-    margin: 0 -50vw;
-    background-color: map-get($gray, 2);
-
-    .card_list {
-      max-width: 1366px;
-      margin: 0 auto;
-      padding: 80px 115px;
-      box-sizing: border-box;
-
-      @include tablet {
-        padding: 80px 72px;
-
-      }
-
-      @include mobile {
-        padding: 80px 30px;
-
-      }
-    }
-
     .discovery_card_item {
       background-color: map-get($gray, 1);
+    }
+
+    @include mobile {
+      .discovery_card_item:not(:first-child) {
+        margin-top: 30px;
+      }
     }
   }
 }
