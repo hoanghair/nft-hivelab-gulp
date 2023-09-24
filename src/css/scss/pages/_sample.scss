@@ -26,6 +26,10 @@ i {
     @include sp-normal('ico_arrowright_32px')
 }
 
+.ico_arrowright_color_20px {
+    @include sp-normal('ico_arrowright_color_20px')
+}
+
 .ico_copy_20px {
     @include sp-normal('ico_copy_20px')
 }
@@ -237,6 +241,7 @@ i {
 .ico_videocamera {
     @include sp-normal('ico_videocamera')
 }
+
 .ico_videocamera_sm {
     @include sp-normal('ico_videocamera_sm')
 }
