@@ -220,12 +220,12 @@
   }
 
   &_box {
-    .discovery_card_item {
+    .artist_card_item {
       background-color: map-get($gray, 1);
     }
 
     @include mobile {
-      .discovery_card_item:not(:first-child) {
+      .artist_card_item:not(:first-child) {
         margin-top: 30px;
       }
     }

@@ -739,7 +739,7 @@ body {
 .section {
 
   &_toprated .section_inner,
-  &_discovery .section_inner {
+  &_artist .section_inner {
 
     @include mobile {
       & {
@@ -769,7 +769,7 @@ body {
     }
   }
 
-  &_discovery .section_inner {
+  &_artist .section_inner {
     @include mobile {
       & {
         padding-bottom: 160px;
@@ -1028,7 +1028,7 @@ body {
 // < !-- // Section Browse Categories -->
 
 // <!-- Section Discover more NFTs -->
-.section_discovery {
+.section_artist {
 
 
   .section_inner {
@@ -1040,7 +1040,7 @@ body {
   }
 }
 
-.discovery_card {
+.artist_card {
   &_item {
     background-color: map-get($gray, 2);
 
@@ -1727,6 +1727,7 @@ body {
 
   .explore {
     &_list {
+      display: inline-block;
       margin-top: 25px;
 
       @include tablet {
@@ -1838,6 +1839,7 @@ body {
   }
 
   &_title {
+    display: block;
     font-family: SpaceMono;
     @include custom-font(22px, 700, 35px);
     text-transform: capitalize;
@@ -1864,6 +1866,7 @@ body {
 
 .sns {
   &_list {
+    display: inline-block;
     margin-top: 10px;
 
     @include tablet {
