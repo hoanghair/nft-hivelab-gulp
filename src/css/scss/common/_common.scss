@@ -493,6 +493,7 @@ legend {
                 box-sizing: border-box;
 
                 @include mobile {
+                    padding: 15px 20px;
                     @include custom-font(12px, 400, 13px);
                 }
 
@@ -505,7 +506,7 @@ legend {
 
                 &:nth-child(2) {
                     width: 42%;
-                    padding: 12px 20px 12px 0;
+                    padding-left: 0;
                 }
 
                 &:nth-child(3) {
@@ -564,7 +565,8 @@ legend {
 
                 &:nth-child(2) {
                     @include flex-item(flex, normal, center);
-                    padding: 12px 20px 12px 0;
+                    padding-left: 0;
+
                 }
 
                 &:nth-child(3) {
@@ -578,6 +580,10 @@ legend {
 
                     @include desktop {
                         margin-left: 20px;
+                    }
+
+                    @include mobile {
+                        // @include custom-font(16px, null, 22px);
                     }
                 }
 
@@ -596,17 +602,16 @@ legend {
                 }
 
                 @include tablet {
+                    padding: 14px 20px;
+
                     &:nth-last-child(2) {
                         display: none;
-                    }
-
-                    & .avatar+span {
-                        @include custom-font(16px, null, 22px);
                     }
                 }
 
                 @include mobile {
                     & {
+                        padding: 12px 8px;
                         @include custom-font(12px, 400, 13px);
                     }
 
