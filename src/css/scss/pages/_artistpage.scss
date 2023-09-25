@@ -119,19 +119,19 @@
     }
   }
 
-  &_name {
-    @include custom-font(51px, 600, 56px);
+  // &_name {
+  //   @include custom-font(51px, 600, 56px);
 
-    @include tablet {
-      @include custom-font(38px, 600, 46px);
+  //   @include tablet {
+  //     @include custom-font(38px, 600, 46px);
 
-    }
+  //   }
 
-    @include mobile {
-      @include custom-font(28px, 600, 39px);
+  //   @include mobile {
+  //     @include custom-font(28px, 600, 39px);
 
-    }
-  }
+  //   }
+  // }
 
   &_btn {
     margin-top: 30px;

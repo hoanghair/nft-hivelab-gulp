@@ -161,9 +161,14 @@ $border_radius_lg: 50%;
     display: none;
   }
 
+  .only_mo {
+    display: none;
+  }
+
   .only_tb {
     display: inline-block;
   }
+
 }
 
 @mixin on_mo {
