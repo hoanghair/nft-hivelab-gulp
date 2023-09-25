@@ -1,32 +1,52 @@
 .section {
   &_rankings {
-    .section_inner {
+
+
+    &_tables {
       padding-top: 40px;
       padding-bottom: 40px;
     }
-  }
 
-  &_tabs_rankings {
-    .tabs {
-      @include tablet {
-        padding: 0px 115px;
+    &_tabs {
 
-      }
+      .tabs {
+        @include desktop {
+          padding: 0px 115px;
 
+        }
 
-      @include tablet {
-        padding: 0px 72px;
+        @include tablet {
+          padding: 0px 72px;
 
-      }
+        }
 
-      @include mobile {
-        padding: 0px 30px;
+        @include mobile {
+          padding: 0px 30px;
 
+        }
       }
     }
   }
+
+
 }
 
-.rankings_table {
-  margin-top: -20px;
+.rankings {
+  &_heading {
+    .page_desc {
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      padding: 30px 30px;
+
+      .page_desc {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &_table {
+    margin-top: -20px;
+  }
 }
