@@ -1,0 +1,32 @@
+.section {
+  &_rankings {
+    .section_inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &_tabs_rankings {
+    .tabs {
+      @include tablet {
+        padding: 0px 115px;
+
+      }
+
+
+      @include tablet {
+        padding: 0px 72px;
+
+      }
+
+      @include mobile {
+        padding: 0px 30px;
+
+      }
+    }
+  }
+}
+
+.rankings_table {
+  margin-top: -20px;
+}

@@ -1,3 +1,4 @@
+
 .section {
   &_account {
     display: flex;
@@ -88,6 +89,10 @@
         width: 325px;
       }
     }
+    .page_desc{
+      margin-top: 20px;
+    }
+
 
     & .form {
       display: block;
@@ -117,27 +122,5 @@
 
   }
 
-  &_title {
-    @include custom-font(38px, 600, 46px);
-    text-transform: capitalize;
 
-    @include desktop {
-      & {
-        @include custom-font(51px, 600, 56px);
-      }
-    }
-  }
-
-  &_desc {
-    display: inline-block;
-    margin-top: 20px;
-    @include custom-font(16px, 400, 22px);
-    text-transform: capitalize;
-
-    @include desktop {
-      & {
-        @include custom-font(22px, 400, 35px);
-      }
-    }
-  }
 }

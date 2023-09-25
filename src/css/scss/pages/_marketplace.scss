@@ -1,0 +1,10 @@
+.section{
+  &_headingpage{
+    .input_group{
+      margin-top: 30px;
+    }
+  }
+  &_marketplace{
+    background-color: map-get($gray, 2);
+  }
+}

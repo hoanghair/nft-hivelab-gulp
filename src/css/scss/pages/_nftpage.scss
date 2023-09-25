@@ -42,6 +42,9 @@
     @include mobile {
       width: 100%;
     }
+    .page_desc {
+      color: map-get($gray, 3);
+    }
   }
 
   &_countdown {
@@ -87,32 +90,6 @@
 
     @include mobile {
       margin-top: 20px;
-    }
-  }
-
-  &_name {
-    // display: inline-block;
-    @include custom-font(51px, 600, 56px);
-
-    @include tablet {
-      @include custom-font(38px, 600, 46px);
-    }
-
-    @include mobile {
-      @include custom-font(28px, 600, 39px);
-    }
-  }
-
-  &_time {
-    display: inline-block;
-    margin-top: 10px;
-    @include custom-font(16px, 600, 22px);
-    color: map-get($gray, 3);
-    text-transform: capitalize;
-
-    @include desktop {
-      @include custom-font(22px, 400, 35px);
-
     }
   }
 
