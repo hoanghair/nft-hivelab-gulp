@@ -1,10 +1,12 @@
 @@include('./include/head.html',{"title": "Connect Wallet", "list_title": "Connect Wallet : Page"})
+
 <body data-pagestatus="new : 2023">
-@@include('./include/skipnavigation.html')
+	@@include('./include/skipnavigation.html')
+	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
 
 	<div class="wrap">
 		<!--[D] HEADER -->
-@@include('./include/header.html',{"type": "01"})
+		@@include('./include/header.html',{"type": "01"})
 		<!--//[D] HEADER -->
 
 		<!-- [D] CONTENTS -->
@@ -19,26 +21,26 @@
 					<div class="connect_form">
 						<h2 class="page_title">Connect Wallet</h2>
 						<p class="page_desc">Choose a wallet you want to connect. There are several wallet providers.</p>
-            <ul class="connect_list">
-              <li class="connect_item">
-                <a href="#none" class="connect_link">
-                  <i class="ico_metamask"></i>
-                  <span class="connect_name">Metamask</span>
-                </a>
-              </li>
-              <li class="connect_item">
-                <a href="#none" class="connect_link">
-                  <i class="ico_walletconnect"></i>
-                  <span class="connect_name">Wallet Connect</span>
-                </a>
-              </li>
-              <li class="connect_item">
-                <a href="#none" class="connect_link">
-                  <i class="ico_coinbase"></i>
-                  <span class="connect_name">Coinbase</span>
-                </a>
-              </li>
-            </ul>
+						<ul class="connect_list">
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_metamask"></i>
+									<span class="connect_name">Metamask</span>
+								</a>
+							</li>
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_walletconnect"></i>
+									<span class="connect_name">Wallet Connect</span>
+								</a>
+							</li>
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_coinbase"></i>
+									<span class="connect_name">Coinbase</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -46,7 +48,7 @@
 		<!-- // [D] CONTENTS -->
 
 		<!--[D] FOOTER -->
-@@include('./include/footer.html',{"type": "01"})
+		@@include('./include/footer.html',{"type": "01"})
 		<!--// [D] FOOTER -->
 	</div>
 
@@ -54,6 +56,7 @@
 	<div class="layer"></div>
 	<!-- [D] LAYER -->
 
-@@include('./include/script.html')
+	@@include('./include/script.html')
 </body>
+
 </html>
