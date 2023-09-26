@@ -1,10 +1,12 @@
 @@include('./include/head.html',{"title": "Create Account", "list_title": "Create Account : Page"})
+
 <body data-pagestatus="new : 2023">
-@@include('./include/skipnavigation.html')
+	@@include('./include/skipnavigation.html')
+	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
 
 	<div class="wrap">
 		<!--[D] HEADER -->
-@@include('./include/header.html',{"type": "01"})
+		@@include('./include/header.html',{"type": "01"})
 		<!--//[D] HEADER -->
 
 		<!-- [D] CONTENTS -->
@@ -20,32 +22,33 @@
 						<h2 class="page_title">Create account</h2>
 						<p class="page_desc">Welcome! enter your details and start creating, collecting and selling NFTs.</p>
 						<form action="#" class="form form_mo">
-              <ul class="input_list">
-                <li class="input_item input_group">
-                  <span class="input_icon_left">
-                    <i class="ico_user_color_20px"></i>
-                  </span>
-                  <input type="name" id="name" name="name" placeholder="Username" class="input_text">
-                </li>
-                <li class="input_item input_group">
-                  <span class="input_icon_left">
-                    <i class="ico_email_color_20px"></i>
-                  </span>
-                  <input type="email" id="email" name="email" placeholder="Email Address" class="input_text">
-                </li>
-                <li class="input_item input_group">
-                  <span class="input_icon_left">
-                    <i class="ico_lockkey_color_20px"></i>
-                  </span>
-                  <input type="password" id="password" name="password" placeholder="Password" class="input_text">
-                </li>
-                <li class="input_item input_group">
-                  <span class="input_icon_left">
-                    <i class="ico_email_color_20px"></i>
-                  </span>
-                  <input type="password" id="cf_password" name="cf_password" placeholder="Confirm Password" class="input_text">
-                </li>
-              </ul>
+							<ul class="input_list">
+								<li class="input_item input_group">
+									<span class="input_icon_left">
+										<i class="ico_user_color_20px"></i>
+									</span>
+									<input type="name" id="name" name="name" placeholder="Username" class="input_text">
+								</li>
+								<li class="input_item input_group">
+									<span class="input_icon_left">
+										<i class="ico_email_color_20px"></i>
+									</span>
+									<input type="email" id="email" name="email" placeholder="Email Address" class="input_text">
+								</li>
+								<li class="input_item input_group">
+									<span class="input_icon_left">
+										<i class="ico_lockkey_color_20px"></i>
+									</span>
+									<input type="password" id="password" name="password" placeholder="Password" class="input_text">
+								</li>
+								<li class="input_item input_group">
+									<span class="input_icon_left">
+										<i class="ico_email_color_20px"></i>
+									</span>
+									<input type="password" id="cf_password" name="cf_password" placeholder="Confirm Password"
+										class="input_text">
+								</li>
+							</ul>
 							<button class="btn btn_sm btn_p30 btn_violet" type="submit">
 								Create connect
 							</button>
@@ -57,7 +60,7 @@
 		<!-- // [D] CONTENTS -->
 
 		<!--[D] FOOTER -->
-@@include('./include/footer.html',{"type": "01"})
+		@@include('./include/footer.html',{"type": "01"})
 		<!--// [D] FOOTER -->
 	</div>
 
@@ -65,6 +68,7 @@
 	<div class="layer"></div>
 	<!-- [D] LAYER -->
 
-@@include('./include/script.html')
+	@@include('./include/script.html')
 </body>
+
 </html>
