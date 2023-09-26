@@ -1,5 +1,10 @@
 
 
+/* swiper */
+
+.swiper {
+  background: #000;
+}
 /* Slider */
 
 .slick-slider {
@@ -105,9 +110,4 @@
 
 .slick-arrow.slick-hidden {
   display: none;
-}
-/* swiper */
-
-.swiper {
-  background: #000;
 }
