@@ -3,58 +3,58 @@ input,
 select,
 textarea,
 button {
-    font-family: WorkSans, '나눔바른고딕', 'NanumBarunGothic', 'Malgun Gothic', '맑은고딕', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif
+  font-family: WorkSans, '나눔바른고딕', 'NanumBarunGothic', 'Malgun Gothic', '맑은고딕', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif
 }
 
 .theme_spacemono {
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        font-family: SpaceMono;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-family: SpaceMono;
+  }
 }
 
 .blind,
 caption span,
 legend {
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    text-indent: -9999px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  text-indent: -9999px;
 }
 
 .skip {
-    height: 0
+  height: 0
 }
 
 .skip a {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -100px;
-    width: 100%;
-    height: 25px;
-    text-align: center
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 25px;
+  text-align: center
 }
 
 .skip a:focus,
 #skip a:active {
-    position: absolute;
-    top: 0;
-    z-index: 100;
-    padding: 10px 0;
-    background: #000;
-    font-weight: bold;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: 10px 0;
+  background: #000;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none
 }
 
 
@@ -75,68 +75,68 @@ legend {
 //  <!-- Btn Navbar Toggler --> */
 .navbar-toggler {
 
-    input {
-        display: none;
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 14px;
+    padding: 5px 3px;
+    transition: all .5s;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  span,
+  span:before,
+  span:after {
+    position: absolute;
+    height: 1.5px;
+    width: 18px;
+    border-radius: 4px;
+    background: var(--white);
+    transition: all .5s;
+  }
+
+  label {
+    span:first-child {
+      top: 5px;
+      width: 13px;
     }
 
-    label {
-        position: relative;
-        display: block;
-        width: 18px;
-        height: 14px;
-        padding: 5px 3px;
-        transition: all .5s;
-        text-align: left;
-        cursor: pointer;
+    span:nth-child(2) {
+      top: 12px;
     }
 
-    span,
-    span:before,
-    span:after {
-        position: absolute;
-        height: 1.5px;
-        width: 18px;
-        border-radius: 4px;
-        background: var(--white);
-        transition: all .5s;
+    span:nth-child(3) {
+      top: 18px;
+      width: 13px;
+    }
+  }
+
+  #menu2:checked+label {
+    span:first-child {
+      top: 20px;
+      width: 0px;
+      opacity: 0;
+      transform: rotate(-45deg);
     }
 
-    label {
-        span:first-child {
-            top: 5px;
-            width: 13px;
-        }
-
-        span:nth-child(2) {
-            top: 12px;
-        }
-
-        span:nth-child(3) {
-            top: 18px;
-            width: 13px;
-        }
+    span:nth-child(2) {
+      top: 12px;
+      width: 25px;
+      transform: rotate(-45deg);
     }
 
-    #menu2:checked+label {
-        span:first-child {
-            top: 20px;
-            width: 0px;
-            opacity: 0;
-            transform: rotate(-45deg);
-        }
-
-        span:nth-child(2) {
-            top: 12px;
-            width: 25px;
-            transform: rotate(-45deg);
-        }
-
-        span:nth-child(3) {
-            top: 12px;
-            width: 25px;
-            transform: rotate(45deg);
-        }
+    span:nth-child(3) {
+      top: 12px;
+      width: 25px;
+      transform: rotate(45deg);
     }
+  }
 }
 
 //  <!--// Btn Navbar Toggler --> */
@@ -144,40 +144,40 @@ legend {
 
 /* <!-- [D] Typography --> */
 .heading {
-    &_one {
-        @include custom-font(67px, 600, 74px);
-    }
+  &_one {
+    @include custom-font(67px, 600, 74px);
+  }
 
-    &_two {
-        @include custom-font(51px, 600, 56px);
-    }
+  &_two {
+    @include custom-font(51px, 600, 56px);
+  }
 
-    &_three {
-        @include custom-font(38px, 600, 46px);
-    }
+  &_three {
+    @include custom-font(38px, 600, 46px);
+  }
 
-    &_four {
-        @include custom-font(28px, 600, 39px);
-    }
+  &_four {
+    @include custom-font(28px, 600, 39px);
+  }
 
-    &_five {
-        @include custom-font(22px, 600, 31px);
-    }
+  &_five {
+    @include custom-font(22px, 600, 31px);
+  }
 
 }
 
 .body {
-    &_caption {
-        @include custom-font(12px, 400, 13px);
-    }
+  &_caption {
+    @include custom-font(12px, 400, 13px);
+  }
 
-    &_base {
-        @include custom-font(16px, 400, 22px);
-    }
+  &_base {
+    @include custom-font(16px, 400, 22px);
+  }
 
-    &_text {
-        @include custom-font(22px, 400, 35px);
-    }
+  &_text {
+    @include custom-font(22px, 400, 35px);
+  }
 }
 
 /* <!--// [D] Typography --> */
@@ -185,123 +185,123 @@ legend {
 /* <!-- [D] Button --> */
 
 .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: $border_radius_sm;
-    @include custom-font(16px, 600, 22px);
-    color: var(--white);
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-    user-select: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border_radius_sm;
+  @include custom-font(16px, 600, 22px);
+  color: var(--white);
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  user-select: none;
 
-    &:hover {
-        // transform: scale(1.1);
-    }
+  &:hover {
+    // transform: scale(1.1);
+  }
 
-    & i {
-        margin-right: 12px;
-    }
+  & i {
+    margin-right: 12px;
+  }
 
-    &.is_disabled {
-        opacity: 50%;
-        pointer-events: none;
-    }
+  &.is_disabled {
+    opacity: 50%;
+    pointer-events: none;
+  }
 
-    &_p30 {
-        padding: 0 30px;
+  &_p30 {
+    padding: 0 30px;
 
-    }
+  }
 
-    &_p50 {
-        padding: 0 50px;
+  &_p50 {
+    padding: 0 50px;
 
-    }
+  }
 
-    &_sm {
-        height: $height_btn_sm;
-    }
+  &_sm {
+    height: $height_btn_sm;
+  }
 
-    &_md {
-        height: $height_btn_md;
-    }
+  &_md {
+    height: $height_btn_md;
+  }
 
-    &_lg {
-        height: $height_btn_lg;
-    }
+  &_lg {
+    height: $height_btn_lg;
+  }
 
-    &_full {
-        width: 100%;
-    }
+  &_full {
+    width: 100%;
+  }
 
-    // &_46px {
-    //     height: $height_btn_sm;
-    // }
+  // &_46px {
+  //     height: $height_btn_sm;
+  // }
 
-    &_w100 {
-        width: $width_100;
-    }
+  &_w100 {
+    width: $width_100;
+  }
 
-    /* <!-- [D] White --> */
-    &_white {
-        background-color: var(--white);
-        color: map-get($gray, 1);
-    }
+  /* <!-- [D] White --> */
+  &_white {
+    background-color: var(--white);
+    color: map-get($gray, 1);
+  }
 
-    /* <!--// [D] White --> */
+  /* <!--// [D] White --> */
 
-    /* <!-- [D] Violet --> */
-    &_violet {
-        background-color: var(--bg_btn_violet);
-    }
+  /* <!-- [D] Violet --> */
+  &_violet {
+    background-color: var(--bg_btn_violet);
+  }
 
-    /* <!--// [D] Violet --> */
+  /* <!--// [D] Violet --> */
 
-    /* <!-- [D] Transparent --> */
-    &_transparent {
-        background-color: transparent;
-        border: 2px solid var(--bg_btn_violet);
-    }
+  /* <!-- [D] Transparent --> */
+  &_transparent {
+    background-color: transparent;
+    border: 2px solid var(--bg_btn_violet);
+  }
 
-    /* <!--// [D] Transparent --> */
+  /* <!--// [D] Transparent --> */
 
-    /* <!-- [D] Gray --> */
-    &_gray {
-        background-color: map-get($gray, 2);
-    }
+  /* <!-- [D] Gray --> */
+  &_gray {
+    background-color: map-get($gray, 2);
+  }
 
-    /* <!--// [D] Gray --> */
+  /* <!--// [D] Gray --> */
 }
 
 /* <!--// [D] Button--> */
 
 // <!-- [D] Thumbnail -->
 .thumb {
-    position: relative;
-    overflow: hidden;
-    padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
 
-    .img {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include custom-dimensions(100%, 100%);
-        object-fit: cover;
+  .img {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include custom-dimensions(100%, 100%);
+    object-fit: cover;
+  }
+
+  &_card {
+    padding-top: 89.69%;
+
+    &_mo {
+      padding-top: 75.56%;
     }
+  }
 
-    &_card {
-        padding-top: 89.69%;
-
-        &_mo {
-            padding-top: 75.56%;
-        }
-    }
-
-    &_16x7 {
-        padding-top: 43.75%;
-    }
+  &_16x7 {
+    padding-top: 43.75%;
+  }
 
 
 }
@@ -311,358 +311,358 @@ legend {
 
 // <!-- [D] Avatar -->
 .avatar {
-    display: inline-block;
+  display: inline-block;
 
+  .thumb {
+    border-radius: $border_radius_lg;
+  }
+
+  &_small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_medium {
+    width: 60px;
+    height: 60px;
+  }
+
+  &_large,
+  &_extra_large {
+    width: 120px;
+    height: 120px;
+  }
+
+  &_extra_large {
     .thumb {
-        border-radius: $border_radius_lg;
+      border-radius: $border_radius_sm;
     }
-
-    &_small {
-        width: 24px;
-        height: 24px;
-    }
-
-    &_medium {
-        width: 60px;
-        height: 60px;
-    }
-
-    &_large,
-    &_extra_large {
-        width: 120px;
-        height: 120px;
-    }
-
-    &_extra_large {
-        .thumb {
-            border-radius: $border_radius_sm;
-        }
-    }
+  }
 }
 
 // <!--// [D] Avatar -->
 
 // <!-- [D] Input -->
 ::placeholder {
-    @include custom-font(16px, 400, 22px);
-    color: map-get($gray, 1);
+  @include custom-font(16px, 400, 22px);
+  color: map-get($gray, 1);
 }
 
 .form {
-    display: flex;
-    overflow: hidden;
-    border-radius: $border_radius_sm;
-    background-color: var(--white);
+  display: flex;
+  overflow: hidden;
+  border-radius: $border_radius_sm;
+  background-color: var(--white);
+
+  // @include tablet {
+  //     &_mo {
+  //         display: block;
+  //         background-color: transparent;
+
+  //         input {
+  //             border-radius: $border_radius_sm;
+  //         }
+  //     }
+  // }
+
+
+  button {
+    width: 100%;
+  }
+
+  .input {
+    &_text {
+      padding: 19px 20px 19px 52px;
+    }
+
+    &_email {
+      padding-left: 20px;
+    }
 
     // @include tablet {
-    //     &_mo {
-    //         display: block;
-    //         background-color: transparent;
+    //     & {
+    //         &_mo {
+    //             padding: 11px 20px;
+    //             border: 1px solid map-get($gray, 3);
 
-    //         input {
-    //             border-radius: $border_radius_sm;
+    //         }
+
+    //         &_mo+button {
+    //             width: 100%;
+    //             margin-top: 16px;
+
     //         }
     //     }
     // }
 
+  }
 
+  &_email {
     button {
-        width: 100%;
+      width: auto;
+      height: 60px;
+      padding: 0 50px;
+
+      // @include tablet {
+      //     height: 46px;
+      // }
     }
 
-    .input {
-        &_text {
-            padding: 19px 20px 19px 52px;
-        }
-
-        &_email {
-            padding-left: 20px;
-        }
-
-        // @include tablet {
-        //     & {
-        //         &_mo {
-        //             padding: 11px 20px;
-        //             border: 1px solid map-get($gray, 3);
-
-        //         }
-
-        //         &_mo+button {
-        //             width: 100%;
-        //             margin-top: 16px;
-
-        //         }
-        //     }
-        // }
-
+    .input_text {
+      padding-left: 20px;
     }
-
-    &_email {
-        button {
-            width: auto;
-            height: 60px;
-            padding: 0 50px;
-
-            // @include tablet {
-            //     height: 46px;
-            // }
-        }
-
-        .input_text {
-            padding-left: 20px;
-        }
-    }
+  }
 }
 
 .input {
-    &_text {
-        width: 100%;
-        padding: 12px 52px;
-        @include custom-font(16px, 400, 22px);
-        color: map-get($gray, 1);
-        box-sizing: border-box;
+  &_text {
+    width: 100%;
+    padding: 12px 52px;
+    @include custom-font(16px, 400, 22px);
+    color: map-get($gray, 1);
+    box-sizing: border-box;
+  }
+
+  &_list+button {
+    margin-top: 30px;
+  }
+
+  &_group {
+    @include flex-item(flex, space-between, center);
+    position: relative;
+    // padding: 8px 20px;
+    overflow: hidden;
+    border-radius: $border_radius_sm;
+    border: 1px solid map-get($gray, 3);
+    background-color: var(--white);
+
+    &+.input_group {
+      margin-top: 15px;
+    }
+  }
+
+  &_icon_left {
+    position: absolute;
+    left: 20px;
+    pointer-events: none;
+  }
+
+  &_icon_right {
+    position: absolute;
+    right: 20px;
+    padding: 4px;
+    cursor: pointer;
+  }
+
+  &_search {
+    // padding: 14px 20px;
+    background-color: transparent;
+
+    & .input_text {
+      padding: 19px 20px;
     }
 
-    &_list+button {
-        margin-top: 30px;
-    }
-
-    &_group {
-        @include flex-item(flex, space-between, center);
-        position: relative;
-        // padding: 8px 20px;
-        overflow: hidden;
-        border-radius: $border_radius_sm;
-        border: 1px solid map-get($gray, 3);
-        background-color: var(--white);
-
-        &+.input_group {
-            margin-top: 15px;
-        }
-    }
-
-    &_icon_left {
-        position: absolute;
-        left: 20px;
-        pointer-events: none;
-    }
-
-    &_icon_right {
-        position: absolute;
-        right: 20px;
-        padding: 4px;
-        cursor: pointer;
-    }
-
-    &_search {
-        // padding: 14px 20px;
-        background-color: transparent;
-
-        & .input_text {
-            padding: 19px 20px;
-        }
-
-        ::placeholder,
-        input {
-            color: map-get($gray, 3);
-            background-color: transparent;
-
-        }
+    ::placeholder,
+    input {
+      color: map-get($gray, 3);
+      background-color: transparent;
 
     }
+
+  }
 }
 
 // <!--// [D] Text input -->
 
 // <!-- [D] Table -->
 .table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 20px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
 
-    thead {
-        tr {
-            th {
-                padding: 12px 20px;
-                border-top: 1px solid map-get($gray, 2);
-                border-bottom: 1px solid map-get($gray, 2);
-                font-family: SpaceMono;
-                @include custom-font(16px, 400, 22px);
-                color: map-get($gray, 3);
-                text-align: left;
-                box-sizing: border-box;
+  thead {
+    tr {
+      th {
+        padding: 12px 20px;
+        border-top: 1px solid map-get($gray, 2);
+        border-bottom: 1px solid map-get($gray, 2);
+        font-family: SpaceMono;
+        @include custom-font(16px, 400, 22px);
+        color: map-get($gray, 3);
+        text-align: left;
+        box-sizing: border-box;
 
-                @include mobile {
-                    padding: 15px 20px;
-                    @include custom-font(12px, 400, 13px);
-                }
-
-                &:first-child {
-                    width: 6.67%;
-                    border-left: 1px solid map-get($gray, 2);
-                    border-radius: $border_radius_sm 0 0 $border_radius_sm ;
-                    text-align: center;
-                }
-
-                &:nth-child(2) {
-                    width: 42%;
-                    padding-left: 0;
-                }
-
-                &:nth-child(3) {
-                    width: 17.14%;
-                }
-
-                &:nth-child(4) {
-                    width: 17.048%;
-                }
-
-                &:last-child {
-                    width: 17.14%;
-                    border-right: 1px solid map-get($gray, 2);
-                    border-radius: 0 $border_radius_sm $border_radius_sm 0;
-                }
-
-                @include tablet {
-                    &:nth-last-child(2) {
-                        display: none;
-                    }
-                }
-
-                @include mobile {
-                    &:nth-last-child(2) {
-                        display: none;
-                    }
-
-                    &:nth-last-child(3) {
-                        display: none;
-                    }
-                }
-            }
+        @include mobile {
+          padding: 15px 20px;
+          @include custom-font(12px, 400, 13px);
         }
-    }
 
-    tbody {
-        tr {
-            background-color: map-get($gray, 2);
-
-            td {
-                padding: 12px 20px;
-                font-family: SpaceMono;
-                @include custom-font(16px, 400, 22px);
-                color: var(--white);
-                text-align: left;
-                box-sizing: border-box;
-
-                &:first-child {
-                    border-radius: $border_radius_sm 0 0 $border_radius_sm;
-                    text-align: center;
-                }
-
-                &:last-child {
-                    border-radius: 0 $border_radius_sm $border_radius_sm 0;
-                }
-
-                &:nth-child(2) {
-                    @include flex-item(flex, normal, center);
-                    padding-left: 0;
-
-                }
-
-                &:nth-child(3) {
-                    color: var(--green);
-                }
-
-                & .avatar+span {
-                    margin-left: 12px;
-                    font-family: WorkSans;
-                    @include custom-font(22px, 600, 31px);
-
-                    @include desktop {
-                        margin-left: 20px;
-                    }
-
-                    @include mobile {
-                        // @include custom-font(16px, null, 22px);
-                    }
-                }
-
-                & .avatar {
-                    flex: 0 0 auto;
-
-                    @include tablet {
-                        width: 24px;
-                        height: 24px;
-                    }
-
-                    @include mobile {
-                        width: 24px;
-                        height: 24px;
-                    }
-                }
-
-                @include tablet {
-                    padding: 14px 20px;
-
-                    &:nth-last-child(2) {
-                        display: none;
-                    }
-                }
-
-                @include mobile {
-                    & {
-                        padding: 12px 8px;
-                        @include custom-font(12px, 400, 13px);
-                    }
-
-                    &:nth-last-child(2) {
-                        display: none;
-                    }
-
-                    &:nth-last-child(3) {
-                        display: none;
-                    }
-
-                    & .avatar+span {
-                        @include custom-font(16px, 400, 22px);
-                    }
-                }
-            }
+        &:first-child {
+          width: 6.67%;
+          border-left: 1px solid map-get($gray, 2);
+          border-radius: $border_radius_sm 0 0 $border_radius_sm ;
+          text-align: center;
         }
+
+        &:nth-child(2) {
+          width: 42%;
+          padding-left: 0;
+        }
+
+        &:nth-child(3) {
+          width: 17.14%;
+        }
+
+        &:nth-child(4) {
+          width: 17.048%;
+        }
+
+        &:last-child {
+          width: 17.14%;
+          border-right: 1px solid map-get($gray, 2);
+          border-radius: 0 $border_radius_sm $border_radius_sm 0;
+        }
+
+        @include tablet {
+          &:nth-last-child(2) {
+            display: none;
+          }
+        }
+
+        @include mobile {
+          &:nth-last-child(2) {
+            display: none;
+          }
+
+          &:nth-last-child(3) {
+            display: none;
+          }
+        }
+      }
     }
+  }
+
+  tbody {
+    tr {
+      background-color: map-get($gray, 2);
+
+      td {
+        padding: 12px 20px;
+        font-family: SpaceMono;
+        @include custom-font(16px, 400, 22px);
+        color: var(--white);
+        text-align: left;
+        box-sizing: border-box;
+
+        &:first-child {
+          border-radius: $border_radius_sm 0 0 $border_radius_sm;
+          text-align: center;
+        }
+
+        &:last-child {
+          border-radius: 0 $border_radius_sm $border_radius_sm 0;
+        }
+
+        &:nth-child(2) {
+          @include flex-item(flex, normal, center);
+          padding-left: 0;
+
+        }
+
+        &:nth-child(3) {
+          color: var(--green);
+        }
+
+        & .avatar+span {
+          margin-left: 12px;
+          font-family: WorkSans;
+          @include custom-font(22px, 600, 31px);
+
+          @include desktop {
+            margin-left: 20px;
+          }
+
+          @include mobile {
+            // @include custom-font(16px, null, 22px);
+          }
+        }
+
+        & .avatar {
+          flex: 0 0 auto;
+
+          @include tablet {
+            width: 24px;
+            height: 24px;
+          }
+
+          @include mobile {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        @include tablet {
+          padding: 14px 20px;
+
+          &:nth-last-child(2) {
+            display: none;
+          }
+        }
+
+        @include mobile {
+          & {
+            padding: 12px 8px;
+            @include custom-font(12px, 400, 13px);
+          }
+
+          &:nth-last-child(2) {
+            display: none;
+          }
+
+          &:nth-last-child(3) {
+            display: none;
+          }
+
+          & .avatar+span {
+            @include custom-font(16px, 400, 22px);
+          }
+        }
+      }
+    }
+  }
 }
 
 .number {
-    position: relative;
-    z-index: 1;
-    @include custom-font(16px, 400, 22px);
-    color: map-get($gray, 3);
-    text-align: center;
+  position: relative;
+  z-index: 1;
+  @include custom-font(16px, 400, 22px);
+  color: map-get($gray, 3);
+  text-align: center;
 
-    &::after {
-        @include absolute-align(50%, 50%, null, null);
-        z-index: -1;
-        @include custom-dimensions(30px, 30px);
-        border-radius: $border_radius_lg;
-        background-color: map-get($gray, 1);
-        transform: translate(-50%, -50%);
-        content: '';
-    }
+  &::after {
+    @include absolute-align(50%, 50%, null, null);
+    z-index: -1;
+    @include custom-dimensions(30px, 30px);
+    border-radius: $border_radius_lg;
+    background-color: map-get($gray, 1);
+    transform: translate(-50%, -50%);
+    content: '';
+  }
 }
 
 
 .table {
-    .number {
-        &::after {
-            @include tablet {
-                display: none;
-            }
+  .number {
+    &::after {
+      @include tablet {
+        display: none;
+      }
 
-            @include mobile {
-                display: none;
-            }
-        }
+      @include mobile {
+        display: none;
+      }
     }
+  }
 }
 
 
@@ -670,134 +670,177 @@ legend {
 
 // <!-- [D] Tab Bar -->
 .tabs {
-    display: flex;
-    background-color: map-get($gray, 1);
-    text-align: center;
+  display: flex;
+  background-color: map-get($gray, 1);
+  text-align: center;
 
-    .active {
-        color: var(--white);
-        border-bottom: 2px solid map-get($gray, 3);
+  .active {
+    color: var(--white);
+    border-bottom: 2px solid map-get($gray, 3);
 
-        & .tabs_data::after {
-            background-color: map-get($gray, 3);
-        }
+    & .tabs_data::after {
+      background-color: map-get($gray, 3);
+    }
+  }
+
+  &_item {
+    flex: 1;
+  }
+
+  &_link {
+    @include flex-item(inline-flex, center, center);
+    @include custom-dimensions(100%, 60px);
+    padding: 14.5px 30px;
+    border-bottom: 2px solid transparent;
+    color: map-get($gray, 3);
+    box-sizing: border-box;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: var(--white);
+      border-bottom: 2px solid map-get($gray, 3);
+
+
+      & .tabs_data::after {
+        background-color: map-get($gray, 3);
+
+      }
     }
 
-    &_item {
-        flex: 1;
+    @include mobile {
+      padding: 19px 12px;
     }
 
-    &_link {
-        @include flex-item(inline-flex, center, center);
-        @include custom-dimensions(100%, 60px);
-        padding: 14.5px 30px;
-        border-bottom: 2px solid transparent;
-        color: map-get($gray, 3);
-        box-sizing: border-box;
-        transition: color 0.4s ease;
+  }
 
-        &:hover {
-            color: var(--white);
-            border-bottom: 2px solid map-get($gray, 3);
+  &_name {
+    @include custom-font(16px, 600, 22px);
 
+    @include desktop {
+      & {
+        @include custom-font(22px, 600, 31px);
 
-            & .tabs_data::after {
-                background-color: map-get($gray, 3);
+      }
+    }
+  }
 
-            }
-        }
+  &_data {
+    position: relative;
+    z-index: 1;
+    margin-left: 16px;
+    padding: 5px 10px;
+    font-family: SpaceMono;
+    @include custom-font(16px, 400, 22px);
+    color: var(--white);
 
-        @include mobile {
-            padding: 19px 12px;
-        }
+    &::after {
+      @include absolute-align(50%, 50%, null, null);
+      z-index: -1;
+      @include custom-dimensions(100%, 100%);
+      border-radius: $border_radius_sm;
+      background-color: map-get($gray, 2);
 
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease;
+      content: '';
+
+      .active {
+        background-color: map-get($gray, 3);
+      }
     }
 
-    &_name {
-        @include custom-font(16px, 600, 22px);
-
-        @include desktop {
-            & {
-                @include custom-font(22px, 600, 31px);
-
-            }
-        }
+    @include tablet {
+      @include custom-font(12px, 400, 13px);
     }
 
-    &_data {
-        position: relative;
-        z-index: 1;
-        margin-left: 16px;
-        padding: 5px 10px;
-        font-family: SpaceMono;
-        @include custom-font(16px, 400, 22px);
-        color: var(--white);
-
-        &::after {
-            @include absolute-align(50%, 50%, null, null);
-            z-index: -1;
-            @include custom-dimensions(100%, 100%);
-            border-radius: $border_radius_sm;
-            background-color: map-get($gray, 2);
-
-            transform: translate(-50%, -50%);
-            transition: all 0.4s ease;
-            content: '';
-
-            .active {
-                background-color: map-get($gray, 3);
-            }
-        }
-
-        @include tablet {
-            @include custom-font(12px, 400, 13px);
-        }
-
-    }
+  }
 }
 
 .card_list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .page {
-    &_title {
+  &_title {
 
-        text-transform: capitalize;
+    text-transform: capitalize;
 
-        @include desktop {
-            & {
-                @include custom-font(51px, 600, 56px);
-            }
-        }
-
-        @include tablet {
-            & {
-                @include custom-font(38px, 600, 46px);
-            }
-        }
-
-        @include mobile {
-            & {
-                @include custom-font(28px, 600, 39px);
-            }
-        }
+    @include desktop {
+      & {
+        @include custom-font(51px, 600, 56px);
+      }
     }
 
-    &_desc {
-        display: inline-block;
-        margin-top: 10px;
-        @include custom-font(16px, 400, 22px);
-        text-transform: capitalize;
-
-        @include desktop {
-            & {
-                @include custom-font(22px, 400, 35px);
-            }
-        }
+    @include tablet {
+      & {
+        @include custom-font(38px, 600, 46px);
+      }
     }
+
+    @include mobile {
+      & {
+        @include custom-font(28px, 600, 39px);
+      }
+    }
+  }
+
+  &_desc {
+    display: inline-block;
+    margin-top: 10px;
+    @include custom-font(16px, 400, 22px);
+    text-transform: capitalize;
+
+    @include desktop {
+      & {
+        @include custom-font(22px, 400, 35px);
+      }
+    }
+  }
 }
+
+.animate_in {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.btn_backtotop {
+  visibility: hidden;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  right: 35px;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  background-color: map-get($gray, 2);
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s ease-in-out;
+
+  i {
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: map-get($gray, 1);
+  }
+
+  @include mobile{
+    right: 10px;
+  }
+}
+
+.btn_backtotop.show {
+  visibility: visible;
+  bottom: 50px;
+  opacity: 1;
+}
+
 
 // @include on_pc;
 @include desktop;
