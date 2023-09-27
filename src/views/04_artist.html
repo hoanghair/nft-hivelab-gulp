@@ -1,9 +1,8 @@
-@@include('./include/head.html',{"title": "NFT Page", "list_title": "NFT Page : Page"})
+@@include('./include/head.html',{"title": "Artist", "list_title": "Artist : Page"})
 
 <body data-pagestatus="new : 2023">
 	@@include('./include/skipnavigation.html')
-	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
-
+	
 	<div class="wrap">
 		<!--[D] HEADER -->
 		@@include('./include/header.html',{"type": "01"})
@@ -11,130 +10,114 @@
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section section_thumb section_thumb_nft">
+			<section class="section section_thumb section_thumb_artist">
 			</section>
-			<section class="section section_nftinfo">
+			<section class="section section_profile">
 				<div class="section_inner">
-					<div class="section_box">
-						<div class="nftinfo_heading">
-							<h2 class="page_title">The Orbitians</h2>
-							<span class="page_desc">Minted on Sep 30, 2022</span>
-						</div>
-						<div class="nftinfo_countdown">
-							<div class="highlight_timer">
-								<span class="timer_desc">Auction ends in:</span>
-								<div class="count">
-									<div class="time_wrap">
-										<span class="hour time_txt">23</span>
-										<span class="title_txt">Hours</span>
-									</div>
-									<span class="divider">:</span>
-									<div class="time_wrap">
-										<span class="minute time_txt">59</span>
-										<span class="title_txt">Minutes</span>
-									</div>
-									<span class="divider">:</span>
-									<div class="time_wrap">
-										<span class="second time_txt">35</span>
-										<span class="title_txt">Seconds</span>
-									</div>
-								</div>
-								<button class="btn btn_md btn_p50 btn_violet">Place Bid</button>
+					<div class="profile_box">
+						<div class="avatar avatar_extra_large">
+							<div class="thumb">
+								<img src="../img/image/img_xl_avt1.png" alt="" class="img">
 							</div>
 						</div>
-						<ul class="nftinfo_list">
-							<li class="nftinfo_item nftinfo_creator">
-								<span class="nftinfo_title">Created By</span>
-								<div class="nftinfo_avt">
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
-											</div>
-										</div>
-										<span class="card_name">Orbitian</span>
-									</div>
-								</div>
-							</li>
-							<li class="nftinfo_item nftinfo_desc">
-								<span class="nftinfo_title">Description</span>
-								<div class="nftinfo_desc_content">
-									<p>
-										The Orbitians<br>
-										is a collection of 10,000 unique NFTs on the Ethereum blockchain,
-									</p>
-									<p>
-										There are all sorts of beings in the NFT Universe. The most advanced and friendly of the bunch are
-										Orbitians.
-									</p>
-									<p>
-										They live in a metal space machines, high up in the sky and only have one foot on Earth.<br>
-										These Orbitians are a peaceful race, but they have been at war with a group of invaders for many
-										generations. The
-										invaders are called Upside-Downs, because of their inverted bodies that live on the ground, yet do
-										not
-										know any other
-										way to be. Upside-Downs believe that they will be able to win this war if they could only get an eye
-										into Orbitian
-										territory, so they've taken to make human beings their target.
-									</p>
-								</div>
-							</li>
-							<li class="nftinfo_item nftinfo_details">
-								<span class="nftinfo_title">Details</span>
-								<ul class="nftinfo_details_list">
-									<li class="nftinfo_details_item">
-										<a href="#none" class="nftinfo_details_link">
-											<span class="nftinfo_details_wrap">
-												<i class="ico_globe_32px"></i>
-												<span class="nftinfo_details_name">View on Etherscan</span>
-											</span>
+						<div class="profile_info">
+							<h2 class="page_title">Animakid</h2>
+							<div class="profile_btn">
+								<button class="btn btn_md  btn_violet">
+									<i class="ico_copy_20px"></i>
+									0xc0E3...B79C
+								</button>
+								<button class="btn btn_md  btn_transparent">
+									<i class="ico_plus_20px"></i>
+									Follow
+								</button>
+							</div>
+						</div>
+						<div class="profile_desc">
+							<div class="profile_desc_item profile_overview">
+								<ul class="overview_list">
+									<li class="overview_item">
+										<strong class="overview_param">250k+</strong>
+										<span class="overview_title">Volume</span>
+									</li>
+									<li class="overview_item">
+										<strong class="overview_param">50k+</strong>
+										<span class="overview_title">NFTs Sold</span>
+									</li>
+									<li class="overview_item">
+										<strong class="overview_param">3000+</strong>
+										<span class="overview_title">Followers</span>
+									</li>
+								</ul>
+							</div>
+							<div class="profile_desc_item profile_bio">
+								<strong class="profile_title">Bio</strong>
+								<span>The internet's friendliest designer kid.</span>
+							</div>
+							<div class="profile_desc_item profile_sns">
+								<strong class="profile_title">Links</strong>
+								<ul class="sns_list">
+									<li class="sns_item">
+										<a class="sns_link" href="#">
+											<i class="ico_globe_32px"></i>
+											<span class="blind">discord</span>
 										</a>
 									</li>
-									<li class="nftinfo_details_item">
-										<a href="#none" class="nftinfo_details_link">
-											<span class="nftinfo_details_wrap">
-												<i class="ico_globe_32px"></i>
-												<span class="nftinfo_details_name">View Original</span>
-											</span>
+									<li class="sns_item">
+										<a class="sns_link" href="#">
+											<i class="ico_discord_32px"></i>
+											<span class="blind">discord</span>
+										</a>
+									</li>
+									<li class="sns_item">
+										<a class="sns_link" href="#">
+											<i class="ico_youtube_32px"></i>
+											<span class="blind">youtube</span>
+										</a>
+									</li>
+									<li class="sns_item">
+										<a class="sns_link" href="#">
+											<i class="ico_twitter_32px"></i>
+											<span class="blind">twitter</span>
+										</a>
+									</li>
+									<li class="sns_item">
+										<a class="sns_link" href="#">
+											<i class="ico_instagram_32px"></i>
+											<span class="blind">instagram</span>
 										</a>
 									</li>
 								</ul>
-							</li>
-							<li class="nftinfo_item nftinfo_tags">
-								<span class="nftinfo_title">Tags</span>
-								<ul class="nftinfo_tags_list">
-									<li class="nftinfo_tags_item">
-										<a href="#none" class="nftinfo_tags_link">Animation</a>
-									</li>
-									<li class="nftinfo_tags_item">
-										<a href="#none" class="nftinfo_tags_link">illustration</a>
-									</li>
-									<li class="nftinfo_tags_item">
-										<a href="#none" class="nftinfo_tags_link">moon</a>
-									</li>
-									<li class="nftinfo_tags_item">
-										<a href="#none" class="nftinfo_tags_link">moon</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section section_artist">
+			<div class="section_tabs">
+				<ul class="tabs">
+					<li class="tabs_item">
+						<button class="tabs_link active">
+							<span class="tabs_name">Created</span>
+							<span class="tabs_data only_pc_tb">302</span>
+						</button>
+					</li>
+					<li class="tabs_item">
+						<button class="tabs_link">
+							<span class="tabs_name">Owned</span>
+							<span class="tabs_data only_pc_tb">67</span>
+						</button>
+					</li>
+					<li class="tabs_item">
+						<button class="tabs_link">
+							<span class="tabs_name">Collection</span>
+							<span class="tabs_data only_pc_tb">4</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<section class="section section_card">
 				<div class="section_inner">
-					<div class="section_heading">
-						<h3 class="section_title">More from this artist</h3>
-
-						<div class="section_heading_btn">
-							<button class="btn btn_md btn_p50 btn_transparent">
-								<i class="ico_arrowright_color_20px"></i>
-								Go To Artist Page
-							</button>
-						</div>
-					</div>
-					<div class="section_content">
+					<div class="section_card_box">
 						<ul class="card_list">
 							<li class="artist_card_item animate_in">
 								<div class="artist_card_image">
@@ -147,10 +130,10 @@
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt5.png" alt="MoonDancer " class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">MoonDancer</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -168,7 +151,7 @@
 							<li class="artist_card_item animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover2.png" alt="" class="img">
+										<img src="../img/image/img_discover2.png" alt="Life On Edena" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
@@ -176,10 +159,39 @@
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt6.png" alt="NebulaKid" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="NebulaKid" class="img">
 											</div>
 										</div>
-										<span class="card_name">NebulaKid</span>
+										<span class="card_name">Animakid</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item animate_in">
+								<div class="artist_card_image">
+									<div class="thumb thumb_card">
+										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">AstroFiction</strong>
+									<div class="card_avt">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
+											</div>
+										</div>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -197,18 +209,18 @@
 							<li class="artist_card_item only_pc_tb animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover4.png" alt="CryptoCity" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">CryptoCity</strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -226,18 +238,18 @@
 							<li class="artist_card_item only_pc_tb animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover5.png" alt="ColorfulDog 0524" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">ColorfulDog 0524</strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -255,47 +267,18 @@
 							<li class="artist_card_item only_pc_tb animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover6.png" alt="Space Tales" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">Space Tales</strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
-									</div>
-									<div class="artist_card_desc">
-										<div class="card_price">
-											<span class="card_desc_title">Price</span>
-											<span class="card_desc_price">1.63 ETH</span>
-										</div>
-										<div class="card_maxprice">
-											<span class="card_desc_title">Highest Bid</span>
-											<span class="card_desc_price">0.33 wETH</span>
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li class="artist_card_item only_pc_tb animate_in">
-								<div class="artist_card_image">
-									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
-									</div>
-								</div>
-								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
-									<div class="card_avt">
-										<div class="avatar avatar_small">
-											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
-											</div>
-										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -313,18 +296,18 @@
 							<li class="artist_card_item only_pc animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover7.png" alt="Cherry Blossom Girl 037" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">Cherry Blossom Girl 037</strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -342,18 +325,18 @@
 							<li class="artist_card_item only_pc animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover8.png" alt="Dancing Robots 0987" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">Dancing Robots 0987</strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">
@@ -371,18 +354,18 @@
 							<li class="artist_card_item only_pc animate_in">
 								<div class="artist_card_image">
 									<div class="thumb thumb_card">
-										<img src="../img/image/img_discover3.png" alt="AstroFiction" class="img">
+										<img src="../img/image/img_discover9.png" alt="IceCream Ape" class="img">
 									</div>
 								</div>
 								<div class="artist_card_info">
-									<strong class="card_title">AstroFiction</strong>
+									<strong class="card_title">IceCream Ape </strong>
 									<div class="card_avt">
 										<div class="avatar avatar_small">
 											<div class="thumb">
-												<img src="../img/image/img_sm_avt7.png" alt="Spaceone" class="img">
+												<img src="../img/image/img_sm_avt1.png" alt="Animakid" class="img">
 											</div>
 										</div>
-										<span class="card_name">Spaceone</span>
+										<span class="card_name">Animakid</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">

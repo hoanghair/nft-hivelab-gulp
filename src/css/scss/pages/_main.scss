@@ -17,7 +17,7 @@ body {
   }
 
   @include tablet {
-    margin-top: 55px;
+    margin-top: 54px;
   }
 
   @include mobile {
@@ -27,15 +27,14 @@ body {
 
 // <!-- Navigation -->
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+
   &_box {
-    position: fixed;
     @include flex-item(flex, space-between, center);
-    z-index: 100;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    width: 100vw;
-    margin: 0 -50vw;
     padding: 20px 50px;
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
@@ -83,13 +82,10 @@ body {
 
 
 .nav {
-
   @include desktop {
     & {
-      &_box {
-        display: flex;
-        justify-content: space-between;
-      }
+      display: flex;
+      justify-content: space-between;
 
       &_list {
         @include flex-item(flex, null, center);
@@ -110,6 +106,10 @@ body {
           background-color: var(--white);
         }
       }
+
+      & .btn {
+        padding: 0 30px;
+      }
     }
   }
 
@@ -129,7 +129,6 @@ body {
       content: "";
     }
 
-
     @include desktop {
       & {
         display: inline-block;
@@ -147,35 +146,22 @@ body {
   }
 
   .nav {
-    &_box {
-      display: flex;
-      position: fixed;
-      flex-direction: column;
-      justify-content: flex-start;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100vh;
-      padding: 50px;
-      background-color: map-get($gray, 2);
-      box-sizing: border-box;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-    }
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 50px;
+    background-color: map-get($gray, 2);
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 
     &_view {
       transform: translateX(0);
-    }
-
-    &_modal {
-      position: fixed;
-      z-index: -1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
     }
 
     &_list {
@@ -216,35 +202,22 @@ body {
   }
 
   .nav {
-    &_box {
-      display: flex;
-      position: fixed;
-      flex-direction: column;
-      justify-content: flex-start;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100vh;
-      padding: 80px 30px;
-      background-color: map-get($gray, 2);
-      box-sizing: border-box;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-    }
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 30px;
+    background-color: map-get($gray, 2);
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 
     &_view {
       transform: translateX(0);
-    }
-
-    &_modal {
-      position: fixed;
-      z-index: -1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
     }
 
     &_list {
@@ -281,26 +254,26 @@ body {
 // <!--CONTENTS -->
 .section {
   &_inner {
-    max-width: 1366px;
+    max-width: 1110px;
     margin: 0 auto;
+    padding: 40px 30px;
     box-sizing: border-box;
 
     @include desktop {
       & {
-        padding: 80px 115px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
 
     @include tablet {
       & {
-        padding: 40px 72px;
+        max-width: 750px;
       }
     }
 
     @include mobile {
-      & {
-        padding: 40px 30px;
-      }
+      & {}
     }
   }
 
@@ -316,12 +289,14 @@ body {
 .section {
   &_hero {
     display: block;
+    min-height: 495px;
     font-size: 0;
 
     .section_inner {
       @include tablet {
         & {
-          padding: 80px 72px;
+          padding-top: 80px;
+          padding-bottom: 80px;
         }
       }
     }
@@ -330,24 +305,28 @@ body {
 
 .hero {
   &_box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    display: block;
+    position: relative;
 
     @include tablet {
       gap: 20px 30px;
     }
 
     @include mobile {
-      display: block;
+      position: static;
     }
   }
 
   &_content {
-    display: inline-block;
-    grid-column: 1 / 2;
-    grid-row: 1;
+    display: block;
+    width: calc(50% - 15px);
     transition: all 0.8s;
+
+    @include mobile {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &_title {
@@ -405,10 +384,12 @@ body {
   }
 
   &_card {
-    display: inline-block;
-    grid-column: 2;
-    grid-row: 1 / 3;
-    vertical-align: top;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 15px);
+    margin-left: 30px;
     transition: all 0.8s;
 
     &_box {
@@ -419,21 +400,30 @@ body {
 
     @include mobile {
       & {
-        display: block;
+        position: static;
+        width: 100%;
         margin-top: 40px;
+        margin-left: 0;
       }
     }
   }
 
   &_btn {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 2;
+    display: inline-block;
+    width: calc(50% - 15px);
+    margin-top: 30px;
     transition: all 0.8s;
+
+    @include tablet {
+      & {
+        margin-top: 20px;
+      }
+    }
 
     @include mobile {
       & {
         display: block;
+        width: 100%;
         margin-top: 40px;
       }
 
@@ -534,39 +524,6 @@ body {
   }
 }
 
-// .typewriter {
-//   display: inline-block;
-//   overflow: hidden;
-//   border-right: .15em solid orange;
-//   animation:
-//     typing 3.5s steps(30, end),
-//     blink-caret .5s step-end infinite;
-// }
-
-// /* The typing effect */
-// @keyframes typing {
-//   from {
-//     width: 0
-//   }
-
-//   to {
-//     width: 100%
-//   }
-// }
-
-// /* The typewriter cursor effect */
-// @keyframes blink-caret {
-
-//   from,
-//   to {
-//     border-color: transparent
-//   }
-
-//   50% {
-//     border-color: orange
-//   }
-// }
-
 // < !-- // Section Hero -->
 
 // < !-- Section Trending -->
@@ -645,7 +602,7 @@ body {
 .trending_card {
   &_item {
     @include card_three_item;
-    transition: all .8s;
+    transition: all 0.8s;
 
     @include tablet {
       & {
@@ -783,7 +740,7 @@ body {
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    transition: all .8s;
+    transition: all 0.8s;
 
     @include desktop {
       & {
@@ -935,7 +892,7 @@ body {
 .category_card {
   &_item {
     background-color: map-get($gray, 2);
-    transition: all .8s;
+    transition: all 0.8s;
 
     & .thumb {
       & {
@@ -1036,7 +993,7 @@ body {
 .artist_card {
   &_item {
     background-color: map-get($gray, 2);
-    transition: all .8s;
+    transition: all 0.8s;
 
     .card_avt {
       margin-top: 5px
@@ -1163,7 +1120,9 @@ body {
         }
 
         .section_inner {
-          padding: 360px 115px 60px;
+          padding-top: 360px;
+          padding-bottom: 60px;
+          // padding: 360px 115px 60px;
         }
       }
     }
@@ -1177,7 +1136,9 @@ body {
         }
 
         .section_inner {
-          padding: 360px 82px 60px;
+          max-width: 730px;
+          padding-top: 360px;
+          padding-bottom: 60px;
         }
       }
     }
@@ -1328,7 +1289,7 @@ body {
     box-sizing: border-box;
     font-size: 0;
     text-align: center;
-    transition: all .8s;
+    transition: all 0.8s;
 
     @include desktop {
       & {
@@ -1427,13 +1388,16 @@ body {
 .section {
   &_subscribe {
     .section_inner {
-
       @include desktop {
-        padding: 40px 115px 80px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        // padding: 40px 115px 80px;
       }
 
       @include tablet {
-        padding: 20px 72px 80px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+        // padding: 20px 72px 80px;
       }
     }
 

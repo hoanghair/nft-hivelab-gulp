@@ -73,65 +73,60 @@ legend {
 
 
 //  <!-- Btn Navbar Toggler --> */
-.navbar-toggler {
-
-  input {
-    display: none;
-  }
-
-  label {
-    position: relative;
-    display: block;
-    width: 18px;
-    height: 14px;
-    padding: 5px 3px;
-    transition: all .5s;
-    text-align: left;
-    cursor: pointer;
-  }
+.nav_toggler {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  // padding: 5px 3px;
+  text-align: left;
+  cursor: pointer;
+  transition: all .5s;
 
   span,
   span:before,
   span:after {
     position: absolute;
-    height: 1.5px;
     width: 18px;
+    height: 1.5px;
     border-radius: 4px;
     background: var(--white);
     transition: all .5s;
   }
 
-  label {
-    span:first-child {
-      top: 5px;
+  span {
+    &:first-child {
+      top: 0;
       width: 13px;
     }
 
-    span:nth-child(2) {
-      top: 12px;
+    &:nth-child(2) {
+      top: 6px;
     }
 
-    span:nth-child(3) {
-      top: 18px;
+    &:nth-child(3) {
+      top: 12px;
       width: 13px;
     }
   }
+}
 
-  #menu2:checked+label {
-    span:first-child {
+.nav_view+.nav_toggler {
+  span {
+    &:first-child {
       top: 20px;
       width: 0px;
       opacity: 0;
       transform: rotate(-45deg);
     }
 
-    span:nth-child(2) {
+    &:nth-child(2) {
       top: 12px;
       width: 25px;
       transform: rotate(-45deg);
     }
 
-    span:nth-child(3) {
+    &:nth-child(3) {
       top: 12px;
       width: 25px;
       transform: rotate(45deg);
@@ -185,9 +180,8 @@ legend {
 /* <!-- [D] Button --> */
 
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  padding: 0 50px;
   border-radius: $border_radius_sm;
   @include custom-font(16px, 600, 22px);
   color: var(--white);
@@ -196,27 +190,14 @@ legend {
   cursor: pointer;
   user-select: none;
 
-  &:hover {
-    // transform: scale(1.1);
+  &:has(i) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   & i {
     margin-right: 12px;
-  }
-
-  &.is_disabled {
-    opacity: 50%;
-    pointer-events: none;
-  }
-
-  &_p30 {
-    padding: 0 30px;
-
-  }
-
-  &_p50 {
-    padding: 0 50px;
-
   }
 
   &_sm {
@@ -230,26 +211,6 @@ legend {
   &_lg {
     height: $height_btn_lg;
   }
-
-  &_full {
-    width: 100%;
-  }
-
-  // &_46px {
-  //     height: $height_btn_sm;
-  // }
-
-  &_w100 {
-    width: $width_100;
-  }
-
-  /* <!-- [D] White --> */
-  &_white {
-    background-color: var(--white);
-    color: map-get($gray, 1);
-  }
-
-  /* <!--// [D] White --> */
 
   /* <!-- [D] Violet --> */
   &_violet {
@@ -265,13 +226,6 @@ legend {
   }
 
   /* <!--// [D] Transparent --> */
-
-  /* <!-- [D] Gray --> */
-  &_gray {
-    background-color: map-get($gray, 2);
-  }
-
-  /* <!--// [D] Gray --> */
 }
 
 /* <!--// [D] Button--> */
@@ -802,44 +756,20 @@ legend {
 .animate_in {
   opacity: 0;
   transform: translateY(100px);
+  // animation: animate_in;
 }
 
-.btn_backtotop {
-  visibility: hidden;
-  position: fixed;
-  z-index: 99;
-  bottom: 0;
-  right: 35px;
-  opacity: 0;
-  width: 50px;
-  height: 50px;
-  border: 3px solid var(--white);
-  border-radius: 50%;
-  background-color: map-get($gray, 2);
-  color: #333;
-  cursor: pointer;
-  outline: none;
-  transition: 0.4s ease-in-out;
+// @keyframes animate_in {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(100px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
 
-  i {
-    transform: rotate(90deg);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: map-get($gray, 1);
-  }
-
-  @include mobile{
-    right: 10px;
-  }
-}
-
-.btn_backtotop.show {
-  visibility: visible;
-  bottom: 50px;
-  opacity: 1;
-}
 
 
 // @include on_pc;

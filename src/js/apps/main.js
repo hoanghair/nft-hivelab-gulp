@@ -125,11 +125,18 @@
     body.toggleClass("off_scroll");
   }
 
-  function check(status) {
-    inputs.prop("checked", status);
-    labels.click(function (e) {
-      $(".nav_box").toggleClass("nav_view");
-      $(".nav").toggleClass("nav_modal");
+  // function check(status) {
+  //   inputs.prop("checked", status);
+  //   labels.click(function (e) {
+  //     $(".nav").toggleClass("nav_view");
+  //     toggleOverflow();
+  //   });
+  // }
+  function check() {
+    // inputs.prop("checked", status);
+    $(".nav_toggler").click(function (e) {
+      console.log('abc');
+      $(".nav").toggleClass("nav_view");
       toggleOverflow();
     });
   }
@@ -145,6 +152,6 @@
     sample5();
     $("body").sample6();
     startCountdownTimer();
-    check(false);
+    check();
   });
 })(window, window.jQuery);
