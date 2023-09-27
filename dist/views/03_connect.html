@@ -6,7 +6,7 @@
 
 	
 
-	<title>Create Account</title>
+	<title>Connect Wallet</title>
 
 	<!-- SEO meta tag -->
 	<meta name="keywords" content="">
@@ -234,7 +234,6 @@
 		<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
 	</ul>
 	<!-- // Skip Navigation -->
-	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
 
 	<div class="wrap">
 		<!--[D] HEADER -->
@@ -244,36 +243,30 @@
 			<div class="header_box">
 				<h1 class="logo">
 					<a href="#" class="logo_link">
-						<img class="logo_img only_pc" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
-						<img class="logo_img only_tb_mo" src="../../img/image/img_logo_mo.png" alt="NFT Marketplace">
+						<img class="logo_img" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
 					</a>
 				</h1>
 				<nav class="nav">
-					<div class="nav_box">
-						<ul class="nav_list">
-							<li class="nav_item">
-								<a href="#" class="nav_link">Marketplace</a>
-							</li>
-							<li class="nav_item">
-								<a href="#" class="nav_link">Rankings</a>
-							</li>
-							<li class="nav_item">
-								<a href="#" class="nav_link">Connect a wallet</a>
-							</li>
-						</ul>
-						<button class="btn btn_md btn_p30 btn_violet">
-							<i class="ico_user_20px"></i>
-							Sign Up
-						</button>
-					</div>
+					<ul class="nav_list">
+						<li class="nav_item">
+							<a href="#" class="nav_link">Marketplace</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Rankings</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Connect a wallet</a>
+						</li>
+					</ul>
+					<button class="btn btn_md btn_violet">
+						<i class="ico_user_20px"></i>
+						Sign Up
+					</button>
 				</nav>
-				<button class="navbar-toggler only_tb_mo" type="button">
-					<input type="checkbox" id="menu2">
-					<label for="menu2">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
+				<button class="nav_toggler only_tb_mo" type="button">
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
 			</div>
 			<!-- // Navigation -->
@@ -283,47 +276,36 @@
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section_account">
-				<div class="account_thumb">
+			<section class="section_connect">
+				<div class="connect_thumb">
 					<div class="thumb">
-						<img src="../img/image/bg_create_acc_pc.png" alt="" class="img">
+						<img src="../img/image/bg_connect_pc.jpg" alt="" class="img">
 					</div>
 				</div>
-				<div class="account_box">
-					<div class="account_form">
-						<h2 class="page_title">Create account</h2>
-						<p class="page_desc">Welcome! enter your details and start creating, collecting and selling NFTs.</p>
-						<form action="#" class="form form_mo">
-							<ul class="input_list">
-								<li class="input_item input_group">
-									<span class="input_icon_left">
-										<i class="ico_user_color_20px"></i>
-									</span>
-									<input type="name" id="name" name="name" placeholder="Username" class="input_text">
-								</li>
-								<li class="input_item input_group">
-									<span class="input_icon_left">
-										<i class="ico_email_color_20px"></i>
-									</span>
-									<input type="email" id="email" name="email" placeholder="Email Address" class="input_text">
-								</li>
-								<li class="input_item input_group">
-									<span class="input_icon_left">
-										<i class="ico_lockkey_color_20px"></i>
-									</span>
-									<input type="password" id="password" name="password" placeholder="Password" class="input_text">
-								</li>
-								<li class="input_item input_group">
-									<span class="input_icon_left">
-										<i class="ico_email_color_20px"></i>
-									</span>
-									<input type="password" id="cf_password" name="cf_password" placeholder="Confirm Password" class="input_text">
-								</li>
-							</ul>
-							<button class="btn btn_sm btn_p30 btn_violet" type="submit">
-								Create connect
-							</button>
-						</form>
+				<div class="connect_box">
+					<div class="connect_form">
+						<h2 class="page_title">Connect Wallet</h2>
+						<p class="page_desc">Choose a wallet you want to connect. There are several wallet providers.</p>
+						<ul class="connect_list">
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_metamask"></i>
+									<span class="connect_name">Metamask</span>
+								</a>
+							</li>
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_walletconnect"></i>
+									<span class="connect_name">Wallet Connect</span>
+								</a>
+							</li>
+							<li class="connect_item">
+								<a href="#none" class="connect_link">
+									<i class="ico_coinbase"></i>
+									<span class="connect_name">Coinbase</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>

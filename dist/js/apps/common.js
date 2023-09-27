@@ -42,30 +42,11 @@
     $(".section_hero .animate_in").removeClass("animate_in");
   }
 
-  function onBtnScrollBackToTop() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-      $(".btn_backtotop").addClass("show");
-    } else {
-      $(".btn_backtotop").removeClass("show");
-    }
-  }
-
-  $(".btn_backtotop").click(function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 1400);
-  });
-
   $(win).on("load", function () {
     loadAnimation();
   });
-  $(win).on("resize", function () {
-    resizeAvatar();
-  });
+  $(win).on("resize", function () {});
   $(win).scroll(function () {
     scrollAnimation();
-    onBtnScrollBackToTop();
   });
 })(window, window.jQuery);

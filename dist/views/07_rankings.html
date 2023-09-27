@@ -6,7 +6,7 @@
 
 	
 
-	<title>Connect Wallet</title>
+	<title>Rankings</title>
 
 	<!-- SEO meta tag -->
 	<meta name="keywords" content="">
@@ -234,7 +234,6 @@
 		<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
 	</ul>
 	<!-- // Skip Navigation -->
-	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
 
 	<div class="wrap">
 		<!--[D] HEADER -->
@@ -244,36 +243,30 @@
 			<div class="header_box">
 				<h1 class="logo">
 					<a href="#" class="logo_link">
-						<img class="logo_img only_pc" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
-						<img class="logo_img only_tb_mo" src="../../img/image/img_logo_mo.png" alt="NFT Marketplace">
+						<img class="logo_img" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
 					</a>
 				</h1>
 				<nav class="nav">
-					<div class="nav_box">
-						<ul class="nav_list">
-							<li class="nav_item">
-								<a href="#" class="nav_link">Marketplace</a>
-							</li>
-							<li class="nav_item">
-								<a href="#" class="nav_link">Rankings</a>
-							</li>
-							<li class="nav_item">
-								<a href="#" class="nav_link">Connect a wallet</a>
-							</li>
-						</ul>
-						<button class="btn btn_md btn_p30 btn_violet">
-							<i class="ico_user_20px"></i>
-							Sign Up
-						</button>
-					</div>
+					<ul class="nav_list">
+						<li class="nav_item">
+							<a href="#" class="nav_link">Marketplace</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Rankings</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Connect a wallet</a>
+						</li>
+					</ul>
+					<button class="btn btn_md btn_violet">
+						<i class="ico_user_20px"></i>
+						Sign Up
+					</button>
 				</nav>
-				<button class="navbar-toggler only_tb_mo" type="button">
-					<input type="checkbox" id="menu2">
-					<label for="menu2">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
+				<button class="nav_toggler only_tb_mo" type="button">
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
 			</div>
 			<!-- // Navigation -->
@@ -283,38 +276,246 @@
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section_connect">
-				<div class="connect_thumb">
-					<div class="thumb">
-						<img src="../img/image/bg_connect_pc.jpg" alt="" class="img">
+			<section class="section section_rankings">
+				<div class="section_inner rankings_heading">
+					<h2 class="page_title">Top Creators</h2>
+					<span class="page_desc">Check out top ranking NFT artists on the NFT Marketplace.</span>
+				</div>
+				<div class="section_tabs rankings_tabs">
+					<ul class="tabs">
+						<li class="tabs_item">
+							<button class="tabs_link active">
+								<span class="tabs_name only_pc_tb">Today</span>
+								<span class="tabs_name only_mo">1d</span>
+							</button>
+						</li>
+						<li class="tabs_item">
+							<button class="tabs_link">
+								<span class="tabs_name only_pc_tb">This Week</span>
+								<span class="tabs_name only_mo">7d</span>
+							</button>
+						</li>
+						<li class="tabs_item">
+							<button class="tabs_link">
+								<span class="tabs_name only_pc_tb">This Month</span>
+								<span class="tabs_name only_mo">30d</span>
+							</button>
+						</li>
+						<li class="tabs_item">
+							<button class="tabs_link">
+								<span class="tabs_name only_pc_tb">All Time</span>
+								<span class="tabs_name only_mo">All</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="section_inner rankings_table">
+					<div class="rankings_table_wrap">
+						<table class="table">
+							<!-- <colgroup>
+                        <col style="width: 6.67%">
+                        <col style="width: 42%">
+                        <col style="width: 17.14%">
+                        <col style="width: 17.048%">
+                        <col style="width: 17.14%">
+                      </colgroup> -->
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Artist</th>
+									<th scope="col">Change</th>
+									<th scope="col">NFTs Sold</th>
+									<th scope="col">Volume</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="number">1</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt1.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Jaydon Ekstrom Bothman</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">2</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt2.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Ruben Carder</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">3</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt3.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Alfredo Septimus</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">4</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt4.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Davis Franci</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">5</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt5.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Livia Rosser</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">6</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt6.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Kianna Donin</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">7</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt7.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Phillip Lipshutz</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">8</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt8.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Maria Rosser</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">9</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt9.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Kianna Stanton</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">10</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt10.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Angel Lubin</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">11</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt11.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Allison Torff</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+
+								<tr>
+									<td><span class="number">12</span></td>
+									<td>
+										<div class="avatar avatar_medium">
+											<div class="thumb">
+												<img src="../img/image/img_lg_avt12.png" alt="" class="img">
+											</div>
+										</div>
+										<span>Davis Workman</span>
+									</td>
+									<td>+1.41%</td>
+									<td>602</td>
+									<td>12.4 ETH</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<div class="connect_box">
-					<div class="connect_form">
-						<h2 class="page_title">Connect Wallet</h2>
-						<p class="page_desc">Choose a wallet you want to connect. There are several wallet providers.</p>
-						<ul class="connect_list">
-							<li class="connect_item">
-								<a href="#none" class="connect_link">
-									<i class="ico_metamask"></i>
-									<span class="connect_name">Metamask</span>
-								</a>
-							</li>
-							<li class="connect_item">
-								<a href="#none" class="connect_link">
-									<i class="ico_walletconnect"></i>
-									<span class="connect_name">Wallet Connect</span>
-								</a>
-							</li>
-							<li class="connect_item">
-								<a href="#none" class="connect_link">
-									<i class="ico_coinbase"></i>
-									<span class="connect_name">Coinbase</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+			</section>
+
+			<section class="section section_rankings">
+
 			</section>
 		</main>
 		<!-- // [D] CONTENTS -->

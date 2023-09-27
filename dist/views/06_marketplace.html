@@ -1,96 +1,290 @@
-@@include('./include/head.html',{"title": "Artist Page", "list_title": "Artist Page : Page"})
+<!DOCTYPE html><html lang="ko"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	
+
+	<title>Marketplace</title>
+
+	<!-- SEO meta tag -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="date" content="">
+	<meta name="sitecode" content="">
+	<!-- // SEO meta tag -->
+
+	<!-- Open Graph -->
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:type" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:country-name" content="">
+	<!-- // Open Graph -->
+
+	<!-- Icon & Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="apple-touch-icon" href="favicon-180x180.png">
+	<!-- // Icon & Favicon -->
+
+	<link rel="stylesheet" href="/css/libs.min.css">
+	<link rel="stylesheet" href="/css/nft.css">
+	<!--<link rel="stylesheet" href="/css/nft.min.css">-->
+
+	<style>
+	.common {
+		max-width: 1366px;
+		margin: 0 auto;
+		background-color: #f5f5f5;
+		color: #000;
+	}
+
+	.wrap_content {
+		padding: 60px 60px;
+	}
+
+	.ui_heading {
+		display: inline-block;
+		font-size: 38px;
+		line-height: 1;
+	}
+
+	.ui_title {
+		display: inline-block;
+		margin: 40px 44px;
+		padding-left: 10px;
+		border-left: 4px solid #4e4d93;
+		/* font-family: Satoshi; */
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 49px;
+		color: #2a254b;
+	}
+
+	.ui_content {
+		padding: 56px;
+		border-radius: 4px;
+		background-color: #fff;
+	}
+
+	.ui_color_list {
+		display: block;
+		font-size: 0;
+	}
+
+	.ui_color_item {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.ui_item_title {
+		display: inline-block;
+		margin-bottom: 16px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.ui_table {
+		width: 100%;
+		min-width: 500px;
+		border-spacing: 0;
+	}
+
+	.ui_table thead {
+		height: 48px;
+		background-color: #f9f9f9;
+	}
+
+	.ui_table thead tr th {
+		padding: 6px 10px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		text-align: left;
+	}
+
+	.ui_table tbody tr {
+		height: 93px;
+	}
+
+	.ui_table tbody tr td {
+		padding: 10px;
+		border-bottom: 1px solid #ebe8f4;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	.ui_table .table__line td {
+		border-bottom: 1px solid #4e4d93;
+	}
+
+	.ui_button,
+	.ui_input {
+		background-color: #cbcbcb;
+		font-size: 0;
+	}
+
+	.ui_item,
+	.ui_typography {
+		overflow-x: auto;
+	}
+
+	.ui_buttonmd .ui_item {
+		display: block;
+	}
+
+	.ui_buttonmd_title {
+		display: inline-block;
+		margin-bottom: 16px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.ui_item+.ui_item {
+		margin-top: 70px;
+	}
+
+	.ui_table_btn thead tr th {
+		text-align: center;
+		border-top: 1px solid #ebe8f4;
+		border-bottom: 1px solid #ebe8f4;
+	}
+
+	.ui_table_btn thead tr th:first-child {
+		text-align: left;
+		border-left: 1px solid #ebe8f4;
+	}
+
+	.ui_table_btn thead tr th:last-child {
+		border-right: 1px solid #ebe8f4;
+	}
+
+	.ui_table_btn tbody tr td,
+	.ui_table_btn tbody tr td:nth-child(2) {
+		text-align: center;
+	}
+
+	.ui_table_btn tbody tr td:first-child {
+		border-right: 1px solid #ebe8f4;
+		border-left: 1px solid #ebe8f4;
+		text-align: left;
+	}
+
+	.ui_table_btn tbody tr td:last-child {
+		border-right: 1px solid #ebe8f4;
+	}
+
+	.ui_product {
+		padding: 20px;
+		font-size: 0;
+	}
+
+	.ui_input {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	.ui_input .ui_item+.ui_item {
+		margin-top: 0;
+	}
+
+	.ui_input .ui_item {
+		display: inline-block;
+		width: calc(50% - 30px);
+	}
+
+	.ui_input .ui_item:nth-child(-n + 2) {
+		margin-left: 0;
+	}
+
+	.ui_table_avatar .avatar {
+		margin: 0 auto;
+	}
+
+	.ui_thumb_list {
+		font-size: 0;
+	}
+
+	.ui_thumb_item {
+		display: inline-block;
+		width: calc(25% - 20px);
+	}
+
+	.ui_thumb_item+.ui_thumb_item {
+		margin-left: 20px;
+	}
+
+	</style>
+</head>
 
 <body data-pagestatus="new : 2023">
-	@@include('./include/skipnavigation.html')
-	<button class="btn_backtotop"><i class="ico_arrowleft_32px"></i></button>
+
+
+	<!-- Skip Navigation -->
+	<ul class="skip">
+		<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+		<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+	</ul>
+	<!-- // Skip Navigation -->
 
 	<div class="wrap">
 		<!--[D] HEADER -->
-		@@include('./include/header.html',{"type": "01"})
+
+		<header class="header">
+			<!-- Navigation -->
+			<div class="header_box">
+				<h1 class="logo">
+					<a href="#" class="logo_link">
+						<img class="logo_img" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
+					</a>
+				</h1>
+				<nav class="nav">
+					<ul class="nav_list">
+						<li class="nav_item">
+							<a href="#" class="nav_link">Marketplace</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Rankings</a>
+						</li>
+						<li class="nav_item">
+							<a href="#" class="nav_link">Connect a wallet</a>
+						</li>
+					</ul>
+					<button class="btn btn_md btn_violet">
+						<i class="ico_user_20px"></i>
+						Sign Up
+					</button>
+				</nav>
+				<button class="nav_toggler only_tb_mo" type="button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<!-- // Navigation -->
+		</header>
+
 		<!--//[D] HEADER -->
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section section_thumb section_thumb_artist">
-			</section>
-			<section class="section section_profile">
+			<section class="section section_headingpage">
 				<div class="section_inner">
-					<div class="profile_box">
-						<div class="avatar avatar_extra_large">
-							<div class="thumb">
-								<img src="../img/image/img_xl_avt1.png" alt="" class="img">
-							</div>
-						</div>
-						<div class="profile_info">
-							<h2 class="page_title">Animakid</h2>
-							<div class="profile_btn">
-								<button class="btn btn_md btn_p30 btn_violet">
-									<i class="ico_copy_20px"></i>
-									0xc0E3...B79C
-								</button>
-								<button class="btn btn_md btn_p30 btn_transparent">
-									<i class="ico_plus_20px"></i>
-									Follow
-								</button>
-							</div>
-						</div>
-						<div class="profile_desc">
-							<div class="profile_desc_item profile_overview">
-								<ul class="overview_list">
-									<li class="overview_item">
-										<strong class="overview_param">250k+</strong>
-										<span class="overview_title">Volume</span>
-									</li>
-									<li class="overview_item">
-										<strong class="overview_param">50k+</strong>
-										<span class="overview_title">NFTs Sold</span>
-									</li>
-									<li class="overview_item">
-										<strong class="overview_param">3000+</strong>
-										<span class="overview_title">Followers</span>
-									</li>
-								</ul>
-							</div>
-							<div class="profile_desc_item profile_bio">
-								<strong class="profile_title">Bio</strong>
-								<span>The internet's friendliest designer kid.</span>
-							</div>
-							<div class="profile_desc_item profile_sns">
-								<strong class="profile_title">Links</strong>
-								<ul class="sns_list">
-									<li class="sns_item">
-										<a class="sns_link" href="#">
-											<i class="ico_globe_32px"></i>
-											<span class="blind">discord</span>
-										</a>
-									</li>
-									<li class="sns_item">
-										<a class="sns_link" href="#">
-											<i class="ico_discord_32px"></i>
-											<span class="blind">discord</span>
-										</a>
-									</li>
-									<li class="sns_item">
-										<a class="sns_link" href="#">
-											<i class="ico_youtube_32px"></i>
-											<span class="blind">youtube</span>
-										</a>
-									</li>
-									<li class="sns_item">
-										<a class="sns_link" href="#">
-											<i class="ico_twitter_32px"></i>
-											<span class="blind">twitter</span>
-										</a>
-									</li>
-									<li class="sns_item">
-										<a class="sns_link" href="#">
-											<i class="ico_instagram_32px"></i>
-											<span class="blind">instagram</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+					<h2 class="page_title">The Orbitians</h2>
+					<span class="page_desc">Browse through more than 50k NFTs on the NFT Marketplace.</span>
+					<div class="input_group input_search">
+						<input type="text" id="search" name="search" placeholder="Search your favourite NFTs" class="input_text input_mo">
+						<button class="input_icon_right">
+							<i class="ico_search_24px"></i>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -98,25 +292,19 @@
 				<ul class="tabs">
 					<li class="tabs_item">
 						<button class="tabs_link active">
-							<span class="tabs_name">Created</span>
+							<span class="tabs_name">NFTs</span>
 							<span class="tabs_data only_pc_tb">302</span>
 						</button>
 					</li>
 					<li class="tabs_item">
 						<button class="tabs_link">
-							<span class="tabs_name">Owned</span>
+							<span class="tabs_name">Collections</span>
 							<span class="tabs_data only_pc_tb">67</span>
-						</button>
-					</li>
-					<li class="tabs_item">
-						<button class="tabs_link">
-							<span class="tabs_name">Collection</span>
-							<span class="tabs_data only_pc_tb">4</span>
 						</button>
 					</li>
 				</ul>
 			</div>
-			<section class="section section_card">
+			<section class="section section_marketplace">
 				<div class="section_inner">
 					<div class="section_card_box">
 						<ul class="card_list">
@@ -388,7 +576,73 @@
 		<!-- // [D] CONTENTS -->
 
 		<!--[D] FOOTER -->
-		@@include('./include/footer.html',{"type": "01"})
+
+		<footer class="footer">
+			<div class="main footer_content">
+				<div class="footer_info">
+					<div class="footer_box">
+						<h1 class="logo">
+							<a href="#" class="logo_link">
+								<img class="logo_img" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
+							</a>
+						</h1>
+						<span class="footer_info_desc">NFT marketplace UI created <br class="only_pc"> with Anima for Figma.</span>
+						<div class="footer_info_sns">
+							<span class="footer_info_txt">Join our community</span>
+							<ul class="sns_list">
+								<li class="sns_item">
+									<a class="sns_link" href="#">
+										<i class="ico_discord_32px"></i>
+										<span class="blind">discord</span>
+									</a>
+								</li>
+								<li class="sns_item">
+									<a class="sns_link" href="#">
+										<i class="ico_youtube_32px"></i>
+										<span class="blind">youtube</span>
+									</a>
+								</li>
+								<li class="sns_item">
+									<a class="sns_link" href="#">
+										<i class="ico_twitter_32px"></i>
+										<span class="blind">twitter</span>
+									</a>
+								</li>
+								<li class="sns_item">
+									<a class="sns_link" href="#">
+										<i class="ico_instagram_32px"></i>
+										<span class="blind">instagram</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer_explore">
+						<strong class="footer_title">Explore</strong>
+						<ul class="explore_list">
+							<li class="explore_item"><a class="explore_link" href="#">Marketplace</a></li>
+							<li class="explore_item"><a class="explore_link" href="#">Rankings</a></li>
+							<li class="explore_item"><a class="explore_link" href="#">Connect a wallet</a></li>
+						</ul>
+					</div>
+					<div class="footer_subscribe">
+						<strong class="footer_title">Join our weekly digest</strong>
+						<span class="footer_info_txt">Get exclusive promotions &amp; updates <br class="only_pc"> straight to your
+							inbox.</span>
+						<form action="#" class="form form_mo form_email">
+							<input type="email" id="email" name="email" placeholder="Enter your email here" class="input_text input_mo">
+							<button class="btn btn_violet" type="submit">
+								Subscribe
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer_copyright">
+					<span class="footer_copyright_txt">Ⓒ NFT Market. Use this template freely.</span>
+				</div>
+			</div>
+		</footer>
+
 		<!--// [D] FOOTER -->
 	</div>
 
@@ -396,7 +650,14 @@
 	<div class="layer"></div>
 	<!-- [D] LAYER -->
 
-	@@include('./include/script.html')
-</body>
+	<!-- Javascript -->
+	<script src="/js/libs/vendor.min.js"></script>
+	<script src="/js/libs/slick.min.js"></script>
+	<script src="/js/apps/common.js"></script>
+	<script src="/js/apps/main.js"></script>
+	<!-- <script src="/js/project-name.min.js"></script> -->
+	<!-- // Javascript -->
 
-</html>
+
+
+</body></html>
