@@ -191,7 +191,7 @@ legend {
   user-select: none;
 
   &:has(i) {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
   }
@@ -245,19 +245,17 @@ legend {
     object-fit: cover;
   }
 
-  &_card {
-    padding-top: 89.69%;
+  // &_card {
+  //   padding-top: 89.69%;
 
-    &_mo {
-      padding-top: 75.56%;
-    }
-  }
+  //   &_mo {
+  //     padding-top: 75.56%;
+  //   }
+  // }
 
-  &_16x7 {
-    padding-top: 43.75%;
-  }
-
-
+  // &_16x7 {
+  //   padding-top: 43.75%;
+  // }
 }
 
 //   <!--// [D] Thumbnail -->
@@ -308,18 +306,6 @@ legend {
   border-radius: $border_radius_sm;
   background-color: var(--white);
 
-  // @include tablet {
-  //     &_mo {
-  //         display: block;
-  //         background-color: transparent;
-
-  //         input {
-  //             border-radius: $border_radius_sm;
-  //         }
-  //     }
-  // }
-
-
   button {
     width: 100%;
   }
@@ -333,22 +319,6 @@ legend {
       padding-left: 20px;
     }
 
-    // @include tablet {
-    //     & {
-    //         &_mo {
-    //             padding: 11px 20px;
-    //             border: 1px solid map-get($gray, 3);
-
-    //         }
-
-    //         &_mo+button {
-    //             width: 100%;
-    //             margin-top: 16px;
-
-    //         }
-    //     }
-    // }
-
   }
 
   &_email {
@@ -357,9 +327,6 @@ legend {
       height: 60px;
       padding: 0 50px;
 
-      // @include tablet {
-      //     height: 46px;
-      // }
     }
 
     .input_text {
@@ -384,7 +351,6 @@ legend {
   &_group {
     @include flex-item(flex, space-between, center);
     position: relative;
-    // padding: 8px 20px;
     overflow: hidden;
     border-radius: $border_radius_sm;
     border: 1px solid map-get($gray, 3);
@@ -409,7 +375,6 @@ legend {
   }
 
   &_search {
-    // padding: 14px 20px;
     background-color: transparent;
 
     & .input_text {
@@ -420,9 +385,7 @@ legend {
     input {
       color: map-get($gray, 3);
       background-color: transparent;
-
     }
-
   }
 }
 
@@ -536,9 +499,6 @@ legend {
             margin-left: 20px;
           }
 
-          @include mobile {
-            // @include custom-font(16px, null, 22px);
-          }
         }
 
         & .avatar {
