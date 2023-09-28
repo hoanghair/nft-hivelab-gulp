@@ -1,15 +1,7 @@
-
 .section {
   &_account {
     display: flex;
     font-size: 0;
-    // margin-top: 54px;
-
-    // @include desktop {
-    //   & {
-    //     margin-top: 100px;
-    //   }
-    // }
 
     @include mobile {
       & {
@@ -89,10 +81,16 @@
         width: 325px;
       }
     }
-    .page_desc{
-      margin-top: 20px;
+
+    .page_title {
+      @include mobile {
+        // @include custom-font(38px, 600, 46px)
+      }
     }
 
+    .page_desc {
+      margin-top: 20px;
+    }
 
     & .form {
       display: block;
@@ -121,6 +119,4 @@
     }
 
   }
-
-
 }
