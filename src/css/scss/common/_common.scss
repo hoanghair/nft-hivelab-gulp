@@ -372,6 +372,10 @@ legend {
     right: 20px;
     padding: 4px;
     cursor: pointer;
+
+    @include mobile {
+      right: 15px;
+    }
   }
 
   &_search {
@@ -687,8 +691,7 @@ legend {
     }
 
     @include tablet {
-      & {
-      }
+      & {}
     }
 
     @include mobile {

@@ -71,7 +71,11 @@ i {
 }
 
 .ico_globe_32px {
-	@include sp-normal('ico_globe_32px')
+	@include sp-normal('ico_globe_24px');
+
+	@include desktop {
+		@include sp-normal('ico_globe_32px')
+	}
 }
 
 .ico_instagram_32px {

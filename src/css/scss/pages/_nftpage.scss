@@ -41,6 +41,10 @@
 
     @include mobile {
       width: 100%;
+
+      .page_title {
+        @include custom-font(28px, 600, 39px);
+      }
     }
 
     .page_desc {
@@ -55,7 +59,10 @@
 
     .highlight_timer {
       padding: 20px 30px 26px;
-      ;
+
+      @include mobile {
+        padding: 30px;
+      }
     }
 
     .btn {
@@ -131,7 +138,7 @@
       }
 
       p+p {
-        margin-top: 20px;
+        margin-top: 22px;
 
         @include desktop {
           margin-top: 35px;
@@ -170,9 +177,13 @@
 
   &_tags {
     &_list {
-      margin-top: -15px;
+      margin-top: -10px;
       margin-left: -20px;
       font-size: 0;
+
+      @include desktop {
+        margin-top: -15px;
+      }
     }
 
     &_item {
@@ -204,6 +215,22 @@
 }
 
 .section_artist_nft {
+  @include tablet {
+    .section_inner {
+      padding-bottom: 40px;
+    }
+
+    .section_content {
+      margin-top: 60px;
+    }
+
+    .artist_card_item:not(:nth-child(-n+2)) {
+      margin-top: 60px;
+    }
+
+
+  }
+
   .artist_card_item:not(:nth-child(-n+3)) {
     margin-top: 60px;
   }
