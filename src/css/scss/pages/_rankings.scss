@@ -1,5 +1,12 @@
 .section {
-  &_rankings {}
+  &_rankings {
+    .page_title {
+      @include mobile {
+
+        @include custom-font(28px, 600, 39px);
+      }
+    }
+  }
 }
 
 .rankings {
@@ -25,7 +32,7 @@
       }
 
       @include tablet {
-        padding: 0px 72px;
+        padding: 0px 75px;
 
       }
 
@@ -36,8 +43,8 @@
   }
 
   &_table {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 38px;
+    padding-bottom: 18px;
 
     &_wrap {
       margin-top: -20px;

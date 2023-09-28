@@ -11,6 +11,17 @@ body {
   color: var(--white);
 }
 
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4;
+  background-color: #000;
+  z-index: 10;
+}
+
 .main {
   @include desktop {
     margin-top: 100px;
@@ -621,6 +632,10 @@ body {
 
 }
 
+.trending_card_item.thumb {
+  padding-top: 100%;
+}
+
 .trending_card {
   &_item {
     @include card_three_item;
@@ -911,6 +926,7 @@ body {
             padding-top: 95.95%;
           }
         }
+
         &::after {
           @include absolute-align(0, 0, null, null);
           @include custom-dimensions(100%, 100%);
@@ -1003,19 +1019,24 @@ body {
       }
     }
   }
-}
-.card_list{
-  .thumb {
-    padding-top: 89.69%;
-  
-    @include mobile {
-      padding-top: 75.56%;
+
+  .card_list {
+    .thumb {
+      padding-top: 89.69%;
+
+      @include mobile {
+        padding-top: 75.56%;
+      }
+    }
+
+    .card_avt {
+      margin-top: 10px;
     }
   }
-  .card_avt{
-    margin-top: 10px;
-  }
 }
+
+
+
 .artist_card {
   &_item {
     background-color: map-get($gray, 2);
