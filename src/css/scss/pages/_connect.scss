@@ -114,7 +114,7 @@
 
   &_link {
     display: block;
-    padding: 9px 20px 9px 40px;
+    padding: 13px 20px 13px 40px;
     border-radius: $border_radius_sm;
     border: 1px solid var(--bg_btn_violet);
     background-color: map-get($gray, 2);
@@ -127,13 +127,13 @@
 
   &_name {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
     @include custom-font(22px, 600, 31px);
     color: var(--white);
     vertical-align: middle;
 
-    @include tablet {
-      margin-left: 20px;
+    @include desktop {
+      
     }
   }
 }

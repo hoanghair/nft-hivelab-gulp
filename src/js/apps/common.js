@@ -42,8 +42,6 @@
     $(".section_hero .animate_in").removeClass("animate_in");
   }
 
-
-
   $(win).on("load", function () {
     loadAnimation();
   });

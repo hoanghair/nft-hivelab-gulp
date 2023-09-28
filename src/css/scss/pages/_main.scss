@@ -66,6 +66,8 @@ body {
 
 .logo {
   display: inline-flex;
+  position: relative;
+  z-index: 1;
   height: 32px;
 
   &_link {
@@ -79,9 +81,11 @@ body {
   }
 }
 
-
-
 .nav {
+  position: relative;
+
+  &_box {}
+
   @include desktop {
     & {
       display: flex;
@@ -117,7 +121,7 @@ body {
     position: relative;
     @include custom-font(16px, 600, 22px);
     color: var(--white);
-    transition: all 0.42s ease-in-out;
+    transition: color 0.42s ease-in-out;
 
     &::before {
       position: absolute;
@@ -125,7 +129,7 @@ body {
       left: 50%;
       width: 0;
       height: 2px;
-      transition: 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
       content: "";
     }
 
@@ -162,6 +166,17 @@ body {
 
     &_view {
       transform: translateX(0);
+
+      &::before {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        content: '';
+      }
     }
 
     &_list {
@@ -300,6 +315,22 @@ body {
         }
       }
     }
+
+    .thumb {
+      padding-top: 78.9%;
+
+      @include tablet {
+        & {
+          padding-top: 66.9%;
+        }
+      }
+
+      @include mobile {
+        & {
+          padding-top: 65.4%;
+        }
+      }
+    }
   }
 }
 
@@ -320,7 +351,8 @@ body {
   &_content {
     display: block;
     width: calc(50% - 15px);
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include mobile {
       & {
@@ -390,7 +422,8 @@ body {
     right: 0;
     width: calc(50% - 15px);
     margin-left: 30px;
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     &_box {
       overflow: hidden;
@@ -412,7 +445,8 @@ body {
     display: inline-block;
     width: calc(50% - 15px);
     margin-top: 30px;
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include tablet {
       & {
@@ -486,22 +520,6 @@ body {
 }
 
 .card {
-  &_thumb {
-    padding-top: 78.9%;
-
-    @include tablet {
-      & {
-        padding-top: 66.9%;
-      }
-    }
-
-    @include mobile {
-      & {
-        padding-top: 65.4%;
-      }
-    }
-  }
-
   &_info {
     padding: 22px 20px;
   }
@@ -512,9 +530,13 @@ body {
     text-transform: capitalize;
   }
 
-  &_avt {
+  &_avatar {
     @include flex-item(flex, null, center);
     margin-top: 10px;
+
+    .thumb {
+      padding-top: 100%;
+    }
   }
 
   &_name {
@@ -602,7 +624,8 @@ body {
 .trending_card {
   &_item {
     @include card_three_item;
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include tablet {
       & {
@@ -682,6 +705,26 @@ body {
         display: block;
       }
     }
+
+    @include tablet {
+      & {
+        .avatar {
+          width: 60px;
+          height: 60px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        .avatar {
+          width: 60px;
+          height: 60px;
+          vertical-align: middle;
+        }
+      }
+    }
   }
 }
 
@@ -740,7 +783,8 @@ body {
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include desktop {
       & {
@@ -767,32 +811,7 @@ body {
     }
   }
 
-  &_avt {
-    @include tablet {
-      & {
-        display: inline-block;
-        vertical-align: middle;
-
-        .avatar {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-
-    @include mobile {
-      & {
-        display: inline-block;
-        vertical-align: middle;
-
-        .avatar {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-
-  }
+  &_avatar {}
 
   &_number {
     position: absolute;
@@ -878,21 +897,6 @@ body {
         }
       }
     }
-  }
-
-  &:has(.section_category) {
-    @include mobile {
-      & {
-        margin-top: 100px;
-      }
-    }
-  }
-}
-
-.category_card {
-  &_item {
-    background-color: map-get($gray, 2);
-    transition: all 0.8s;
 
     & .thumb {
       & {
@@ -907,8 +911,32 @@ body {
             padding-top: 95.95%;
           }
         }
+        &::after {
+          @include absolute-align(0, 0, null, null);
+          @include custom-dimensions(100%, 100%);
+          border-top-left-radius: $border_radius_sm;
+          border-top-right-radius: $border_radius_sm;
+          backdrop-filter: blur(8px) brightness(100%);
+          content: '';
+        }
       }
     }
+  }
+
+  &:has(.section_category) {
+    @include mobile {
+      & {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+.category_card {
+  &_item {
+    background-color: map-get($gray, 2);
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include desktop {
       @include card_four_item;
@@ -934,17 +962,6 @@ body {
 
   &_image {
     position: relative;
-  }
-
-  &_thumb {
-    &::after {
-      @include absolute-align(0, 0, null, null);
-      @include custom-dimensions(100%, 100%);
-      border-top-left-radius: $border_radius_sm;
-      border-top-right-radius: $border_radius_sm;
-      backdrop-filter: blur(8px) brightness(100%);
-      content: '';
-    }
   }
 
   &_icon {
@@ -979,8 +996,6 @@ body {
 
 // <!-- Section Discover more NFTs -->
 .section_artist {
-
-
   .section_inner {
     @include tablet {
       & {
@@ -989,13 +1004,25 @@ body {
     }
   }
 }
-
+.card_list{
+  .thumb {
+    padding-top: 89.69%;
+  
+    @include mobile {
+      padding-top: 75.56%;
+    }
+  }
+  .card_avt{
+    margin-top: 10px;
+  }
+}
 .artist_card {
   &_item {
     background-color: map-get($gray, 2);
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
-    .card_avt {
+    .card_avatar {
       margin-top: 5px
     }
 
@@ -1107,8 +1134,13 @@ body {
       content: '';
     }
 
-    .card_avt {
+    .card_avatar {
       margin-top: 0;
+    }
+
+    & .btn {
+      color: map-get($gray, 1);
+      background-color: var(--white);
     }
 
     @include desktop {
@@ -1289,7 +1321,8 @@ body {
     box-sizing: border-box;
     font-size: 0;
     text-align: center;
-    transition: all 0.8s;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
 
     @include desktop {
       & {

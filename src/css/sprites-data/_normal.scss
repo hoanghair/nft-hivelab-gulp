@@ -5,7 +5,7 @@ $normal-vars: (
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_arrowright_32px': (
@@ -14,7 +14,7 @@ $normal-vars: (
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_arrowright_color_20px': (
@@ -23,7 +23,7 @@ $normal-vars: (
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_basketball': (
@@ -32,7 +32,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_basketball_sm': (
@@ -41,7 +41,7 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_bookmarkssimple': (
@@ -50,7 +50,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_camera': (
@@ -59,7 +59,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_camera_sm': (
@@ -68,7 +68,7 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_coinbase': (
@@ -77,7 +77,16 @@ $normal-vars: (
 		width: 40px,
 		height: 40px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_coinbase_sm': (
+		offset-x: -432px,
+		offset-y: -252px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_copy_20px': (
@@ -86,16 +95,25 @@ $normal-vars: (
 		width: 21px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_copy_32px': (
-		offset-x: -432px,
-		offset-y: -252px,
+		offset-x: -396px,
+		offset-y: -288px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_discord_24px': (
+		offset-x: -324px,
+		offset-y: -396px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_discord_32px': (
@@ -104,7 +122,7 @@ $normal-vars: (
 		width: 33px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_email_20px': (
@@ -113,16 +131,16 @@ $normal-vars: (
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_email_32px': (
-		offset-x: -396px,
+		offset-x: -432px,
 		offset-y: -288px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_email_color_20px': (
@@ -131,34 +149,34 @@ $normal-vars: (
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_eye_20px': (
-		offset-x: -272px,
-		offset-y: -396px,
+		offset-x: -56px,
+		offset-y: -432px,
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_eye_32px': (
+		offset-x: -432px,
+		offset-y: -324px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_eyeslash_32px': (
 		offset-x: -396px,
 		offset-y: -324px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_eyeslash_32px': (
-		offset-x: -432px,
-		offset-y: -288px,
-		width: 32px,
-		height: 32px,
-		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_eyeslash_color_20px': (
@@ -167,16 +185,34 @@ $normal-vars: (
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_globe_24px': (
+		offset-x: -352px,
+		offset-y: -396px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_globe_32px': (
-		offset-x: -432px,
-		offset-y: -324px,
+		offset-x: -396px,
+		offset-y: -360px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_instagram_24px': (
+		offset-x: -380px,
+		offset-y: -396px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_instagram_32px': (
@@ -185,52 +221,52 @@ $normal-vars: (
 		width: 33px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_list_24px': (
-		offset-x: -216px,
+		offset-x: -408px,
 		offset-y: -396px,
 		width: 24px,
 		height: 24px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_list_32px': (
-		offset-x: -396px,
-		offset-y: -360px,
-		width: 32px,
-		height: 32px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_lockkey_20px': (
-		offset-x: -296px,
-		offset-y: -396px,
-		width: 20px,
-		height: 20px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_lockkey_32px': (
 		offset-x: -432px,
 		offset-y: -360px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
-	'ico_lockkey_color_20px': (
-		offset-x: -320px,
-		offset-y: -396px,
+	'ico_lockkey_20px': (
+		offset-x: -80px,
+		offset-y: -432px,
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_lockkey_32px': (
+		offset-x: -312px,
+		offset-y: -252px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_lockkey_color_20px': (
+		offset-x: -104px,
+		offset-y: -432px,
+		width: 20px,
+		height: 20px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_magicwand': (
@@ -239,7 +275,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_magicwand_sm': (
@@ -248,7 +284,7 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_metamask': (
@@ -257,7 +293,16 @@ $normal-vars: (
 		width: 40px,
 		height: 40px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_metamask_sm': (
+		offset-x: -348px,
+		offset-y: -252px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_musicnotes': (
@@ -266,7 +311,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_musicnotes_sm': (
@@ -275,7 +320,7 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_paintbrush': (
@@ -284,7 +329,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_paintbrush_sm': (
@@ -293,7 +338,7 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_planet': (
@@ -302,7 +347,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_planet_sm': (
@@ -311,97 +356,97 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_plus_20px': (
-		offset-x: -344px,
-		offset-y: -396px,
+		offset-x: -128px,
+		offset-y: -432px,
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_plus_32px': (
-		offset-x: -312px,
-		offset-y: -252px,
-		width: 32px,
-		height: 32px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_rocket_32px': (
 		offset-x: -336px,
 		offset-y: -312px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
-	'ico_rocketlaunch_20px': (
-		offset-x: -368px,
-		offset-y: -396px,
-		width: 20px,
-		height: 20px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_rocketlaunch_32px': (
-		offset-x: -348px,
-		offset-y: -252px,
-		width: 32px,
-		height: 32px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_rocketlaunch_color_20px': (
-		offset-x: -392px,
-		offset-y: -396px,
-		width: 20px,
-		height: 20px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_search_24px': (
-		offset-x: -244px,
-		offset-y: -396px,
-		width: 24px,
-		height: 24px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_search_32px': (
-		offset-x: -336px,
-		offset-y: -348px,
-		width: 32px,
-		height: 32px,
-		total-width: 476px,
-		total-height: 428px,
-		imageSrc: '../img/normal.png'
-	),
-	'ico_storefront_32px': (
+	'ico_rocket_32px': (
 		offset-x: 0px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
-	'ico_storefront_color_32px': (
+	'ico_rocketlaunch_20px': (
+		offset-x: -152px,
+		offset-y: -432px,
+		width: 20px,
+		height: 20px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_rocketlaunch_32px': (
+		offset-x: -336px,
+		offset-y: -348px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_rocketlaunch_color_20px': (
+		offset-x: -176px,
+		offset-y: -432px,
+		width: 20px,
+		height: 20px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_search_24px': (
+		offset-x: -436px,
+		offset-y: -396px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_search_32px': (
 		offset-x: -36px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_storefront_32px': (
+		offset-x: -72px,
+		offset-y: -396px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_storefront_color_32px': (
+		offset-x: -108px,
+		offset-y: -396px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_swatches': (
@@ -410,7 +455,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_swatches_sm': (
@@ -419,16 +464,25 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_trendup_32px': (
-		offset-x: -72px,
+		offset-x: -144px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_twitter_24px': (
+		offset-x: 0px,
+		offset-y: -432px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_twitter_32px': (
@@ -437,43 +491,43 @@ $normal-vars: (
 		width: 33px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_user_20px': (
-		offset-x: -416px,
-		offset-y: -396px,
+		offset-x: -200px,
+		offset-y: -432px,
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_user_32px': (
-		offset-x: -144px,
+		offset-x: -216px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_user_color_20px': (
-		offset-x: -440px,
-		offset-y: -396px,
+		offset-x: -224px,
+		offset-y: -432px,
 		width: 20px,
 		height: 20px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_usercircle_32px': (
-		offset-x: -108px,
+		offset-x: -180px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_videocamera': (
@@ -482,7 +536,7 @@ $normal-vars: (
 		width: 100px,
 		height: 100px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_videocamera_sm': (
@@ -491,16 +545,16 @@ $normal-vars: (
 		width: 80px,
 		height: 80px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_wallet_32px': (
-		offset-x: -180px,
+		offset-x: -288px,
 		offset-y: -396px,
 		width: 32px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_walletconnect': (
@@ -509,7 +563,25 @@ $normal-vars: (
 		width: 40px,
 		height: 40px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_walletconnect_sm': (
+		offset-x: -252px,
+		offset-y: -396px,
+		width: 32px,
+		height: 32px,
+		total-width: 476px,
+		total-height: 456px,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_youtube_24px': (
+		offset-x: -28px,
+		offset-y: -432px,
+		width: 24px,
+		height: 24px,
+		total-width: 476px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 	'ico_youtube_32px': (
@@ -518,13 +590,13 @@ $normal-vars: (
 		width: 33px,
 		height: 32px,
 		total-width: 476px,
-		total-height: 428px,
+		total-height: 456px,
 		imageSrc: '../img/normal.png'
 	),
 );
 $normal-origin: (
   total-width: 476px,
-  total-height: 428px,
+  total-height: 456px,
   imageSrc: '../img/normal.png'
 );
 

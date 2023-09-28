@@ -117,23 +117,13 @@
   });
 
   // toggle btn nav
-  const inputs = $("input");
-  const labels = $("label");
   const body = $("body");
 
   function toggleOverflow() {
     body.toggleClass("off_scroll");
   }
 
-  // function check(status) {
-  //   inputs.prop("checked", status);
-  //   labels.click(function (e) {
-  //     $(".nav").toggleClass("nav_view");
-  //     toggleOverflow();
-  //   });
-  // }
   function check() {
-    // inputs.prop("checked", status);
     $(".nav_toggler").click(function (e) {
       console.log('abc');
       $(".nav").toggleClass("nav_view");
