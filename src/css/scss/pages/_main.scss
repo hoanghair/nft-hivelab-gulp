@@ -8,6 +8,7 @@ body {
 }
 
 .wrap {
+  min-width: 375px;
   color: var(--white);
 }
 
@@ -17,22 +18,22 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .4;
-  background-color: #000;
   z-index: 10;
+  background-color: #000;
+  opacity: 0.4;
 }
 
 .main {
   @include desktop {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 
   @include tablet {
-    margin-top: 54px;
+    padding-top: 54px;
   }
 
   @include mobile {
-    margin-top: 54px;
+    padding-top: 54px;
   }
 }
 
@@ -47,6 +48,7 @@ body {
   &_box {
     @include flex-item(flex, space-between, center);
     padding: 20px 50px;
+    background-color: map-get($gray, 1);
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
 
@@ -72,30 +74,30 @@ body {
       height: 46px;
     }
   }
-
 }
 
 .logo {
   display: inline-flex;
   position: relative;
   z-index: 1;
-  height: 32px;
+  width: 183px;
+  height: 24px;
 
-  &_link {
-    flex: 0 0 auto;
+  @include desktop {
+    width: 244px;
+    height: 32px;
   }
 
   &_img {
     display: inline-block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
 .nav {
   position: relative;
-
-  &_box {}
 
   @include desktop {
     & {
@@ -154,12 +156,6 @@ body {
 }
 
 @include tablet {
-  .header {
-    .logo {
-      height: 24px;
-    }
-  }
-
   .nav {
     display: flex;
     position: fixed;
@@ -171,9 +167,9 @@ body {
     height: 100vh;
     padding: 50px;
     background-color: map-get($gray, 2);
-    box-sizing: border-box;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
 
     &_view {
       transform: translateX(0);
@@ -221,12 +217,6 @@ body {
 }
 
 @include mobile {
-  .header {
-    .logo {
-      height: 24px;
-    }
-  }
-
   .nav {
     display: flex;
     position: fixed;
@@ -238,9 +228,9 @@ body {
     height: 100vh;
     padding: 80px 30px;
     background-color: map-get($gray, 2);
-    box-sizing: border-box;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
 
     &_view {
       transform: translateX(0);
@@ -296,10 +286,6 @@ body {
       & {
         max-width: 750px;
       }
-    }
-
-    @include mobile {
-      & {}
     }
   }
 
@@ -544,10 +530,6 @@ body {
   &_avatar {
     @include flex-item(flex, null, center);
     margin-top: 10px;
-
-    .thumb {
-      padding-top: 100%;
-    }
   }
 
   &_name {
@@ -654,10 +636,10 @@ body {
 
       }
     }
-  }
 
-  &_thumb .thumb {
-    border-radius: $border_radius_sm;
+    .thumb {
+      border-radius: $border_radius_sm;
+    }
   }
 
   &_info {
@@ -673,8 +655,8 @@ body {
 
   &_item {
     display: inline-block;
-    @include border_sm;
     width: calc((100% / 3) - 7.5px);
+    @include border_sm;
 
     &+.image_item {
       margin-left: 15px;
@@ -795,11 +777,11 @@ body {
     padding: 20px;
     font-size: 0;
     background-color: map-get($gray, 2);
-    box-sizing: border-box;
     text-align: center;
-    cursor: pointer;
     transition-property: opacity, transform;
     transition-duration: 0.8s;
+    cursor: pointer;
+    box-sizing: border-box;
 
     @include desktop {
       & {
@@ -820,13 +802,7 @@ body {
         text-align: left;
       }
     }
-
-    &:hover {
-      // transform: scale(1.04);
-    }
   }
-
-  &_avatar {}
 
   &_number {
     position: absolute;
@@ -1020,20 +996,8 @@ body {
     }
   }
 
-  .card_list {
-    .thumb {
-      padding-top: 89.69%;
-
-      @include mobile {
-        padding-top: 75.56%;
-      }
-    }
-
-    .card_avt {
-      margin-top: 10px;
-    }
-  }
 }
+
 
 
 
@@ -1053,6 +1017,18 @@ body {
           padding-top: 75.56%;
         }
       }
+    }
+
+    .thumb {
+      padding-top: 89.69%;
+
+      @include mobile {
+        padding-top: 75.56%;
+      }
+    }
+
+    .card_avt {
+      margin-top: 10px;
     }
 
     @include desktop {
@@ -1147,9 +1123,9 @@ body {
 
     &::before {
       position: absolute;
-      z-index: -1;
       bottom: 0;
       right: 0;
+      z-index: -1;
       width: 100vw;
       background: var(--gradient_white_violet);
       content: '';
@@ -1175,7 +1151,6 @@ body {
         .section_inner {
           padding-top: 360px;
           padding-bottom: 60px;
-          // padding: 360px 115px 60px;
         }
       }
     }
@@ -1290,8 +1265,8 @@ body {
   &_timer {
     width: 295px;
     padding: 30px 30px 26px;
-    font-family: SpaceMono;
     border-radius: $border_radius_sm;
+    font-family: SpaceMono;
     background-color: map-get($gray, 5);
     box-sizing: border-box;
 
@@ -1318,6 +1293,46 @@ body {
   background-color: map-get($gray, 2);
 }
 
+// <!-- Count down -->
+.count {
+  display: block;
+  margin-top: 10px;
+  font-size: 0;
+  text-align: center;
+
+  .time {
+    &_wrap {
+      display: inline-block;
+    }
+
+    &_txt {
+      position: relative;
+      display: inline-block;
+      width: 53px;
+      @include custom-font(38px, 700, 46px);
+      vertical-align: middle;
+    }
+  }
+
+  .title_txt {
+    display: block;
+    margin-top: 5px;
+    @include custom-font(12px, 400, 13px);
+    text-align: center;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 18px;
+    margin: 0px 10px;
+    @include custom-font(28px, 700, 39px);
+    vertical-align: top;
+    text-align: center;
+  }
+}
+
+// <!-- Count down -->
+
 // <!--// Section Highlight -->
 
 // <!-- Section How it works -->
@@ -1338,12 +1353,12 @@ body {
 .steps_card {
   &_item {
     padding: 10px 30px 30px;
-    background-color: map-get($gray, 2);
-    box-sizing: border-box;
     font-size: 0;
+    background-color: map-get($gray, 2);
     text-align: center;
     transition-property: opacity, transform;
     transition-duration: 0.8s;
+    box-sizing: border-box;
 
     @include desktop {
       & {
@@ -1395,14 +1410,12 @@ body {
       @include tablet {
         & {
           @include custom-font(16px, 600, 22px);
-
         }
       }
 
       @include mobile {
         & {
           @include custom-font(16px, 600, 22px);
-
         }
       }
     }
@@ -1445,13 +1458,11 @@ body {
       @include desktop {
         padding-top: 40px;
         padding-bottom: 80px;
-        // padding: 40px 115px 80px;
       }
 
       @include tablet {
         padding-top: 20px;
         padding-bottom: 80px;
-        // padding: 20px 72px 80px;
       }
     }
 
@@ -1463,7 +1474,6 @@ body {
       @include desktop {
         & {
           padding: 60px;
-
         }
       }
 
@@ -1474,9 +1484,10 @@ body {
       }
 
       @include mobile {
+        padding: 0;
+
         & {
           border-radius: 0;
-          padding: 0;
           background-color: map-get($gray, 1);
         }
       }
@@ -1503,8 +1514,8 @@ body {
     }
 
     .section_content {
-      @include border_sm;
       margin-top: 0px;
+      @include border_sm;
     }
 
     .section_heading {
@@ -1617,8 +1628,6 @@ body {
       }
     }
   }
-
-
 }
 
 // <!--// Section Subscribe widget -->
@@ -1767,6 +1776,24 @@ body {
     width: 420px;
     vertical-align: top;
 
+    @include tablet {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
+
     & .footer_info_txt {
       margin-top: 25px;
 
@@ -1791,7 +1818,6 @@ body {
         width: 100%;
       }
     }
-
 
     .form {
       @include mobile {
@@ -1832,23 +1858,6 @@ body {
       }
     }
 
-    @include tablet {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
-    }
-
-    @include mobile {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
-    }
   }
 
   &_title {
@@ -1910,45 +1919,7 @@ body {
 
 // <!-- // Footer -->
 
-// <!-- Count down -->
-.count {
-  display: block;
-  margin-top: 10px;
-  font-size: 0;
-  text-align: center;
 
-  .time {
-    &_wrap {
-      display: inline-block;
-    }
-
-    &_txt {
-      position: relative;
-      display: inline-block;
-      width: 53px;
-      @include custom-font(38px, 700, 46px);
-      vertical-align: middle;
-    }
-  }
-
-  .title_txt {
-    display: block;
-    margin-top: 5px;
-    @include custom-font(12px, 400, 13px);
-    text-align: center;
-  }
-
-  .divider {
-    display: inline-block;
-    width: 18px;
-    margin: 0px 10px;
-    @include custom-font(28px, 700, 39px);
-    vertical-align: top;
-    text-align: center;
-  }
-}
-
-// <!-- Count down -->
 
 //Responsive
 

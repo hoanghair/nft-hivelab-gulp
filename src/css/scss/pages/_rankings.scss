@@ -37,14 +37,14 @@
       }
 
       @include mobile {
-        padding: 0px 30px;
+        padding: 0px 30px;  
       }
     }
   }
 
   &_table {
+    padding-bottom: 20px;
     padding-top: 38px;
-    padding-bottom: 18px;
 
     &_wrap {
       margin-top: -20px;

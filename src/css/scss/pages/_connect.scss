@@ -115,8 +115,8 @@
   &_link {
     display: block;
     padding: 13px 20px 13px 40px;
-    border-radius: $border_radius_sm;
     border: 1px solid var(--bg_btn_violet);
+    border-radius: $border_radius_sm;
     background-color: map-get($gray, 2);
     box-sizing: border-box;
 
@@ -131,9 +131,5 @@
     @include custom-font(22px, 600, 31px);
     color: var(--white);
     vertical-align: middle;
-
-    @include desktop {
-      
-    }
   }
 }

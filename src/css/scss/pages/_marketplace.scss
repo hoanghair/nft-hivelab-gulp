@@ -13,7 +13,6 @@
 
     .page_title {
       @include mobile {
-
         @include custom-font(28px, 600, 39px);
       }
     }
@@ -24,9 +23,14 @@
     background-color: map-get($gray, 2);
 
     .section_inner {
+      padding-top: 58px;
+
       @include tablet {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
+      }
+
+      @include mobile {
+        padding-top: 40px;
       }
     }
   }

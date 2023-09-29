@@ -81,13 +81,7 @@
         width: 325px;
       }
     }
-
-    .page_title {
-      @include mobile {
-        // @include custom-font(38px, 600, 46px)
-      }
-    }
-
+    
     .page_desc {
       margin-top: 20px;
     }
