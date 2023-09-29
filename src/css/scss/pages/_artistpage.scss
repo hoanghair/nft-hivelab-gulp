@@ -1,4 +1,39 @@
 .section {
+  &_thumb {
+    &_artist {
+      height: 320px;
+      background: url(../img/image/bg_artist_pc.jpg) no-repeat center/cover;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 320px;
+        background: var(--gradient_white_violet);
+        content: '';
+      }
+
+      @include tablet {
+        height: 280px;
+
+        &::after {
+          height: 280px;
+        }
+      }
+
+      @include mobile {
+        height: 250px;
+
+        &::after {
+          height: 250px;
+        }
+      }
+    }
+
+  }
+
   &_profile {
     .section_inner {
       margin-top: -110px;
@@ -6,9 +41,8 @@
 
       @include desktop {
         margin-top: -150px;
-        padding-bottom: 38px;
+        padding-bottom: 37px;
       }
-
     }
 
     .btn_violet {
@@ -42,41 +76,6 @@
         margin-left: 20px;
       }
     }
-  }
-
-  &_thumb {
-    &_artist {
-      height: 320px;
-      background: url(../img/image/bg_artist_pc.jpg) no-repeat center/cover;
-
-      &::after {
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        bottom: 0;
-        width: 100vw;
-        height: 320px;
-        background: var(--gradient_white_violet);
-        content: '';
-      }
-
-      @include tablet {
-        height: 280px;
-
-        &::after {
-          height: 280px;
-        }
-      }
-
-      @include mobile {
-        height: 250px;
-
-        &::after {
-          height: 250px;
-        }
-      }
-    }
-
   }
 
   &_tabs {
@@ -129,21 +128,21 @@
     margin-top: 30px;
     font-size: 0;
 
-    .btn+.btn {
-      margin-left: 20px;
-    }
-
     @include desktop {
       margin-top: 0;
     }
 
-    @include mobile {
-      .btn {
+    .btn {
+      @include mobile {
         display: block;
         width: 100%;
       }
+    }
 
-      .btn+.btn {
+    .btn+.btn {
+      margin-left: 20px;
+
+      @include mobile {
         margin-top: 20px;
         margin-left: 0;
       }
@@ -156,7 +155,6 @@
 
     @include desktop {
       margin-top: 25px;
-
     }
 
     @include mobile {
@@ -246,7 +244,6 @@
         height: 32px;
       }
     }
-
   }
 
   &_bio {
@@ -259,23 +256,14 @@
       }
     }
   }
-
-
 }
 
 .section_card {
   background-color: map-get($gray, 2);
 
   .section_inner {
-    padding-top: 78px;
-
-    @include tablet {
-      padding-bottom: 80px;
-    }
-
-    @include mobile {
-      padding-bottom: 80px;
-    }
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   &_box {

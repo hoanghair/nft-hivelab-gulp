@@ -46,7 +46,9 @@
 	}
 
 	.wrap_content {
+		min-width: 1280px;
 		padding: 60px 60px;
+		box-sizing: border-box;
 	}
 
 	.ui_heading {
@@ -227,21 +229,10 @@
 	</style>
 </head>
 
-<body>
+<body data-pagestatus="new : 31-10-2023">
 
-
-	<!-- Skip Navigation -->
-	<ul class="skip">
-		<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
-		<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
-	</ul>
-	<!-- // Skip Navigation -->
 
 	<div class="wrap">
-		<!--[D] HEADER -->
-
-		<!--//[D] HEADER -->
-
 		<!-- [D] CONTENTS -->
 		<main id="content" class="common">
 			<div class="wrap_content">
@@ -1075,13 +1066,6 @@
 						<div class="ui_item">
 							<h3 class="ui_item_title"># Table Responsive</h3>
 							<table class="table">
-								<!-- <colgroup>
-									<col style="width: 6.67%">
-									<col style="width: 42%">
-									<col style="width: 17.14%">
-									<col style="width: 17.048%">
-									<col style="width: 17.14%">
-								</colgroup> -->
 								<thead>
 									<tr>
 										<th scope="col">#</th>
@@ -1189,16 +1173,7 @@
 			</div>
 		</main>
 		<!-- // [D] CONTENTS -->
-
-		<!--[D] FOOTER -->
-
-		<!--// [D] FOOTER -->
 	</div>
-
-	<!-- [D] LAYER -->
-	<div class="layer"></div>
-	<!-- [D] LAYER -->
-
 	<!-- Javascript -->
 	<script src="/js/libs/vendor.min.js"></script>
 	<script src="/js/libs/slick.min.js"></script>

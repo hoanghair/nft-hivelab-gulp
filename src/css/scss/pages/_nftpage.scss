@@ -227,8 +227,36 @@
     .artist_card_item:not(:nth-child(-n+2)) {
       margin-top: 60px;
     }
+  }
 
+  @include mobile {
+    .section_content {
+      margin-top: 30px;
+    }
 
+    &:has(.thumb) .thumb {
+      padding-top: 93.69%;
+    }
+
+    &:has(.artist_card_info) .artist_card_info {
+      padding: 20px 30px 25px 30px;
+    }
+
+    &:has(.card_desc_price) .card_desc_price {
+      @include custom-font(16px, 400, 22px)
+    }
+
+    .artist_card_item:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:has(.section_heading_btn) .section_heading_btn {
+      bottom: 38px;
+    }
+
+    &:has(.section_inner) .section_inner {
+      padding-bottom: 130px;
+    }
   }
 
   .artist_card_item:not(:nth-child(-n+3)) {
