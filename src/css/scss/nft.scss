@@ -1,14 +1,16 @@
 @import "common/reset.scss";
-@import "common/variable.scss";
-@import "common/common.scss";
 @import "common/font.scss";
+@import "common/variable.scss";
 @import "mixins/mixins.scss";
+@import "common/common.scss";
 
 @import "../sprites-data/_icons-svg-mixins.scss";
 @import "../sprites-data/normal.scss";
 @import "../sprites-data/retina.scss";
 
+@import "components/components.scss";
 @import "pages/sample.scss";
+
 
 @import "pages/main.scss";
 @import "pages/account.scss";

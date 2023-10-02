@@ -1,237 +1,6 @@
-<!DOCTYPE html><html lang="ko"><head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-	<meta name="format-detection" content="telephone=no">
-
-	
-
-	<title>Common NFT</title>
-
-	<!-- SEO meta tag -->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="date" content="">
-	<meta name="sitecode" content="">
-	<!-- // SEO meta tag -->
-
-	<!-- Open Graph -->
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
-	<meta property="og:type" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:locale" content="">
-	<meta property="og:title" content="">
-	<meta property="og:description" content="">
-	<meta property="og:country-name" content="">
-	<!-- // Open Graph -->
-
-	<!-- Icon & Favicon -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="apple-touch-icon" href="favicon-180x180.png">
-	<!-- // Icon & Favicon -->
-
-	<link rel="stylesheet" href="/css/libs.min.css">
-	<link rel="stylesheet" href="/css/nft.css">
-	<!--<link rel="stylesheet" href="/css/nft.min.css">-->
-
-	<style>
-	.common {
-		max-width: 1366px;
-		margin: 0 auto;
-		background-color: #f5f5f5;
-		color: #000;
-	}
-
-	.wrap_content {
-		min-width: 1280px;
-		padding: 60px 60px;
-		box-sizing: border-box;
-	}
-
-	.ui_heading {
-		display: inline-block;
-		font-size: 38px;
-		line-height: 1;
-	}
-
-	.ui_title {
-		display: inline-block;
-		margin: 40px 44px;
-		padding-left: 10px;
-		border-left: 4px solid #4e4d93;
-		/* font-family: Satoshi; */
-		font-size: 36px;
-		font-weight: 400;
-		line-height: 49px;
-		color: #2a254b;
-	}
-
-	.ui_content {
-		padding: 56px;
-		border-radius: 4px;
-		background-color: #fff;
-	}
-
-	.ui_color_list {
-		display: block;
-		font-size: 0;
-	}
-
-	.ui_color_item {
-		display: inline-block;
-		width: 50%;
-	}
-
-	.ui_item_title {
-		display: inline-block;
-		margin-bottom: 16px;
-		font-size: 20px;
-		line-height: 20px;
-	}
-
-	.ui_table {
-		width: 100%;
-		min-width: 500px;
-		border-spacing: 0;
-	}
-
-	.ui_table thead {
-		height: 48px;
-		background-color: #f9f9f9;
-	}
-
-	.ui_table thead tr th {
-		padding: 6px 10px;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 22px;
-		text-align: left;
-	}
-
-	.ui_table tbody tr {
-		height: 93px;
-	}
-
-	.ui_table tbody tr td {
-		/* display: flex;
-      justify-content: ; */
-		padding: 10px;
-		border-bottom: 1px solid #ebe8f4;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 22px;
-	}
-
-	.ui_table .table__line td {
-		border-bottom: 1px solid #4e4d93;
-	}
-
-	.ui_button,
-	.ui_input {
-		background-color: #cbcbcb;
-		font-size: 0;
-	}
-
-	.ui_item,
-	.ui_typography {
-		overflow-x: auto;
-	}
-
-	.ui_buttonmd .ui_item {
-		display: block;
-	}
-
-	.ui_buttonmd_title {
-		display: inline-block;
-		margin-bottom: 16px;
-		font-size: 20px;
-		line-height: 20px;
-	}
-
-	.ui_item+.ui_item {
-		margin-top: 70px;
-	}
-
-	.ui_table_btn thead tr th {
-		text-align: center;
-		border-top: 1px solid #ebe8f4;
-		border-bottom: 1px solid #ebe8f4;
-	}
-
-	.ui_table_btn thead tr th:first-child {
-		text-align: left;
-		border-left: 1px solid #ebe8f4;
-	}
-
-	.ui_table_btn thead tr th:last-child {
-		border-right: 1px solid #ebe8f4;
-	}
-
-	.ui_table_btn tbody tr td,
-	.ui_table_btn tbody tr td:nth-child(2) {
-		text-align: center;
-	}
-
-	.ui_table_btn tbody tr td:first-child {
-		border-right: 1px solid #ebe8f4;
-		border-left: 1px solid #ebe8f4;
-		text-align: left;
-	}
-
-	.ui_table_btn tbody tr td:last-child {
-		border-right: 1px solid #ebe8f4;
-	}
-
-	.ui_product {
-		padding: 20px;
-		font-size: 0;
-	}
-
-	.ui_input {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 30px;
-	}
-
-	.ui_input .ui_item+.ui_item {
-		margin-top: 0;
-	}
-
-	.ui_input .ui_item {
-		display: inline-block;
-		width: calc(50% - 30px);
-	}
-
-	.ui_input .ui_item:nth-child(-n + 2) {
-		margin-left: 0;
-	}
-
-	.ui_table_avatar .avatar {
-		margin: 0 auto;
-	}
-
-	.ui_thumb_list {
-		font-size: 0;
-	}
-
-	.ui_thumb_item {
-		display: inline-block;
-		width: calc(25% - 20px);
-	}
-
-	.ui_thumb_item+.ui_thumb_item {
-		margin-left: 20px;
-	}
-
-	</style>
-</head>
+@@include('./include/head.html',{"title": "Common NFT", "list_title": "List Title - Layout : Common"})
 
 <body data-pagestatus="new : 31-10-2023">
-
-
 	<div class="wrap">
 		<!-- [D] CONTENTS -->
 		<main id="content" class="common">
@@ -243,85 +12,113 @@
 					<div class="ui_content ui_color">
 						<ul class="ui_color_list">
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #2b2b2b;box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #2b2b2b;box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Background
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#2b2b2b</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#2b2b2b</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #3b3b3b;box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #3b3b3b;box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Background Secondary
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#3b3b3b</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#3b3b3b</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #858584;box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
-										Caption &amp; Label Text
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #858584;box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+										Caption & Label Text
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#858584</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#858584</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #ccc;box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: #ccc;box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Gray
 									</span>
 									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ccc</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--white);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: #2b2b2b;">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--white);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: #2b2b2b;">
 										White
 									</span>
 									<span style="display: inline-block;font-size: 18px;color:#000;text-align: right">#fff</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--bg_btn_violet);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--bg_btn_violet);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Background Button
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ebe8f4</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ebe8f4</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--blue_accent);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--blue_accent);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Blue Accent
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#377df7</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#377df7</span>
 								</span>
 							</li>
 							<li class="ui_color_item">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--red_accent);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background-color: var(--red_accent);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Red Accent
 									</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ff7262</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ff7262</span>
 								</span>
 							</li>
 							<li class="ui_color_item" style="width: 100%;">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background: var(--gradient_white_violet);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background: var(--gradient_white_violet);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Gradient White Violet
 									</span>
 									<span style="display: inline-block;font-size: 18px;color:var(--white)">rgba(162, 89, 255, 0)</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#a259ff</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#a259ff</span>
 								</span>
 							</li>
 							<li class="ui_color_item" style="width: 100%;">
-								<span style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background: var(--gradient_violet_red);box-sizing: border-box;">
-									<span style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
+								<span
+									style="display: flex;justify-content: space-between;align-items: center;height: 50px;padding: 14px 18px;background: var(--gradient_violet_red);box-sizing: border-box;">
+									<span
+										style="display: inline-block;font-size: 16px;font-weight: 400;line-height: 22px;color: var(--white);">
 										Gradient Violet Red
 									</span>
 									<span style="display: inline-block;font-size: 18px;color:var(--white)">rgba(162, 89, 255, 0)</span>
-									<span style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ff7262</span>
+									<span
+										style="display: inline-block;font-size: 18px;color:var(--white);text-align: right">#ff7262</span>
 								</span>
 							</li>
 						</ul>
@@ -329,233 +126,12 @@
 				</section>
 				<!--// [D] Colors -->
 
-				<!-- [D] Typography -->
-				<section class="ui_section">
-					<h2 class="ui_title">Typography</h2>
-					<div class="ui_content ui_typography">
-						<div class="ui_item">
-							<h3 class="ui_item_title"># WorkSans Font</h3>
-							<table class="ui_table">
-								<colgroup>
-									<col style="width: 25%">
-									<col style="width: 25%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th scope="col">Type</th>
-										<th scope="col">Role</th>
-										<th scope="col">Size</th>
-										<th scope="col">Weight</th>
-										<th scope="col">Line height</th>
-										<th scope="col">Spacing</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<h1 class="heading_one">Headline</h1>
-										</td>
-										<td>heading_one</td>
-										<td>67</td>
-										<td>bold</td>
-										<td>74</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h2 class="heading_two">Headline</h2>
-										</td>
-										<td>heading_two</td>
-										<td>51</td>
-										<td>bold</td>
-										<td>56</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h3 class="heading_three">Headline</h3>
-										</td>
-										<td>heading_three</td>
-										<td>38</td>
-										<td>bold</td>
-										<td>46</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h4 class="heading_four">Headline</h4>
-										</td>
-										<td>heading_four</td>
-										<td>28</td>
-										<td>bold</td>
-										<td>39</td>
-										<td>0</td>
-									</tr>
-
-									<tr class="table__line">
-										<td>
-											<h5 class="heading_five">Headline</h5>
-										</td>
-										<td>Headline five</td>
-										<td>22</td>
-										<td>bold</td>
-										<td>31</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="body_caption">Body</p>
-										</td>
-										<td>body_caption</td>
-										<td>12</td>
-										<td>regular</td>
-										<td>13</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="body_base">Body</p>
-										</td>
-										<td>body_base</td>
-										<td>16</td>
-										<td>regular</td>
-										<td>22</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="body_text">Body</p>
-										</td>
-										<td>body_text</td>
-										<td>22</td>
-										<td>regular</td>
-										<td>35</td>
-										<td>0</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="ui_item theme_spacemono">
-							<h3 class="ui_item_title"># SpaceMono Font</h3>
-							<table class="ui_table">
-								<colgroup>
-									<col style="width: 25%">
-									<col style="width: 25%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-									<col style="width: 12.5%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th scope="col">Type</th>
-										<th scope="col">Role</th>
-										<th scope="col">Size</th>
-										<th scope="col">Weight</th>
-										<th scope="col">Line height</th>
-										<th scope="col">Spacing</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<h1 class="heading_one">Headline</h1>
-										</td>
-										<td>heading_one</td>
-										<td>67</td>
-										<td>bold</td>
-										<td>74</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h2 class="heading_two">Headline</h2>
-										</td>
-										<td>heading_two</td>
-										<td>51</td>
-										<td>bold</td>
-										<td>56</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h3 class="heading_three">Headline</h3>
-										</td>
-										<td>heading_three</td>
-										<td>38</td>
-										<td>bold</td>
-										<td>46</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<h4 class="heading_four">Headline</h4>
-										</td>
-										<td>heading_four</td>
-										<td>28</td>
-										<td>bold</td>
-										<td>39</td>
-										<td>0</td>
-									</tr>
-
-									<tr class="table__line">
-										<td>
-											<h5 class="heading_five">Headline</h5>
-										</td>
-										<td>heading_five</td>
-										<td>22</td>
-										<td>bold</td>
-										<td>31</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="body_base">Body</p>
-										</td>
-										<td>body_base</td>
-										<td>16</td>
-										<td>regular</td>
-										<td>22</td>
-										<td>0</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="body_text">Body</p>
-										</td>
-										<td>body_text</td>
-										<td>22</td>
-										<td>regular</td>
-										<td>35</td>
-										<td>0</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</section>
-				<!--// [D] Typography -->
-
 				<!-- [D] Button -->
 				<section class="ui_section">
 					<h2 class="ui_title">Button</h2>
 					<div class="ui_content ui_button">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Default</h3>
+							<h3 class="ui_item_title">&#35; Default</h3>
 							<table class="ui_table ui_table_btn">
 								<colgroup>
 									<col style="width: 20%">
@@ -591,7 +167,7 @@
 							</table>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Button Icon</h3>
+							<h3 class="ui_item_title">&#35; Button Icon</h3>
 							<table class="ui_table ui_table_btn">
 								<colgroup>
 									<col style="width: 20%">
@@ -658,7 +234,7 @@
 					<h2 class="ui_title">Icons</h2>
 					<div class="ui_content ui_button">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Icons</h3>
+							<h3 class="ui_item_title">&#35; Icons</h3>
 							<table class="ui_table ui_table_btn">
 								<colgroup>
 									<col style="width: 25%">
@@ -853,7 +429,7 @@
 							</table>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Icons Large</h3>
+							<h3 class="ui_item_title">&#35; Icons Large</h3>
 							<table class="ui_table ui_table_btn">
 								<colgroup>
 									<col style="width: 20%">
@@ -923,7 +499,7 @@
 					<div class="ui_content ui_thumb">
 						<ul class="ui_thumb_list">
 							<li class="ui_thumb_item">
-								<h3 class="ui_item_title"># 1:1 (Image)</h3>
+								<h3 class="ui_item_title">&#35; 1:1 (Image)</h3>
 								<div class="thumb">
 									<img src="../img/image/img_lg_trending1.png" alt="" class="img">
 								</div>
@@ -938,7 +514,7 @@
 					<h2 class="ui_title">Avatar</h2>
 					<div class="ui_content ui_thumb">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Common</h3>
+							<h3 class="ui_item_title">&#35; Common</h3>
 							<table class="ui_table ui_table_btn ui_table_avatar">
 								<colgroup>
 									<col style="width: 20%">
@@ -1000,7 +576,7 @@
 					<h2 class="ui_title">Input</h2>
 					<div class="ui_content ui_input">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Subscribe Form</h3>
+							<h3 class="ui_item_title">&#35; Subscribe Form</h3>
 							<ul class="ui_input_list">
 								<li class="ui_input_item">
 									<form action="#" class="form form_email">
@@ -1014,7 +590,7 @@
 							</ul>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Subscribe Widget/Mobile</h3>
+							<h3 class="ui_item_title">&#35; Subscribe Widget/Mobile</h3>
 							<ul class="ui_input_list">
 								<li class="ui_input_item">
 									<div class="input_group">
@@ -1027,7 +603,7 @@
 							</ul>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Type Form</h3>
+							<h3 class="ui_item_title">&#35; Type Form</h3>
 							<ul class="ui_input_list">
 								<li class="ui_input_item">
 									<div class="input_group">
@@ -1043,11 +619,12 @@
 							</ul>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Search</h3>
+							<h3 class="ui_item_title">&#35; Search</h3>
 							<ul class="ui_input_list">
 								<li class="ui_input_item">
 									<div class="input_group input_search">
-										<input type="text" id="search" name="search" placeholder="Search your favourite NFTs" class="input_text input_mo">
+										<input type="text" id="search" name="search" placeholder="Search your favourite NFTs"
+											class="input_text input_mo">
 										<button class="input_icon_right">
 											<i class="ico_search_24px"></i>
 										</button>
@@ -1064,7 +641,7 @@
 					<h2 class="ui_title">Table</h2>
 					<div class="ui_content ui_thumb">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Table Responsive</h3>
+							<h3 class="ui_item_title">&#35; Table Responsive</h3>
 							<table class="table">
 								<thead>
 									<tr>
@@ -1116,10 +693,10 @@
 					<h2 class="ui_title">Tab Bar</h2>
 					<div class="ui_content ui_thumb">
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Tabs</h3>
+							<h3 class="ui_item_title">&#35; Tabs</h3>
 							<ul class="tabs tabs_default">
-								<li class="tabs_item">
-									<button class="tabs_link active">
+								<li class="tabs_item active">
+									<button class="tabs_link">
 										<span class="tabs_name only_pc">Today</span>
 										<span class="tabs_name only_mo">1d</span>
 									</button>
@@ -1148,10 +725,10 @@
 							</ul>
 						</div>
 						<div class="ui_item">
-							<h3 class="ui_item_title"># Tabs Number</h3>
+							<h3 class="ui_item_title">&#35; Tabs Number</h3>
 							<ul class="tabs tabs_number">
-								<li class="tabs_item">
-									<button class="tabs_link active">
+								<li class="tabs_item active">
+									<button class="tabs_link">
 										<span class="tabs_name">Today</span>
 										<span class="tabs_data only_pc">320</span>
 									</button>
@@ -1174,14 +751,7 @@
 		</main>
 		<!-- // [D] CONTENTS -->
 	</div>
-	<!-- Javascript -->
-	<script src="/js/libs/vendor.min.js"></script>
-	<script src="/js/libs/slick.min.js"></script>
-	<script src="/js/apps/common.js"></script>
-	<script src="/js/apps/main.js"></script>
-	<!-- <script src="/js/project-name.min.js"></script> -->
-	<!-- // Javascript -->
+	@@include('./include/script.html')
+</body>
 
-
-
-</body></html>
+</html>

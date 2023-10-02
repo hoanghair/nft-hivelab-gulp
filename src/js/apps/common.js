@@ -1,16 +1,21 @@
 (function (win, $) {
   "use strict";
+  // tabs active
+  $(".tabs_item").on("click", function (e) {
+    e.preventDefault();
+    var tabId = $(this).attr("data-tab");
 
-  $(".tabs_link").click(function () {
-    $(this)
-      .addClass("active")
-      .parent()
-      .siblings()
-      .find(".tabs_link")
-      .removeClass("active");
+    $(this).addClass("active").siblings().removeClass("active");
+
+    $(".content_tab").removeClass("active");
+
+    $(this).addClass("active");
+    console.log('[data-content="' + tabId + '"]');
+    $('[data-content="' + tabId + '"]').addClass("active");
   });
 
-  var sections = [
+  //sections Scroll Animation
+  var sectionsScrollAnimation = [
     ".section_hero",
     ".section_trending",
     ".section_toprated",
@@ -19,10 +24,9 @@
     ".section_steps",
   ];
 
-  sections.forEach(function (section) {
+  sectionsScrollAnimation.forEach(function (section) {
     $(section + " .animate_in").each(function (index, el) {
       var delay = 0.1 * index + "s";
-      // console.log(delay);
       $(this).css("transition-delay", delay);
     });
   });
@@ -38,15 +42,19 @@
     });
   }
 
+  //sections load Animation
+  var sectionsloadAnimation = ["section_hero", "section_marketplace"];
+
   function loadAnimation() {
-    $(".section_hero .animate_in").removeClass("animate_in");
+    sectionsloadAnimation.forEach(function (sectionClass) {
+      $("." + sectionClass + " .animate_in").removeClass("animate_in");
+    });
   }
 
   $(win).on("load", function () {
     loadAnimation();
   });
-  $(win).on("resize", function () {
-  });
+  $(win).on("resize", function () {});
   $(win).scroll(function () {
     scrollAnimation();
   });

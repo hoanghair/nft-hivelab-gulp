@@ -6,8 +6,6 @@
     var variable = "sample loaded";
     return {
       init: function () {
-        console.log(variable);
-        console.log(variableGlobal);
       },
     };
   })();
@@ -17,7 +15,6 @@
     var variable = "sample2 loaded";
     return {
       init: function () {
-        console.log(variable);
       },
     };
   })();
@@ -27,7 +24,6 @@
     var variable = "sample3 loaded";
 
     var init = function () {
-      console.log(variable);
     };
     return {
       init: init,
@@ -38,14 +34,12 @@
   var sample4 = function () {
     var variable = "sample4 loaded";
 
-    console.log(variable);
   };
 
   // sample5
   function sample5() {
     var variable = "sample5 loaded";
 
-    console.log(variable);
   }
 
   // sample6
@@ -67,7 +61,6 @@
           test.bindEvent();
         },
         bindEvent: function () {
-          console.log(testText, var1, var2);
         },
       };
       test.init();
@@ -76,10 +69,10 @@
 
   // startCountdownTimer
   function startCountdownTimer() {
-    // // Thiết lập thời gian ban đầu
+    // // Set the initial time
     let [hours, minutes, seconds] = [23, 59, 59];
 
-    // Hàm đếm ngược
+    // Countdown function
     function countdown() {
       const interval = setInterval(function () {
         if (seconds > 0) {
@@ -95,14 +88,14 @@
           clearInterval(interval); // Dừng
         }
 
-        // Hiển thị thời gian cập nhật
+        // Show update time
         $(".hour").text(hours.toString().padStart(2, "0"));
         $(".minute").text(minutes.toString().padStart(2, "0"));
         $(".second").text(seconds.toString().padStart(2, "0"));
       }, 1000);
     }
 
-    // Bắt đầu khi web được tải
+    // Starts when the web is loaded
     countdown();
   }
 
