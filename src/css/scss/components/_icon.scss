@@ -1,0 +1,270 @@
+i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ico_arrowleft_32px {
+  @include sp-normal('ico_arrowleft_32px')
+}
+
+.ico_arrowright_32px {
+  @include sp-normal('ico_arrowright_32px')
+}
+
+.ico_arrowright_color_20px {
+  @include sp-normal('ico_arrowright_color_20px')
+}
+
+.ico_copy_20px {
+  @include sp-normal('ico_copy_20px')
+}
+
+.ico_copy_32px {
+  @include sp-normal('ico_copy_32px')
+}
+
+.ico_discord_32px {
+  @include sp-normal('ico_discord_32px')
+}
+
+.ico_email_20px {
+  @include sp-normal('ico_email_20px')
+}
+
+.ico_email_color_20px {
+  @include sp-normal('ico_email_color_20px')
+}
+
+.ico_email_32px {
+  @include sp-normal('ico_email_32px')
+}
+
+.ico_eye_20px {
+  @include sp-normal('ico_eye_20px')
+}
+
+.ico_eye_32px {
+  @include sp-normal('ico_eye_32px')
+}
+
+.ico_eyeslash_color_20px {
+  @include sp-normal('ico_eyeslash_color_20px')
+}
+
+.ico_eyeslash_32px {
+  @include sp-normal('ico_eyeslash_32px')
+}
+
+.ico_globe_32px {
+  @include sp-normal('ico_globe_24px');
+
+  @include desktop {
+    @include sp-normal('ico_globe_32px')
+  }
+}
+
+.ico_instagram_32px {
+  @include sp-normal('ico_instagram_32px')
+}
+
+.ico_list_24px {
+  @include sp-normal('ico_list_24px')
+}
+
+.ico_list_32px {
+  @include sp-normal('ico_list_32px')
+}
+
+.ico_lockkey_color_20px {
+  @include sp-normal('ico_lockkey_color_20px')
+}
+
+.ico_lockkey_32px {
+  @include sp-normal('ico_lockkey_32px')
+}
+
+.ico_plus_20px {
+  @include sp-normal('ico_plus_20px')
+}
+
+.ico_plus_32px {
+  @include sp-normal('ico_plus_32px')
+}
+
+.ico_rocket_32px {
+  @include sp-normal('ico_rocket_32px')
+}
+
+.ico_rocketlaunch_20px {
+  @include sp-normal('ico_rocketlaunch_20px')
+}
+
+.ico_rocketlaunch_color_20px {
+  @include sp-normal('ico_rocketlaunch_color_20px')
+}
+
+.ico_rocketlaunch_32px {
+  @include sp-normal('ico_rocketlaunch_32px')
+}
+
+.ico_search_24px {
+  @include sp-normal('ico_search_24px')
+}
+
+.ico_search_32px {
+  @include sp-normal('ico_search_32px')
+}
+
+.ico_storefront_32px {
+  @include sp-normal('ico_storefront_32px')
+}
+
+.ico_storefront_color_32px {
+  @include sp-normal('ico_storefront_color_32px')
+}
+
+.ico_trendup_32px {
+  @include sp-normal('ico_trendup_32px')
+}
+
+.ico_twitter_32px {
+  @include sp-normal('ico_twitter_32px')
+}
+
+.ico_user_20px {
+  @include sp-normal('ico_user_20px')
+}
+
+.ico_user_color_20px {
+  @include sp-normal('ico_user_color_20px')
+}
+
+.ico_user_32px {
+  @include sp-normal('ico_user_32px')
+}
+
+.ico_usercircle_32px {
+  @include sp-normal('ico_usercircle_32px')
+}
+
+.ico_wallet_32px {
+  @include sp-normal('ico_wallet_32px')
+}
+
+.ico_youtube_32px {
+  @include sp-normal('ico_youtube_32px')
+}
+
+.ico_coinbase {
+  @include sp-normal('ico_coinbase_sm');
+
+  @include desktop {
+    background-position: -396px -84px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ico_metamask {
+  @include sp-normal('ico_metamask_sm');
+
+  @include desktop {
+    background-position: -396px -128px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ico_walletconnect {
+  @include sp-normal('ico_walletconnect_sm');
+
+  @include desktop {
+    background-position: -396px -172px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ico_basketball {
+  @include sp-normal('ico_basketball_sm');
+
+  @include desktop {
+    background-position: 0px 0px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_bookmarkssimple {
+  @include sp-normal('ico_bookmarkssimple')
+}
+
+.ico_camera {
+  @include sp-normal('ico_camera_sm');
+
+  @include desktop {
+    background-position: 0px -104px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_magicwand {
+  @include sp-normal('ico_magicwand_sm');
+
+  @include desktop {
+    background-position: -104px -104px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_musicnotes {
+  @include sp-normal('ico_musicnotes_sm');
+
+  @include desktop {
+    background-position: -208px 0px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_paintbrush {
+  @include sp-normal('ico_paintbrush_sm');
+
+  @include desktop {
+    background-position: -208px -104px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_planet {
+  @include sp-normal('ico_planet_sm');
+
+  @include desktop {
+    background-position: 0px -208px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_swatches {
+  @include sp-normal('ico_swatches_sm');
+
+  @include desktop {
+    background-position: -104px -208px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ico_videocamera {
+  @include sp-normal('ico_videocamera_sm');
+
+  @include desktop {
+    background-position: -208px -208px;
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -8,10 +8,11 @@
 @import "../sprites-data/normal.scss";
 @import "../sprites-data/retina.scss";
 
+//components
+@import "components/icon.scss";
 @import "components/components.scss";
-@import "pages/sample.scss";
 
-
+//pages
 @import "pages/main.scss";
 @import "pages/account.scss";
 @import "pages/artistpage.scss";
@@ -19,4 +20,3 @@
 @import "pages/nftpage.scss";
 @import "pages/marketplace.scss";
 @import "pages/rankings.scss";
-
