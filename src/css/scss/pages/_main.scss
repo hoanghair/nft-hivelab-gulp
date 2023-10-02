@@ -192,7 +192,7 @@ body {
       align-items: flex-start;
       text-align: left;
 
-      &+button {
+      &+.btn_violet {
         height: 46px;
         margin-top: 30px;
       }
@@ -312,22 +312,6 @@ body {
         }
       }
     }
-
-    .thumb {
-      padding-top: 78.9%;
-
-      @include tablet {
-        & {
-          padding-top: 66.9%;
-        }
-      }
-
-      @include mobile {
-        & {
-          padding-top: 65.4%;
-        }
-      }
-    }
   }
 }
 
@@ -426,15 +410,25 @@ body {
       overflow: hidden;
       border-radius: $border_radius_sm;
       background-color: map-get($gray, 2);
+
+      &>.thumb {
+        padding-top: 78.9%;
+
+        @include tablet {
+          padding-top: 66.9%;
+        }
+
+        @include mobile {
+          padding-top: 65.4%;
+        }
+      }
     }
 
     @include mobile {
-      & {
-        position: static;
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-      }
+      position: static;
+      width: 100%;
+      margin-top: 40px;
+      margin-left: 0;
     }
   }
 
@@ -522,7 +516,7 @@ body {
   }
 
   &_title {
-    display: inline-block;
+    display: block;
     @include custom-font(22px, 600, 31px);
     text-transform: capitalize;
   }
@@ -784,46 +778,32 @@ body {
     box-sizing: border-box;
 
     @include desktop {
-      & {
-        @include card_four_item;
-      }
+      @include card_four_item;
     }
 
     @include tablet {
-      & {
-        @include card_two_item;
-        text-align: left;
-      }
+      @include card_two_item;
+      text-align: left;
     }
 
     @include mobile {
-      & {
-        @include card_one_item;
-        text-align: left;
+      @include card_one_item;
+      text-align: left;
+    }
+
+    &>.number {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      font-family: SpaceMono;
+
+      @include desktop {
+        top: 19px;
+        left: 20px;
       }
     }
   }
 
-  &_number {
-    position: absolute;
-    top: 22px;
-    left: 30px;
-    font-family: SpaceMono;
-
-    @include tablet {
-      & {
-        top: 17px;
-        left: 23px;
-      }
-    }
-
-    @include mobile {
-      & {
-        top: 17px;
-        left: 23px;
-      }
-    }
-  }
 
   &_info {
     display: inline-block;
@@ -847,29 +827,26 @@ body {
       }
     }
   }
-
 }
+.card_info{
+  &_total {
+    display: block;
+    margin-top: 4px;
+  }
 
-.card_infomore {
-  display: block;
-  margin-top: 4px;
-  @include custom-font(16px, 400, 22px);
-  color: map-get($gray, 3);
-
-  &_desc {
-    margin-left: 4px;
-    font-family: SpaceMono;
+  &_price {
+    display: inline-block;
     @include custom-font(16px, 400, 22px);
-    color: var(--white);
+    color: map-get($gray, 3);
 
-    @include tablet {
-      & {
+    &+.price {
+      margin-left: 8px;
+
+      @include tablet {
         margin-left: 13px
       }
-    }
 
-    @include mobile {
-      & {
+      @include mobile {
         margin-left: 4px
       }
     }
@@ -1011,41 +988,31 @@ body {
       margin-top: 5px
     }
 
-    & .thumb_card {
-      @include mobile {
-        & {
-          padding-top: 75.56%;
-        }
-      }
-    }
-
-    .thumb {
-      padding-top: 89.69%;
-
-      @include mobile {
-        padding-top: 75.56%;
-      }
-    }
-
     .card_avt {
       margin-top: 10px;
     }
 
     @include desktop {
-      & {
-        @include card_three_item;
-      }
+      @include card_three_item;
+
     }
 
     @include tablet {
-      & {
-        @include card_two_item;
-      }
+      @include card_two_item;
+
     }
 
     @include mobile {
-      & {
-        @include card_one_item;
+      @include card_one_item;
+    }
+  }
+
+  &_image {
+    &>.thumb {
+      padding-top: 89.69%;
+
+      @include mobile {
+        padding-top: 75.56%;
       }
     }
   }
@@ -1058,10 +1025,7 @@ body {
     }
 
     @include mobile {
-      & {
-        padding: 20px 20px 25px;
-
-      }
+      padding: 20px 20px 25px;
     }
   }
 
@@ -1070,6 +1034,15 @@ body {
     justify-content: space-between;
     margin-top: 25px;
     font-family: SpaceMono;
+
+    .price {
+      display: block;
+      margin-top: 8px;
+
+      @include mobile {
+        @include custom-font(12px, 400, 13px);
+      }
+    }
   }
 }
 
@@ -1078,18 +1051,6 @@ body {
     display: block;
     @include custom-font(12px, 400, 13px);
     color: map-get($gray, 3);
-  }
-
-  &_price {
-    display: block;
-    margin-top: 8px;
-    @include custom-font(16px, 400, 22px);
-
-    @include mobile {
-      & {
-        @include custom-font(12px, 400, 13px);
-      }
-    }
   }
 }
 

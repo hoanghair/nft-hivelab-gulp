@@ -246,28 +246,26 @@
 			<!-- Navigation -->
 			<div class="header_box">
 				<h1 class="logo">
-					<a href="#" class="logo_link">
+					<a href="01_main.html" class="logo_link">
 						<img class="logo_img" src="../../img/image/img_logo_pc.png" alt="NFT Marketplace">
 					</a>
 				</h1>
 				<nav class="nav">
 					<ul class="nav_list">
 						<li class="nav_item">
-							<a href="#" class="nav_link">Marketplace</a>
+							<a href="02_05_marketplace.html" class="nav_link">Marketplace</a>
 						</li>
-
 						<li class="nav_item">
-							<a href="#" class="nav_link">Rankings</a>
+							<a href="02_05_rankings.html" class="nav_link">Rankings</a>
 						</li>
-
 						<li class="nav_item">
-							<a href="#" class="nav_link">Connect a wallet</a>
+							<a href="02_02_connect.html" class="nav_link">Connect a wallet</a>
 						</li>
 					</ul>
-					<button class="btn btn_md btn_violet">
+					<a href="02_01_create_account.html" class="btn btn_md btn_violet">
 						<i class="ico_user_20px"></i>
 						Sign Up
-					</button>
+					</a>
 				</nav>
 				<button class="nav_toggler only_tb_mo" type="button">
 					<span></span>
@@ -373,21 +371,21 @@
 			</section>
 			<div class="section_tabs">
 				<ul class="tabs">
-					<li class="tabs_item">
-						<button class="tabs_link active">
+					<li class="tabs_item active" data-tab="tab-1">
+						<button class="tabs_link">
 							<span class="tabs_name">Created</span>
 							<span class="tabs_data only_pc_tb">302</span>
 						</button>
 					</li>
 
-					<li class="tabs_item">
+					<li class="tabs_item" data-tab="tab-2">
 						<button class="tabs_link">
 							<span class="tabs_name">Owned</span>
 							<span class="tabs_data only_pc_tb">67</span>
 						</button>
 					</li>
 
-					<li class="tabs_item">
+					<li class="tabs_item" data-tab="tab-3">
 						<button class="tabs_link">
 							<span class="tabs_name">Collection</span>
 							<span class="tabs_data only_pc_tb">4</span>
@@ -397,7 +395,7 @@
 			</div>
 			<section class="section section_card">
 				<div class="section_inner">
-					<div class="section_card_box">
+					<div data-content="tab-1" class="section_card_box content_tab active">
 						<ul class="card_list">
 							<li class="artist_card_item animate_in">
 								<div class="artist_card_image">
@@ -646,6 +644,536 @@
 											</div>
 										</div>
 										<span class="card_name">Animakid</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div data-content="tab-2" class="section_card_box content_tab">
+						<ul class="card_list">
+							<li class="artist_card_item" style="transition-delay: 0s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist1.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Foxy Life</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item" style="transition-delay: 0.1s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist2.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Cat from future</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.2s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist3.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Psycho Dog</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.3s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist4.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Designer Bear</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.4s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist5.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0375</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.5s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist6.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0356</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_artist2.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.6s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist7.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0321</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.7s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist8.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0512</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.8s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist9.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0024</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div data-content="tab-3" class="section_card_box content_tab">
+						<ul class="card_list">
+							<li class="artist_card_item" style="transition-delay: 0s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist3.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Foxy Life</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item" style="transition-delay: 0.1s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist5.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Cat from future</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.2s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist1.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Psycho Dog</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.3s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist6.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Designer Bear</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.4s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist7.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0375</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc_tb" style="transition-delay: 0.5s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist6.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0356</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_artist2.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.6s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist7.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0321</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.7s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist8.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0512</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
+									</div>
+									<div class="artist_card_desc">
+										<div class="card_price">
+											<span class="card_desc_title">Price</span>
+											<span class="card_desc_price">1.63 ETH</span>
+										</div>
+										<div class="card_maxprice">
+											<span class="card_desc_title">Highest Bid</span>
+											<span class="card_desc_price">0.33 wETH</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="artist_card_item only_pc" style="transition-delay: 0.8s;">
+								<div class="artist_card_image">
+									<div class="thumb">
+										<img class="img" src="../img/image/img_artist9.png">
+									</div>
+								</div>
+								<div class="artist_card_info">
+									<strong class="card_title">Dancing Robot 0024</strong>
+									<div class="card_avatar">
+										<div class="avatar avatar_small">
+											<div class="thumb">
+												<img class="img" src="../img/image/img_sm_avt8.png">
+											</div>
+										</div>
+										<span class="card_name">Orbitian</span>
 									</div>
 									<div class="artist_card_desc">
 										<div class="card_price">

@@ -286,24 +286,24 @@ i {
 
 
 
-.vw-sample-text {
-	background-color: lightcoral;
-	color: #fff;
-	@include vw-font-size-pc(50);
-	@include line-height-pc(1);
-	padding: 10px;
-}
+// .vw-sample-text {
+// 	background-color: lightcoral;
+// 	color: #fff;
+// 	@include vw-font-size-pc(50);
+// 	@include line-height-pc(1);
+// 	padding: 10px;
+// }
 
-@include breakpoint(tablet) {
-	.vw-sample-text {
-		background-color: lightgreen;
-		@include vw-font-size-tb(50);
-	}
-}
+// @include breakpoint(tablet) {
+// 	.vw-sample-text {
+// 		background-color: lightgreen;
+// 		@include vw-font-size-tb(50);
+// 	}
+// }
 
-@include breakpoint(mobile) {
-	.vw-sample-text {
-		background-color: lightsalmon;
-		@include vw-font-size-mo(25);
-	}
-}
+// @include breakpoint(mobile) {
+// 	.vw-sample-text {
+// 		background-color: lightsalmon;
+// 		@include vw-font-size-mo(25);
+// 	}
+// }
