@@ -58,7 +58,7 @@ i {
 .ico_globe_32px {
   @include sp-normal('ico_globe_24px');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     @include sp-normal('ico_globe_32px')
   }
 }
@@ -158,7 +158,7 @@ i {
 .ico_coinbase {
   @include sp-normal('ico_coinbase_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -396px -84px;
     width: 40px;
     height: 40px;
@@ -168,7 +168,7 @@ i {
 .ico_metamask {
   @include sp-normal('ico_metamask_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -396px -128px;
     width: 40px;
     height: 40px;
@@ -178,7 +178,7 @@ i {
 .ico_walletconnect {
   @include sp-normal('ico_walletconnect_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -396px -172px;
     width: 40px;
     height: 40px;
@@ -188,7 +188,7 @@ i {
 .ico_basketball {
   @include sp-normal('ico_basketball_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: 0px 0px;
     width: 100px;
     height: 100px;
@@ -202,7 +202,7 @@ i {
 .ico_camera {
   @include sp-normal('ico_camera_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: 0px -104px;
     width: 100px;
     height: 100px;
@@ -212,7 +212,7 @@ i {
 .ico_magicwand {
   @include sp-normal('ico_magicwand_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -104px -104px;
     width: 100px;
     height: 100px;
@@ -222,7 +222,7 @@ i {
 .ico_musicnotes {
   @include sp-normal('ico_musicnotes_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -208px 0px;
     width: 100px;
     height: 100px;
@@ -232,7 +232,7 @@ i {
 .ico_paintbrush {
   @include sp-normal('ico_paintbrush_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -208px -104px;
     width: 100px;
     height: 100px;
@@ -242,7 +242,7 @@ i {
 .ico_planet {
   @include sp-normal('ico_planet_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: 0px -208px;
     width: 100px;
     height: 100px;
@@ -252,7 +252,7 @@ i {
 .ico_swatches {
   @include sp-normal('ico_swatches_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -104px -208px;
     width: 100px;
     height: 100px;
@@ -262,7 +262,7 @@ i {
 .ico_videocamera {
   @include sp-normal('ico_videocamera_sm');
 
-  @include desktop {
+  @include respond-above($screen-md) {
     background-position: -208px -208px;
     width: 100px;
     height: 100px;

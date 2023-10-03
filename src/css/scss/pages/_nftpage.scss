@@ -4,13 +4,13 @@
       height: 560px;
       background: url(../img/image/bg_nft_page_pc.png) no-repeat center/cover;
 
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         height: 420px;
         background: url(../img/image/bg_nft_page_tb.png) no-repeat center/cover;
 
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         height: 320px;
         background: url(../img/image/bg_nft_page_mo.png) no-repeat center/cover;
 
@@ -35,11 +35,11 @@
   &_heading {
     width: 605px;
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       width: 365px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 100%;
 
       .page_title {
@@ -60,7 +60,7 @@
     .highlight_timer {
       padding: 20px 30px 26px;
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding: 30px;
       }
     }
@@ -70,7 +70,7 @@
       margin-top: 27px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       position: static;
       margin-top: 20px;
     }
@@ -80,11 +80,11 @@
     width: 605px;
     margin-top: 30px;
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       width: 365px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 100%;
       margin-top: 20px;
     }
@@ -93,7 +93,7 @@
   &_item+&_item {
     margin-top: 30px;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 20px;
     }
   }
@@ -105,7 +105,7 @@
     @include custom-font(16px, 600, 22px);
     color: map-get($gray, 3);
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include custom-font(22px, 400, 35px);
 
     }
@@ -117,7 +117,7 @@
     }
 
     .card_name {
-      @include desktop {
+      @include respond-above($screen-md) {
         @include custom-font(22px, 600, 31px);
       }
     }
@@ -132,7 +132,7 @@
       p {
         @include custom-font(16px, 400, 22px);
 
-        @include desktop {
+        @include respond-above($screen-md) {
           @include custom-font(22px, 400, 35px);
         }
       }
@@ -140,7 +140,7 @@
       p+p {
         margin-top: 22px;
 
-        @include desktop {
+        @include respond-above($screen-md) {
           margin-top: 35px;
         }
       }
@@ -169,7 +169,7 @@
       @include custom-font(16px, 400, 22px);
       vertical-align: middle;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         @include custom-font(22px, 400, 35px);
       }
     }
@@ -181,7 +181,7 @@
       margin-left: -20px;
       font-size: 0;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         margin-top: -15px;
       }
     }
@@ -191,7 +191,7 @@
       margin-top: 20px;
       margin-left: 20px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         display: inline-block;
       }
     }
@@ -215,7 +215,7 @@
 }
 
 .section_artist_nft {
-  @include tablet {
+  @include respond-between($screen-sm,$screen-md) {
     .section_inner {
       padding-bottom: 40px;
     }
@@ -229,7 +229,7 @@
     }
   }
 
-  @include mobile {
+  @include respond-below($screen-sm) {
     .section_content {
       margin-top: 30px;
     }

@@ -297,13 +297,13 @@
 }
 
 @mixin respond-above($mq) {
-	@media (min-width: $mq) {
+	@media (min-width: #{$mq - 1px}) {
 		@content;
 	}
 }
 
 @mixin respond-between($mq-min, $mq-max) {
-	@media (min-width: $mq-min) and (max-width: $mq-max) {
+	@media (min-width: #{$mq-min}) and (max-width: #{$mq-max - 1px}) {
 		@content;
 	}
 }
@@ -558,23 +558,25 @@
   }
 }
 
-@mixin mobile {
-  @media (max-width: #{$screen-sm - 1px}) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media (max-width: #{$screen-sm - 1px}) {
+//     @content;
+//   }
+// }
 
-@mixin tablet {
-  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md - 1}) {
-    @content;
-  }
-}
+// @mixin tablet {
+//   @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md - 1}) {
+//     @content;
+//   }
+// }
 
-@mixin desktop {
-  @media (min-width: #{$screen-md}) {
-    @content;
-  }
-}
+// @mixin desktop {
+//   @media (min-width: #{$screen-md}) {
+//     @content;
+//   }
+// }
+
+
 
 @mixin on_pc {
   .only_pc {

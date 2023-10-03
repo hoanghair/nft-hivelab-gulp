@@ -175,7 +175,7 @@
   background-color: var(--white);
 
   button {
-    @include desktop{
+    @include respond-above($screen-md){
       width: auto;
     }
   }
@@ -261,7 +261,7 @@
         text-align: left;
         box-sizing: border-box;
 
-        @include mobile {
+        @include respond-below($screen-sm) {
           padding: 15.5px 8px;
           @include custom-font(12px, 400, 13px);
         }
@@ -272,11 +272,11 @@
           border-radius: $border_radius_sm 0 0 $border_radius_sm ;
           text-align: center;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             width: 9.275%;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             width: 13.968%;
           }
         }
@@ -285,12 +285,12 @@
           width: 40.095%;
           padding-left: 0;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             width: 53.188%;
             padding-left: 5px;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             width: 54.921%;
           }
         }
@@ -298,11 +298,11 @@
         &:nth-child(3) {
           width: 17.143%;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             width: 17.246%;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             display: none;
           }
         }
@@ -310,11 +310,11 @@
         &:nth-child(4) {
           width: 17.048%;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             display: none;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             display: none;
           }
         }
@@ -324,11 +324,11 @@
           border-right: 1px solid map-get($gray, 2);
           border-radius: 0 $border_radius_sm $border_radius_sm 0;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             width: 20.29%;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             width: 31.111%;
           }
         }
@@ -348,7 +348,7 @@
         text-align: left;
         box-sizing: border-box;
 
-        @include tablet {
+        @include respond-between($screen-sm,$screen-md) {
           padding: 14.5px 20px;
 
           &:nth-last-child(2) {
@@ -356,7 +356,7 @@
           }
         }
 
-        @include mobile {
+        @include respond-below($screen-sm) {
           padding: 13px 8px;
           @include custom-font(12px, 400, 13px);
 
@@ -393,11 +393,11 @@
           font-family: WorkSans;
           @include custom-font(22px, 600, 31px);
 
-          @include desktop {
+          @include respond-above($screen-md) {
             margin-left: 20px;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             @include custom-font(16px, 400, 22px);
           }
 
@@ -406,12 +406,12 @@
         & .avatar {
           flex: 0 0 auto;
 
-          @include tablet {
+          @include respond-between($screen-sm,$screen-md) {
             width: 24px;
             height: 24px;
           }
 
-          @include mobile {
+          @include respond-below($screen-sm) {
             width: 24px;
             height: 24px;
           }
@@ -421,7 +421,7 @@
   }
 
   .number {
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(12px, 400, 13px);
     }
   }
@@ -449,14 +449,14 @@
 
 .table {
   .number {
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       width: 24px;
       height: 24px;
       background-color: transparent;
       @include custom-font(16px, 400, 24px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 24px;
       height: 24px;
       background-color: transparent;
@@ -521,7 +521,7 @@
     color: map-get($gray, 3);
     box-sizing: border-box;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 19px 5px;
     }
   }
@@ -529,7 +529,7 @@
   &_name {
     @include custom-font(16px, 600, 22px);
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include custom-font(22px, 600, 31px);
     }
   }
@@ -558,7 +558,7 @@
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       @include custom-font(12px, 400, 13px);
     }
 
@@ -577,7 +577,7 @@
     @include custom-font(38px, 600, 46px);
     text-transform: capitalize;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include custom-font(51px, 600, 56px);
     }
   }
@@ -588,7 +588,7 @@
     @include custom-font(16px, 400, 22px);
     text-transform: capitalize;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include custom-font(22px, 400, 35px);
     }
   }
@@ -622,6 +622,6 @@
 }
 
 // @include on_pc;
-@include desktop;
-@include tablet;
-@include mobile;
+@include respond-above($screen-md);
+@include respond-between($screen-sm,$screen-md);
+@include respond-below($screen-sm);

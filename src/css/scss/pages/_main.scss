@@ -24,15 +24,15 @@ body {
 }
 
 .main {
-  @include desktop {
+  @include respond-above($screen-md) {
     padding-top: 100px;
   }
 
-  @include tablet {
+  @include respond-between($screen-sm, $screen-md) {
     padding-top: 54px;
   }
 
-  @include mobile {
+  @include respond-below($screen-sm) {
     padding-top: 54px;
   }
 }
@@ -52,12 +52,12 @@ body {
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       padding: 15px 50px;
 
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 15px 30px;
 
     }
@@ -81,7 +81,7 @@ body {
   width: 183px;
   height: 24px;
 
-  @include desktop {
+  @include respond-above($screen-md) {
     width: 244px;
     height: 32px;
   }
@@ -97,7 +97,7 @@ body {
 .nav {
   position: relative;
 
-  @include desktop {
+  @include respond-above($screen-md) {
     display: flex;
     justify-content: space-between;
 
@@ -143,14 +143,14 @@ body {
       content: "";
     }
 
-    @include desktop {
+    @include respond-above($screen-md) {
       display: inline-block;
       padding: 12px 20px;
     }
   }
 }
 
-@include tablet {
+@include respond-between($screen-sm, $screen-md) {
   .nav {
     display: flex;
     position: fixed;
@@ -211,7 +211,7 @@ body {
 
 }
 
-@include mobile {
+@include respond-below($screen-sm) {
   .nav {
     display: flex;
     position: fixed;
@@ -237,7 +237,7 @@ body {
       align-items: flex-start;
       text-align: left;
 
-      &+button {
+      &+.btn {
         height: 46px;
         margin-top: 30px;
       }
@@ -270,12 +270,12 @@ body {
     padding: 40px 30px;
     box-sizing: border-box;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       padding-top: 80px;
       padding-bottom: 80px;
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       max-width: 750px;
     }
   }
@@ -296,7 +296,7 @@ body {
     font-size: 0;
 
     .section_inner {
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         padding-top: 80px;
         padding-bottom: 80px;
       }
@@ -309,11 +309,11 @@ body {
     display: block;
     position: relative;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       gap: 20px 30px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       position: static;
     }
   }
@@ -324,7 +324,7 @@ body {
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 100%;
     }
   }
@@ -333,11 +333,11 @@ body {
     @include custom-font(67px, 600, 74px);
     text-transform: capitalize;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(38px, 600, 46px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       @include custom-font(28px, 600, 39px);
     }
@@ -348,11 +348,11 @@ body {
     @include custom-font(22px, 400, 35px);
     text-transform: capitalize;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(16px, 400, 22px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 10px;
       @include custom-font(16px, 400, 22px);
     }
@@ -362,11 +362,11 @@ body {
   &_overview {
     margin-top: 30px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 20px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 40px;
     }
   }
@@ -390,17 +390,17 @@ body {
       &>.thumb {
         padding-top: 78.9%;
 
-        @include tablet {
+        @include respond-between($screen-sm, $screen-md) {
           padding-top: 66.9%;
         }
 
-        @include mobile {
+        @include respond-below($screen-sm) {
           padding-top: 65.4%;
         }
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       position: static;
       width: 100%;
       margin-top: 40px;
@@ -415,11 +415,11 @@ body {
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 20px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
       margin-top: 40px;
@@ -451,11 +451,11 @@ body {
     font-family: SpaceMono;
     @include custom-font(28px, 700, 39px);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(22px, 700, 35px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(22px, 700, 35px);
     }
   }
@@ -464,11 +464,11 @@ body {
     display: inline-block;
     @include custom-font(24px, 400, 38px);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(16px, 400, 22px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(16px, 400, 22px);
     }
   }
@@ -522,11 +522,11 @@ body {
     @include custom-font(38px, 600, 46px);
     text-transform: capitalize;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(28px, 600, 39px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(28px, 600, 39px);
     }
 
@@ -536,11 +536,11 @@ body {
       @include custom-font(22px, 400, 35px);
       text-transform: capitalize;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         @include custom-font(16px, 400, 22px);
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         @include custom-font(16px, 400, 22px);
       }
     }
@@ -551,11 +551,11 @@ body {
   &_content {
     margin-top: 60px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 40px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 40px;
     }
   }
@@ -572,11 +572,11 @@ body {
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include card_one_item;
     }
 
@@ -610,7 +610,10 @@ body {
     background-color: var(--bg_btn_violet);
 
     &>a {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
     }
@@ -619,12 +622,12 @@ body {
   &_number {
     display: block;
     font-family: SpaceMono;
-    @include custom-font(22px, 700, 100px);
+    @include custom-font(22px, 700, 36px);
     text-align: center;
     color: var(--white);
 
-    @include mobile {
-      @include custom-font(16px, 700, 95px);
+    @include respond-below($screen-sm) {
+      @include custom-font(16px, 700, 23px);
     }
   }
 }
@@ -634,19 +637,19 @@ body {
 // <!-- Section Top Rated -->
 .section {
   &_heading {
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
     }
   }
 
   &_toprated {
-    @include mobile {
+    @include respond-below($screen-sm) {
       .card_list {
         display: block;
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       .avatar {
         width: 60px;
         height: 60px;
@@ -654,7 +657,7 @@ body {
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       .avatar {
         width: 60px;
         height: 60px;
@@ -665,13 +668,13 @@ body {
 }
 
 .section_inner:has(.btn_box) {
-  @include mobile {
+  @include respond-below($screen-sm) {
     position: relative;
   }
 }
 
 .section_inner {
-  @include mobile {
+  @include respond-below($screen-sm) {
     .btn_box {
       position: absolute;
       left: 50%;
@@ -685,7 +688,7 @@ body {
 
 .section {
   &_toprated>.section_inner {
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding-bottom: 140px;
 
       .btn_box {
@@ -695,7 +698,7 @@ body {
   }
 
   &_artist>.section_inner {
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding-bottom: 160px;
 
       .btn_box {
@@ -714,15 +717,15 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include card_four_item;
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include card_one_item;
     }
   }
@@ -733,11 +736,11 @@ body {
     color: var(--white);
     text-align: center;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       text-align: left;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       text-align: left;
     }
 
@@ -747,7 +750,7 @@ body {
       left: 13px;
       font-family: SpaceMono;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         top: 19px;
         left: 20px;
       }
@@ -759,14 +762,14 @@ body {
     display: inline-block;
     margin-top: 20px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       width: calc(100% - 80px);
       margin-top: 0;
       margin-left: 20px;
       vertical-align: middle;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: calc(100% - 80px);
       margin-top: 0;
       margin-left: 20px;
@@ -789,11 +792,11 @@ body {
     &+.price {
       margin-left: 10px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         margin-left: 18px
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-left: 11px
       }
     }
@@ -806,17 +809,17 @@ body {
 .section {
   &_category {
     .section_content {
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 48px;
       }
     }
 
     & .thumb {
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         padding-top: 94.667%;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding-top: 95.95%;
       }
 
@@ -832,7 +835,7 @@ body {
   }
 
   &:has(.section_category) {
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 100px;
     }
   }
@@ -844,15 +847,15 @@ body {
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include card_four_item;
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include card_four_item;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include card_two_item;
       width: calc((100% / 2) - 10px);
 
@@ -882,12 +885,12 @@ body {
     padding: 20px 30px 25px 30px;
     @include custom-font(22px, 600, 31px);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       padding: 20px 20px 25px 20px;
       @include custom-font(16px, 600, 22px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 20px 20px 25px 20px;
       @include custom-font(16px, 600, 22px);
 
@@ -900,7 +903,7 @@ body {
 // <!-- Section Discover more NFTs -->
 .section_artist {
   .section_inner {
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       padding-bottom: 80px;
     }
   }
@@ -920,24 +923,24 @@ body {
       margin-top: 10px;
     }
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include card_three_item;
 
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
 
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include card_one_item;
     }
 
     &>a>.thumb {
       padding-top: 89.69%;
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding-top: 75.56%;
       }
     }
@@ -950,7 +953,7 @@ body {
       font-family: SpaceMono;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 20px 20px 25px;
     }
   }
@@ -965,7 +968,7 @@ body {
       display: block;
       margin-top: 8px;
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         @include custom-font(12px, 400, 13px);
       }
     }
@@ -995,7 +998,7 @@ body {
 // <!-- Section Highlight -->
 .section {
   &:has(.section_highlight) {
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 120px;
       padding: 0
     }
@@ -1025,7 +1028,7 @@ body {
       background-color: var(--white);
     }
 
-    @include desktop {
+    @include respond-above($screen-md) {
 
       background: url(../img/image/bg_highlight_pc.png) no-repeat center/cover;
 
@@ -1039,7 +1042,7 @@ body {
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
 
       background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
 
@@ -1054,7 +1057,7 @@ body {
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
 
       background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
 
@@ -1078,12 +1081,12 @@ body {
     & .btn {
       margin-top: 30px;
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 0;
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
     }
@@ -1094,7 +1097,7 @@ body {
     // position: relative;
     width: calc(100% - 295px);
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
 
@@ -1108,27 +1111,27 @@ body {
     margin-top: 30px;
     @include custom-font(51px, 600, 56px);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(38px, 600, 46px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(38px, 600, 46px);
     }
   }
 
   &_box {
-    @include desktop {
+    @include respond-above($screen-md) {
       display: inline-block;
       vertical-align: bottom;
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       display: inline-block;
       vertical-align: bottom;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin: 32px auto 0;
       text-align: center;
     }
@@ -1142,7 +1145,7 @@ body {
     background-color: map-get($gray, 5);
     box-sizing: border-box;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 315px;
       margin: 0 auto;
     }
@@ -1150,7 +1153,7 @@ body {
     .timer_desc {
       @include custom-font(12px, 400, 13px);
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         display: block;
         text-align: left;
       }
@@ -1212,11 +1215,11 @@ body {
   .section_content {
     margin-top: 48px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 42px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 41px;
     }
   }
@@ -1232,16 +1235,16 @@ body {
     transition-duration: 0.8s;
     box-sizing: border-box;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       @include card_three_item;
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include card_three_item;
       padding: 10px 20px 30px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include card_one_item;
       padding: 20px;
       text-align: left;
@@ -1251,11 +1254,11 @@ body {
   &_thumb {
     padding: 0 10px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       padding: 0 5px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: inline-block;
       width: 100px;
       height: 100px;
@@ -1269,16 +1272,16 @@ body {
 
     .card_title {
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         @include custom-font(16px, 600, 22px);
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         @include custom-font(16px, 600, 22px);
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: inline-block;
       width: calc(100% - 120px);
       margin-top: 0;
@@ -1291,11 +1294,11 @@ body {
     margin-top: 10px;
     @include custom-font(16px, 400, 22px);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(12px, 400, 17px);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       @include custom-font(12px, 400, 17px);
     }
   }
@@ -1307,12 +1310,12 @@ body {
 .section {
   &_subscribe {
     .section_inner {
-      @include desktop {
+      @include respond-above($screen-md) {
         padding-top: 40px;
         padding-bottom: 80px;
       }
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         padding-top: 22px;
         padding-bottom: 80px;
       }
@@ -1323,15 +1326,15 @@ body {
       font-size: 0;
       background-color: map-get($gray, 2);
 
-      @include desktop {
+      @include respond-above($screen-md) {
         padding: 60px;
       }
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         padding: 40px 30px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding: 0;
 
         border-radius: 0;
@@ -1345,11 +1348,11 @@ body {
       width: calc(50% - 40px);
       vertical-align: middle;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         width: calc(50% - 15px)
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         display: block;
         width: 100%;
       }
@@ -1362,12 +1365,12 @@ body {
 
     .thumb {
       padding-top: 72.94%;
-  
-      @include tablet {
+
+      @include respond-between($screen-sm, $screen-md) {
         padding-top: 93.33%;
       }
-  
-      @include mobile {
+
+      @include respond-below($screen-sm) {
         padding-top: 80.95%;
       }
     }
@@ -1376,11 +1379,11 @@ body {
       display: inline-block;
       margin-left: 80px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         margin-left: 30px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 30px;
         margin-left: 0;
       }
@@ -1389,19 +1392,19 @@ body {
     .form {
       margin-top: 40px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         display: block;
         background-color: transparent;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         display: block;
         background-color: transparent;
       }
     }
 
     .input_text {
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         padding: 11px 20px;
         border: 1px solid map-get($gray, 3);
         border-radius: $border_radius_sm;
@@ -1413,7 +1416,7 @@ body {
         }
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding: 11px 20px;
         border: 1px solid map-get($gray, 3);
         border-radius: $border_radius_sm;
@@ -1444,11 +1447,11 @@ body {
     padding: 40px 115px;
     box-sizing: border-box;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       padding: 38px 72px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 38px 30px;
     }
   }
@@ -1456,11 +1459,11 @@ body {
   &_info {
     display: flex;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       display: block;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
     }
 
@@ -1484,21 +1487,21 @@ body {
     .footer_info_desc {
       margin-top: 30px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         margin-top: 20px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 20px;
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       display: block;
       width: 100%;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
     }
@@ -1515,14 +1518,14 @@ body {
     margin-left: 31px;
     vertical-align: top;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       display: block;
       width: 100%;
       margin-top: 30px;
       margin-left: 0;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
       margin-top: 30px;
@@ -1535,11 +1538,11 @@ body {
       display: inline-block;
       margin-top: 25px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         margin-top: 20px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 20px;
       }
     }
@@ -1555,14 +1558,14 @@ body {
     width: 420px;
     vertical-align: top;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       display: block;
       width: 100%;
       margin-top: 30px;
       margin-left: 0;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
       margin-top: 30px;
@@ -1572,11 +1575,11 @@ body {
     & .footer_info_txt {
       margin-top: 25px;
 
-      @include tablet {
+      @include respond-between($screen-sm, $screen-md) {
         margin-top: 20px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 20px;
       }
     }
@@ -1586,7 +1589,7 @@ body {
     width: 420px;
     margin-top: 20px;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       display: block;
       width: 100%;
       background-color: transparent;
@@ -1594,7 +1597,7 @@ body {
   }
 
   .input_text {
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 11px 20px;
       border: 1px solid map-get($gray, 3);
       border-radius: $border_radius_sm;
@@ -1618,7 +1621,7 @@ body {
     margin-top: 28px;
     border-top: 1px solid map-get($gray , 3);
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 48px;
     }
 
@@ -1636,11 +1639,11 @@ body {
     display: inline-block;
     margin-top: 10px;
 
-    @include tablet {
+    @include respond-between($screen-sm, $screen-md) {
       margin-top: 15px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 15px;
     }
   }
@@ -1669,7 +1672,7 @@ body {
   display: inline-block
 }
 
-@include desktop {
+@include respond-above($screen-md) {
   @include on_pc;
 
   .only_tb_mo {
@@ -1678,7 +1681,7 @@ body {
 
 }
 
-@include tablet {
+@include respond-between($screen-sm, $screen-md) {
   @include on_tb;
 
   .only_tb_mo {
@@ -1690,7 +1693,7 @@ body {
   }
 }
 
-@include mobile {
+@include respond-below($screen-sm) {
   @include on_mo;
 
   .only_tb_mo {

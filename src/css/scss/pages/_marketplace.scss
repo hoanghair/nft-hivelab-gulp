@@ -1,7 +1,7 @@
 .section {
   &_headingpage {
     .section_inner {
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -12,7 +12,7 @@
     }
 
     .page_title {
-      @include mobile {
+      @include respond-below($screen-sm) {
         @include custom-font(28px, 600, 39px);
       }
     }
@@ -25,11 +25,11 @@
     .section_inner {
       padding-top: 58px;
 
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         padding-bottom: 80px;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding-top: 40px;
       }
     }
