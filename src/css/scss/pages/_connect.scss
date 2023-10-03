@@ -3,7 +3,7 @@
     display: flex;
     font-size: 0;
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       & {
         display: block;
       }
@@ -15,7 +15,7 @@
   &_thumb {
     display: inline-block;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       width: calc(50% - 30px);
 
       & .thumb {
@@ -23,7 +23,7 @@
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       width: calc(50% - 20px);
 
       & .thumb {
@@ -31,7 +31,7 @@
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 100%;
 
       & .thumb {
@@ -46,21 +46,21 @@
     justify-content: center;
     vertical-align: top;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       & {
         width: calc(50% - 30px);
         margin-left: 60px;
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       & {
         width: calc(50% - 20px);
         margin-left: 40px;
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       & {
         width: 100%;
         padding: 30px 30px 40px;
@@ -70,13 +70,13 @@
   }
 
   &_form {
-    @include desktop {
+    @include respond-above($screen-md) {
       & {
         width: 460px;
       }
     }
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       & {
         width: 320px;
       }
@@ -91,17 +91,17 @@
     display: block;
     margin-top: 40px;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       width: 320px;
 
     }
 
-    @include tablet {
+    @include respond-between($screen-sm,$screen-md) {
       width: 100%;
 
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       margin-top: 30px;
 
     }
@@ -120,7 +120,7 @@
     background-color: map-get($gray, 2);
     box-sizing: border-box;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       padding: 15px 20px 15px 40px;
     }
   }

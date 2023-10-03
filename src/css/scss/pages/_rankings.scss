@@ -1,7 +1,7 @@
 .section {
   &_rankings {
     .page_title {
-      @include mobile {
+      @include respond-below($screen-sm) {
 
         @include custom-font(28px, 600, 39px);
       }
@@ -15,7 +15,7 @@
       margin-top: 20px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       padding: 30px 30px;
 
       .page_desc {
@@ -26,17 +26,17 @@
 
   &_tabs {
     .tabs {
-      @include desktop {
+      @include respond-above($screen-md) {
         padding: 0px 115px;
 
       }
 
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         padding: 0px 75px;
 
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding: 0px 30px;  
       }
     }

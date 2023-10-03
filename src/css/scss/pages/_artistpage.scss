@@ -15,7 +15,7 @@
         content: '';
       }
 
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         height: 280px;
 
         &::after {
@@ -23,7 +23,7 @@
         }
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         height: 250px;
 
         &::after {
@@ -39,7 +39,7 @@
       margin-top: -110px;
       padding-bottom: 30px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         margin-top: -150px;
         padding-bottom: 37px;
       }
@@ -57,13 +57,13 @@
       margin-left: 10px
     }
 
-    @include desktop {
+    @include respond-above($screen-md) {
       .overview_title {
         font-size: 22px
       }
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       .page_title {
         @include custom-font(28px, 600, 39px);
       }
@@ -88,11 +88,11 @@
       padding: 10px 115px 0;
       box-sizing: border-box;
 
-      @include tablet {
+      @include respond-between($screen-sm,$screen-md) {
         padding: 10px 75px 0;
       }
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         padding: 10px 30px 0;
 
       }
@@ -105,7 +105,7 @@
     font-size: 0;
 
     .avatar {
-      @include mobile {
+      @include respond-below($screen-sm) {
         display: block;
         margin: 0 auto;
       }
@@ -116,7 +116,7 @@
     display: block;
     margin-top: 30px;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       display: flex;
       justify-content: space-between;
       margin-top: 40px;
@@ -128,12 +128,12 @@
     margin-top: 30px;
     font-size: 0;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       margin-top: 0;
     }
 
     .btn {
-      @include mobile {
+      @include respond-below($screen-sm) {
         display: block;
         width: 100%;
       }
@@ -142,7 +142,7 @@
     .btn+.btn {
       margin-left: 20px;
 
-      @include mobile {
+      @include respond-below($screen-sm) {
         margin-top: 20px;
         margin-left: 0;
       }
@@ -153,11 +153,11 @@
     width: 500px;
     margin-top: 30px;
 
-    @include desktop {
+    @include respond-above($screen-md) {
       margin-top: 25px;
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       width: 100%;
 
     }
@@ -173,7 +173,7 @@
       @include custom-font(16px, 400, 22px);
       color: map-get($gray, 3);
 
-      @include desktop {
+      @include respond-above($screen-md) {
         @include custom-font(22px, 700, 35px);
       }
     }
@@ -190,7 +190,7 @@
       width: 24px;
       height: 24px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         background-position: -440px -84px;
         width: 33px;
         height: 32px;
@@ -202,7 +202,7 @@
       width: 24px;
       height: 24px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         background-position: -440px -84px;
         width: 33px;
         height: 32px;
@@ -214,7 +214,7 @@
       width: 24px;
       height: 24px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         background-position: -396px -216px;
         width: 33px;
         height: 32px;
@@ -226,7 +226,7 @@
       width: 24px;
       height: 24px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         background-position: -440px -172px;
         width: 33px;
         height: 32px;
@@ -238,7 +238,7 @@
       width: 24px;
       height: 24px;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         background-position: -440px -128px;
         width: 33px;
         height: 32px;
@@ -251,7 +251,7 @@
       @include custom-font(16px, 400, 22px);
       text-transform: capitalize;
 
-      @include desktop {
+      @include respond-above($screen-md) {
         @include custom-font(22px, 400, 35px);
       }
     }
@@ -271,7 +271,7 @@
       background-color: map-get($gray, 1);
     }
 
-    @include mobile {
+    @include respond-below($screen-sm) {
       .artist_card_item:not(:first-child) {
         margin-top: 30px;
       }
