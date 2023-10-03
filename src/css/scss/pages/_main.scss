@@ -53,15 +53,13 @@ body {
     transition: 0.3s ease-in-out;
 
     @include tablet {
-      & {
-        padding: 15px 50px;
-      }
+      padding: 15px 50px;
+
     }
 
     @include mobile {
-      & {
-        padding: 15px 30px;
-      }
+      padding: 15px 30px;
+
     }
   }
 
@@ -100,33 +98,32 @@ body {
   position: relative;
 
   @include desktop {
-    & {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-      &_list {
-        @include flex-item(flex, null, center);
+    &_list {
+      @include flex-item(flex, null, center);
 
-        &+button {
-          margin-left: 10px;
-        }
-      }
-
-      &_item+&_item {
+      &+button {
         margin-left: 10px;
       }
+    }
 
-      &_item {
-        &:hover .nav_link::before {
-          left: 0;
-          width: 100%;
-          background-color: var(--white);
-        }
-      }
+    &_item+&_item {
+      margin-left: 10px;
+    }
 
-      & .btn {
-        padding: 0 30px;
+    &_item {
+      &:hover .nav_link::before {
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
       }
+    }
+
+    &>.btn {
+      margin-left: 12px;
+      padding: 0 30px;
     }
   }
 
@@ -147,10 +144,8 @@ body {
     }
 
     @include desktop {
-      & {
-        display: inline-block;
-        padding: 12px 20px;
-      }
+      display: inline-block;
+      padding: 12px 20px;
     }
   }
 }
@@ -276,16 +271,12 @@ body {
     box-sizing: border-box;
 
     @include desktop {
-      & {
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
 
     @include tablet {
-      & {
-        max-width: 750px;
-      }
+      max-width: 750px;
     }
   }
 
@@ -306,10 +297,8 @@ body {
 
     .section_inner {
       @include tablet {
-        & {
-          padding-top: 80px;
-          padding-bottom: 80px;
-        }
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
   }
@@ -336,9 +325,7 @@ body {
     transition-duration: 0.8s;
 
     @include mobile {
-      & {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 
@@ -347,16 +334,12 @@ body {
     text-transform: capitalize;
 
     @include tablet {
-      & {
-        @include custom-font(38px, 600, 46px);
-      }
+      @include custom-font(38px, 600, 46px);
     }
 
     @include mobile {
-      & {
-        display: block;
-        @include custom-font(28px, 600, 39px);
-      }
+      display: block;
+      @include custom-font(28px, 600, 39px);
     }
   }
 
@@ -366,16 +349,12 @@ body {
     text-transform: capitalize;
 
     @include tablet {
-      & {
-        @include custom-font(16px, 400, 22px);
-      }
+      @include custom-font(16px, 400, 22px);
     }
 
     @include mobile {
-      & {
-        margin-top: 10px;
-        @include custom-font(16px, 400, 22px);
-      }
+      margin-top: 10px;
+      @include custom-font(16px, 400, 22px);
     }
   }
 
@@ -384,15 +363,11 @@ body {
     margin-top: 30px;
 
     @include tablet {
-      & {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
     }
 
     @include mobile {
-      & {
-        margin-top: 40px;
-      }
+      margin-top: 40px;
     }
   }
 
@@ -403,6 +378,7 @@ body {
     right: 0;
     width: calc(50% - 15px);
     margin-left: 30px;
+    color: var(--white);
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
@@ -440,17 +416,13 @@ body {
     transition-duration: 0.8s;
 
     @include tablet {
-      & {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
     }
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 40px;
-      }
+      display: block;
+      width: 100%;
+      margin-top: 40px;
 
       & .btn {
         width: 100%;
@@ -480,15 +452,11 @@ body {
     @include custom-font(28px, 700, 39px);
 
     @include tablet {
-      & {
-        @include custom-font(22px, 700, 35px);
-      }
+      @include custom-font(22px, 700, 35px);
     }
 
     @include mobile {
-      & {
-        @include custom-font(22px, 700, 35px);
-      }
+      @include custom-font(22px, 700, 35px);
     }
   }
 
@@ -497,15 +465,11 @@ body {
     @include custom-font(24px, 400, 38px);
 
     @include tablet {
-      & {
-        @include custom-font(16px, 400, 22px);
-      }
+      @include custom-font(16px, 400, 22px);
     }
 
     @include mobile {
-      & {
-        @include custom-font(16px, 400, 22px);
-      }
+      @include custom-font(16px, 400, 22px);
     }
   }
 }
@@ -548,7 +512,7 @@ body {
     justify-content: space-between;
   }
 
-  &_heading_btn {
+  .btn_box {
     display: inline-flex;
     flex-direction: column;
     justify-content: end
@@ -559,50 +523,40 @@ body {
     text-transform: capitalize;
 
     @include tablet {
-      & {
-        @include custom-font(28px, 600, 39px);
-      }
+      @include custom-font(28px, 600, 39px);
     }
 
     @include mobile {
-      & {
-        @include custom-font(28px, 600, 39px);
-      }
+      @include custom-font(28px, 600, 39px);
     }
-  }
 
-  &_subhead {
-    display: inline-block;
-    margin-top: 10px;
-    @include custom-font(22px, 400, 35px);
-    text-transform: capitalize;
+    &_sub {
+      display: inline-block;
+      margin-top: 10px;
+      @include custom-font(22px, 400, 35px);
+      text-transform: capitalize;
 
-    @include tablet {
-      & {
+      @include tablet {
         @include custom-font(16px, 400, 22px);
       }
-    }
 
-    @include mobile {
-      & {
+      @include mobile {
         @include custom-font(16px, 400, 22px);
       }
     }
   }
+
+
 
   &_content {
     margin-top: 60px;
 
     @include tablet {
-      & {
-        margin-top: 40px;
-      }
+      margin-top: 40px;
     }
 
     @include mobile {
-      & {
-        margin-top: 40px;
-      }
+      margin-top: 40px;
     }
   }
 
@@ -619,16 +573,11 @@ body {
     transition-duration: 0.8s;
 
     @include tablet {
-      & {
-        @include card_two_item;
-      }
+      @include card_two_item;
     }
 
     @include mobile {
-      & {
-        @include card_one_item;
-
-      }
+      @include card_one_item;
     }
 
     .thumb {
@@ -658,22 +607,24 @@ body {
   }
 
   &_more {
-    @include flex-item(flex, center, center);
-    flex-direction: column;
     background-color: var(--bg_btn_violet);
+
+    &>a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &_number {
+    display: block;
     font-family: SpaceMono;
-    @include custom-font(22px, 700, 35px);
+    @include custom-font(22px, 700, 100px);
     text-align: center;
     color: var(--white);
 
     @include mobile {
-      & {
-        @include custom-font(16px, 700, 22px);
-
-      }
+      @include custom-font(16px, 700, 95px);
     }
   }
 }
@@ -684,9 +635,7 @@ body {
 .section {
   &_heading {
     @include mobile {
-      & {
-        display: block;
-      }
+      display: block;
     }
   }
 
@@ -698,67 +647,58 @@ body {
     }
 
     @include tablet {
-      & {
-        .avatar {
-          width: 60px;
-          height: 60px;
-          vertical-align: middle;
-        }
+      .avatar {
+        width: 60px;
+        height: 60px;
+        vertical-align: middle;
       }
     }
 
     @include mobile {
-      & {
-        .avatar {
-          width: 60px;
-          height: 60px;
-          vertical-align: middle;
-        }
+      .avatar {
+        width: 60px;
+        height: 60px;
+        vertical-align: middle;
       }
     }
   }
 }
 
-.section {
+.section_inner:has(.btn_box) {
+  @include mobile {
+    position: relative;
+  }
+}
 
-  &_toprated .section_inner,
-  &_artist .section_inner {
-
-    @include mobile {
-      & {
-        position: relative;
-      }
-
-      .section_heading_btn {
-        position: absolute;
-        left: 50%;
-        width: 100%;
-        padding: 0 30px;
-        transform: translateX(-50%);
-        box-sizing: border-box;
-      }
+.section_inner {
+  @include mobile {
+    .btn_box {
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      padding: 0 30px;
+      transform: translateX(-50%);
+      box-sizing: border-box;
     }
   }
+}
 
-  &_toprated .section_inner {
+.section {
+  &_toprated>.section_inner {
     @include mobile {
-      & {
-        padding-bottom: 140px;
-      }
+      padding-bottom: 140px;
 
-      .section_heading_btn {
+      .btn_box {
         bottom: 40px;
       }
     }
   }
 
-  &_artist .section_inner {
+  &_artist>.section_inner {
     @include mobile {
-      & {
-        padding-bottom: 160px;
-      }
+      padding-bottom: 160px;
 
-      .section_heading_btn {
+      .btn_box {
         bottom: 60px;
       }
     }
@@ -767,11 +707,8 @@ body {
 
 .toprated_card {
   &_item {
-    position: relative;
-    padding: 20px;
     font-size: 0;
     background-color: map-get($gray, 2);
-    text-align: center;
     transition-property: opacity, transform;
     transition-duration: 0.8s;
     cursor: pointer;
@@ -783,11 +720,24 @@ body {
 
     @include tablet {
       @include card_two_item;
-      text-align: left;
     }
 
     @include mobile {
       @include card_one_item;
+    }
+  }
+
+  &_box {
+    position: relative;
+    padding: 20px;
+    color: var(--white);
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include mobile {
       text-align: left;
     }
 
@@ -810,25 +760,22 @@ body {
     margin-top: 20px;
 
     @include tablet {
-      & {
-        width: calc(100% - 80px);
-        margin-top: 0;
-        margin-left: 20px;
-        vertical-align: middle;
-      }
+      width: calc(100% - 80px);
+      margin-top: 0;
+      margin-left: 20px;
+      vertical-align: middle;
     }
 
     @include mobile {
-      & {
-        width: calc(100% - 80px);
-        margin-top: 0;
-        margin-left: 20px;
-        vertical-align: middle;
-      }
+      width: calc(100% - 80px);
+      margin-top: 0;
+      margin-left: 20px;
+      vertical-align: middle;
     }
   }
 }
-.card_info{
+
+.card_info {
   &_total {
     display: block;
     margin-top: 4px;
@@ -840,14 +787,14 @@ body {
     color: map-get($gray, 3);
 
     &+.price {
-      margin-left: 8px;
+      margin-left: 10px;
 
       @include tablet {
-        margin-left: 13px
+        margin-left: 18px
       }
 
       @include mobile {
-        margin-left: 4px
+        margin-left: 11px
       }
     }
   }
@@ -860,43 +807,33 @@ body {
   &_category {
     .section_content {
       @include mobile {
-        & {
-          margin-top: 48px;
-        }
+        margin-top: 48px;
       }
     }
 
     & .thumb {
-      & {
-        @include tablet {
-          & {
-            padding-top: 94.667%;
-          }
-        }
+      @include tablet {
+        padding-top: 94.667%;
+      }
 
-        @include mobile {
-          & {
-            padding-top: 95.95%;
-          }
-        }
+      @include mobile {
+        padding-top: 95.95%;
+      }
 
-        &::after {
-          @include absolute-align(0, 0, null, null);
-          @include custom-dimensions(100%, 100%);
-          border-top-left-radius: $border_radius_sm;
-          border-top-right-radius: $border_radius_sm;
-          backdrop-filter: blur(8px) brightness(100%);
-          content: '';
-        }
+      &::after {
+        @include absolute-align(0, 0, null, null);
+        @include custom-dimensions(100%, 100%);
+        border-top-left-radius: $border_radius_sm;
+        border-top-right-radius: $border_radius_sm;
+        backdrop-filter: blur(8px) brightness(100%);
+        content: '';
       }
     }
   }
 
   &:has(.section_category) {
     @include mobile {
-      & {
-        margin-top: 100px;
-      }
+      margin-top: 100px;
     }
   }
 }
@@ -946,17 +883,14 @@ body {
     @include custom-font(22px, 600, 31px);
 
     @include tablet {
-      & {
-        padding: 20px 20px 25px 20px;
-        @include custom-font(16px, 600, 22px);
-      }
+      padding: 20px 20px 25px 20px;
+      @include custom-font(16px, 600, 22px);
     }
 
     @include mobile {
-      & {
-        padding: 20px 20px 25px 20px;
-        @include custom-font(16px, 600, 22px);
-      }
+      padding: 20px 20px 25px 20px;
+      @include custom-font(16px, 600, 22px);
+
     }
   }
 }
@@ -967,16 +901,10 @@ body {
 .section_artist {
   .section_inner {
     @include tablet {
-      & {
-        padding-bottom: 80px;
-      }
+      padding-bottom: 80px;
     }
   }
-
 }
-
-
-
 
 .artist_card {
   &_item {
@@ -1005,10 +933,8 @@ body {
     @include mobile {
       @include card_one_item;
     }
-  }
 
-  &_image {
-    &>.thumb {
+    &>a>.thumb {
       padding-top: 89.69%;
 
       @include mobile {
@@ -1070,10 +996,8 @@ body {
 .section {
   &:has(.section_highlight) {
     @include mobile {
-      & {
-        margin-top: 120px;
-        padding: 0
-      }
+      margin-top: 120px;
+      padding: 0
     }
   }
 
@@ -1102,48 +1026,45 @@ body {
     }
 
     @include desktop {
-      & {
-        background: url(../img/image/bg_highlight_pc.png) no-repeat center/cover;
 
-        &::before {
-          height: 640px;
-        }
+      background: url(../img/image/bg_highlight_pc.png) no-repeat center/cover;
 
-        .section_inner {
-          padding-top: 360px;
-          padding-bottom: 60px;
-        }
+      &::before {
+        height: 640px;
+      }
+
+      .section_inner {
+        padding-top: 360px;
+        padding-bottom: 60px;
       }
     }
 
     @include tablet {
-      & {
-        background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
 
-        &::before {
-          height: 630px;
-        }
+      background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
 
-        .section_inner {
-          max-width: 730px;
-          padding-top: 360px;
-          padding-bottom: 60px;
-        }
+      &::before {
+        height: 630px;
+      }
+
+      .section_inner {
+        max-width: 730px;
+        padding-top: 360px;
+        padding-bottom: 60px;
       }
     }
 
     @include mobile {
-      & {
-        background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
 
-        &::before {
-          height: 590px;
-        }
+      background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
 
-        .section_inner {
-          padding-top: 120px;
-          padding-bottom: 130px;
-        }
+      &::before {
+        height: 590px;
+      }
+
+      .section_inner {
+        padding-top: 120px;
+        padding-bottom: 130px;
       }
     }
   }
@@ -1154,7 +1075,7 @@ body {
     font-size: 0;
     box-sizing: border-box;
 
-    & button {
+    & .btn {
       margin-top: 30px;
 
       @include mobile {
@@ -1163,28 +1084,22 @@ body {
     }
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
-      }
+      display: block;
+      width: 100%;
     }
   }
 
   &_name {
     display: inline-block;
-    position: relative;
+    // position: relative;
     width: calc(100% - 295px);
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
+      display: block;
+      width: 100%;
 
-        .section_heading_btn {
-          position: absolute;
-          bottom: -264px;
-          width: 100%;
-        }
+      .btn_box {
+        bottom: 40px;
       }
     }
   }
@@ -1194,15 +1109,11 @@ body {
     @include custom-font(51px, 600, 56px);
 
     @include tablet {
-      & {
-        @include custom-font(38px, 600, 46px);
-      }
+      @include custom-font(38px, 600, 46px);
     }
 
     @include mobile {
-      & {
-        @include custom-font(38px, 600, 46px);
-      }
+      @include custom-font(38px, 600, 46px);
     }
   }
 
@@ -1218,7 +1129,7 @@ body {
     }
 
     @include mobile {
-      margin: 30px auto 0;
+      margin: 32px auto 0;
       text-align: center;
     }
   }
@@ -1322,24 +1233,18 @@ body {
     box-sizing: border-box;
 
     @include desktop {
-      & {
-        @include card_three_item;
-      }
+      @include card_three_item;
     }
 
     @include tablet {
-      & {
-        @include card_three_item;
-        padding: 10px 20px 30px;
-      }
+      @include card_three_item;
+      padding: 10px 20px 30px;
     }
 
     @include mobile {
-      & {
-        @include card_one_item;
-        padding: 20px;
-        text-align: left;
-      }
+      @include card_one_item;
+      padding: 20px;
+      text-align: left;
     }
   }
 
@@ -1347,19 +1252,15 @@ body {
     padding: 0 10px;
 
     @include tablet {
-      & {
-        padding: 0 5px;
-      }
+      padding: 0 5px;
     }
 
     @include mobile {
-      & {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        padding: 0;
-        vertical-align: middle;
-      }
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      vertical-align: middle;
     }
   }
 
@@ -1369,26 +1270,20 @@ body {
     .card_title {
 
       @include tablet {
-        & {
-          @include custom-font(16px, 600, 22px);
-        }
+        @include custom-font(16px, 600, 22px);
       }
 
       @include mobile {
-        & {
-          @include custom-font(16px, 600, 22px);
-        }
+        @include custom-font(16px, 600, 22px);
       }
     }
 
     @include mobile {
-      & {
-        display: inline-block;
-        width: calc(100% - 120px);
-        margin-top: 0;
-        margin-left: 20px;
-        vertical-align: middle;
-      }
+      display: inline-block;
+      width: calc(100% - 120px);
+      margin-top: 0;
+      margin-left: 20px;
+      vertical-align: middle;
     }
   }
 
@@ -1397,15 +1292,11 @@ body {
     @include custom-font(16px, 400, 22px);
 
     @include tablet {
-      & {
-        @include custom-font(12px, 400, 17px);
-      }
+      @include custom-font(12px, 400, 17px);
     }
 
     @include mobile {
-      & {
-        @include custom-font(12px, 400, 17px);
-      }
+      @include custom-font(12px, 400, 17px);
     }
   }
 }
@@ -1422,7 +1313,7 @@ body {
       }
 
       @include tablet {
-        padding-top: 20px;
+        padding-top: 22px;
         padding-bottom: 80px;
       }
     }
@@ -1433,24 +1324,18 @@ body {
       background-color: map-get($gray, 2);
 
       @include desktop {
-        & {
-          padding: 60px;
-        }
+        padding: 60px;
       }
 
       @include tablet {
-        & {
-          padding: 40px 30px;
-        }
+        padding: 40px 30px;
       }
 
       @include mobile {
         padding: 0;
 
-        & {
-          border-radius: 0;
-          background-color: map-get($gray, 1);
-        }
+        border-radius: 0;
+        background-color: map-get($gray, 1);
       }
     }
 
@@ -1461,16 +1346,12 @@ body {
       vertical-align: middle;
 
       @include tablet {
-        & {
-          width: calc(50% - 15px)
-        }
+        width: calc(50% - 15px)
       }
 
       @include mobile {
-        & {
-          display: block;
-          width: 100%;
-        }
+        display: block;
+        width: 100%;
       }
     }
 
@@ -1479,113 +1360,69 @@ body {
       @include border_sm;
     }
 
+    .thumb {
+      padding-top: 72.94%;
+  
+      @include tablet {
+        padding-top: 93.33%;
+      }
+  
+      @include mobile {
+        padding-top: 80.95%;
+      }
+    }
+
     .section_heading {
       display: inline-block;
       margin-left: 80px;
 
       @include tablet {
-        & {
-          margin-left: 30px;
-        }
+        margin-left: 30px;
       }
 
       @include mobile {
-        & {
-          margin-top: 30px;
-          margin-left: 0;
-        }
+        margin-top: 30px;
+        margin-left: 0;
       }
     }
 
     .form {
       margin-top: 40px;
+
+      @include tablet {
+        display: block;
+        background-color: transparent;
+      }
+
+      @include mobile {
+        display: block;
+        background-color: transparent;
+      }
     }
 
-    .form {
+    .input_text {
       @include tablet {
-        &_mo {
-          display: block;
-          background-color: transparent;
+        padding: 11px 20px;
+        border: 1px solid map-get($gray, 3);
+        border-radius: $border_radius_sm;
 
-          input {
-            border-radius: $border_radius_sm;
-          }
+        &+.btn {
+          width: 100%;
+          height: 46px;
+          margin-top: 16px;
         }
       }
 
       @include mobile {
-        &_mo {
-          display: block;
-          background-color: transparent;
+        padding: 11px 20px;
+        border: 1px solid map-get($gray, 3);
+        border-radius: $border_radius_sm;
 
-          input {
-            border-radius: $border_radius_sm;
-          }
+        &+.btn {
+          width: 100%;
+          height: 46px;
+          margin-top: 16px;
         }
-      }
-
-      .input {
-        @include tablet {
-          & {
-            &_mo {
-              padding: 11px 20px;
-              border: 1px solid map-get($gray, 3);
-
-            }
-
-            &_mo+button {
-              width: 100%;
-              margin-top: 16px;
-
-            }
-          }
-        }
-
-        @include mobile {
-          & {
-            &_mo {
-              padding: 11px 20px;
-              border: 1px solid map-get($gray, 3);
-
-            }
-
-            &_mo+button {
-              width: 100%;
-              margin-top: 16px;
-
-            }
-          }
-        }
-      }
-
-      &_email {
-        button {
-          @include tablet {
-            height: 46px;
-          }
-
-          @include mobile {
-            height: 46px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.subscribe {
-  &_thumb {
-    padding-top: 72.94%;
-
-    @include tablet {
-      & {
-        padding-top: 93.33%;
-      }
-    }
-
-    @include mobile {
-      & {
-        padding-top: 80.95%;
       }
     }
   }
@@ -1608,15 +1445,11 @@ body {
     box-sizing: border-box;
 
     @include tablet {
-      & {
-        padding: 38px 72px;
-      }
+      padding: 38px 72px;
     }
 
     @include mobile {
-      & {
-        padding: 38px 30px;
-      }
+      padding: 38px 30px;
     }
   }
 
@@ -1624,15 +1457,11 @@ body {
     display: flex;
 
     @include tablet {
-      & {
-        display: block;
-      }
+      display: block;
     }
 
     @include mobile {
-      & {
-        display: block;
-      }
+      display: block;
     }
 
     &_txt,
@@ -1656,31 +1485,28 @@ body {
       margin-top: 30px;
 
       @include tablet {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
 
       @include mobile {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
     }
 
     @include tablet {
-      & {
-        display: block;
-        width: 100%;
-      }
+      display: block;
+      width: 100%;
     }
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
-      }
+      display: block;
+      width: 100%;
     }
+  }
+
+  .logo {
+    width: 244px;
+    height: 32px;
   }
 
   &_explore {
@@ -1690,21 +1516,17 @@ body {
     vertical-align: top;
 
     @include tablet {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
     }
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
     }
   }
 
@@ -1714,15 +1536,11 @@ body {
       margin-top: 25px;
 
       @include tablet {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
 
       @include mobile {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
     }
 
@@ -1738,87 +1556,55 @@ body {
     vertical-align: top;
 
     @include tablet {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
     }
 
     @include mobile {
-      & {
-        display: block;
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 0;
-      }
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
     }
 
     & .footer_info_txt {
       margin-top: 25px;
 
       @include tablet {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
 
       @include mobile {
-        & {
-          margin-top: 20px;
-        }
+        margin-top: 20px;
       }
     }
+  }
 
-    & .form_email {
-      width: 420px;
-      margin-top: 20px;
+  .form {
+    width: 420px;
+    margin-top: 20px;
 
-      @include mobile {
+    @include mobile {
+      display: block;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  .input_text {
+    @include mobile {
+      padding: 11px 20px;
+      border: 1px solid map-get($gray, 3);
+      border-radius: $border_radius_sm;
+
+      &+.btn {
         width: 100%;
+        height: 46px;
+        margin-top: 16px;
       }
     }
-
-    .form {
-      @include mobile {
-        &_mo {
-          display: block;
-          background-color: transparent;
-
-          input {
-            border-radius: $border_radius_sm;
-          }
-        }
-      }
-
-      .input {
-        @include mobile {
-          & {
-            &_mo {
-              padding: 11px 20px;
-              border: 1px solid map-get($gray, 3);
-
-            }
-
-            &_mo+button {
-              width: 100%;
-              margin-top: 16px;
-
-            }
-          }
-        }
-      }
-
-      &_email {
-        button {
-          @include mobile {
-            height: 46px;
-          }
-        }
-      }
-    }
-
   }
 
   &_title {
@@ -1829,13 +1615,11 @@ body {
   }
 
   &_copyright {
-    margin-top: 30px;
+    margin-top: 28px;
     border-top: 1px solid map-get($gray , 3);
 
     @include tablet {
-      & {
-        margin-top: 48px;
-      }
+      margin-top: 48px;
     }
 
     &_txt {
@@ -1853,15 +1637,11 @@ body {
     margin-top: 10px;
 
     @include tablet {
-      & {
-        margin-top: 15px;
-      }
+      margin-top: 15px;
     }
 
     @include mobile {
-      & {
-        margin-top: 15px;
-      }
+      margin-top: 15px;
     }
   }
 
@@ -1881,13 +1661,6 @@ body {
 // <!-- // Footer -->
 
 
-
-//Responsive
-
-// .only_tb_mo {
-//   display: none;
-// }
-
 .only_pc_mo {
   display: inline-block
 }
@@ -1896,7 +1669,6 @@ body {
   display: inline-block
 }
 
-// @include on_pc;
 @include desktop {
   @include on_pc;
 
