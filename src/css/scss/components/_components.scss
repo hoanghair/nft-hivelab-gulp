@@ -175,30 +175,14 @@
   background-color: var(--white);
 
   button {
-    width: 100%;
-  }
-
-  .input {
-    &_text {
-      padding: 19px 20px 19px 52px;
+    @include desktop{
+      width: auto;
     }
-
-    &_email {
-      padding-left: 20px;
-    }
-
   }
 
   &_email {
-    button {
-      width: auto;
-      height: 60px;
-      padding: 0 50px;
-
-    }
-
     .input_text {
-      padding-left: 20px;
+      padding: 19px 20px;
     }
   }
 }
@@ -212,21 +196,21 @@
     box-sizing: border-box;
   }
 
-  &_list+button {
+  &_list+.btn {
+    width: 100%;
     margin-top: 30px;
   }
+  &_item + &_item{
+    margin-top: 15px
+  }
 
-  &_group {
+  &_box {
     @include flex-item(flex, space-between, center);
     position: relative;
     overflow: hidden;
     border: 1px solid map-get($gray, 3);
     border-radius: $border_radius_sm;
     background-color: var(--white);
-
-    &+.input_group {
-      margin-top: 15px;
-    }
   }
 
   &_icon_left {
