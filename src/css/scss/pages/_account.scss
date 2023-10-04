@@ -4,9 +4,7 @@
     font-size: 0;
 
     @include respond-below($screen-sm) {
-      & {
-        display: block;
-      }
+      display: block;
     }
   }
 }
@@ -18,15 +16,15 @@
     @include respond-above($screen-md) {
       width: calc(50% - 30px);
 
-      & .thumb {
+      .thumb {
         padding-top: 113.27%;
       }
     }
 
-    @include respond-between($screen-sm,$screen-md) {
+    @include respond-between($screen-sm, $screen-md) {
       width: calc(50% - 20px);
 
-      & .thumb {
+      .thumb {
         padding-top: 154.91%;
       }
     }
@@ -34,7 +32,7 @@
     @include respond-below($screen-sm) {
       width: 100%;
 
-      & .thumb {
+      .thumb {
         padding-top: 61.866%;
       }
     }
@@ -47,70 +45,55 @@
     vertical-align: top;
 
     @include respond-above($screen-md) {
-      & {
-        width: calc(50% - 30px);
-        margin-left: 60px;
-      }
+      width: calc(50% - 30px);
+      margin-left: 60px;
     }
 
-    @include respond-between($screen-sm,$screen-md) {
-      & {
-        width: calc(50% - 20px);
-        margin-left: 40px;
-      }
+    @include respond-between($screen-sm, $screen-md) {
+      width: calc(50% - 20px);
+      margin-left: 40px;
     }
 
     @include respond-below($screen-sm) {
-      & {
-        width: 100%;
-        padding: 30px 30px 40px;
-        box-sizing: border-box;
-      }
+      width: 100%;
+      padding: 30px 30px 40px;
+      box-sizing: border-box;
     }
   }
 
   &_form {
     @include respond-above($screen-md) {
-      & {
-        width: 460px;
-      }
+      width: 460px;
     }
 
-    @include respond-between($screen-sm,$screen-md) {
-      & {
-        width: 325px;
-      }
+    @include respond-between($screen-sm, $screen-md) {
+      width: 325px;
     }
-    
+
     .page_desc {
       margin-top: 20px;
     }
 
-    & .form {
+    .form {
       display: block;
       margin-top: 40px;
       background-color: transparent;
 
       @include respond-above($screen-md) {
         width: 330px;
-
       }
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         width: 100%;
-
       }
 
       @include respond-below($screen-sm) {
         margin-top: 30px;
-
       }
 
-      & .input_text {
+      .input_text {
         padding: 11px 20px 11px 52px;
       }
-
     }
-
   }
 }

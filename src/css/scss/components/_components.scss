@@ -37,10 +37,10 @@
   }
 
   &_transparent {
-    background-color: transparent;
+    padding: 0 49px;
     border: 2px solid var(--bg_btn_violet);
+    background-color: transparent;
   }
-
 }
 
 /* <!--// [D] Button--> */
@@ -109,7 +109,6 @@
 
 //  <!--// Button Navbar Toggler --> */
 
-
 // <!-- [D] Thumbnail -->
 .thumb {
   position: relative;
@@ -127,7 +126,6 @@
 }
 
 //<!--// [D] Thumbnail -->
-
 
 // <!-- [D] Avatar -->
 .avatar {
@@ -175,7 +173,7 @@
   background-color: var(--white);
 
   button {
-    @include respond-above($screen-md){
+    @include respond-above($screen-md) {
       width: auto;
     }
   }
@@ -200,7 +198,8 @@
     width: 100%;
     margin-top: 30px;
   }
-  &_item + &_item{
+
+  &_item+&_item {
     margin-top: 15px
   }
 
@@ -272,7 +271,7 @@
           border-radius: $border_radius_sm 0 0 $border_radius_sm ;
           text-align: center;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             width: 9.275%;
           }
 
@@ -285,7 +284,7 @@
           width: 40.095%;
           padding-left: 0;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             width: 53.188%;
             padding-left: 5px;
           }
@@ -298,7 +297,7 @@
         &:nth-child(3) {
           width: 17.143%;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             width: 17.246%;
           }
 
@@ -310,7 +309,7 @@
         &:nth-child(4) {
           width: 17.048%;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             display: none;
           }
 
@@ -324,7 +323,7 @@
           border-right: 1px solid map-get($gray, 2);
           border-radius: 0 $border_radius_sm $border_radius_sm 0;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             width: 20.29%;
           }
 
@@ -348,7 +347,7 @@
         text-align: left;
         box-sizing: border-box;
 
-        @include respond-between($screen-sm,$screen-md) {
+        @include respond-between($screen-sm, $screen-md) {
           padding: 14.5px 20px;
 
           &:nth-last-child(2) {
@@ -381,14 +380,13 @@
         &:nth-child(2) {
           @include flex-item(flex, normal, center);
           padding-left: 0;
-
         }
 
         &:nth-child(3) {
           color: var(--green);
         }
 
-        & .avatar+span {
+        .avatar+span {
           margin-left: 12px;
           font-family: WorkSans;
           @include custom-font(22px, 600, 31px);
@@ -400,13 +398,12 @@
           @include respond-below($screen-sm) {
             @include custom-font(16px, 400, 22px);
           }
-
         }
 
-        & .avatar {
+        .avatar {
           flex: 0 0 auto;
 
-          @include respond-between($screen-sm,$screen-md) {
+          @include respond-between($screen-sm, $screen-md) {
             width: 24px;
             height: 24px;
           }
@@ -449,7 +446,7 @@
 
 .table {
   .number {
-    @include respond-between($screen-sm,$screen-md) {
+    @include respond-between($screen-sm, $screen-md) {
       width: 24px;
       height: 24px;
       background-color: transparent;
@@ -486,7 +483,7 @@
     border-bottom: 2px solid map-get($gray, 3);
     color: var(--white);
 
-    & .tabs_data::after {
+    .tabs_data::after {
       background-color: map-get($gray, 3);
     }
   }
@@ -504,7 +501,7 @@
         color: var(--white);
       }
 
-      & .tabs_data::after {
+      .tabs_data::after {
         background-color: map-get($gray, 3);
       }
     }
@@ -558,7 +555,7 @@
       }
     }
 
-    @include respond-between($screen-sm,$screen-md) {
+    @include respond-between($screen-sm, $screen-md) {
       @include custom-font(12px, 400, 13px);
     }
 
@@ -621,7 +618,43 @@
   }
 }
 
-// @include on_pc;
-@include respond-above($screen-md);
-@include respond-between($screen-sm,$screen-md);
-@include respond-below($screen-sm);
+
+.only_pc_mo {
+  display: inline-block;
+}
+
+.only_pc_tb {
+  display: inline-block;
+}
+
+@include respond-above($screen-md) {
+  @include on_pc;
+
+  .only_tb_mo {
+    display: none !important;
+  }
+}
+
+@include respond-between($screen-sm, $screen-md) {
+  @include on_tb;
+
+  .only_tb_mo {
+    display: inline-block !important;
+  }
+
+  .only_pc_mo {
+    display: none !important;
+  }
+}
+
+@include respond-below($screen-sm) {
+  @include on_mo;
+
+  .only_tb_mo {
+    display: inline-block !important;
+  }
+
+  .only_pc_tb {
+    display: none !important;
+  }
+}
