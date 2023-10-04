@@ -1416,41 +1416,54 @@ body {
 
 // <!-- Footer -->
 .footer {
-  border-top: 2px solid map-get($gray, 1);
   background-color: map-get($gray, 2);
 
-  &_content {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 40px 115px;
+  &_border {
+    border-top: 2px solid map-get($gray, 1);
     box-sizing: border-box;
+  }
+
+  .section_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &_box {
+    @include respond-above($screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
-      padding: 38px 72px;
+      display: block;
     }
 
     @include respond-below($screen-sm) {
-      padding: 38px 30px;
+      display: block;
     }
   }
 
   &_info {
-    display: flex;
+    @include respond-above($screen-md) {
+      flex: 0 0 250px;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
       display: block;
+      width: 100%;
     }
 
     @include respond-below($screen-sm) {
       display: block;
+      width: 100%;
     }
 
-    &_txt,
-    .explore_link,
-    .footer_info_desc {
-      display: block;
-      @include custom-font(16px, 400, 22px);
-      color: map-get($gray, 4);
+    &_desc {
+      margin-top: 20px;
+
+      @include respond-above($screen-md) {
+        margin-top: 30px;
+      }
     }
 
     &_sns {
@@ -1458,31 +1471,12 @@ body {
     }
   }
 
-  &_box {
-    display: inline-block;
-    width: calc(100% - 420px - 240px - 62px);
-
-    .footer_info_desc {
-      margin-top: 30px;
-
-      @include respond-between($screen-sm, $screen-md) {
-        margin-top: 20px;
-      }
-
-      @include respond-below($screen-sm) {
-        margin-top: 20px;
-      }
-    }
-
-    @include respond-between($screen-sm, $screen-md) {
-      display: block;
-      width: 100%;
-    }
-
-    @include respond-below($screen-sm) {
-      display: block;
-      width: 100%;
-    }
+  .footer_info_txt,
+  .explore_link,
+  .footer_info_desc {
+    display: block;
+    @include custom-font(16px, 400, 22px);
+    color: map-get($gray, 4);
   }
 
   .logo {
@@ -1491,10 +1485,9 @@ body {
   }
 
   &_explore {
-    display: inline-block;
-    width: 240px;
-    margin-left: 31px;
-    vertical-align: top;
+    @include respond-above($screen-md) {
+      flex: 0 0 160px;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
       display: block;
@@ -1514,14 +1507,10 @@ body {
   .explore {
     &_list {
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 20px;
 
-      @include respond-between($screen-sm, $screen-md) {
-        margin-top: 20px;
-      }
-
-      @include respond-below($screen-sm) {
-        margin-top: 20px;
+      @include respond-above($screen-md) {
+        margin-top: 25px;
       }
     }
 
@@ -1531,10 +1520,9 @@ body {
   }
 
   &_subscribe {
-    display: inline-block;
-    margin-left: 31px;
-    width: 420px;
-    vertical-align: top;
+    @include respond-above($screen-md) {
+      flex: 0 0 420px;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
       display: block;
@@ -1551,14 +1539,10 @@ body {
     }
 
     .footer_info_txt {
-      margin-top: 25px;
+      margin-top: 20px;
 
-      @include respond-between($screen-sm, $screen-md) {
-        margin-top: 20px;
-      }
-
-      @include respond-below($screen-sm) {
-        margin-top: 20px;
+      @include respond-above($screen-md) {
+        margin-top: 25px;
       }
     }
   }
@@ -1615,14 +1599,10 @@ body {
 .sns {
   &_list {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
 
-    @include respond-between($screen-sm, $screen-md) {
-      margin-top: 15px;
-    }
-
-    @include respond-below($screen-sm) {
-      margin-top: 15px;
+    @include respond-above($screen-md) {
+      margin-top: 10px;
     }
   }
 
