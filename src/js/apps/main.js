@@ -5,8 +5,7 @@
   var sample = (function () {
     var variable = "sample loaded";
     return {
-      init: function () {
-      },
+      init: function () {},
     };
   })();
 
@@ -14,8 +13,7 @@
   var sample2 = (function () {
     var variable = "sample2 loaded";
     return {
-      init: function () {
-      },
+      init: function () {},
     };
   })();
 
@@ -23,8 +21,7 @@
   var sample3 = (function () {
     var variable = "sample3 loaded";
 
-    var init = function () {
-    };
+    var init = function () {};
     return {
       init: init,
     };
@@ -33,13 +30,11 @@
   // sample4
   var sample4 = function () {
     var variable = "sample4 loaded";
-
   };
 
   // sample5
   function sample5() {
     var variable = "sample5 loaded";
-
   }
 
   // sample6
@@ -60,8 +55,7 @@
         init: function () {
           test.bindEvent();
         },
-        bindEvent: function () {
-        },
+        bindEvent: function () {},
       };
       test.init();
     });
@@ -85,7 +79,7 @@
           minutes = 59;
           seconds = 59;
         } else {
-          clearInterval(interval); // Dừng
+          clearInterval(interval); // stop
         }
 
         // Show update time
@@ -116,11 +110,21 @@
     body.toggleClass("off_scroll");
   }
 
-  function check() {
+  function toggleNavigation() {
+    $(".nav").toggleClass("nav_view");
+    toggleOverflow();
+    $(".dimmed").toggle();
+  }
+
+  function togglerNav() {
     $(".nav_toggler").click(function (e) {
-      console.log('abc');
-      $(".nav").toggleClass("nav_view");
-      toggleOverflow();
+      toggleNavigation();
+    });
+  }
+
+  function closeDimmed() {
+    $(".dimmed").click(function (e) {
+      toggleNavigation();
     });
   }
 
@@ -135,6 +139,7 @@
     sample5();
     $("body").sample6();
     startCountdownTimer();
-    check();
+    togglerNav();
+    closeDimmed();
   });
 })(window, window.jQuery);

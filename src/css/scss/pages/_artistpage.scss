@@ -15,7 +15,7 @@
         content: '';
       }
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         height: 280px;
 
         &::after {
@@ -31,7 +31,6 @@
         }
       }
     }
-
   }
 
   &_profile {
@@ -50,11 +49,15 @@
     }
 
     .btn_transparent {
-      padding: 0 30px;
+      padding: 0 29px;
     }
 
     .sns_item+.sns_item {
-      margin-left: 10px
+      margin-left: 10px;
+
+      @include respond-above($screen-md) {
+        margin-left: 9px
+      }
     }
 
     @include respond-above($screen-md) {
@@ -88,7 +91,7 @@
       padding: 10px 115px 0;
       box-sizing: border-box;
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         padding: 10px 75px 0;
       }
 
@@ -134,7 +137,6 @@
 
     .btn {
       @include respond-below($screen-sm) {
-        display: block;
         width: 100%;
       }
     }

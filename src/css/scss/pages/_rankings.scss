@@ -2,7 +2,6 @@
   &_rankings {
     .page_title {
       @include respond-below($screen-sm) {
-
         @include custom-font(28px, 600, 39px);
       }
     }
@@ -28,28 +27,29 @@
     .tabs {
       @include respond-above($screen-md) {
         padding: 0px 115px;
-
       }
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         padding: 0px 75px;
-
       }
 
       @include respond-below($screen-sm) {
-        padding: 0px 30px;  
+        padding: 0px 30px;
       }
     }
   }
 
   &_table {
-    padding-bottom: 20px;
-    padding-top: 39px;
+    padding-bottom: 19px;
+    padding-top: 38px;
+
+    @include respond-below($screen-sm) {
+      padding-bottom: 20px;
+      padding-top: 40px;
+    }
 
     &_wrap {
       margin-top: -20px;
     }
   }
-
-
 }

@@ -7,13 +7,11 @@
       @include respond-between($screen-sm,$screen-md) {
         height: 420px;
         background: url(../img/image/bg_nft_page_tb.png) no-repeat center/cover;
-
       }
 
       @include respond-below($screen-sm) {
         height: 320px;
         background: url(../img/image/bg_nft_page_mo.png) no-repeat center/cover;
-
       }
     }
   }
