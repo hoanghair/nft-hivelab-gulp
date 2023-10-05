@@ -51,7 +51,10 @@ body {
     padding: 20px 50px;
     background-color: map-get($gray, 1);
     box-sizing: border-box;
-    transition: 0.3s ease-in-out;
+
+    &:has(.nav_view) {
+      background-color: transparent;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
       padding: 15px 50px;
@@ -96,6 +99,24 @@ body {
 .nav {
   position: relative;
 
+  &_link {
+    position: relative;
+    @include custom-font(16px, 600, 22px);
+    color: var(--white);
+    transition: color 0.42s ease-in-out;
+
+    &::before {
+      position: absolute;
+      bottom: 6px;
+      width: calc(100% - 40px);
+      height: 2px;
+      background-color: var(--white);
+      transform: scaleX(0);
+      transition: transform .2s linear;
+      content: "";
+    }
+  }
+
   @include respond-above($screen-md) {
     display: flex;
     justify-content: space-between;
@@ -112,39 +133,18 @@ body {
       margin-left: 10px;
     }
 
-    &_item {
-      &:hover .nav_link::before {
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
+    &_link {
+      display: inline-block;
+      padding: 12px 20px;
+
+      &:hover:before {
+        transform: scaleX(1);
       }
     }
 
     &>.btn {
       margin-left: 12px;
       padding: 0 30px;
-    }
-  }
-
-  &_link {
-    position: relative;
-    @include custom-font(16px, 600, 22px);
-    color: var(--white);
-    transition: color 0.42s ease-in-out;
-
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      transition: color 0.3s ease-in-out;
-      content: "";
-    }
-
-    @include respond-above($screen-md) {
-      display: inline-block;
-      padding: 12px 20px;
     }
   }
 }
@@ -495,8 +495,36 @@ body {
   }
 
   &_heading {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    font-size: 0;
+
+    @include respond-above($screen-md) {
+      position: relative;
+    }
+
+    @include respond-between($screen-sm, $screen-md) {
+      position: relative;
+    }
+
+    &_box {
+      display: inline-block;
+
+      @include respond-below($screen-sm) {
+        display: block;
+      }
+
+      &+.btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include respond-below($screen-sm) {
+          right: auto;
+          width: calc(100% - 60px);
+        }
+      }
+    }
+
   }
 
   .btn_box {
@@ -545,6 +573,34 @@ body {
     }
   }
 
+}
+
+.section_inner:has(.btn) {
+  @include respond-below($screen-sm) {
+    position: relative;
+  }
+}
+
+.section {
+  &_toprated>.section_inner {
+    @include respond-below($screen-sm) {
+      padding-bottom: 140px;
+
+      .btn {
+        bottom: 40px;
+      }
+    }
+  }
+
+  &_artist>.section_inner {
+    @include respond-below($screen-sm) {
+      padding-bottom: 160px;
+
+      .btn {
+        bottom: 60px;
+      }
+    }
+  }
 }
 
 .trending_card_item.thumb {
@@ -652,46 +708,7 @@ body {
   }
 }
 
-.section_inner:has(.btn_box) {
-  @include respond-below($screen-sm) {
-    position: relative;
-  }
-}
 
-.section_inner {
-  @include respond-below($screen-sm) {
-    .btn_box {
-      position: absolute;
-      left: 50%;
-      width: 100%;
-      padding: 0 30px;
-      transform: translateX(-50%);
-      box-sizing: border-box;
-    }
-  }
-}
-
-.section {
-  &_toprated>.section_inner {
-    @include respond-below($screen-sm) {
-      padding-bottom: 140px;
-
-      .btn_box {
-        bottom: 40px;
-      }
-    }
-  }
-
-  &_artist>.section_inner {
-    @include respond-below($screen-sm) {
-      padding-bottom: 160px;
-
-      .btn_box {
-        bottom: 60px;
-      }
-    }
-  }
-}
 
 .toprated_card {
   &_item {
@@ -1010,6 +1027,12 @@ body {
     .btn {
       color: map-get($gray, 1);
       background-color: var(--white);
+
+      @include respond-below($screen-sm) {
+        position: absolute;
+        bottom: 40px;
+        width: calc(100% - 60px);
+      }
     }
 
     @include respond-above($screen-md) {
@@ -1580,7 +1603,7 @@ body {
   }
 
   &_copyright {
-    margin-top: 28px;
+    margin-top: 30px;
     border-top: 1px solid map-get($gray , 3);
 
     @include respond-between($screen-sm, $screen-md) {
