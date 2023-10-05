@@ -1,6 +1,6 @@
 .section {
   &_account {
-    display: flex;
+    display: block;
     font-size: 0;
 
     @include respond-below($screen-sm) {
@@ -12,6 +12,7 @@
 .account {
   &_thumb {
     display: inline-block;
+    vertical-align: middle;
 
     @include respond-above($screen-md) {
       width: calc(50% - 30px);
@@ -39,10 +40,8 @@
   }
 
   &_box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    vertical-align: top;
+    display: inline-block;
+    vertical-align: middle;
 
     @include respond-above($screen-md) {
       width: calc(50% - 30px);
@@ -89,10 +88,6 @@
 
       @include respond-below($screen-sm) {
         margin-top: 30px;
-      }
-
-      .input_text {
-        padding: 11px 20px 11px 52px;
       }
     }
   }
