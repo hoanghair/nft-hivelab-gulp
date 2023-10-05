@@ -188,7 +188,7 @@
 .input {
   &_text {
     width: 100%;
-    padding: 12px 52px;
+    padding: 11px 52px;
     @include custom-font(16px, 400, 22px);
     color: map-get($gray, 1);
     box-sizing: border-box;
