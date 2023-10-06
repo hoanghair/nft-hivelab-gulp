@@ -65,7 +65,7 @@ body {
     }
   }
 
-  .header_scroll {
+  &_scroll {
     background-color: map-get($gray, 2);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1035,7 +1035,16 @@ body {
       }
     }
 
+    .section_inner {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      transform: translateX(-50%);
+    }
+
     @include respond-above($screen-md) {
+      height: 640px;
       background: url(../img/image/bg_highlight_pc.png) no-repeat center/cover;
 
       &::before {
@@ -1043,12 +1052,12 @@ body {
       }
 
       .section_inner {
-        padding-top: 360px;
         padding-bottom: 60px;
       }
     }
 
     @include respond-between($screen-sm, $screen-md) {
+      height: 630px;
       background: url(../img/image/bg_highlight_tb.png) no-repeat center/cover;
 
       &::before {
@@ -1056,13 +1065,13 @@ body {
       }
 
       .section_inner {
-        max-width: 730px;
-        padding-top: 360px;
+        // max-width: 730px;
         padding-bottom: 60px;
       }
     }
 
     @include respond-below($screen-sm) {
+      height: 590px;
       background: url(../img/image/bg_highlight_mo.png) no-repeat center/cover;
 
       &::before {
@@ -1070,8 +1079,39 @@ body {
       }
 
       .section_inner {
-        padding-top: 120px;
         padding-bottom: 130px;
+      }
+    }
+
+    .card_avatar {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: $border_radius_sm;
+      background-color: map-get($gray, 2);
+    }
+
+    .avatar {
+      vertical-align: middle;
+    }
+
+    .card_name {
+      vertical-align: middle;
+    }
+
+    .highlight_timer {
+      @include respond-above($screen-md) {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+      @include respond-between($screen-sm, $screen-md) {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+      @include respond-below($screen-sm) {
+        margin: 32px auto 0;
+        text-align: center;
       }
     }
   }
@@ -1123,23 +1163,6 @@ body {
     }
   }
 
-  &_box {
-    @include respond-above($screen-md) {
-      display: inline-block;
-      vertical-align: bottom;
-    }
-
-    @include respond-between($screen-sm, $screen-md) {
-      display: inline-block;
-      vertical-align: bottom;
-    }
-
-    @include respond-below($screen-sm) {
-      margin: 32px auto 0;
-      text-align: center;
-    }
-  }
-
   &_timer {
     width: 295px;
     padding: 30px 30px 26px;
@@ -1162,13 +1185,6 @@ body {
       }
     }
   }
-}
-
-.card_wrap {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: $border_radius_sm;
-  background-color: map-get($gray, 2);
 }
 
 // <!-- Count down -->
@@ -1210,7 +1226,6 @@ body {
 }
 
 // <!-- Count down -->
-
 // <!--// Section Highlight -->
 
 // <!-- Section How it works -->
