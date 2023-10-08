@@ -1,7 +1,7 @@
 .section {
   &_headingpage {
     .section_inner {
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -22,9 +22,9 @@
     background-color: map-get($gray, 2);
 
     .section_inner {
-      padding-top: 58px;
+      padding-top: 60px;
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         padding-bottom: 80px;
       }
 
