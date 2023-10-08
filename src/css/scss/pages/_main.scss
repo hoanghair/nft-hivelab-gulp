@@ -361,37 +361,36 @@ body {
   &_card {
     display: block;
     position: absolute;
+    overflow: hidden;
     top: 0;
     right: 0;
     width: calc(50% - 15px);
     margin-left: 30px;
+    border-radius: $border_radius_sm;
     color: var(--white);
     transition-property: opacity, transform;
+    background-color: map-get($gray, 2);
     transition-duration: 0.8s;
-
-    &_box {
-      overflow: hidden;
-      border-radius: $border_radius_sm;
-      background-color: map-get($gray, 2);
-
-      &>.thumb {
-        padding-top: 78.9%;
-
-        @include respond-between($screen-sm, $screen-md) {
-          padding-top: 66.9%;
-        }
-
-        @include respond-below($screen-sm) {
-          padding-top: 65.4%;
-        }
-      }
-    }
 
     @include respond-below($screen-sm) {
       position: static;
       width: 100%;
       margin-top: 40px;
       margin-left: 0;
+    }
+
+    &>.thumb {
+      @include respond-above($screen-md) {
+        padding-top: 78.9%;
+      }
+
+      @include respond-between($screen-sm, $screen-md) {
+        padding-top: 66.9%;
+      }
+
+      @include respond-below($screen-sm) {
+        padding-top: 65.4%;
+      }
     }
   }
 
@@ -527,11 +526,11 @@ body {
 
   }
 
-  .btn_box {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: end
-  }
+  // .btn_box {
+  //   display: inline-flex;
+  //   flex-direction: column;
+  //   justify-content: end
+  // }
 
   &_title {
     @include custom-font(38px, 600, 46px);
@@ -601,6 +600,11 @@ body {
       }
     }
   }
+}
+
+.trending_card_list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .trending_card_item.thumb {
@@ -685,8 +689,14 @@ body {
 
   &_toprated {
     @include respond-below($screen-sm) {
-      .card_list {
+      .toprated_card_list {
         display: block;
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+        vertical-align: middle;
       }
     }
 
@@ -697,18 +707,13 @@ body {
         vertical-align: middle;
       }
     }
-
-    @include respond-below($screen-sm) {
-      .avatar {
-        width: 60px;
-        height: 60px;
-        vertical-align: middle;
-      }
-    }
   }
 }
 
-
+.toprated_card_list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .toprated_card {
   &_item {
@@ -732,7 +737,8 @@ body {
     }
   }
 
-  &_box {
+  &_link {
+    display: block;
     position: relative;
     padding: 20px;
     color: var(--white);
@@ -843,6 +849,11 @@ body {
   }
 }
 
+.category_card_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .category_card {
   &_item {
     background-color: map-get($gray, 2);
@@ -908,6 +919,11 @@ body {
       padding-bottom: 80px;
     }
   }
+}
+
+.artist_card_list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .artist_card {
@@ -1144,9 +1160,9 @@ body {
       display: block;
       width: 100%;
 
-      .btn_box {
-        bottom: 40px;
-      }
+      // .btn_box {
+      //   bottom: 40px;
+      // }
     }
   }
 
@@ -1241,6 +1257,11 @@ body {
       margin-top: 41px;
     }
   }
+}
+
+.steps_card_list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .steps_card {

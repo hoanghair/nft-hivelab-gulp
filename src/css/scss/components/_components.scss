@@ -564,10 +564,10 @@
 
 // <!-- [D] //Tab Bar -->
 
-.card_list {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .card_list {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
 .page {
   &_title {
@@ -595,6 +595,18 @@
   opacity: 0;
   transform: translateY(100px);
 }
+
+// .animate_in {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   /* Initial state, hidden below */
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+// .animate_in.in_view {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 
 //page error
 .page_error {

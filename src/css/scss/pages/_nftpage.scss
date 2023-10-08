@@ -4,7 +4,7 @@
       height: 560px;
       background: url(../img/image/bg_nft_page_pc.png) no-repeat center/cover;
 
-      @include respond-between($screen-sm,$screen-md) {
+      @include respond-between($screen-sm, $screen-md) {
         height: 420px;
         background: url(../img/image/bg_nft_page_tb.png) no-repeat center/cover;
       }
@@ -33,7 +33,7 @@
   &_heading {
     width: 605px;
 
-    @include respond-between($screen-sm,$screen-md) {
+    @include respond-between($screen-sm, $screen-md) {
       width: 365px;
     }
 
@@ -78,7 +78,7 @@
     width: 605px;
     margin-top: 30px;
 
-    @include respond-between($screen-sm,$screen-md) {
+    @include respond-between($screen-sm, $screen-md) {
       width: 365px;
     }
 
@@ -213,13 +213,27 @@
 }
 
 .section_artist_nft {
-  @include respond-between($screen-sm,$screen-md) {
+  @include respond-above($screen-md) {
+    .section_heading_box+.btn {
+      top: 0;
+    }
+
+    .section_content {
+      margin-top: 74px;
+    }
+  }
+
+  @include respond-between($screen-sm, $screen-md) {
     .section_inner {
       padding-bottom: 40px;
     }
 
+    .section_heading_box+.btn {
+      top: 0;
+    }
+
     .section_content {
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     .artist_card_item:not(:nth-child(-n+2)) {
@@ -248,7 +262,7 @@
       margin-top: 30px;
     }
 
-    &:has(.btn_box) .btn_box {
+    &:has(.section_heading_box) .btn {
       bottom: 38px;
     }
 
