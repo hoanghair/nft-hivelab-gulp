@@ -25,8 +25,25 @@
     .section_box {
       position: relative;
     }
-  }
 
+    .highlight_timer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px 30px 30px;
+
+      @include respond-below($screen-sm) {
+        position: static;
+        margin-top: 20px;
+        padding: 30px;
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 27px;
+      }
+    }
+  }
 }
 
 .nftinfo {
@@ -47,30 +64,6 @@
 
     .page_desc {
       color: map-get($gray, 3);
-    }
-  }
-
-  &_countdown {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    .highlight_timer {
-      padding: 20px 30px 26px;
-
-      @include respond-below($screen-sm) {
-        padding: 30px;
-      }
-    }
-
-    .btn {
-      width: 100%;
-      margin-top: 27px;
-    }
-
-    @include respond-below($screen-sm) {
-      position: static;
-      margin-top: 20px;
     }
   }
 
@@ -105,7 +98,6 @@
 
     @include respond-above($screen-md) {
       @include custom-font(22px, 400, 35px);
-
     }
   }
 
@@ -152,12 +144,8 @@
 
     &_link {
       display: inline-block;
-      color: var(--white);
-    }
-
-    &_wrap {
-      display: inline-block;
       font-size: 0;
+      color: var(--white);
       vertical-align: middle;
     }
 
