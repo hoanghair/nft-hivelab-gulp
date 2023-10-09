@@ -975,7 +975,7 @@ body {
     }
   }
 
-  &_desc {
+  &_price {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
@@ -992,7 +992,7 @@ body {
   }
 }
 
-.card_desc {
+.card_price {
   &_title {
     display: block;
     @include custom-font(12px, 400, 13px);
@@ -1081,7 +1081,7 @@ body {
       }
 
       .section_inner {
-        // max-width: 730px;
+        max-width: 730px;
         padding-bottom: 60px;
       }
     }
@@ -1485,6 +1485,10 @@ body {
   .section_inner {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  &_border>.section_inner {
+    padding-top: 38px;
   }
 
   &_box {
