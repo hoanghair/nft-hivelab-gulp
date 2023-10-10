@@ -130,9 +130,14 @@
 // <!-- [D] Avatar -->
 .avatar {
   display: inline-block;
+  overflow: hidden;
+  border-radius: $border_radius_lg;
 
-  .thumb {
-    border-radius: $border_radius_lg;
+  .img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &_small {
@@ -152,9 +157,7 @@
   }
 
   &_extra_large {
-    .thumb {
-      border-radius: $border_radius_sm;
-    }
+    border-radius: $border_radius_sm;
   }
 }
 
@@ -247,6 +250,9 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 20px;
+  .txt_green{
+    color: var(--green);
+  }
 
   thead {
     tr {
@@ -382,9 +388,9 @@
           padding-left: 0;
         }
 
-        &:nth-child(3) {
-          color: var(--green);
-        }
+        // &:nth-child(3) {
+        //   color: var(--green);
+        // }
 
         .avatar+span {
           margin-left: 12px;
@@ -426,8 +432,6 @@
 
 .number {
   display: inline-block;
-  position: relative;
-  z-index: 1;
   width: 30px;
   height: 30px;
   border-radius: $border_radius_lg;
@@ -435,6 +439,7 @@
   color: map-get($gray, 3);
   background-color: map-get($gray, 1);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .price {
@@ -470,7 +475,7 @@
   display: none;
 }
 
-.content_tab.active {
+.content_tab.is_active {
   display: block;
 }
 
@@ -479,15 +484,6 @@
   background-color: map-get($gray, 1);
   text-align: center;
 
-  .active {
-    border-bottom: 2px solid map-get($gray, 3);
-    color: var(--white);
-
-    .tabs_data::after {
-      background-color: map-get($gray, 3);
-    }
-  }
-
   &_item {
     flex: 1;
     border-bottom: 2px solid transparent;
@@ -495,18 +491,22 @@
     box-sizing: border-box;
 
     &:hover {
-      border-bottom: 2px solid map-get($gray, 3);
+      border-bottom-color: map-get($gray, 3);
 
       .tabs_link {
         color: var(--white);
       }
 
-      .tabs_data::after {
+      .tabs_data {
         background-color: map-get($gray, 3);
       }
     }
 
-    &.active .tabs_link {
+    &.is_active .tabs_data {
+      background-color: map-get($gray, 3);
+    }
+
+    &.is_active .tabs_link {
       color: var(--white);
     }
   }
@@ -514,7 +514,7 @@
   &_link {
     @include flex-item(inline-flex, center, center);
     @include custom-dimensions(100%, 57px);
-    padding: 14.5px 30px;
+    padding: 14px 30px;
     color: map-get($gray, 3);
     box-sizing: border-box;
 
@@ -532,33 +532,28 @@
   }
 
   &_data {
-    position: relative;
-    z-index: 1;
+    display: inline-block;
     margin-left: 16px;
     padding: 5px 10px;
+    border-radius: $border_radius_sm;
+    background-color: map-get($gray, 2);
     font-family: SpaceMono;
     @include custom-font(16px, 400, 22px);
-    color: var(--white);
-
-    &::after {
-      @include absolute-align(50%, 50%, null, null);
-      z-index: -1;
-      @include custom-dimensions(100%, 100%);
-      border-radius: $border_radius_sm;
-      background-color: map-get($gray, 2);
-      transform: translate(-50%, -50%);
-      transition: all 0.4s ease;
-      content: '';
-
-      .active {
-        background-color: map-get($gray, 3);
-      }
-    }
+    transition: all 0.4s ease;
+    box-sizing: border-box;
 
     @include respond-between($screen-sm, $screen-md) {
       @include custom-font(12px, 400, 13px);
     }
+  }
 
+  .is_active {
+    border-bottom-color: map-get($gray, 3);
+    color: var(--white);
+
+    .tabs_data::after {
+      background-color: map-get($gray, 3);
+    }
   }
 }
 
