@@ -87,7 +87,6 @@
 
   &_tabs {
     border-top: 1px solid map-get($gray, 2);
-    background-color: map-get($gray, 1);
 
     .tabs {
       max-width: 1366px;
@@ -112,6 +111,7 @@
     font-size: 0;
 
     .avatar {
+      position: relative;
       @include respond-below($screen-sm) {
         display: block;
         margin: 0 auto;
