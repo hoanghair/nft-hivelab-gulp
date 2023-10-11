@@ -267,7 +267,7 @@
         box-sizing: border-box;
 
         @include respond-below($screen-sm) {
-          padding: 15.5px 8px;
+          padding: 16px 8px;
           @include custom-font(12px, 400, 13px);
         }
 
@@ -387,10 +387,6 @@
           @include flex-item(flex, normal, center);
           padding-left: 0;
         }
-
-        // &:nth-child(3) {
-        //   color: var(--green);
-        // }
 
         .avatar+span {
           margin-left: 12px;
@@ -558,12 +554,6 @@
 }
 
 // <!-- [D] //Tab Bar -->
-
-// .card_list {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
 .page {
   &_title {
     @include custom-font(38px, 600, 46px);

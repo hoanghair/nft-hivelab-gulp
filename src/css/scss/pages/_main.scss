@@ -1176,10 +1176,6 @@ body {
     @include respond-below($screen-sm) {
       display: block;
       width: 100%;
-
-      // .btn_box {
-      //   bottom: 40px;
-      // }
     }
   }
 
@@ -1430,7 +1426,6 @@ body {
     }
 
     .section_heading {
-      display: inline-block;
       margin-left: 80px;
 
       @include respond-between($screen-sm, $screen-md) {
