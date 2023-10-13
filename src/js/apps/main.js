@@ -61,6 +61,66 @@
     });
   };
 
+  //scroll navbar
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 0) {
+      $(".header_box").addClass("header_scroll");
+    } else {
+      $(".header_box").removeClass("header_scroll");
+    }
+  });
+
+  //sections Scroll Animation
+  $(".animate_in").each(function () {
+    var delay = $(this).data("animation-delay");
+    $(this).css("transition-delay", delay);
+  });
+
+  function scrollAnimation() {
+    var scrollTop = $(document).scrollTop();
+    $(".animate_in").each(function () {
+      var height = $(window).height();
+      var offsetTop = $(this).offset().top;
+
+      if (
+        offsetTop > scrollTop - height * 0.5 &&
+        offsetTop < height + scrollTop
+      ) {
+        $(this).removeClass("animate_in");
+      }
+    });
+  }
+
+  // toggle btn nav
+  const body = $("body");
+
+  function toggleOverflow() {
+    body.toggleClass("off_scroll");
+  }
+
+  function toggleNavigation() {
+    $(".nav").toggleClass("nav_view");
+    toggleOverflow();
+    $(".dimmed").toggle();
+  }
+
+  $(".nav_toggler").on("click", function () {
+    toggleNavigation();
+  });
+
+  $(".dimmed").on("click", function () {
+    toggleNavigation();
+  });
+
+  // tabs active
+  $(".tabs_item").on("click", function () {
+    var tabId = $(this).attr("data-tab");
+    $(this).addClass("is_active").siblings().removeClass("is_active");
+    $(".content_tab").removeClass("is_active");
+    $('[data-content="' + tabId + '"]').addClass("is_active");
+  });
+
   // startCountdownTimer
   function startCountdownTimer() {
     // // Set the initial time
@@ -81,7 +141,6 @@
         } else {
           clearInterval(interval); // stop
         }
-
         // Show update time
         $(".hour").text(hours.toString().padStart(2, "0"));
         $(".minute").text(minutes.toString().padStart(2, "0"));
@@ -93,44 +152,13 @@
     countdown();
   }
 
-  //scroll navbar
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > 0) {
-      $(".header_box").addClass("header_scroll");
-    } else {
-      $(".header_box").removeClass("header_scroll");
-    }
-  });
-
-  // toggle btn nav
-  const body = $("body");
-
-  function toggleOverflow() {
-    body.toggleClass("off_scroll");
-  }
-
-  function toggleNavigation() {
-    $(".nav").toggleClass("nav_view");
-    toggleOverflow();
-    $(".dimmed").toggle();
-  }
-
-  function togglerNav() {
-    $(".nav_toggler").click(function (e) {
-      toggleNavigation();
-    });
-  }
-
-  function closeDimmed() {
-    $(".dimmed").click(function (e) {
-      toggleNavigation();
-    });
-  }
-
   $(function () {
     sample2.init();
     sample3.init();
+  });
+
+  $(win).scroll(function () {
+    scrollAnimation();
   });
 
   $(win).on("load", function () {
@@ -138,8 +166,7 @@
     sample4();
     sample5();
     $("body").sample6();
+    scrollAnimation();
     startCountdownTimer();
-    togglerNav();
-    closeDimmed();
   });
 })(window, window.jQuery);
