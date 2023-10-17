@@ -76,7 +76,7 @@
 						Sign Up
 					</a>
 				</nav>
-				<button class="nav_toggler" type="button">
+				<button type="button" class="nav_toggler">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -89,35 +89,35 @@
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section section_headingpage">
+			<div class="section section_headingpage">
 				<div class="section_inner">
 					<h2 class="page_title">Browse Marketplace</h2>
 					<span class="page_desc">Browse through more than 50k NFTs on the NFT Marketplace.</span>
 					<div class="input_box input_search">
 						<input type="text" placeholder="Search your favourite NFTs" class="input_text input_mo">
-						<button class="input_icon_right">
+						<button type="button" class="input_icon_right">
 							<i class="ico_search_24px"></i>
 						</button>
 					</div>
 				</div>
-			</section>
+			</div>
 			<div class="section_tabs">
 				<ul class="tabs">
 					<li class="tabs_item is_active" data-tab="tab_1">
-						<button class="tabs_link">
+						<button type="button" class="tabs_link">
 							<span class="tabs_name">NFTs</span>
 							<span class="tabs_data">302</span>
 						</button>
 					</li>
 					<li class="tabs_item" data-tab="tab_2">
-						<button class="tabs_link">
+						<button type="button" class="tabs_link">
 							<span class="tabs_name">Collections</span>
 							<span class="tabs_data">67</span>
 						</button>
 					</li>
 				</ul>
 
-				<section class="section section_marketplace">
+				<div class="section section_marketplace">
 					<div class="section_inner">
 						<div data-content="tab_1" class="section_card_box content_tab is_active">
 							<ul class="artist_card_list">
@@ -736,7 +736,7 @@
 							</ul>
 						</div>
 					</div>
-				</section>
+				</div>
 			</div>
 		</main>
 		<!-- // [D] CONTENTS -->
@@ -753,7 +753,8 @@
 								<img class="logo_img" src="../img/image/img_logo_pc.png" alt="NFT Marketplace">
 							</a>
 						</h2>
-						<span class="footer_info_desc">NFT marketplace UI created <br class="only_pc"> with Anima for Figma.</span>
+						<span class="footer_info_desc">NFT marketplace UI created <br class="only_pc">
+							with Anima for Figma.</span>
 						<div class="footer_info_sns">
 							<span class="footer_info_txt">Join our community</span>
 							<ul class="sns_list">
@@ -790,20 +791,24 @@
 					<div class="footer_explore">
 						<strong class="footer_title">Explore</strong>
 						<ul class="explore_list">
-							<li class="explore_item"><a href="#none" class="explore_link">Marketplace</a></li>
-							<li class="explore_item"><a href="#none" class="explore_link">Rankings</a></li>
-							<li class="explore_item"><a href="#none" class="explore_link">Connect a wallet</a></li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Marketplace</a>
+							</li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Rankings</a>
+							</li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Connect a wallet</a>
+							</li>
 						</ul>
 					</div>
 					<div class="footer_subscribe">
 						<strong class="footer_title">Join our weekly digest</strong>
-						<span class="footer_info_txt">Get exclusive promotions &amp; updates <br class="only_pc"> straight to your
-							inbox.</span>
+						<span class="footer_info_txt">Get exclusive promotions &amp; updates <br class="only_pc">
+							straight to your inbox.</span>
 						<div class="form_box form_email">
 							<input type="email" placeholder="Enter your email here" class="input_text">
-							<button class="btn btn_violet" type="submit">
-								Subscribe
-							</button>
+							<button type="button" class="btn btn_violet">Subscribe</button>
 						</div>
 					</div>
 				</div>
@@ -812,6 +817,8 @@
 				</div>
 			</div>
 		</footer>
+		
+
 		<!--// [D] FOOTER -->
 	</div>
 
