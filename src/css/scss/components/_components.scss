@@ -47,7 +47,6 @@
 
 //  <!-- Button Navbar Toggler --> */
 .nav_toggler {
-  display: block;
   position: relative;
   width: 24px;
   height: 24px;
@@ -55,6 +54,18 @@
   text-align: left;
   transition: transform .5s;
   cursor: pointer;
+
+  @include respond-above($screen-md) {
+    display: none;
+  }
+
+  @include respond-between($screen-sm, $screen-md) {
+    display: block;
+  }
+
+  @include respond-below($screen-sm) {
+    display: block;
+  }
 
   span,
   span:before,
@@ -261,8 +272,8 @@
     tr {
       th {
         padding: 12px 20px;
-        border-top: 1px solid map-get($gray, 2);
-        border-bottom: 1px solid map-get($gray, 2);
+        border: solid map-get($gray, 2);
+        border-width: 1px 0 1px 0;
         font-family: SpaceMono;
         @include custom-font(16px, 400, 22px);
         color: map-get($gray, 3);
@@ -276,7 +287,8 @@
 
         &:first-child {
           width: 6.667%;
-          border-left: 1px solid map-get($gray, 2);
+          border-left-width: 1px;
+          // border-left: 1px solid map-get($gray, 2);
           border-radius: $border_radius_sm 0 0 $border_radius_sm ;
           text-align: center;
 
@@ -329,7 +341,8 @@
 
         &:last-child {
           width: 19.143%;
-          border-right: 1px solid map-get($gray, 2);
+          border-right-width: 1px;
+          // border-right: 1px solid map-get($gray, 2);
           border-radius: 0 $border_radius_sm $border_radius_sm 0;
 
           @include respond-between($screen-sm, $screen-md) {
@@ -539,26 +552,60 @@
   }
 
   &_name {
-    @include custom-font(16px, 600, 22px);
-
     @include respond-above($screen-md) {
       @include custom-font(22px, 600, 31px);
+    }
+
+    @include respond-between($screen-sm, $screen-md) {
+      @include custom-font(16px, 600, 22px);
+    }
+
+    @include respond-below($screen-sm) {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+      content: '' attr(title) '';
+
+      @include respond-below($screen-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &_shortcut {
+    display: none;
+
+    @include respond-below($screen-sm) {
+      display: inline-block;
+      @include custom-font(16px, 600, 22px);
+
+      &::after {
+        display: block;
+        content: '' attr(title) '';
+      }
     }
   }
 
   &_data {
     display: inline-block;
+    min-width: 28px;
     margin-left: 16px;
     padding: 5px 10px;
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 2);
     font-family: SpaceMono;
-    @include custom-font(16px, 400, 22px);
+    @include custom-font(16px, 400, 13px);
     transition: all 0.4s ease;
     box-sizing: border-box;
 
     @include respond-between($screen-sm, $screen-md) {
       @include custom-font(12px, 400, 13px);
+    }
+
+    @include respond-below($screen-sm) {
+      display: none;
     }
   }
 
@@ -606,59 +653,26 @@
   margin: 0 auto;
   text-align: center;
 
-  &_title {
-    @include custom-font(38px, 600, 46px);
+  img {
+    width: 200px;
+    height: 200px;
   }
 
   &_text {
     margin-top: 20px;
-    @include custom-font(16px, 400, 35px);
-  }
-
-  &_text+&_btn {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
+    @include custom-font(22px, 400, 35px);
   }
 }
 
-
-.only_pc_mo {
-  display: inline-block;
-}
-
-.only_pc_tb {
-  display: inline-block;
-}
 
 @include respond-above($screen-md) {
   @include on_pc;
-
-  .only_tb_mo {
-    display: none !important;
-  }
 }
 
 @include respond-between($screen-sm, $screen-md) {
   @include on_tb;
-
-  .only_tb_mo {
-    display: inline-block !important;
-  }
-
-  .only_pc_mo {
-    display: none !important;
-  }
 }
 
 @include respond-below($screen-sm) {
   @include on_mo;
-
-  .only_tb_mo {
-    display: inline-block !important;
-  }
-
-  .only_pc_tb {
-    display: none !important;
-  }
 }

@@ -623,10 +623,18 @@ body {
 
     @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
+
+      &:last-child{
+        display: none;
+      }
     }
 
     @include respond-below($screen-sm) {
       @include card_one_item;
+
+      &:nth-child(n + 2){
+        display: none;
+      }
     }
 
     .thumb {
@@ -734,10 +742,18 @@ body {
 
     @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
+
+      &:nth-child(n+7){
+        display: none
+      }
     }
 
     @include respond-below($screen-sm) {
       @include card_one_item;
+
+      &:nth-child(n+6){
+        display: none
+      }
     }
   }
 
@@ -943,6 +959,22 @@ body {
     transition-property: opacity, transform;
     transition-duration: 0.8s;
 
+    @include respond-above($screen-md) {
+      @include card_three_item;
+    }
+
+    @include respond-between($screen-sm, $screen-md) {
+      @include card_two_item;
+
+      &:last-child{
+        display: none;
+      }
+    }
+
+    @include respond-below($screen-sm) {
+      @include card_one_item;
+    }
+
     .card_content {
       margin-top: 5px
     }
@@ -953,20 +985,6 @@ body {
 
     .card_avt {
       margin-top: 10px;
-    }
-
-    @include respond-above($screen-md) {
-      @include card_three_item;
-
-    }
-
-    @include respond-between($screen-sm, $screen-md) {
-      @include card_two_item;
-
-    }
-
-    @include respond-below($screen-sm) {
-      @include card_one_item;
     }
 
     &>a>.thumb {
