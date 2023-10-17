@@ -32,5 +32,20 @@
         padding-top: 40px;
       }
     }
+
+    .artist_card_item {
+      @include respond-between($screen-sm, $screen-md) {
+        &:nth-child(n+9) {
+          display: none;
+        }
+      }
+
+      @include respond-below($screen-sm) {
+        &:nth-child(n+6) {
+          display: none;
+        }
+      }
+    }
+
   }
 }

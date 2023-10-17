@@ -540,7 +540,6 @@
   &:not(:nth-child(-n + 3)) {
     margin-top: 30px;
   }
-
 }
 
 @mixin card_four_item {
@@ -559,43 +558,43 @@
 
 @mixin on_pc {
   .only_pc {
-    display: inline-block !important;
+    display: inline-block;
   }
 
   .only_tb {
-    display: none !important;
+    display: none;
   }
 
   .only_mo {
-    display: none !important;
+    display: none;
   }
 }
 
 @mixin on_tb {
   .only_pc {
-    display: none !important;
+    display: none;
   }
 
   .only_mo {
-    display: none !important;
+    display: none;
   }
 
   .only_tb {
-    display: inline-block !important;
+    display: inline-block;
   }
 
 }
 
 @mixin on_mo {
   .only_pc {
-    display: none !important;
+    display: none;
   }
 
   .only_tb {
-    display: none !important;
+    display: none;
   }
 
   .only_mo {
-    display: inline-block !important;
+    display: inline-block;
   }
 }

@@ -38,6 +38,24 @@
 
     @include respond-above($screen-md) {
       margin-top: -150px;
+
+      .overview_title {
+        font-size: 22px
+      }
+    }
+
+    @include respond-below($screen-sm) {
+      .page_title {
+        @include custom-font(28px, 600, 39px);
+      }
+
+      .overview_item {
+        width: calc((100% / 3) - 10px);
+      }
+
+      .overview_item+.overview_item {
+        margin-left: 20px;
+      }
     }
 
     .section_inner {
@@ -63,26 +81,6 @@
         margin-left: 9px
       }
     }
-
-    @include respond-above($screen-md) {
-      .overview_title {
-        font-size: 22px
-      }
-    }
-
-    @include respond-below($screen-sm) {
-      .page_title {
-        @include custom-font(28px, 600, 39px);
-      }
-
-      .overview_item {
-        width: calc((100% / 3) - 10px);
-      }
-
-      .overview_item+.overview_item {
-        margin-left: 20px;
-      }
-    }
   }
 
   &_tabs {
@@ -99,7 +97,7 @@
       }
 
       @include respond-below($screen-sm) {
-        padding: 10px 30px 0;
+        padding: 6px 30px 0;
       }
     }
   }
@@ -111,6 +109,7 @@
 
     .avatar {
       position: relative;
+
       @include respond-below($screen-sm) {
         display: block;
         margin: 0 auto;
@@ -271,13 +270,31 @@
   }
 
   &_box {
-    .artist_card_item {
-      background-color: map-get($gray, 1);
-    }
-
     @include respond-below($screen-sm) {
       .artist_card_item:not(:first-child) {
         margin-top: 30px;
+      }
+    }
+
+    .artist_card_item {
+      background-color: map-get($gray, 1);
+    }
+  }
+}
+
+.artist_page {
+  .artist_card_item {
+    background-color: map-get($gray, 1);
+
+    @include respond-between($screen-sm, $screen-md) {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+
+    @include respond-below($screen-sm) {
+      &:nth-child(n + 4) {
+        display: none;
       }
     }
   }

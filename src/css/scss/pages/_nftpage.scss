@@ -224,6 +224,12 @@
       margin-top: 80px;
     }
 
+    .artist_card_item {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
+
     .artist_card_item:not(:nth-child(-n+2)) {
       margin-top: 60px;
     }
@@ -244,6 +250,12 @@
 
     &:has(.price) .price {
       @include custom-font(16px, 400, 22px)
+    }
+
+    .artist_card_item {
+      &:nth-child(n+3) {
+        display: none;
+      }
     }
 
     .artist_card_item:not(:first-child) {
