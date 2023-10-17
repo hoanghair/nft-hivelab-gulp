@@ -76,7 +76,7 @@
 						Sign Up
 					</a>
 				</nav>
-				<button class="nav_toggler" type="button">
+				<button type="button" class="nav_toggler">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -89,9 +89,10 @@
 
 		<!-- [D] CONTENTS -->
 		<main id="content" class="main">
-			<section class="section section_thumb section_thumb_artist">
-			</section>
-			<section class="section section_profile">
+			<div class="section_thumb section_thumb_artist">
+				<img class="img" src="../img/image/bg_artist_pc.jpg" alt="">
+			</div>
+			<div class="section_profile">
 				<div class="section_inner">
 					<div class="profile_box">
 						<span class="avatar avatar_extra_large">
@@ -100,11 +101,11 @@
 						<div class="profile_info">
 							<h2 class="page_title">Animakid</h2>
 							<div class="profile_btn">
-								<button class="btn btn_md btn_violet">
+								<button type="button" class="btn btn_md btn_violet">
 									<i class="ico_copy_20px"></i>
 									0xc0E3...B79C
 								</button>
-								<button class="btn btn_md btn_transparent">
+								<button type="button" class="btn btn_md btn_transparent">
 									<i class="ico_plus_20px"></i>
 									Follow
 								</button>
@@ -113,17 +114,17 @@
 						<div class="profile_desc">
 							<ul class="overview_list">
 								<li class="overview_item">
-									<strong class="overview_param">250k+</strong>
+									<span class="overview_param">250k+</span>
 									<span class="overview_title">Volume</span>
 								</li>
 
 								<li class="overview_item">
-									<strong class="overview_param">50k+</strong>
+									<span class="overview_param">50k+</span>
 									<span class="overview_title">NFTs Sold</span>
 								</li>
 
 								<li class="overview_item">
-									<strong class="overview_param">3000+</strong>
+									<span class="overview_param">3000+</span>
 									<span class="overview_title">Followers</span>
 								</li>
 							</ul>
@@ -173,32 +174,32 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<div class="section_tabs">
 				<ul class="tabs">
 					<li class="tabs_item is_active" data-tab="tab_1">
-						<button class="tabs_link">
+						<button type="button" class="tabs_link">
 							<span class="tabs_name">Created</span>
 							<span class="tabs_data">302</span>
 						</button>
 					</li>
 
 					<li class="tabs_item" data-tab="tab_2">
-						<button class="tabs_link">
+						<button type="button" class="tabs_link">
 							<span class="tabs_name">Owned</span>
 							<span class="tabs_data">67</span>
 						</button>
 					</li>
 
 					<li class="tabs_item" data-tab="tab_3">
-						<button class="tabs_link">
+						<button type="button" class="tabs_link">
 							<span class="tabs_name">Collection</span>
 							<span class="tabs_data">4</span>
 						</button>
 					</li>
 				</ul>
 
-				<section class="section section_card artist_page">
+				<div class="section_card artist_page">
 					<div class="section_inner">
 						<div data-content="tab_1" class="section_card_box content_tab is_active">
 							<ul class="artist_card_list">
@@ -995,7 +996,7 @@
 							</ul>
 						</div>
 					</div>
-				</section>
+				</div>
 			</div>
 		</main>
 		<!-- // [D] CONTENTS -->
@@ -1012,7 +1013,8 @@
 								<img class="logo_img" src="../img/image/img_logo_pc.png" alt="NFT Marketplace">
 							</a>
 						</h2>
-						<span class="footer_info_desc">NFT marketplace UI created <br class="only_pc"> with Anima for Figma.</span>
+						<span class="footer_info_desc">NFT marketplace UI created <br class="only_pc">
+							with Anima for Figma.</span>
 						<div class="footer_info_sns">
 							<span class="footer_info_txt">Join our community</span>
 							<ul class="sns_list">
@@ -1049,20 +1051,24 @@
 					<div class="footer_explore">
 						<strong class="footer_title">Explore</strong>
 						<ul class="explore_list">
-							<li class="explore_item"><a href="#none" class="explore_link">Marketplace</a></li>
-							<li class="explore_item"><a href="#none" class="explore_link">Rankings</a></li>
-							<li class="explore_item"><a href="#none" class="explore_link">Connect a wallet</a></li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Marketplace</a>
+							</li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Rankings</a>
+							</li>
+							<li class="explore_item">
+								<a href="#none" class="explore_link">Connect a wallet</a>
+							</li>
 						</ul>
 					</div>
 					<div class="footer_subscribe">
 						<strong class="footer_title">Join our weekly digest</strong>
-						<span class="footer_info_txt">Get exclusive promotions &amp; updates <br class="only_pc"> straight to your
-							inbox.</span>
+						<span class="footer_info_txt">Get exclusive promotions &amp; updates <br class="only_pc">
+							straight to your inbox.</span>
 						<div class="form_box form_email">
 							<input type="email" placeholder="Enter your email here" class="input_text">
-							<button class="btn btn_violet" type="submit">
-								Subscribe
-							</button>
+							<button type="button" class="btn btn_violet">Subscribe</button>
 						</div>
 					</div>
 				</div>
@@ -1071,6 +1077,8 @@
 				</div>
 			</div>
 		</footer>
+		
+
 		<!--// [D] FOOTER -->
 	</div>
 
