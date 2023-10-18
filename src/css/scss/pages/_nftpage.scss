@@ -1,8 +1,10 @@
 .section {
   &_thumb {
     &_nft {
-      height: 560px;
-      background: url(../img/image/bg_nft_page_pc.png) no-repeat center/cover;
+      @include respond-above($screen-md) {
+        height: 560px;
+        background: url(../img/image/bg_nft_page_pc.png) no-repeat center/cover;
+      }
 
       @include respond-between($screen-sm, $screen-md) {
         height: 420px;
