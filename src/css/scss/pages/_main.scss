@@ -25,16 +25,10 @@ body {
 }
 
 .main {
+  padding-top: 54px;
+
   @include respond-above($screen-md) {
     padding-top: 100px;
-  }
-
-  @include respond-between($screen-sm, $screen-md) {
-    padding-top: 54px;
-  }
-
-  @include respond-below($screen-sm) {
-    padding-top: 54px;
   }
 }
 
@@ -99,7 +93,7 @@ body {
   }
 }
 
-.off_scroll .logo_link{
+.off_scroll .logo_link {
   @include respond-between($screen-sm, $screen-md) {
     display: none;
   }
@@ -327,31 +321,33 @@ body {
   }
 
   &_title {
-    @include custom-font(67px, 600, 74px);
-    text-transform: capitalize;
+    @include respond-above($screen-md) {
+      @include custom-font(67px, 600, 74px);
+      text-transform: capitalize;
+    }
 
     @include respond-between($screen-sm, $screen-md) {
       @include custom-font(38px, 600, 46px);
+      text-transform: capitalize;
     }
 
     @include respond-below($screen-sm) {
-      display: block;
       @include custom-font(28px, 600, 39px);
+      text-transform: capitalize;
     }
   }
 
   &_desc {
     margin-top: 20px;
-    @include custom-font(22px, 400, 35px);
+    @include custom-font(16px, 400, 22px);
     text-transform: capitalize;
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(16px, 400, 22px);
+    @include respond-above($screen-md) {
+      @include custom-font(22px, 400, 35px);
     }
 
     @include respond-below($screen-sm) {
       margin-top: 10px;
-      @include custom-font(16px, 400, 22px);
     }
   }
 
@@ -445,27 +441,19 @@ body {
   &_param {
     display: block;
     font-family: SpaceMono;
-    @include custom-font(28px, 700, 39px);
+    @include custom-font(22px, 700, 35px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(22px, 700, 35px);
-    }
-
-    @include respond-below($screen-sm) {
-      @include custom-font(22px, 700, 35px);
+    @include respond-above($screen-md) {
+      @include custom-font(28px, 700, 39px);
     }
   }
 
   &_title {
     display: inline-block;
-    @include custom-font(24px, 400, 38px);
+    @include custom-font(16px, 400, 22px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(16px, 400, 22px);
-    }
-
-    @include respond-below($screen-sm) {
-      @include custom-font(16px, 400, 22px);
+    @include respond-above($screen-md) {
+      @include custom-font(24px, 400, 38px);
     }
   }
 }
@@ -537,45 +525,32 @@ body {
   }
 
   &_title {
-    @include custom-font(38px, 600, 46px);
     text-transform: capitalize;
+    @include custom-font(28px, 600, 39px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(28px, 600, 39px);
-    }
-
-    @include respond-below($screen-sm) {
-      @include custom-font(28px, 600, 39px);
+    @include respond-above($screen-md) {
+      @include custom-font(38px, 600, 46px);
     }
 
     &_sub {
       display: inline-block;
       margin-top: 10px;
-      @include custom-font(22px, 400, 35px);
+      @include custom-font(16px, 400, 22px);
       text-transform: capitalize;
 
-      @include respond-between($screen-sm, $screen-md) {
-        @include custom-font(16px, 400, 22px);
-      }
-
-      @include respond-below($screen-sm) {
-        @include custom-font(16px, 400, 22px);
+      @include respond-above($screen-md) {
+        @include custom-font(22px, 400, 35px);
       }
     }
   }
 
   &_content {
-    margin-top: 60px;
+    margin-top: 40px;
 
-    @include respond-between($screen-sm, $screen-md) {
-      margin-top: 40px;
-    }
-
-    @include respond-below($screen-sm) {
-      margin-top: 40px;
+    @include respond-above($screen-md) {
+      margin-top: 60px;
     }
   }
-
 }
 
 .section_inner:has(.btn) {
@@ -624,7 +599,7 @@ body {
     @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
 
-      &:last-child{
+      &:last-child {
         display: none;
       }
     }
@@ -632,7 +607,7 @@ body {
     @include respond-below($screen-sm) {
       @include card_one_item;
 
-      &:nth-child(n + 2){
+      &:nth-child(n + 2) {
         display: none;
       }
     }
@@ -743,7 +718,7 @@ body {
     @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
 
-      &:nth-child(n+7){
+      &:nth-child(n+7) {
         display: none
       }
     }
@@ -751,7 +726,7 @@ body {
     @include respond-below($screen-sm) {
       @include card_one_item;
 
-      &:nth-child(n+6){
+      &:nth-child(n+6) {
         display: none
       }
     }
@@ -915,17 +890,12 @@ body {
 
   &_name {
     display: block;
-    padding: 20px 30px 25px 30px;
-    @include custom-font(22px, 600, 31px);
+    padding: 20px 20px 25px 20px;
+    @include custom-font(16px, 600, 22px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      padding: 20px 20px 25px 20px;
-      @include custom-font(16px, 600, 22px);
-    }
-
-    @include respond-below($screen-sm) {
-      padding: 20px 20px 25px 20px;
-      @include custom-font(16px, 600, 22px);
+    @include respond-above($screen-md) {
+      padding: 20px 30px 25px 30px;
+      @include custom-font(22px, 600, 31px);
     }
   }
 }
@@ -966,7 +936,7 @@ body {
     @include respond-between($screen-sm, $screen-md) {
       @include card_two_item;
 
-      &:last-child{
+      &:last-child {
         display: none;
       }
     }
@@ -1209,14 +1179,10 @@ body {
 
   &_title {
     margin-top: 30px;
-    @include custom-font(51px, 600, 56px);
+    @include custom-font(38px, 600, 46px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(38px, 600, 46px);
-    }
-
-    @include respond-below($screen-sm) {
-      @include custom-font(38px, 600, 46px);
+    @include respond-above($screen-md) {
+      @include custom-font(51px, 600, 56px);
     }
   }
 
@@ -1371,14 +1337,10 @@ body {
 
   &_desc {
     margin-top: 10px;
-    @include custom-font(16px, 400, 22px);
+    @include custom-font(12px, 400, 17px);
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(12px, 400, 17px);
-    }
-
-    @include respond-below($screen-sm) {
-      @include custom-font(12px, 400, 17px);
+    @include respond-above($screen-md) {
+      @include custom-font(16px, 400, 22px);
     }
   }
 }
@@ -1511,7 +1473,6 @@ body {
 // <!--// Section Subscribe widget -->
 
 // <!-- // CONTENTS -->
-
 
 // <!-- Footer -->
 .footer {

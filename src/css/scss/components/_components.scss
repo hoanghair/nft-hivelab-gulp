@@ -20,15 +20,15 @@
     margin-right: 12px;
   }
 
-  &_sm {
+  &_small {
     height: $height_btn_sm;
   }
 
-  &_md {
+  &_medium {
     height: $height_btn_md;
   }
 
-  &_lg {
+  &_large {
     height: $height_btn_lg;
   }
 
@@ -288,7 +288,6 @@
         &:first-child {
           width: 6.667%;
           border-left-width: 1px;
-          // border-left: 1px solid map-get($gray, 2);
           border-radius: $border_radius_sm 0 0 $border_radius_sm ;
           text-align: center;
 
@@ -342,7 +341,6 @@
         &:last-child {
           width: 19.143%;
           border-right-width: 1px;
-          // border-right: 1px solid map-get($gray, 2);
           border-radius: 0 $border_radius_sm $border_radius_sm 0;
 
           @include respond-between($screen-sm, $screen-md) {
@@ -454,6 +452,10 @@
   box-sizing: border-box;
 }
 
+.section_toprated .number{
+  min-width: 30px;
+}
+
 .price {
   display: inline-block;
   font-family: SpaceMono;
@@ -467,14 +469,14 @@
       width: 24px;
       height: 24px;
       background-color: transparent;
-      @include custom-font(16px, 400, 24px);
+      line-height: 24px;
     }
 
     @include respond-below($screen-sm) {
       width: 24px;
       height: 24px;
       background-color: transparent;
-      @include custom-font(12px, 400, 24px);
+      line-height: 24px;
     }
   }
 }
