@@ -452,7 +452,7 @@
   box-sizing: border-box;
 }
 
-.section_toprated .number{
+.section_toprated .number {
   min-width: 30px;
 }
 
@@ -542,7 +542,7 @@
   }
 
   &_link {
-    @include flex-item(inline-flex, center, center);
+    display: block;
     @include custom-dimensions(100%, 57px);
     padding: 14px 30px;
     color: map-get($gray, 3);
@@ -554,16 +554,15 @@
   }
 
   &_name {
+    display: inline-block;
+    @include custom-font(16px, 600, 22px);
+    vertical-align: middle;
+
     @include respond-above($screen-md) {
       @include custom-font(22px, 600, 31px);
     }
 
     @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(16px, 600, 22px);
-    }
-
-    @include respond-below($screen-sm) {
-      display: none;
     }
 
     &::after {
@@ -597,13 +596,19 @@
     padding: 5px 10px;
     border-radius: $border_radius_sm;
     background-color: map-get($gray, 2);
-    font-family: SpaceMono;
-    @include custom-font(16px, 400, 13px);
     transition: all 0.4s ease;
     box-sizing: border-box;
+    vertical-align: middle;
 
-    @include respond-between($screen-sm, $screen-md) {
-      @include custom-font(12px, 400, 13px);
+    &::after {
+      display: inline-block;
+      font-family: SpaceMono;
+      @include custom-font(16px, 400, 16px);
+      content: '' attr(data) '';
+
+      @include respond-between($screen-sm, $screen-md) {
+        @include custom-font(12px, 400, 12px);
+      }
     }
 
     @include respond-below($screen-sm) {

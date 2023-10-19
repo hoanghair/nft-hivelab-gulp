@@ -5,6 +5,14 @@
         @include custom-font(28px, 600, 39px);
       }
     }
+
+    .tabs {
+      &_name {
+        @include respond-below($screen-sm) {
+          display: none;
+        }
+      }
+    }
   }
 }
 
