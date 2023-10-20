@@ -545,6 +545,7 @@
     display: block;
     @include custom-dimensions(100%, 57px);
     padding: 14px 30px;
+    font-size: 0;
     color: map-get($gray, 3);
     box-sizing: border-box;
 
